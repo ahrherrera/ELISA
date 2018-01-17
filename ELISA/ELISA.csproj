@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A53DEDC7-37BD-4832-AB78-EB32BDF0AD50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ELISA</RootNamespace>
+    <AssemblyName>ELISA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chikungunyainhhiper.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chikungunyainhmono.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="componentesns1.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="componentesrotaviru.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="componentesvih.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="controles_ns1.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="controles_rotaviru.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="controles_vih.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolochik.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolochikhiper.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolochikmono.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocoloei.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocoloeiensayo.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocoloeizika.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocoloigg.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocoloigm.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocoloigmzika.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolons1.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolorotaviru.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolovih.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolozikabob.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="datosprotocolozikaigmbei.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElisaDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElisaDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElisaDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElisaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElisaDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="elisaigg.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisaiggrepeticione.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisaigm.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainh.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainh1d.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainh1dchik.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainh1dchikrepeticiones.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainh1dchiksero.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainh1dchikserorepeticiones.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainh1drepeticiones.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhrm.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhrmchik.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhrmchikrepeticione.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhrmchiksero.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhrmchikserorepeticione.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhrmrepeticione.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhtmp.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="elisainhzika.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ensayo.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estudio.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kit_elisa_ns1.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kit_elisa_rotaviru.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kit_elisa_vih.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="laboratorista.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ns1.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="proch20.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reactivos_bei.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reactivos_bob.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reactivos_ns1.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reactivos_rotaviru.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reactivos_vih.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rotaviru.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tipobloqueo.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipodiluyente.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transaccion\UsuarioTrans.cs" />
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Log.cs" />
+    <Compile Include="vih.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zika1d.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zika1ddup.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zikabob.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zikabobanual.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zikabobanualdup.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zikaigm.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zikaigmbei.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zikarmanual.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zikarmanualdup.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="ElisaDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ElisaDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ElisaDB.edmx.diagram">
+      <DependentUpon>ElisaDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-22-eye_315220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashELISA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ElisaDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ElisaDB.edmx</DependentUpon>
+      <LastGenOutput>ElisaDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ElisaDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ElisaDB.edmx</DependentUpon>
+      <LastGenOutput>ElisaDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
