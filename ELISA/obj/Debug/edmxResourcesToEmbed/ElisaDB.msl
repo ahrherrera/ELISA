@@ -1,0 +1,1883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="elisaModelStoreContainer" CdmEntityContainer="elisaEntities1">
+    <EntitySetMapping Name="chikungunyainhhipers">
+      <EntityTypeMapping TypeName="elisaModel.chikungunyainhhiper">
+        <MappingFragment StoreEntitySet="chikungunyainhhiper">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chikungunyainhmonoes">
+      <EntityTypeMapping TypeName="elisaModel.chikungunyainhmono">
+        <MappingFragment StoreEntitySet="chikungunyainhmono">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="componentesns1">
+      <EntityTypeMapping TypeName="elisaModel.componentesns1">
+        <MappingFragment StoreEntitySet="componentesns1">
+          <ScalarProperty Name="idComponente" ColumnName="idComponente" />
+          <ScalarProperty Name="Componente_Desc" ColumnName="Componente_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="componentesrotavirus">
+      <EntityTypeMapping TypeName="elisaModel.componentesrotaviru">
+        <MappingFragment StoreEntitySet="componentesrotavirus">
+          <ScalarProperty Name="Componente" ColumnName="Componente" />
+          <ScalarProperty Name="Componente_Desc" ColumnName="Componente_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="componentesvihs">
+      <EntityTypeMapping TypeName="elisaModel.componentesvih">
+        <MappingFragment StoreEntitySet="componentesvih">
+          <ScalarProperty Name="Componente" ColumnName="Componente" />
+          <ScalarProperty Name="Componente_Desc" ColumnName="Componente_Desc" />
+          <ScalarProperty Name="Vironostika" ColumnName="Vironostika" />
+          <ScalarProperty Name="Adaltis" ColumnName="Adaltis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="controles_ns1">
+      <EntityTypeMapping TypeName="elisaModel.controles_ns1">
+        <MappingFragment StoreEntitySet="controles ns1">
+          <ScalarProperty Name="CodControl" ColumnName="CodControl" />
+          <ScalarProperty Name="TipoControl" ColumnName="TipoControl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="controles_rotavirus">
+      <EntityTypeMapping TypeName="elisaModel.controles_rotaviru">
+        <MappingFragment StoreEntitySet="controles rotavirus">
+          <ScalarProperty Name="CodControl" ColumnName="CodControl" />
+          <ScalarProperty Name="TipoControl" ColumnName="TipoControl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="controles_vihs">
+      <EntityTypeMapping TypeName="elisaModel.controles_vih">
+        <MappingFragment StoreEntitySet="controles vih">
+          <ScalarProperty Name="CodControl" ColumnName="CodControl" />
+          <ScalarProperty Name="TipoControl" ColumnName="TipoControl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolons1">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolons1">
+        <MappingFragment StoreEntitySet="datosprotocolons1">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TIMES" ColumnName="TIMES" />
+          <ScalarProperty Name="CalFactor" ColumnName="CalFactor" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+          <ScalarProperty Name="ControlPosLI" ColumnName="ControlPosLI" />
+          <ScalarProperty Name="ControlPosLS" ColumnName="ControlPosLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolorotavirus">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolorotaviru">
+        <MappingFragment StoreEntitySet="datosprotocolorotavirus">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TIMES" ColumnName="TIMES" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+          <ScalarProperty Name="ControlPosLI" ColumnName="ControlPosLI" />
+          <ScalarProperty Name="ControlPosLS" ColumnName="ControlPosLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolovihs">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolovih">
+        <MappingFragment StoreEntitySet="datosprotocolovih">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TIMES" ColumnName="TIMES" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+          <ScalarProperty Name="ControlPosLI" ColumnName="ControlPosLI" />
+          <ScalarProperty Name="ControlPosLS" ColumnName="ControlPosLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisaiggs">
+      <EntityTypeMapping TypeName="elisaModel.elisaigg">
+        <MappingFragment StoreEntitySet="elisaigg">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="m3men" ColumnName="m3men" />
+          <ScalarProperty Name="Unidades" ColumnName="Unidades" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlNegSal" ColumnName="ControlNegSal" />
+          <ScalarProperty Name="LoteIgG" ColumnName="LoteIgG" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisaiggrepeticiones">
+      <EntityTypeMapping TypeName="elisaModel.elisaiggrepeticione">
+        <MappingFragment StoreEntitySet="elisaiggrepeticiones">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="m3men" ColumnName="m3men" />
+          <ScalarProperty Name="Unidades" ColumnName="Unidades" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlNegSal" ColumnName="ControlNegSal" />
+          <ScalarProperty Name="LoteIgG" ColumnName="LoteIgG" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisaigms">
+      <EntityTypeMapping TypeName="elisaModel.elisaigm">
+        <MappingFragment StoreEntitySet="elisaigm">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Unidades" ColumnName="Unidades" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPosA" ColumnName="ControlPosA" />
+          <ScalarProperty Name="ControlPosB" ColumnName="ControlPosB" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
+          <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
+          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhs">
+      <EntityTypeMapping TypeName="elisaModel.elisainh">
+        <MappingFragment StoreEntitySet="elisainh">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainh1d">
+      <EntityTypeMapping TypeName="elisaModel.elisainh1d">
+        <MappingFragment StoreEntitySet="elisainh1d">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="APROB" ColumnName="APROB" />
+          <ScalarProperty Name="NuevoRes" ColumnName="NuevoRes" />
+          <ScalarProperty Name="NVC" ColumnName="NVC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainh1dchik">
+      <EntityTypeMapping TypeName="elisaModel.elisainh1dchik">
+        <MappingFragment StoreEntitySet="elisainh1dchik">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="APROB" ColumnName="APROB" />
+          <ScalarProperty Name="NuevoRes" ColumnName="NuevoRes" />
+          <ScalarProperty Name="NVC" ColumnName="NVC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainh1dchikrepeticiones">
+      <EntityTypeMapping TypeName="elisaModel.elisainh1dchikrepeticiones">
+        <MappingFragment StoreEntitySet="elisainh1dchikrepeticiones">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="NVC" ColumnName="NVC" />
+          <ScalarProperty Name="NuevoRes" ColumnName="NuevoRes" />
+          <ScalarProperty Name="NVC1" ColumnName="NVC1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainh1dchiksero">
+      <EntityTypeMapping TypeName="elisaModel.elisainh1dchiksero">
+        <MappingFragment StoreEntitySet="elisainh1dchiksero">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="APROB" ColumnName="APROB" />
+          <ScalarProperty Name="NuevoRes" ColumnName="NuevoRes" />
+          <ScalarProperty Name="NVC" ColumnName="NVC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainh1dchikserorepeticiones">
+      <EntityTypeMapping TypeName="elisaModel.elisainh1dchikserorepeticiones">
+        <MappingFragment StoreEntitySet="elisainh1dchikserorepeticiones">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="NVC" ColumnName="NVC" />
+          <ScalarProperty Name="NuevoRes" ColumnName="NuevoRes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainh1drepeticiones">
+      <EntityTypeMapping TypeName="elisaModel.elisainh1drepeticiones">
+        <MappingFragment StoreEntitySet="elisainh1drepeticiones">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="NVC" ColumnName="NVC" />
+          <ScalarProperty Name="NuevoRes" ColumnName="NuevoRes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhrms">
+      <EntityTypeMapping TypeName="elisaModel.elisainhrm">
+        <MappingFragment StoreEntitySet="elisainhrm">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhrmchiks">
+      <EntityTypeMapping TypeName="elisaModel.elisainhrmchik">
+        <MappingFragment StoreEntitySet="elisainhrmchik">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhrmchikrepeticiones">
+      <EntityTypeMapping TypeName="elisaModel.elisainhrmchikrepeticione">
+        <MappingFragment StoreEntitySet="elisainhrmchikrepeticiones">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhrmchikseroes">
+      <EntityTypeMapping TypeName="elisaModel.elisainhrmchiksero">
+        <MappingFragment StoreEntitySet="elisainhrmchiksero">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhrmchikserorepeticiones">
+      <EntityTypeMapping TypeName="elisaModel.elisainhrmchikserorepeticione">
+        <MappingFragment StoreEntitySet="elisainhrmchikserorepeticiones">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhrmrepeticiones">
+      <EntityTypeMapping TypeName="elisaModel.elisainhrmrepeticione">
+        <MappingFragment StoreEntitySet="elisainhrmrepeticiones">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhtmps">
+      <EntityTypeMapping TypeName="elisaModel.elisainhtmp">
+        <MappingFragment StoreEntitySet="elisainhtmp">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elisainhzikas">
+      <EntityTypeMapping TypeName="elisaModel.elisainhzika">
+        <MappingFragment StoreEntitySet="elisainhzika">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ensayos">
+      <EntityTypeMapping TypeName="elisaModel.ensayo">
+        <MappingFragment StoreEntitySet="ensayos">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estudios">
+      <EntityTypeMapping TypeName="elisaModel.estudio">
+        <MappingFragment StoreEntitySet="estudios">
+          <ScalarProperty Name="Estudio1" ColumnName="Estudio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kit_elisa_ns1">
+      <EntityTypeMapping TypeName="elisaModel.kit_elisa_ns1">
+        <MappingFragment StoreEntitySet="kit elisa ns1">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="CasaComercial" ColumnName="CasaComercial" />
+          <ScalarProperty Name="Metodo" ColumnName="Metodo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kit_elisa_rotavirus">
+      <EntityTypeMapping TypeName="elisaModel.kit_elisa_rotaviru">
+        <MappingFragment StoreEntitySet="kit elisa rotavirus">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="CasaComercial" ColumnName="CasaComercial" />
+          <ScalarProperty Name="Metodo" ColumnName="Metodo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kit_elisa_vihs">
+      <EntityTypeMapping TypeName="elisaModel.kit_elisa_vih">
+        <MappingFragment StoreEntitySet="kit elisa vih">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="CasaComercial" ColumnName="CasaComercial" />
+          <ScalarProperty Name="Metodo" ColumnName="Metodo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="laboratoristas">
+      <EntityTypeMapping TypeName="elisaModel.laboratorista">
+        <MappingFragment StoreEntitySet="laboratoristas">
+          <ScalarProperty Name="Cod" ColumnName="Cod" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ns1">
+      <EntityTypeMapping TypeName="elisaModel.ns1">
+        <MappingFragment StoreEntitySet="ns1">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Unidades" ColumnName="Unidades" />
+          <ScalarProperty Name="Concen" ColumnName="Concen" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="CodigoKit" ColumnName="CodigoKit" />
+          <ScalarProperty Name="CalFactor" ColumnName="CalFactor" />
+          <ScalarProperty Name="TIMES" ColumnName="TIMES" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proch20">
+      <EntityTypeMapping TypeName="elisaModel.proch20">
+        <MappingFragment StoreEntitySet="proch20">
+          <ScalarProperty Name="ProcH201" ColumnName="ProcH20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reactivos_ns1">
+      <EntityTypeMapping TypeName="elisaModel.reactivos_ns1">
+        <MappingFragment StoreEntitySet="reactivos ns1">
+          <ScalarProperty Name="CodigoKit" ColumnName="CodigoKit" />
+          <ScalarProperty Name="Componente" ColumnName="Componente" />
+          <ScalarProperty Name="CodigoC" ColumnName="CodigoC" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reactivos_rotavirus">
+      <EntityTypeMapping TypeName="elisaModel.reactivos_rotaviru">
+        <MappingFragment StoreEntitySet="reactivos rotavirus">
+          <ScalarProperty Name="CodigoKit" ColumnName="CodigoKit" />
+          <ScalarProperty Name="Componente" ColumnName="Componente" />
+          <ScalarProperty Name="CodigoC" ColumnName="CodigoC" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reactivos_vihs">
+      <EntityTypeMapping TypeName="elisaModel.reactivos_vih">
+        <MappingFragment StoreEntitySet="reactivos vih">
+          <ScalarProperty Name="CodigoKit" ColumnName="CodigoKit" />
+          <ScalarProperty Name="Componente" ColumnName="Componente" />
+          <ScalarProperty Name="CodigoC" ColumnName="CodigoC" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reactivos_bei">
+      <EntityTypeMapping TypeName="elisaModel.reactivos_bei">
+        <MappingFragment StoreEntitySet="reactivos_bei">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="CasaComercial" ColumnName="CasaComercial" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Concentracion" ColumnName="Concentracion" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+          <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reactivos_bob">
+      <EntityTypeMapping TypeName="elisaModel.reactivos_bob">
+        <MappingFragment StoreEntitySet="reactivos_bob">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="CasaComercial" ColumnName="CasaComercial" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Concentracion" ColumnName="Concentracion" />
+          <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Fecha_Fijacion" ColumnName="Fecha_Fijacion" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+          <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rotavirus">
+      <EntityTypeMapping TypeName="elisaModel.rotaviru">
+        <MappingFragment StoreEntitySet="rotavirus">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="ControlMuestra" ColumnName="ControlMuestra" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="CodigoKit" ColumnName="CodigoKit" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="TIMES" ColumnName="TIMES" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipobloqueos">
+      <EntityTypeMapping TypeName="elisaModel.tipobloqueo">
+        <MappingFragment StoreEntitySet="tipobloqueo">
+          <ScalarProperty Name="TipoBloqueo1" ColumnName="TipoBloqueo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipodiluyentes">
+      <EntityTypeMapping TypeName="elisaModel.tipodiluyente">
+        <MappingFragment StoreEntitySet="tipodiluyente">
+          <ScalarProperty Name="TipoDiluyente1" ColumnName="TipoDiluyente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="elisaModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vihs">
+      <EntityTypeMapping TypeName="elisaModel.vih">
+        <MappingFragment StoreEntitySet="vih">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="CodigoKit" ColumnName="CodigoKit" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="TIMES" ColumnName="TIMES" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zika1d">
+      <EntityTypeMapping TypeName="elisaModel.zika1d">
+        <MappingFragment StoreEntitySet="zika1d">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zika1ddup">
+      <EntityTypeMapping TypeName="elisaModel.zika1ddup">
+        <MappingFragment StoreEntitySet="zika1ddup">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zikabobs">
+      <EntityTypeMapping TypeName="elisaModel.zikabob">
+        <MappingFragment StoreEntitySet="zikabob">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="BOBP" ColumnName="BOBP" />
+          <ScalarProperty Name="ControlMax" ColumnName="ControlMax" />
+          <ScalarProperty Name="ControlMin" ColumnName="ControlMin" />
+          <ScalarProperty Name="NS1" ColumnName="NS1" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PBS" ColumnName="PBS" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="CodSustBloqueo" ColumnName="CodSustBloqueo" />
+          <ScalarProperty Name="ZKA" ColumnName="ZKA" />
+          <ScalarProperty Name="SFA" ColumnName="SFA" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="APROB" ColumnName="APROB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zikabobanuals">
+      <EntityTypeMapping TypeName="elisaModel.zikabobanual">
+        <MappingFragment StoreEntitySet="zikabobanual">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="BOBP" ColumnName="BOBP" />
+          <ScalarProperty Name="ControlMax" ColumnName="ControlMax" />
+          <ScalarProperty Name="ControlMin" ColumnName="ControlMin" />
+          <ScalarProperty Name="NS1" ColumnName="NS1" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PBS" ColumnName="PBS" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="CodSustBloqueo" ColumnName="CodSustBloqueo" />
+          <ScalarProperty Name="ZKA" ColumnName="ZKA" />
+          <ScalarProperty Name="SFA" ColumnName="SFA" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="APROB" ColumnName="APROB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zikabobanualdups">
+      <EntityTypeMapping TypeName="elisaModel.zikabobanualdup">
+        <MappingFragment StoreEntitySet="zikabobanualdup">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="BOBP" ColumnName="BOBP" />
+          <ScalarProperty Name="ControlMax" ColumnName="ControlMax" />
+          <ScalarProperty Name="ControlMin" ColumnName="ControlMin" />
+          <ScalarProperty Name="NS1" ColumnName="NS1" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PBS" ColumnName="PBS" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="CodSustBloqueo" ColumnName="CodSustBloqueo" />
+          <ScalarProperty Name="ZKA" ColumnName="ZKA" />
+          <ScalarProperty Name="SFA" ColumnName="SFA" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="APROB" ColumnName="APROB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zikaigms">
+      <EntityTypeMapping TypeName="elisaModel.zikaigm">
+        <MappingFragment StoreEntitySet="zikaigm">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Unidades" ColumnName="Unidades" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Resultado2" ColumnName="Resultado2" />
+          <ScalarProperty Name="VC2" ColumnName="VC2" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
+          <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
+          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="fechafijIGM" ColumnName="fechafijIGM" />
+          <ScalarProperty Name="VolUsadoIGM" ColumnName="VolUsadoIGM" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Factor2" ColumnName="Factor2" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zikaigmbeis">
+      <EntityTypeMapping TypeName="elisaModel.zikaigmbei">
+        <MappingFragment StoreEntitySet="zikaigmbei">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="TipoAg" ColumnName="TipoAg" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="DDO" ColumnName="DDO" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="AntiIgM" ColumnName="AntiIgM" />
+          <ScalarProperty Name="fechafijIGM" ColumnName="fechafijIGM" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PBS" ColumnName="PBS" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="CodSustBloqueo" ColumnName="CodSustBloqueo" />
+          <ScalarProperty Name="LoteAntigenoViral" ColumnName="LoteAntigenoViral" />
+          <ScalarProperty Name="LoteAntigenoNormal" ColumnName="LoteAntigenoNormal" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="TipoDiluyente" ColumnName="TipoDiluyente" />
+          <ScalarProperty Name="CodDiluyente" ColumnName="CodDiluyente" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zikarmanuals">
+      <EntityTypeMapping TypeName="elisaModel.zikarmanual">
+        <MappingFragment StoreEntitySet="zikarmanual">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zikarmanualdups">
+      <EntityTypeMapping TypeName="elisaModel.zikarmanualdup">
+        <MappingFragment StoreEntitySet="zikarmanualdup">
+          <ScalarProperty Name="Cod_Pozo" ColumnName="Cod_Pozo" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="INHP" ColumnName="INHP" />
+          <ScalarProperty Name="Dilucion" ColumnName="Dilucion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
+          <ScalarProperty Name="repetir" ColumnName="repetir" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="contaux" ColumnName="contaux" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolochiks">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolochik">
+        <MappingFragment StoreEntitySet="datosprotocolochik">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+          <ScalarProperty Name="LoteAntigenoViral" ColumnName="LoteAntigenoViral" />
+          <ScalarProperty Name="LoteAntigenoNormal" ColumnName="LoteAntigenoNormal" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Tecnica" ColumnName="Tecnica" />
+          <ScalarProperty Name="LimCPI" ColumnName="LimCPI" />
+          <ScalarProperty Name="LimCPS" ColumnName="LimCPS" />
+          <ScalarProperty Name="LimCNI" ColumnName="LimCNI" />
+          <ScalarProperty Name="LimCNS" ColumnName="LimCNS" />
+          <ScalarProperty Name="FVC" ColumnName="FVC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolochikhipers">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolochikhiper">
+        <MappingFragment StoreEntitySet="datosprotocolochikhiper">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolochikmonoes">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolochikmono">
+        <MappingFragment StoreEntitySet="datosprotocolochikmono">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocoloeis">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocoloei">
+        <MappingFragment StoreEntitySet="datosprotocoloei">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocoloeiensayos">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocoloeiensayo">
+        <MappingFragment StoreEntitySet="datosprotocoloeiensayos">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocoloeizikas">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocoloeizika">
+        <MappingFragment StoreEntitySet="datosprotocoloeizika">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocoloiggs">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocoloigg">
+        <MappingFragment StoreEntitySet="datosprotocoloigg">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlNegSal" ColumnName="ControlNegSal" />
+          <ScalarProperty Name="LoteIgG" ColumnName="LoteIgG" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+          <ScalarProperty Name="ControlNegSalLI" ColumnName="ControlNegSalLI" />
+          <ScalarProperty Name="ControlNegSalLS" ColumnName="ControlNegSalLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocoloigms">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocoloigm">
+        <MappingFragment StoreEntitySet="datosprotocoloigm">
+          <ScalarProperty Name="ControlPosA" ColumnName="ControlPosA" />
+          <ScalarProperty Name="ControlPosB" ColumnName="ControlPosB" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
+          <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
+          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+          <ScalarProperty Name="ControlPosRadLI" ColumnName="ControlPosRadLI" />
+          <ScalarProperty Name="ControlPosRadLS" ColumnName="ControlPosRadLS" />
+          <ScalarProperty Name="ControlNegRadLI" ColumnName="ControlNegRadLI" />
+          <ScalarProperty Name="ControlNegRadLS" ColumnName="ControlNegRadLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocoloigmzikas">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocoloigmzika">
+        <MappingFragment StoreEntitySet="datosprotocoloigmzika">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
+          <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
+          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="fechafijIGM" ColumnName="fechafijIGM" />
+          <ScalarProperty Name="VolUsadoIGM" ColumnName="VolUsadoIGM" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Factor2" ColumnName="Factor2" />
+          <ScalarProperty Name="ControlPosLI" ColumnName="ControlPosLI" />
+          <ScalarProperty Name="ControlPosLS" ColumnName="ControlPosLS" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+          <ScalarProperty Name="ControlPosRadLI" ColumnName="ControlPosRadLI" />
+          <ScalarProperty Name="ControlPosRadLS" ColumnName="ControlPosRadLS" />
+          <ScalarProperty Name="ControlNegRadLI" ColumnName="ControlNegRadLI" />
+          <ScalarProperty Name="ControlNegRadLS" ColumnName="ControlNegRadLS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolozikabobs">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolozikabob">
+        <MappingFragment StoreEntitySet="datosprotocolozikabob">
+          <ScalarProperty Name="ControlMax" ColumnName="ControlMax" />
+          <ScalarProperty Name="ControlMin" ColumnName="ControlMin" />
+          <ScalarProperty Name="NS1" ColumnName="NS1" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PBS" ColumnName="PBS" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="CodSustBloqueo" ColumnName="CodSustBloqueo" />
+          <ScalarProperty Name="ZKA" ColumnName="ZKA" />
+          <ScalarProperty Name="SFA" ColumnName="SFA" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocolozikaigmbeis">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocolozikaigmbei">
+        <MappingFragment StoreEntitySet="datosprotocolozikaigmbei">
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="AntiIgM" ColumnName="AntiIgM" />
+          <ScalarProperty Name="fechafijIGM" ColumnName="fechafijIGM" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PBS" ColumnName="PBS" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="CodSustBloqueo" ColumnName="CodSustBloqueo" />
+          <ScalarProperty Name="LoteAntigenoViral" ColumnName="LoteAntigenoViral" />
+          <ScalarProperty Name="LoteAntigenoNormal" ColumnName="LoteAntigenoNormal" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="TipoDiluyente" ColumnName="TipoDiluyente" />
+          <ScalarProperty Name="CodDiluyente" ColumnName="CodDiluyente" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

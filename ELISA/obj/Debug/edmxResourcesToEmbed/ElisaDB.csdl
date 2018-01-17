@@ -1,0 +1,2209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="elisaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="chikungunyainhhiper">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="chikungunyainhmono">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="componentesns1">
+    <Key>
+      <PropertyRef Name="idComponente" />
+    </Key>
+    <Property Name="idComponente" Type="Int32" Nullable="false" />
+    <Property Name="Componente_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="componentesrotaviru">
+    <Key>
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="Componente" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Componente_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="componentesvih">
+    <Key>
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="Componente" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Componente_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Vironostika" Type="Boolean" />
+    <Property Name="Adaltis" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="controles_ns1">
+    <Key>
+      <PropertyRef Name="CodControl" />
+    </Key>
+    <Property Name="CodControl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoControl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="controles_rotaviru">
+    <Key>
+      <PropertyRef Name="CodControl" />
+    </Key>
+    <Property Name="CodControl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoControl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="controles_vih">
+    <Key>
+      <PropertyRef Name="CodControl" />
+    </Key>
+    <Property Name="CodControl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoControl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolons1">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIMES" Type="Single" />
+    <Property Name="CalFactor" Type="Single" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLI" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolorotaviru">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIMES" Type="Single" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLI" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolovih">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIMES" Type="Single" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLI" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="elisaigg">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="m3men" Type="Single" />
+    <Property Name="Unidades" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNegSal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteIgG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="elisaiggrepeticione">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="m3men" Type="Single" />
+    <Property Name="Unidades" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNegSal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteIgG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="elisaigm">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="Unidades" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPosA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPosB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="User" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="elisainh">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="elisainh1d">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="APROB" Type="Boolean" />
+    <Property Name="NuevoRes" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NVC" Type="Single" />
+  </EntityType>
+  <EntityType Name="elisainh1dchik">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="APROB" Type="Boolean" />
+    <Property Name="NuevoRes" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NVC" Type="Single" />
+  </EntityType>
+  <EntityType Name="elisainh1dchikrepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NVC" Type="Single" />
+    <Property Name="NuevoRes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NVC1" Type="Single" />
+  </EntityType>
+  <EntityType Name="elisainh1dchiksero">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="APROB" Type="Boolean" />
+    <Property Name="NuevoRes" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NVC" Type="Single" />
+  </EntityType>
+  <EntityType Name="elisainh1dchikserorepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NVC" Type="Single" />
+    <Property Name="NuevoRes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="elisainh1drepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NVC" Type="Single" />
+    <Property Name="NuevoRes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="elisainhrm">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="elisainhrmchik">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="elisainhrmchikrepeticione">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="elisainhrmchiksero">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="elisainhrmchikserorepeticione">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="elisainhrmrepeticione">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="elisainhtmp">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="elisainhzika">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ensayo">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="estudio">
+    <Key>
+      <PropertyRef Name="Estudio1" />
+    </Key>
+    <Property Name="Estudio1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kit_elisa_ns1">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CasaComercial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Metodo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ns1" Relationship="Self.fk_NS1kit" FromRole="kit_elisa_ns1" ToRole="ns1" />
+    <NavigationProperty Name="reactivos_ns1" Relationship="Self.fk_reactivoskit" FromRole="kit_elisa_ns1" ToRole="reactivos_ns1" />
+  </EntityType>
+  <EntityType Name="kit_elisa_rotaviru">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CasaComercial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Metodo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="reactivos_rotavirus" Relationship="Self.fk_reactivosRotakit" FromRole="kit_elisa_rotavirus" ToRole="reactivos_rotavirus" />
+    <NavigationProperty Name="rotavirus" Relationship="Self.fk_Rotaviruskit" FromRole="kit_elisa_rotavirus" ToRole="rotavirus" />
+  </EntityType>
+  <EntityType Name="kit_elisa_vih">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CasaComercial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Metodo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="reactivos_vih" Relationship="Self.fk_reactivosVIHkit" FromRole="kit_elisa_vih" ToRole="reactivos_vih" />
+    <NavigationProperty Name="vihs" Relationship="Self.fk_VIHkit" FromRole="kit_elisa_vih" ToRole="vih" />
+  </EntityType>
+  <EntityType Name="laboratorista">
+    <Key>
+      <PropertyRef Name="Cod" />
+    </Key>
+    <Property Name="Cod" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ns1">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="Unidades" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Concen" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Resultado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="CodigoKit" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CalFactor" Type="Single" />
+    <Property Name="TIMES" Type="Byte" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="User" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <NavigationProperty Name="kit_elisa_ns1" Relationship="Self.fk_NS1kit" FromRole="ns1" ToRole="kit_elisa_ns1" />
+  </EntityType>
+  <EntityType Name="proch20">
+    <Key>
+      <PropertyRef Name="ProcH201" />
+    </Key>
+    <Property Name="ProcH201" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reactivos_ns1">
+    <Key>
+      <PropertyRef Name="CodigoKit" />
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="CodigoKit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Componente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha_Expiracion" Type="DateTime" Nullable="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="kit_elisa_ns1" Relationship="Self.fk_reactivoskit" FromRole="reactivos_ns1" ToRole="kit_elisa_ns1" />
+  </EntityType>
+  <EntityType Name="reactivos_rotaviru">
+    <Key>
+      <PropertyRef Name="CodigoKit" />
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="CodigoKit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Componente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha_Expiracion" Type="DateTime" Nullable="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="kit_elisa_rotavirus" Relationship="Self.fk_reactivosRotakit" FromRole="reactivos_rotavirus" ToRole="kit_elisa_rotavirus" />
+  </EntityType>
+  <EntityType Name="reactivos_vih">
+    <Key>
+      <PropertyRef Name="CodigoKit" />
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="CodigoKit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Componente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha_Expiracion" Type="DateTime" Nullable="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="kit_elisa_vih" Relationship="Self.fk_reactivosVIHkit" FromRole="reactivos_vih" ToRole="kit_elisa_vih" />
+  </EntityType>
+  <EntityType Name="reactivos_bei">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Tipo" />
+      <PropertyRef Name="Lote" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tipo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lote" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CasaComercial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Titulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Concentracion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_Expiracion" Type="DateTime" />
+    <Property Name="Fecha_Inicio" Type="DateTime" />
+    <Property Name="Fecha_Finalizacion" Type="DateTime" />
+    <Property Name="Oservaciones" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="reactivos_bob">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Tipo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tipo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CasaComercial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Lote" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Titulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Concentracion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Concentracion_Uso" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_Expiracion" Type="DateTime" />
+    <Property Name="Fecha_Fijacion" Type="DateTime" />
+    <Property Name="Fecha_Inicio" Type="DateTime" />
+    <Property Name="Fecha_Finalizacion" Type="DateTime" />
+    <Property Name="Oservaciones" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="rotaviru">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlMuestra" Type="Boolean" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="CodigoKit" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TIMES" Type="Byte" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="User" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <NavigationProperty Name="kit_elisa_rotavirus" Relationship="Self.fk_Rotaviruskit" FromRole="rotavirus" ToRole="kit_elisa_rotavirus" />
+  </EntityType>
+  <EntityType Name="tipobloqueo">
+    <Key>
+      <PropertyRef Name="TipoBloqueo1" />
+    </Key>
+    <Property Name="TipoBloqueo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tipodiluyente">
+    <Key>
+      <PropertyRef Name="TipoDiluyente1" />
+    </Key>
+    <Property Name="TipoDiluyente1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pass" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="rol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vih">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoKit" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TIMES" Type="Byte" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="kit_elisa_vih" Relationship="Self.fk_VIHkit" FromRole="vih" ToRole="kit_elisa_vih" />
+  </EntityType>
+  <EntityType Name="zika1d">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="zika1ddup">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="zikabob">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="BOBP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlMax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlMin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NS1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PBS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodSustBloqueo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ZKA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SFA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="APROB" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="zikabobanual">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="BOBP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlMax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlMin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NS1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PBS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodSustBloqueo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ZKA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SFA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="APROB" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="zikabobanualdup">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="BOBP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlMax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlMin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NS1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PBS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodSustBloqueo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ZKA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SFA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="APROB" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="zikaigm">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="Unidades" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Resultado2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC2" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijIGM" Type="DateTime" />
+    <Property Name="VolUsadoIGM" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Factor" Type="Single" Nullable="false" />
+    <Property Name="Factor2" Type="Single" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="User" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="zikaigmbei">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="TipoAg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="DDO" Type="Single" Nullable="false" />
+    <Property Name="Resultado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AntiIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijIGM" Type="DateTime" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PBS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodSustBloqueo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigenoViral" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigenoNormal" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoDiluyente" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CodDiluyente" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="User" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tras" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="zikarmanual">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="zikarmanualdup">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hora" Type="DateTime" Nullable="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="INHP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dilucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="act" Type="Boolean" />
+    <Property Name="Tras" Type="Boolean" />
+    <Property Name="cambio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="repetir" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contaux" Type="Int32" />
+  </EntityType>
+  <EntityType Name="datosprotocolochik">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteIgM" />
+      <PropertyRef Name="LoteAntigenoViral" />
+      <PropertyRef Name="LoteAntigenoNormal" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigenoViral" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigenoNormal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tecnica" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LimCPI" Type="Single" />
+    <Property Name="LimCPS" Type="Single" />
+    <Property Name="LimCNI" Type="Single" />
+    <Property Name="LimCNS" Type="Single" />
+    <Property Name="FVC" Type="Single" />
+  </EntityType>
+  <EntityType Name="datosprotocolochikhiper">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolochikmono">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocoloei">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocoloeiensayo">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocoloeizika">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocoloigg">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="ControlNegSal" />
+      <PropertyRef Name="LoteIgG" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="ControlNegSalLI" />
+      <PropertyRef Name="ControlNegSalLS" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegSal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteIgG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="ControlNegSalLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegSalLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocoloigm">
+    <Key>
+      <PropertyRef Name="ControlPosA" />
+      <PropertyRef Name="ControlPosB" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="ControlRadPos" />
+      <PropertyRef Name="ControlRadNeg" />
+      <PropertyRef Name="LoteIgM" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="ControlPosRadLI" />
+      <PropertyRef Name="ControlPosRadLS" />
+      <PropertyRef Name="ControlNegRadLI" />
+      <PropertyRef Name="ControlNegRadLS" />
+    </Key>
+    <Property Name="ControlPosA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPosB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="ControlPosRadLI" Type="Single" Nullable="false" />
+    <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
+    <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocoloigmzika">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="ControlRadPos" />
+      <PropertyRef Name="ControlRadNeg" />
+      <PropertyRef Name="LoteIgM" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="Factor" />
+      <PropertyRef Name="Factor2" />
+      <PropertyRef Name="ControlPosLI" />
+      <PropertyRef Name="ControlPosLS" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="ControlPosRadLI" />
+      <PropertyRef Name="ControlPosRadLS" />
+      <PropertyRef Name="ControlNegRadLI" />
+      <PropertyRef Name="ControlNegRadLS" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijIGM" Type="DateTime" />
+    <Property Name="VolUsadoIGM" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Factor" Type="Single" Nullable="false" />
+    <Property Name="Factor2" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLI" Type="Single" Nullable="false" />
+    <Property Name="ControlPosLS" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="ControlPosRadLI" Type="Single" Nullable="false" />
+    <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
+    <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolozikabob">
+    <Key>
+      <PropertyRef Name="Substrato" />
+    </Key>
+    <Property Name="ControlMax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlMin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NS1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PBS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodSustBloqueo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ZKA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SFA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+  </EntityType>
+  <EntityType Name="datosprotocolozikaigmbei">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="AntiIgM" />
+      <PropertyRef Name="LoteAntigenoViral" />
+      <PropertyRef Name="LoteAntigenoNormal" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="STOP" />
+    </Key>
+    <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AntiIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijIGM" Type="DateTime" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PBS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodSustBloqueo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigenoViral" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigenoNormal" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoDiluyente" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CodDiluyente" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_NS1kit">
+    <End Role="kit_elisa_ns1" Type="Self.kit_elisa_ns1" Multiplicity="0..1" />
+    <End Role="ns1" Type="Self.ns1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit_elisa_ns1">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="ns1">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_reactivoskit">
+    <End Role="kit_elisa_ns1" Type="Self.kit_elisa_ns1" Multiplicity="1" />
+    <End Role="reactivos_ns1" Type="Self.reactivos_ns1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit_elisa_ns1">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="reactivos_ns1">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_reactivosRotakit">
+    <End Role="kit_elisa_rotavirus" Type="Self.kit_elisa_rotaviru" Multiplicity="1" />
+    <End Role="reactivos_rotavirus" Type="Self.reactivos_rotaviru" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit_elisa_rotavirus">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="reactivos_rotavirus">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rotaviruskit">
+    <End Role="kit_elisa_rotavirus" Type="Self.kit_elisa_rotaviru" Multiplicity="0..1" />
+    <End Role="rotavirus" Type="Self.rotaviru" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit_elisa_rotavirus">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="rotavirus">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_reactivosVIHkit">
+    <End Role="kit_elisa_vih" Type="Self.kit_elisa_vih" Multiplicity="1" />
+    <End Role="reactivos_vih" Type="Self.reactivos_vih" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit_elisa_vih">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="reactivos_vih">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_VIHkit">
+    <End Role="kit_elisa_vih" Type="Self.kit_elisa_vih" Multiplicity="0..1" />
+    <End Role="vih" Type="Self.vih" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit_elisa_vih">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="vih">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="elisaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="chikungunyainhhipers" EntityType="Self.chikungunyainhhiper" />
+    <EntitySet Name="chikungunyainhmonoes" EntityType="Self.chikungunyainhmono" />
+    <EntitySet Name="componentesns1" EntityType="Self.componentesns1" />
+    <EntitySet Name="componentesrotavirus" EntityType="Self.componentesrotaviru" />
+    <EntitySet Name="componentesvihs" EntityType="Self.componentesvih" />
+    <EntitySet Name="controles_ns1" EntityType="Self.controles_ns1" />
+    <EntitySet Name="controles_rotavirus" EntityType="Self.controles_rotaviru" />
+    <EntitySet Name="controles_vihs" EntityType="Self.controles_vih" />
+    <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" />
+    <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotaviru" />
+    <EntitySet Name="datosprotocolovihs" EntityType="Self.datosprotocolovih" />
+    <EntitySet Name="elisaiggs" EntityType="Self.elisaigg" />
+    <EntitySet Name="elisaiggrepeticiones" EntityType="Self.elisaiggrepeticione" />
+    <EntitySet Name="elisaigms" EntityType="Self.elisaigm" />
+    <EntitySet Name="elisainhs" EntityType="Self.elisainh" />
+    <EntitySet Name="elisainh1d" EntityType="Self.elisainh1d" />
+    <EntitySet Name="elisainh1dchik" EntityType="Self.elisainh1dchik" />
+    <EntitySet Name="elisainh1dchikrepeticiones" EntityType="Self.elisainh1dchikrepeticiones" />
+    <EntitySet Name="elisainh1dchiksero" EntityType="Self.elisainh1dchiksero" />
+    <EntitySet Name="elisainh1dchikserorepeticiones" EntityType="Self.elisainh1dchikserorepeticiones" />
+    <EntitySet Name="elisainh1drepeticiones" EntityType="Self.elisainh1drepeticiones" />
+    <EntitySet Name="elisainhrms" EntityType="Self.elisainhrm" />
+    <EntitySet Name="elisainhrmchiks" EntityType="Self.elisainhrmchik" />
+    <EntitySet Name="elisainhrmchikrepeticiones" EntityType="Self.elisainhrmchikrepeticione" />
+    <EntitySet Name="elisainhrmchikseroes" EntityType="Self.elisainhrmchiksero" />
+    <EntitySet Name="elisainhrmchikserorepeticiones" EntityType="Self.elisainhrmchikserorepeticione" />
+    <EntitySet Name="elisainhrmrepeticiones" EntityType="Self.elisainhrmrepeticione" />
+    <EntitySet Name="elisainhtmps" EntityType="Self.elisainhtmp" />
+    <EntitySet Name="elisainhzikas" EntityType="Self.elisainhzika" />
+    <EntitySet Name="ensayos" EntityType="Self.ensayo" />
+    <EntitySet Name="estudios" EntityType="Self.estudio" />
+    <EntitySet Name="kit_elisa_ns1" EntityType="Self.kit_elisa_ns1" />
+    <EntitySet Name="kit_elisa_rotavirus" EntityType="Self.kit_elisa_rotaviru" />
+    <EntitySet Name="kit_elisa_vihs" EntityType="Self.kit_elisa_vih" />
+    <EntitySet Name="laboratoristas" EntityType="Self.laboratorista" />
+    <EntitySet Name="ns1" EntityType="Self.ns1" />
+    <EntitySet Name="proch20" EntityType="Self.proch20" />
+    <EntitySet Name="reactivos_ns1" EntityType="Self.reactivos_ns1" />
+    <EntitySet Name="reactivos_rotavirus" EntityType="Self.reactivos_rotaviru" />
+    <EntitySet Name="reactivos_vihs" EntityType="Self.reactivos_vih" />
+    <EntitySet Name="reactivos_bei" EntityType="Self.reactivos_bei" />
+    <EntitySet Name="reactivos_bob" EntityType="Self.reactivos_bob" />
+    <EntitySet Name="rotavirus" EntityType="Self.rotaviru" />
+    <EntitySet Name="tipobloqueos" EntityType="Self.tipobloqueo" />
+    <EntitySet Name="tipodiluyentes" EntityType="Self.tipodiluyente" />
+    <EntitySet Name="usuarios" EntityType="Self.usuario" />
+    <EntitySet Name="vihs" EntityType="Self.vih" />
+    <EntitySet Name="zika1d" EntityType="Self.zika1d" />
+    <EntitySet Name="zika1ddup" EntityType="Self.zika1ddup" />
+    <EntitySet Name="zikabobs" EntityType="Self.zikabob" />
+    <EntitySet Name="zikabobanuals" EntityType="Self.zikabobanual" />
+    <EntitySet Name="zikabobanualdups" EntityType="Self.zikabobanualdup" />
+    <EntitySet Name="zikaigms" EntityType="Self.zikaigm" />
+    <EntitySet Name="zikaigmbeis" EntityType="Self.zikaigmbei" />
+    <EntitySet Name="zikarmanuals" EntityType="Self.zikarmanual" />
+    <EntitySet Name="zikarmanualdups" EntityType="Self.zikarmanualdup" />
+    <EntitySet Name="datosprotocolochiks" EntityType="Self.datosprotocolochik" />
+    <EntitySet Name="datosprotocolochikhipers" EntityType="Self.datosprotocolochikhiper" />
+    <EntitySet Name="datosprotocolochikmonoes" EntityType="Self.datosprotocolochikmono" />
+    <EntitySet Name="datosprotocoloeis" EntityType="Self.datosprotocoloei" />
+    <EntitySet Name="datosprotocoloeiensayos" EntityType="Self.datosprotocoloeiensayo" />
+    <EntitySet Name="datosprotocoloeizikas" EntityType="Self.datosprotocoloeizika" />
+    <EntitySet Name="datosprotocoloiggs" EntityType="Self.datosprotocoloigg" />
+    <EntitySet Name="datosprotocoloigms" EntityType="Self.datosprotocoloigm" />
+    <EntitySet Name="datosprotocoloigmzikas" EntityType="Self.datosprotocoloigmzika" />
+    <EntitySet Name="datosprotocolozikabobs" EntityType="Self.datosprotocolozikabob" />
+    <EntitySet Name="datosprotocolozikaigmbeis" EntityType="Self.datosprotocolozikaigmbei" />
+    <AssociationSet Name="fk_NS1kit" Association="Self.fk_NS1kit">
+      <End Role="kit_elisa_ns1" EntitySet="kit_elisa_ns1" />
+      <End Role="ns1" EntitySet="ns1" />
+    </AssociationSet>
+    <AssociationSet Name="fk_reactivoskit" Association="Self.fk_reactivoskit">
+      <End Role="kit_elisa_ns1" EntitySet="kit_elisa_ns1" />
+      <End Role="reactivos_ns1" EntitySet="reactivos_ns1" />
+    </AssociationSet>
+    <AssociationSet Name="fk_reactivosRotakit" Association="Self.fk_reactivosRotakit">
+      <End Role="kit_elisa_rotavirus" EntitySet="kit_elisa_rotavirus" />
+      <End Role="reactivos_rotavirus" EntitySet="reactivos_rotavirus" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rotaviruskit" Association="Self.fk_Rotaviruskit">
+      <End Role="kit_elisa_rotavirus" EntitySet="kit_elisa_rotavirus" />
+      <End Role="rotavirus" EntitySet="rotavirus" />
+    </AssociationSet>
+    <AssociationSet Name="fk_reactivosVIHkit" Association="Self.fk_reactivosVIHkit">
+      <End Role="kit_elisa_vih" EntitySet="kit_elisa_vihs" />
+      <End Role="reactivos_vih" EntitySet="reactivos_vihs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_VIHkit" Association="Self.fk_VIHkit">
+      <End Role="kit_elisa_vih" EntitySet="kit_elisa_vihs" />
+      <End Role="vih" EntitySet="vihs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

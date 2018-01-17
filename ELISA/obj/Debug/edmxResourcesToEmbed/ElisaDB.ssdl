@@ -1,0 +1,2500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="elisaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chikungunyainhhiper">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="chikungunyainhmono">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="componentesns1">
+    <Key>
+      <PropertyRef Name="idComponente" />
+    </Key>
+    <Property Name="idComponente" Type="int" Nullable="false" />
+    <Property Name="Componente_Desc" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="componentesrotavirus">
+    <Key>
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="Componente" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Componente_Desc" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="componentesvih">
+    <Key>
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="Componente" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Componente_Desc" Type="varchar" MaxLength="50" />
+    <Property Name="Vironostika" Type="bool" />
+    <Property Name="Adaltis" Type="bool" />
+  </EntityType>
+  <EntityType Name="controles ns1">
+    <Key>
+      <PropertyRef Name="CodControl" />
+    </Key>
+    <Property Name="CodControl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TipoControl" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="controles rotavirus">
+    <Key>
+      <PropertyRef Name="CodControl" />
+    </Key>
+    <Property Name="CodControl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TipoControl" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="controles vih">
+    <Key>
+      <PropertyRef Name="CodControl" />
+    </Key>
+    <Property Name="CodControl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TipoControl" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocolochik' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocolochik">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteIgM" />
+      <PropertyRef Name="LoteAntigenoViral" />
+      <PropertyRef Name="LoteAntigenoNormal" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteIgM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigenoViral" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigenoNormal" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tecnica" Type="varchar" MaxLength="25" />
+    <Property Name="LimCPI" Type="float" />
+    <Property Name="LimCPS" Type="float" />
+    <Property Name="LimCNI" Type="float" />
+    <Property Name="LimCNS" Type="float" />
+    <Property Name="FVC" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocolochikhiper' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocolochikhiper">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocolochikmono' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocolochikmono">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocoloei' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocoloei">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocoloeiensayos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocoloeiensayos">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteEI" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocoloeizika' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocoloeizika">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocoloigg">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="ControlNegSal" />
+      <PropertyRef Name="LoteIgG" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="ControlNegSalLI" />
+      <PropertyRef Name="ControlNegSalLS" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegSal" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteIgG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="ControlNegSalLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegSalLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocoloigm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocoloigm">
+    <Key>
+      <PropertyRef Name="ControlPosA" />
+      <PropertyRef Name="ControlPosB" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="ControlRadPos" />
+      <PropertyRef Name="ControlRadNeg" />
+      <PropertyRef Name="LoteIgM" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="ControlPosRadLI" />
+      <PropertyRef Name="ControlPosRadLS" />
+      <PropertyRef Name="ControlNegRadLI" />
+      <PropertyRef Name="ControlNegRadLS" />
+    </Key>
+    <Property Name="ControlPosA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlPosB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteIgM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="ControlPosRadLI" Type="float" Nullable="false" />
+    <Property Name="ControlPosRadLS" Type="float" Nullable="false" />
+    <Property Name="ControlNegRadLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegRadLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocoloigmzika' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocoloigmzika">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="ControlRadPos" />
+      <PropertyRef Name="ControlRadNeg" />
+      <PropertyRef Name="LoteIgM" />
+      <PropertyRef Name="LoteAntigeno" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="Factor" />
+      <PropertyRef Name="Factor2" />
+      <PropertyRef Name="ControlPosLI" />
+      <PropertyRef Name="ControlPosLS" />
+      <PropertyRef Name="ControlNegLI" />
+      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="ControlPosRadLI" />
+      <PropertyRef Name="ControlPosRadLS" />
+      <PropertyRef Name="ControlNegRadLI" />
+      <PropertyRef Name="ControlNegRadLS" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteIgM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="fechafijIGM" Type="datetime" Precision="0" />
+    <Property Name="VolUsadoIGM" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Factor" Type="float" Nullable="false" />
+    <Property Name="Factor2" Type="float" Nullable="false" />
+    <Property Name="ControlPosLI" Type="float" Nullable="false" />
+    <Property Name="ControlPosLS" Type="float" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="ControlPosRadLI" Type="float" Nullable="false" />
+    <Property Name="ControlPosRadLS" Type="float" Nullable="false" />
+    <Property Name="ControlNegRadLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegRadLS" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolons1">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TIMES" Type="float" />
+    <Property Name="CalFactor" Type="float" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="ControlPosLI" Type="float" Nullable="false" />
+    <Property Name="ControlPosLS" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolorotavirus">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TIMES" Type="float" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="ControlPosLI" Type="float" Nullable="false" />
+    <Property Name="ControlPosLS" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datosprotocolovih">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TIMES" Type="float" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNegLI" Type="float" Nullable="false" />
+    <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="ControlPosLI" Type="float" Nullable="false" />
+    <Property Name="ControlPosLS" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocolozikabob' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocolozikabob">
+    <Key>
+      <PropertyRef Name="Substrato" />
+    </Key>
+    <Property Name="ControlMax" Type="varchar" MaxLength="10" />
+    <Property Name="ControlMin" Type="varchar" MaxLength="10" />
+    <Property Name="NS1" Type="varchar" MaxLength="10" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PBS" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="CodSustBloqueo" Type="varchar" MaxLength="25" />
+    <Property Name="ZKA" Type="varchar" MaxLength="10" />
+    <Property Name="SFA" Type="varchar" MaxLength="10" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="datosprotocolozikaigmbei">
+    <Key>
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="AntiIgM" />
+      <PropertyRef Name="LoteAntigenoViral" />
+      <PropertyRef Name="LoteAntigenoNormal" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="STOP" />
+    </Key>
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="AntiIgM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijIGM" Type="datetime" Precision="0" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PBS" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="CodSustBloqueo" Type="varchar" MaxLength="25" />
+    <Property Name="LoteAntigenoViral" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="LoteAntigenoNormal" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TipoDiluyente" Type="varchar" MaxLength="25" />
+    <Property Name="CodDiluyente" Type="varchar" MaxLength="25" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="elisaigg">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="m3men" Type="float" />
+    <Property Name="Unidades" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="3" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNegSal" Type="varchar" MaxLength="10" />
+    <Property Name="LoteIgG" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="elisaiggrepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="m3men" Type="float" />
+    <Property Name="Unidades" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="3" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNegSal" Type="varchar" MaxLength="10" />
+    <Property Name="LoteIgG" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="elisaigm">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="Unidades" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPosA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlPosB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteIgM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="User" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+  </EntityType>
+  <EntityType Name="elisainh">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="elisainh1d">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="APROB" Type="bool" />
+    <Property Name="NuevoRes" Type="varchar" MaxLength="1" />
+    <Property Name="NVC" Type="float" />
+  </EntityType>
+  <EntityType Name="elisainh1dchik">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="APROB" Type="bool" />
+    <Property Name="NuevoRes" Type="varchar" MaxLength="1" />
+    <Property Name="NVC" Type="float" />
+  </EntityType>
+  <EntityType Name="elisainh1dchikrepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="NVC" Type="float" />
+    <Property Name="NuevoRes" Type="varchar" MaxLength="10" />
+    <Property Name="NVC1" Type="float" />
+  </EntityType>
+  <EntityType Name="elisainh1dchiksero">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="APROB" Type="bool" />
+    <Property Name="NuevoRes" Type="varchar" MaxLength="1" />
+    <Property Name="NVC" Type="float" />
+  </EntityType>
+  <EntityType Name="elisainh1dchikserorepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="NVC" Type="float" />
+    <Property Name="NuevoRes" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="elisainh1drepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="NVC" Type="float" />
+    <Property Name="NuevoRes" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="elisainhrm">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="elisainhrmchik">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="elisainhrmchikrepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="elisainhrmchiksero">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="elisainhrmchikserorepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="elisainhrmrepeticiones">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="elisainhtmp">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="elisainhzika">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="ensayos">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="estudios">
+    <Key>
+      <PropertyRef Name="Estudio" />
+    </Key>
+    <Property Name="Estudio" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kit elisa ns1">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lote" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CasaComercial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Metodo" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kit elisa rotavirus">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lote" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CasaComercial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Metodo" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kit elisa vih">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lote" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CasaComercial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Metodo" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="laboratoristas">
+    <Key>
+      <PropertyRef Name="Cod" />
+    </Key>
+    <Property Name="Cod" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ns1">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="Unidades" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Concen" Type="varchar" MaxLength="15" />
+    <Property Name="Resultado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="CodigoKit" Type="varchar" MaxLength="15" />
+    <Property Name="CalFactor" Type="float" />
+    <Property Name="TIMES" Type="utinyint" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="User" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+  </EntityType>
+  <EntityType Name="proch20">
+    <Key>
+      <PropertyRef Name="ProcH20" />
+    </Key>
+    <Property Name="ProcH20" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reactivos ns1">
+    <Key>
+      <PropertyRef Name="CodigoKit" />
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="CodigoKit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Componente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodigoC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lote" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="reactivos rotavirus">
+    <Key>
+      <PropertyRef Name="CodigoKit" />
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="CodigoKit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Componente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodigoC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lote" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="reactivos vih">
+    <Key>
+      <PropertyRef Name="CodigoKit" />
+      <PropertyRef Name="Componente" />
+    </Key>
+    <Property Name="CodigoKit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Componente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodigoC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Lote" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="reactivos_bei">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Tipo" />
+      <PropertyRef Name="Lote" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Tipo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Lote" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CasaComercial" Type="varchar" MaxLength="100" />
+    <Property Name="Titulo" Type="varchar" MaxLength="100" />
+    <Property Name="Concentracion" Type="varchar" MaxLength="100" />
+    <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" />
+    <Property Name="Fecha_Inicio" Type="datetime" Precision="0" />
+    <Property Name="Fecha_Finalizacion" Type="datetime" Precision="0" />
+    <Property Name="Oservaciones" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="reactivos_bob">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Tipo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Tipo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CasaComercial" Type="varchar" MaxLength="100" />
+    <Property Name="Lote" Type="varchar" MaxLength="100" />
+    <Property Name="Titulo" Type="varchar" MaxLength="100" />
+    <Property Name="Concentracion" Type="varchar" MaxLength="100" />
+    <Property Name="Concentracion_Uso" Type="varchar" MaxLength="100" />
+    <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" />
+    <Property Name="Fecha_Fijacion" Type="datetime" Precision="0" />
+    <Property Name="Fecha_Inicio" Type="datetime" Precision="0" />
+    <Property Name="Fecha_Finalizacion" Type="datetime" Precision="0" />
+    <Property Name="Oservaciones" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="rotavirus">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="ControlMuestra" Type="bool" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="CodigoKit" Type="varchar" MaxLength="15" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TIMES" Type="utinyint" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="User" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+  </EntityType>
+  <EntityType Name="tipobloqueo">
+    <Key>
+      <PropertyRef Name="TipoBloqueo" />
+    </Key>
+    <Property Name="TipoBloqueo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tipodiluyente">
+    <Key>
+      <PropertyRef Name="TipoDiluyente" />
+    </Key>
+    <Property Name="TipoDiluyente" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pass" Type="blob" />
+    <Property Name="rol" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vih">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CodigoKit" Type="varchar" MaxLength="15" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="TIMES" Type="utinyint" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="zika1d">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="zika1ddup">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="zikabob">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="BOBP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlMax" Type="varchar" MaxLength="10" />
+    <Property Name="ControlMin" Type="varchar" MaxLength="10" />
+    <Property Name="NS1" Type="varchar" MaxLength="10" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PBS" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="CodSustBloqueo" Type="varchar" MaxLength="25" />
+    <Property Name="ZKA" Type="varchar" MaxLength="10" />
+    <Property Name="SFA" Type="varchar" MaxLength="10" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="APROB" Type="bool" />
+  </EntityType>
+  <EntityType Name="zikabobanual">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="BOBP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlMax" Type="varchar" MaxLength="10" />
+    <Property Name="ControlMin" Type="varchar" MaxLength="10" />
+    <Property Name="NS1" Type="varchar" MaxLength="10" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PBS" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="CodSustBloqueo" Type="varchar" MaxLength="25" />
+    <Property Name="ZKA" Type="varchar" MaxLength="10" />
+    <Property Name="SFA" Type="varchar" MaxLength="10" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="APROB" Type="bool" />
+  </EntityType>
+  <EntityType Name="zikabobanualdup">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="BOBP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ControlMax" Type="varchar" MaxLength="10" />
+    <Property Name="ControlMin" Type="varchar" MaxLength="10" />
+    <Property Name="NS1" Type="varchar" MaxLength="10" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PBS" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="CodSustBloqueo" Type="varchar" MaxLength="25" />
+    <Property Name="ZKA" Type="varchar" MaxLength="10" />
+    <Property Name="SFA" Type="varchar" MaxLength="10" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="APROB" Type="bool" />
+  </EntityType>
+  <EntityType Name="zikaigm">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="Unidades" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="Resultado2" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="VC2" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteIgM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="fechafijIGM" Type="datetime" Precision="0" />
+    <Property Name="VolUsadoIGM" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Factor" Type="float" Nullable="false" />
+    <Property Name="Factor2" Type="float" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="User" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+  </EntityType>
+  <EntityType Name="zikaigmbei">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="TipoAg" Type="varchar" MaxLength="5" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="DDO" Type="float" Nullable="false" />
+    <Property Name="Resultado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="AntiIgM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijIGM" Type="datetime" Precision="0" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PBS" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="CodSustBloqueo" Type="varchar" MaxLength="25" />
+    <Property Name="LoteAntigenoViral" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="LoteAntigenoNormal" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TipoDiluyente" Type="varchar" MaxLength="25" />
+    <Property Name="CodDiluyente" Type="varchar" MaxLength="25" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="User" Type="varchar" MaxLength="3" />
+    <Property Name="Tras" Type="bool" />
+  </EntityType>
+  <EntityType Name="zikarmanual">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <EntityType Name="zikarmanualdup">
+    <Key>
+      <PropertyRef Name="Cod_Pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+    </Key>
+    <Property Name="Cod_Pozo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="posicion" Type="utinyint" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Lectura" Type="float" Nullable="false" />
+    <Property Name="INHP" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Dilucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VC" Type="float" Nullable="false" />
+    <Property Name="ControlPos" Type="varchar" MaxLength="10" />
+    <Property Name="ControlNeg" Type="varchar" MaxLength="10" />
+    <Property Name="LoteEI" Type="varchar" MaxLength="10" />
+    <Property Name="LoteAntigeno" Type="varchar" MaxLength="10" />
+    <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechafijGG" Type="datetime" Precision="0" />
+    <Property Name="VolUsado" Type="float" />
+    <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+    <Property Name="TipoEstudio" Type="varchar" MaxLength="50" />
+    <Property Name="Coatting" Type="varchar" MaxLength="50" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="TB" Type="varchar" MaxLength="50" />
+    <Property Name="FB" Type="datetime" Precision="0" />
+    <Property Name="TMPB" Type="utinyint" />
+    <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+    <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TSubstrato" Type="float" />
+    <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Valido" Type="bool" />
+    <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Lab2" Type="varchar" MaxLength="3" />
+    <Property Name="act" Type="bool" />
+    <Property Name="Tras" Type="bool" />
+    <Property Name="cambio" Type="varchar" MaxLength="1" />
+    <Property Name="repetir" Type="varchar" MaxLength="1" />
+    <Property Name="user" Type="varchar" MaxLength="3" />
+    <Property Name="contaux" Type="int" />
+  </EntityType>
+  <Association Name="fk_NS1kit">
+    <End Role="kit elisa ns1" Type="Self.kit elisa ns1" Multiplicity="0..1" />
+    <End Role="ns1" Type="Self.ns1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit elisa ns1">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="ns1">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_reactivoskit">
+    <End Role="kit elisa ns1" Type="Self.kit elisa ns1" Multiplicity="1" />
+    <End Role="reactivos ns1" Type="Self.reactivos ns1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit elisa ns1">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="reactivos ns1">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_reactivosRotakit">
+    <End Role="kit elisa rotavirus" Type="Self.kit elisa rotavirus" Multiplicity="1" />
+    <End Role="reactivos rotavirus" Type="Self.reactivos rotavirus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit elisa rotavirus">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="reactivos rotavirus">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_reactivosVIHkit">
+    <End Role="kit elisa vih" Type="Self.kit elisa vih" Multiplicity="1" />
+    <End Role="reactivos vih" Type="Self.reactivos vih" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit elisa vih">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="reactivos vih">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rotaviruskit">
+    <End Role="kit elisa rotavirus" Type="Self.kit elisa rotavirus" Multiplicity="0..1" />
+    <End Role="rotavirus" Type="Self.rotavirus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit elisa rotavirus">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="rotavirus">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_VIHkit">
+    <End Role="kit elisa vih" Type="Self.kit elisa vih" Multiplicity="0..1" />
+    <End Role="vih" Type="Self.vih" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kit elisa vih">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="vih">
+        <PropertyRef Name="CodigoKit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="elisaModelStoreContainer">
+    <EntitySet Name="chikungunyainhhiper" EntityType="Self.chikungunyainhhiper" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="chikungunyainhmono" EntityType="Self.chikungunyainhmono" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="componentesns1" EntityType="Self.componentesns1" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="componentesrotavirus" EntityType="Self.componentesrotavirus" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="componentesvih" EntityType="Self.componentesvih" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="controles ns1" EntityType="Self.controles ns1" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="controles rotavirus" EntityType="Self.controles rotavirus" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="controles vih" EntityType="Self.controles vih" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotavirus" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="datosprotocolovih" EntityType="Self.datosprotocolovih" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisaigg" EntityType="Self.elisaigg" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisaiggrepeticiones" EntityType="Self.elisaiggrepeticiones" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisaigm" EntityType="Self.elisaigm" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainh" EntityType="Self.elisainh" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainh1d" EntityType="Self.elisainh1d" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainh1dchik" EntityType="Self.elisainh1dchik" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainh1dchikrepeticiones" EntityType="Self.elisainh1dchikrepeticiones" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainh1dchiksero" EntityType="Self.elisainh1dchiksero" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainh1dchikserorepeticiones" EntityType="Self.elisainh1dchikserorepeticiones" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainh1drepeticiones" EntityType="Self.elisainh1drepeticiones" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhrm" EntityType="Self.elisainhrm" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhrmchik" EntityType="Self.elisainhrmchik" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhrmchikrepeticiones" EntityType="Self.elisainhrmchikrepeticiones" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhrmchiksero" EntityType="Self.elisainhrmchiksero" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhrmchikserorepeticiones" EntityType="Self.elisainhrmchikserorepeticiones" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhrmrepeticiones" EntityType="Self.elisainhrmrepeticiones" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhtmp" EntityType="Self.elisainhtmp" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="elisainhzika" EntityType="Self.elisainhzika" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="ensayos" EntityType="Self.ensayos" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="estudios" EntityType="Self.estudios" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="kit elisa ns1" EntityType="Self.kit elisa ns1" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="kit elisa rotavirus" EntityType="Self.kit elisa rotavirus" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="kit elisa vih" EntityType="Self.kit elisa vih" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="laboratoristas" EntityType="Self.laboratoristas" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="ns1" EntityType="Self.ns1" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="proch20" EntityType="Self.proch20" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="reactivos ns1" EntityType="Self.reactivos ns1" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="reactivos rotavirus" EntityType="Self.reactivos rotavirus" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="reactivos vih" EntityType="Self.reactivos vih" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="reactivos_bei" EntityType="Self.reactivos_bei" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="reactivos_bob" EntityType="Self.reactivos_bob" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="rotavirus" EntityType="Self.rotavirus" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="tipobloqueo" EntityType="Self.tipobloqueo" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="tipodiluyente" EntityType="Self.tipodiluyente" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="vih" EntityType="Self.vih" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zika1d" EntityType="Self.zika1d" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zika1ddup" EntityType="Self.zika1ddup" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zikabob" EntityType="Self.zikabob" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zikabobanual" EntityType="Self.zikabobanual" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zikabobanualdup" EntityType="Self.zikabobanualdup" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zikaigm" EntityType="Self.zikaigm" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zikaigmbei" EntityType="Self.zikaigmbei" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zikarmanual" EntityType="Self.zikarmanual" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="zikarmanualdup" EntityType="Self.zikarmanualdup" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="datosprotocolochik" EntityType="Self.datosprotocolochik" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocolochik`.`ControlPos`, 
+`datosprotocolochik`.`ControlNeg`, 
+`datosprotocolochik`.`LoteIgM`, 
+`datosprotocolochik`.`LoteAntigenoViral`, 
+`datosprotocolochik`.`LoteAntigenoNormal`, 
+`datosprotocolochik`.`GGLOB`, 
+`datosprotocolochik`.`fechafijGG`, 
+`datosprotocolochik`.`VolUsado`, 
+`datosprotocolochik`.`ProcH2O`, 
+`datosprotocolochik`.`Coatting`, 
+`datosprotocolochik`.`PB`, 
+`datosprotocolochik`.`TB`, 
+`datosprotocolochik`.`FB`, 
+`datosprotocolochik`.`TMPB`, 
+`datosprotocolochik`.`TIMEB`, 
+`datosprotocolochik`.`Conjugado`, 
+`datosprotocolochik`.`Substrato`, 
+`datosprotocolochik`.`TSubstrato`, 
+`datosprotocolochik`.`SHN`, 
+`datosprotocolochik`.`STOP`, 
+`datosprotocolochik`.`Tecnica`, 
+`datosprotocolochik`.`LimCPI`, 
+`datosprotocolochik`.`LimCPS`, 
+`datosprotocolochik`.`LimCNI`, 
+`datosprotocolochik`.`LimCNS`, 
+`datosprotocolochik`.`FVC`
+FROM `datosprotocolochik` AS `datosprotocolochik`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocolochikhiper" EntityType="Self.datosprotocolochikhiper" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocolochikhiper`.`ControlPos`, 
+`datosprotocolochikhiper`.`ControlNeg`, 
+`datosprotocolochikhiper`.`LoteEI`, 
+`datosprotocolochikhiper`.`LoteAntigeno`, 
+`datosprotocolochikhiper`.`GGLOB`, 
+`datosprotocolochikhiper`.`fechafijGG`, 
+`datosprotocolochikhiper`.`VolUsado`, 
+`datosprotocolochikhiper`.`ProcH2O`, 
+`datosprotocolochikhiper`.`TipoEstudio`, 
+`datosprotocolochikhiper`.`Coatting`, 
+`datosprotocolochikhiper`.`PB`, 
+`datosprotocolochikhiper`.`TB`, 
+`datosprotocolochikhiper`.`FB`, 
+`datosprotocolochikhiper`.`TMPB`, 
+`datosprotocolochikhiper`.`TIMEB`, 
+`datosprotocolochikhiper`.`Conjugado`, 
+`datosprotocolochikhiper`.`Substrato`, 
+`datosprotocolochikhiper`.`TSubstrato`, 
+`datosprotocolochikhiper`.`SHN`, 
+`datosprotocolochikhiper`.`STOP`, 
+`datosprotocolochikhiper`.`ControlNegLI`, 
+`datosprotocolochikhiper`.`ControlNegLS`
+FROM `datosprotocolochikhiper` AS `datosprotocolochikhiper`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocolochikmono" EntityType="Self.datosprotocolochikmono" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocolochikmono`.`ControlPos`, 
+`datosprotocolochikmono`.`ControlNeg`, 
+`datosprotocolochikmono`.`LoteEI`, 
+`datosprotocolochikmono`.`LoteAntigeno`, 
+`datosprotocolochikmono`.`GGLOB`, 
+`datosprotocolochikmono`.`fechafijGG`, 
+`datosprotocolochikmono`.`VolUsado`, 
+`datosprotocolochikmono`.`ProcH2O`, 
+`datosprotocolochikmono`.`TipoEstudio`, 
+`datosprotocolochikmono`.`Coatting`, 
+`datosprotocolochikmono`.`PB`, 
+`datosprotocolochikmono`.`TB`, 
+`datosprotocolochikmono`.`FB`, 
+`datosprotocolochikmono`.`TMPB`, 
+`datosprotocolochikmono`.`TIMEB`, 
+`datosprotocolochikmono`.`Conjugado`, 
+`datosprotocolochikmono`.`Substrato`, 
+`datosprotocolochikmono`.`TSubstrato`, 
+`datosprotocolochikmono`.`SHN`, 
+`datosprotocolochikmono`.`STOP`, 
+`datosprotocolochikmono`.`ControlNegLI`, 
+`datosprotocolochikmono`.`ControlNegLS`
+FROM `datosprotocolochikmono` AS `datosprotocolochikmono`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocoloei" EntityType="Self.datosprotocoloei" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocoloei`.`ControlPos`, 
+`datosprotocoloei`.`ControlNeg`, 
+`datosprotocoloei`.`LoteEI`, 
+`datosprotocoloei`.`LoteAntigeno`, 
+`datosprotocoloei`.`GGLOB`, 
+`datosprotocoloei`.`fechafijGG`, 
+`datosprotocoloei`.`VolUsado`, 
+`datosprotocoloei`.`ProcH2O`, 
+`datosprotocoloei`.`TipoEstudio`, 
+`datosprotocoloei`.`Coatting`, 
+`datosprotocoloei`.`PB`, 
+`datosprotocoloei`.`TB`, 
+`datosprotocoloei`.`FB`, 
+`datosprotocoloei`.`TMPB`, 
+`datosprotocoloei`.`TIMEB`, 
+`datosprotocoloei`.`Conjugado`, 
+`datosprotocoloei`.`Substrato`, 
+`datosprotocoloei`.`TSubstrato`, 
+`datosprotocoloei`.`SHN`, 
+`datosprotocoloei`.`STOP`, 
+`datosprotocoloei`.`ControlNegLI`, 
+`datosprotocoloei`.`ControlNegLS`
+FROM `datosprotocoloei` AS `datosprotocoloei`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocoloeiensayos" EntityType="Self.datosprotocoloeiensayos" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocoloeiensayos`.`ControlPos`, 
+`datosprotocoloeiensayos`.`ControlNeg`, 
+`datosprotocoloeiensayos`.`LoteEI`, 
+`datosprotocoloeiensayos`.`LoteAntigeno`, 
+`datosprotocoloeiensayos`.`GGLOB`, 
+`datosprotocoloeiensayos`.`fechafijGG`, 
+`datosprotocoloeiensayos`.`VolUsado`, 
+`datosprotocoloeiensayos`.`ProcH2O`, 
+`datosprotocoloeiensayos`.`TipoEstudio`, 
+`datosprotocoloeiensayos`.`Coatting`, 
+`datosprotocoloeiensayos`.`PB`, 
+`datosprotocoloeiensayos`.`TB`, 
+`datosprotocoloeiensayos`.`FB`, 
+`datosprotocoloeiensayos`.`TMPB`, 
+`datosprotocoloeiensayos`.`TIMEB`, 
+`datosprotocoloeiensayos`.`Conjugado`, 
+`datosprotocoloeiensayos`.`Substrato`, 
+`datosprotocoloeiensayos`.`TSubstrato`, 
+`datosprotocoloeiensayos`.`SHN`, 
+`datosprotocoloeiensayos`.`STOP`, 
+`datosprotocoloeiensayos`.`ControlNegLI`, 
+`datosprotocoloeiensayos`.`ControlNegLS`
+FROM `datosprotocoloeiensayos` AS `datosprotocoloeiensayos`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocoloeizika" EntityType="Self.datosprotocoloeizika" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocoloeizika`.`ControlPos`, 
+`datosprotocoloeizika`.`ControlNeg`, 
+`datosprotocoloeizika`.`LoteAntigeno`, 
+`datosprotocoloeizika`.`GGLOB`, 
+`datosprotocoloeizika`.`fechafijGG`, 
+`datosprotocoloeizika`.`VolUsado`, 
+`datosprotocoloeizika`.`ProcH2O`, 
+`datosprotocoloeizika`.`TipoEstudio`, 
+`datosprotocoloeizika`.`Coatting`, 
+`datosprotocoloeizika`.`PB`, 
+`datosprotocoloeizika`.`TB`, 
+`datosprotocoloeizika`.`FB`, 
+`datosprotocoloeizika`.`TMPB`, 
+`datosprotocoloeizika`.`TIMEB`, 
+`datosprotocoloeizika`.`Conjugado`, 
+`datosprotocoloeizika`.`Substrato`, 
+`datosprotocoloeizika`.`TSubstrato`, 
+`datosprotocoloeizika`.`SHN`, 
+`datosprotocoloeizika`.`STOP`, 
+`datosprotocoloeizika`.`ControlNegLI`, 
+`datosprotocoloeizika`.`ControlNegLS`
+FROM `datosprotocoloeizika` AS `datosprotocoloeizika`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocoloigg" EntityType="Self.datosprotocoloigg" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocoloigg`.`ControlPos`, 
+`datosprotocoloigg`.`ControlNeg`, 
+`datosprotocoloigg`.`ControlNegSal`, 
+`datosprotocoloigg`.`LoteIgG`, 
+`datosprotocoloigg`.`LoteAntigeno`, 
+`datosprotocoloigg`.`GGLOB`, 
+`datosprotocoloigg`.`fechafijGG`, 
+`datosprotocoloigg`.`VolUsado`, 
+`datosprotocoloigg`.`ProcH2O`, 
+`datosprotocoloigg`.`TipoEstudio`, 
+`datosprotocoloigg`.`Coatting`, 
+`datosprotocoloigg`.`PB`, 
+`datosprotocoloigg`.`TB`, 
+`datosprotocoloigg`.`FB`, 
+`datosprotocoloigg`.`TMPB`, 
+`datosprotocoloigg`.`TIMEB`, 
+`datosprotocoloigg`.`Conjugado`, 
+`datosprotocoloigg`.`Substrato`, 
+`datosprotocoloigg`.`TSubstrato`, 
+`datosprotocoloigg`.`SHN`, 
+`datosprotocoloigg`.`STOP`, 
+`datosprotocoloigg`.`ControlNegLI`, 
+`datosprotocoloigg`.`ControlNegLS`, 
+`datosprotocoloigg`.`ControlNegSalLI`, 
+`datosprotocoloigg`.`ControlNegSalLS`
+FROM `datosprotocoloigg` AS `datosprotocoloigg`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocoloigm" EntityType="Self.datosprotocoloigm" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocoloigm`.`ControlPosA`, 
+`datosprotocoloigm`.`ControlPosB`, 
+`datosprotocoloigm`.`ControlNeg`, 
+`datosprotocoloigm`.`ControlRadPos`, 
+`datosprotocoloigm`.`ControlRadNeg`, 
+`datosprotocoloigm`.`LoteIgM`, 
+`datosprotocoloigm`.`LoteAntigeno`, 
+`datosprotocoloigm`.`GGLOB`, 
+`datosprotocoloigm`.`fechafijGG`, 
+`datosprotocoloigm`.`VolUsado`, 
+`datosprotocoloigm`.`ProcH2O`, 
+`datosprotocoloigm`.`TipoEstudio`, 
+`datosprotocoloigm`.`Coatting`, 
+`datosprotocoloigm`.`PB`, 
+`datosprotocoloigm`.`TB`, 
+`datosprotocoloigm`.`FB`, 
+`datosprotocoloigm`.`TMPB`, 
+`datosprotocoloigm`.`TIMEB`, 
+`datosprotocoloigm`.`Conjugado`, 
+`datosprotocoloigm`.`Substrato`, 
+`datosprotocoloigm`.`TSubstrato`, 
+`datosprotocoloigm`.`SHN`, 
+`datosprotocoloigm`.`STOP`, 
+`datosprotocoloigm`.`ControlNegLI`, 
+`datosprotocoloigm`.`ControlNegLS`, 
+`datosprotocoloigm`.`ControlPosRadLI`, 
+`datosprotocoloigm`.`ControlPosRadLS`, 
+`datosprotocoloigm`.`ControlNegRadLI`, 
+`datosprotocoloigm`.`ControlNegRadLS`
+FROM `datosprotocoloigm` AS `datosprotocoloigm`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocoloigmzika" EntityType="Self.datosprotocoloigmzika" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocoloigmzika`.`ControlPos`, 
+`datosprotocoloigmzika`.`ControlNeg`, 
+`datosprotocoloigmzika`.`ControlRadPos`, 
+`datosprotocoloigmzika`.`ControlRadNeg`, 
+`datosprotocoloigmzika`.`LoteIgM`, 
+`datosprotocoloigmzika`.`LoteAntigeno`, 
+`datosprotocoloigmzika`.`fechafijIGM`, 
+`datosprotocoloigmzika`.`VolUsadoIGM`, 
+`datosprotocoloigmzika`.`ProcH2O`, 
+`datosprotocoloigmzika`.`TipoEstudio`, 
+`datosprotocoloigmzika`.`Coatting`, 
+`datosprotocoloigmzika`.`PB`, 
+`datosprotocoloigmzika`.`TB`, 
+`datosprotocoloigmzika`.`FB`, 
+`datosprotocoloigmzika`.`TMPB`, 
+`datosprotocoloigmzika`.`TIMEB`, 
+`datosprotocoloigmzika`.`Conjugado`, 
+`datosprotocoloigmzika`.`Substrato`, 
+`datosprotocoloigmzika`.`TSubstrato`, 
+`datosprotocoloigmzika`.`SHN`, 
+`datosprotocoloigmzika`.`STOP`, 
+`datosprotocoloigmzika`.`Factor`, 
+`datosprotocoloigmzika`.`Factor2`, 
+`datosprotocoloigmzika`.`ControlPosLI`, 
+`datosprotocoloigmzika`.`ControlPosLS`, 
+`datosprotocoloigmzika`.`ControlNegLI`, 
+`datosprotocoloigmzika`.`ControlNegLS`, 
+`datosprotocoloigmzika`.`ControlPosRadLI`, 
+`datosprotocoloigmzika`.`ControlPosRadLS`, 
+`datosprotocoloigmzika`.`ControlNegRadLI`, 
+`datosprotocoloigmzika`.`ControlNegRadLS`
+FROM `datosprotocoloigmzika` AS `datosprotocoloigmzika`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocolozikabob" EntityType="Self.datosprotocolozikabob" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocolozikabob`.`ControlMax`, 
+`datosprotocolozikabob`.`ControlMin`, 
+`datosprotocolozikabob`.`NS1`, 
+`datosprotocolozikabob`.`TipoEstudio`, 
+`datosprotocolozikabob`.`Coatting`, 
+`datosprotocolozikabob`.`PBS`, 
+`datosprotocolozikabob`.`TB`, 
+`datosprotocolozikabob`.`CodSustBloqueo`, 
+`datosprotocolozikabob`.`ZKA`, 
+`datosprotocolozikabob`.`SFA`, 
+`datosprotocolozikabob`.`Substrato`, 
+`datosprotocolozikabob`.`TSubstrato`
+FROM `datosprotocolozikabob` AS `datosprotocolozikabob`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="datosprotocolozikaigmbei" EntityType="Self.datosprotocolozikaigmbei" store:Type="Tables" store:Schema="elisa">
+      <DefiningQuery>SELECT
+`datosprotocolozikaigmbei`.`ControlPos`, 
+`datosprotocolozikaigmbei`.`ControlNeg`, 
+`datosprotocolozikaigmbei`.`AntiIgM`, 
+`datosprotocolozikaigmbei`.`fechafijIGM`, 
+`datosprotocolozikaigmbei`.`TipoEstudio`, 
+`datosprotocolozikaigmbei`.`Coatting`, 
+`datosprotocolozikaigmbei`.`PBS`, 
+`datosprotocolozikaigmbei`.`TB`, 
+`datosprotocolozikaigmbei`.`CodSustBloqueo`, 
+`datosprotocolozikaigmbei`.`LoteAntigenoViral`, 
+`datosprotocolozikaigmbei`.`LoteAntigenoNormal`, 
+`datosprotocolozikaigmbei`.`Conjugado`, 
+`datosprotocolozikaigmbei`.`TipoDiluyente`, 
+`datosprotocolozikaigmbei`.`CodDiluyente`, 
+`datosprotocolozikaigmbei`.`Substrato`, 
+`datosprotocolozikaigmbei`.`STOP`
+FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="fk_NS1kit" Association="Self.fk_NS1kit">
+      <End Role="kit elisa ns1" EntitySet="kit elisa ns1" />
+      <End Role="ns1" EntitySet="ns1" />
+    </AssociationSet>
+    <AssociationSet Name="fk_reactivoskit" Association="Self.fk_reactivoskit">
+      <End Role="kit elisa ns1" EntitySet="kit elisa ns1" />
+      <End Role="reactivos ns1" EntitySet="reactivos ns1" />
+    </AssociationSet>
+    <AssociationSet Name="fk_reactivosRotakit" Association="Self.fk_reactivosRotakit">
+      <End Role="kit elisa rotavirus" EntitySet="kit elisa rotavirus" />
+      <End Role="reactivos rotavirus" EntitySet="reactivos rotavirus" />
+    </AssociationSet>
+    <AssociationSet Name="fk_reactivosVIHkit" Association="Self.fk_reactivosVIHkit">
+      <End Role="kit elisa vih" EntitySet="kit elisa vih" />
+      <End Role="reactivos vih" EntitySet="reactivos vih" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rotaviruskit" Association="Self.fk_Rotaviruskit">
+      <End Role="kit elisa rotavirus" EntitySet="kit elisa rotavirus" />
+      <End Role="rotavirus" EntitySet="rotavirus" />
+    </AssociationSet>
+    <AssociationSet Name="fk_VIHkit" Association="Self.fk_VIHkit">
+      <End Role="kit elisa vih" EntitySet="kit elisa vih" />
+      <End Role="vih" EntitySet="vih" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
