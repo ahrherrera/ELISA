@@ -54,14 +54,6 @@ namespace ELISA.UI
             timer.Stop();
         }
 
-        private void Login_Shown(object sender, EventArgs e)
-        {
-            //Realiza una tarea asincrona que manda a traer los nombres de usuarios
-            //y los llena en el combobox
-            fillCombo();
-            Utils.Log.logInfo("Ventana de autenticación Mostrada");
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             IniciarSesion();
@@ -101,10 +93,15 @@ namespace ELISA.UI
         {
             Environment.Exit(1);
         }
+        
 
-        private void masterPanel_Paint(object sender, PaintEventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-
+            // Realiza una tarea asincrona que manda a traer los nombres de usuarios
+            //y los llena en el combobox
+            txt_Password.Select();
+            fillCombo();
+            Utils.Log.logInfo("Ventana de autenticación Mostrada");
         }
     }
 }

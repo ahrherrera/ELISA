@@ -255,6 +255,7 @@
     <Compile Include="tipodiluyente.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Transaccion\LaboratoristasTrans.cs" />
     <Compile Include="Transaccion\UsuarioTrans.cs" />
     <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>

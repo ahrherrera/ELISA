@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_showPassword = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
             this.cmbUsuario = new MetroFramework.Controls.MetroComboBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.lbl_Error = new System.Windows.Forms.Label();
             this.masterPanel = new System.Windows.Forms.Panel();
-            this.txt_Password = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.masterPanel.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.lbl_userName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_userName.Location = new System.Drawing.Point(20, 44);
             this.lbl_userName.Name = "lbl_userName";
-            this.lbl_userName.Size = new System.Drawing.Size(118, 54);
+            this.lbl_userName.Size = new System.Drawing.Size(117, 54);
             this.lbl_userName.TabIndex = 2;
             this.lbl_userName.Text = "Nombre de Usuario :";
             this.lbl_userName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -57,7 +57,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 121);
+            this.label1.Location = new System.Drawing.Point(21, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 25);
             this.label1.TabIndex = 3;
@@ -68,9 +68,10 @@
             this.btn_showPassword.BackgroundImage = global::ELISA.Properties.Resources.if_icon_22_eye_315220;
             this.btn_showPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_showPassword.Location = new System.Drawing.Point(449, 110);
+            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_showPassword.Name = "btn_showPassword";
-            this.btn_showPassword.Size = new System.Drawing.Size(40, 40);
-            this.btn_showPassword.TabIndex = 4;
+            this.btn_showPassword.Size = new System.Drawing.Size(40, 39);
+            this.btn_showPassword.TabIndex = 6;
             this.btn_showPassword.UseVisualStyleBackColor = true;
             this.btn_showPassword.Click += new System.EventHandler(this.btn_showPassword_Click);
             // 
@@ -82,31 +83,45 @@
             this.groupBox1.Controls.Add(this.btn_showPassword);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 17);
+            this.groupBox1.Location = new System.Drawing.Point(22, 22);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(509, 194);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inicie Sesión";
+            // 
+            // txt_Password
+            // 
+            this.txt_Password.Location = new System.Drawing.Point(145, 116);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(297, 30);
+            this.txt_Password.TabIndex = 2;
+            this.txt_Password.UseSystemPasswordChar = true;
+            this.txt_Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Password_KeyPress);
             // 
             // cmbUsuario
             // 
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.ItemHeight = 24;
             this.cmbUsuario.Location = new System.Drawing.Point(145, 58);
+            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(298, 30);
+            this.cmbUsuario.Size = new System.Drawing.Size(297, 30);
             this.cmbUsuario.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cmbUsuario.TabIndex = 5;
+            this.cmbUsuario.TabIndex = 1;
             this.cmbUsuario.UseSelectable = true;
             // 
             // btn_Login
             // 
             this.btn_Login.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(414, 241);
+            this.btn_Login.Location = new System.Drawing.Point(413, 241);
+            this.btn_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(114, 32);
-            this.btn_Login.TabIndex = 2;
+            this.btn_Login.Size = new System.Drawing.Size(115, 32);
+            this.btn_Login.TabIndex = 3;
             this.btn_Login.Text = "Iniciar Sesión";
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.button1_Click);
@@ -114,10 +129,11 @@
             // btn_Cancel
             // 
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(302, 241);
+            this.btn_Cancel.Location = new System.Drawing.Point(301, 241);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(106, 32);
-            this.btn_Cancel.TabIndex = 7;
+            this.btn_Cancel.Size = new System.Drawing.Size(107, 32);
+            this.btn_Cancel.TabIndex = 4;
             this.btn_Cancel.Text = "Cancelar";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -143,17 +159,10 @@
             this.masterPanel.Controls.Add(this.btn_Cancel);
             this.masterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.masterPanel.Location = new System.Drawing.Point(0, 0);
+            this.masterPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.masterPanel.Name = "masterPanel";
             this.masterPanel.Size = new System.Drawing.Size(552, 300);
             this.masterPanel.TabIndex = 5;
-            this.masterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.masterPanel_Paint);
-            // 
-            // txt_Password
-            // 
-            this.txt_Password.Location = new System.Drawing.Point(145, 116);
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(298, 30);
-            this.txt_Password.TabIndex = 7;
             // 
             // Login
             // 
@@ -161,12 +170,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 300);
             this.Controls.Add(this.masterPanel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Login";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autenticación";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
-            this.Shown += new System.EventHandler(this.Login_Shown);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.masterPanel.ResumeLayout(false);
