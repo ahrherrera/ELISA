@@ -24,6 +24,8 @@ namespace ELISA.Transaccion
                     cmb.ValueMember = "Cod";
                     cmb.Invalidate();
                     ELISA.Utils.Log.logInfo("Lista de laboratorista cargado correctamente");
+                    cmb.SelectedItem = null;
+                    cmb.SelectedText = "";
                 }
             }
             catch (Exception ex)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace ELISA.UI
     public partial class Principal : Form
     {
         public static usuario user;
+        public string SelectedProtocol;
         public Principal(usuario logged)
         {
             InitializeComponent();
@@ -39,6 +41,32 @@ namespace ELISA.UI
             Log.logInfo("Ventana principal Cargada correctamente");
             fillCombobox();
             fillComboLab();
+            addCheckbox();
+            alignHeaders();
+            timerClock.Enabled = true;
+        }
+
+        private void alignHeaders()
+        {
+            dgv_Protocolo.Rows.Add(8);
+            int rowNumber = 0;
+            foreach (DataGridViewRow row in dgv_Protocolo.Rows)
+            {
+                if (row.IsNewRow) continue;
+                row.HeaderCell.Value = MainUtils.abc()[rowNumber];
+                rowNumber = rowNumber + 1;
+            }
+            dgv_Protocolo.AutoResizeRowHeadersWidth(
+                DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
+        }
+
+        private void addCheckbox()
+        {
+            CheckBox cb = new CheckBox();
+            cb.Text = "IgM";
+            cb.BackColor = Color.Transparent;
+            ToolStripControlHost host = new ToolStripControlHost(cb);
+            toolStrip1.Items.Insert(11, host);
         }
 
         private void fillComboLab()
@@ -98,10 +126,21 @@ namespace ELISA.UI
             RMList.Add("ZIKA RM Cohorte Anual Dup");
             cmb_RM.DataSource = RMList;
 
+            cmb_IgM.SelectedIndexChanged += cmb_Protocolo_SelectedIndexChanged;
+            cmb_EI.SelectedIndexChanged += cmb_Protocolo_SelectedIndexChanged;
+            cmb_BOB.SelectedIndexChanged += cmb_Protocolo_SelectedIndexChanged;
+            cmb_IgG.SelectedIndexChanged += cmb_Protocolo_SelectedIndexChanged;
+            cmb_1D.SelectedIndexChanged += cmb_Protocolo_SelectedIndexChanged;
+            cmb_RM.SelectedIndexChanged += cmb_Protocolo_SelectedIndexChanged;
+
+
             List<String> EquipoList = new List<string>();
             EquipoList.Add("MULTISKAN EX");
             EquipoList.Add("MULTISKAN FC");
             cmb_Equipo.ComboBox.DataSource = EquipoList;
+
+            rb_Rotavirus.Checked = true;
+            rb_IgM.Checked = true;
         }
 
         private void rb_CheckedChanged(object sender, EventArgs e)
@@ -110,7 +149,7 @@ namespace ELISA.UI
 
             if (send.Checked)
             {
-                //MessageBox.Show("Text: " + send.Text);
+                SelectedProtocol = send.Text;
                 if (send.Text.Contains("IgM"))
                 {
                     cmb_IgM.Enabled = true;
@@ -172,10 +211,97 @@ namespace ELISA.UI
                     cmb_IgG.Enabled = false;
                     cmb_1D.Enabled = false;
                     cmb_RM.Enabled = false;
+                    groupProtocol.Text = "Protocolo Rotavirus";
                 }
             }
-            
+        }
 
+        private void btnProtocolo_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(btnProtocolo, new Point(0, btnProtocolo.Height));
+        }
+
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            lbl_Time.Text = DateTime.Now.ToString("F",
+                CultureInfo.CreateSpecificCulture("es-MX"));
+        }
+
+        private void cmb_IgM_EnabledChanged(object sender, EventArgs e)
+        {
+            if (cmb_IgM.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_IgM.SelectedItem.ToString();
+            }
+        }
+
+        private void cmb_EI_EnabledChanged(object sender, EventArgs e)
+        {
+            if (cmb_EI.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_EI.SelectedItem.ToString();
+            }
+        }
+
+        private void cmb_BOB_EnabledChanged(object sender, EventArgs e)
+        {
+            if (cmb_BOB.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_BOB.SelectedItem.ToString();
+            }
+        }
+
+        private void cmb_IgG_EnabledChanged(object sender, EventArgs e)
+        {
+            if (cmb_IgG.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_IgG.SelectedItem.ToString();
+            }
+        }
+
+        private void cmb_1D_EnabledChanged(object sender, EventArgs e)
+        {
+            if (cmb_1D.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_1D.SelectedItem.ToString();
+            }
+            
+        }
+
+        private void cmb_RM_EnabledChanged(object sender, EventArgs e)
+        {
+            if (cmb_RM.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_RM.SelectedItem.ToString();
+            }
+        }
+
+        private void cmb_Protocolo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_EI.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_EI.SelectedItem.ToString();
+            }
+            if (cmb_IgM.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_IgM.SelectedItem.ToString();
+            }
+            if (cmb_BOB.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_BOB.SelectedItem.ToString();
+            }
+            if (cmb_IgG.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_IgG.SelectedItem.ToString();
+            }
+            if (cmb_1D.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_1D.SelectedItem.ToString();
+            }
+            if (cmb_RM.Enabled)
+            {
+                groupProtocol.Text = "Protocolo " + cmb_RM.SelectedItem.ToString();
+            }
         }
     }
 }

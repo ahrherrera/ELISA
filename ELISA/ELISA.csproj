@@ -273,6 +273,7 @@
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils\Log.cs" />
+    <Compile Include="Utils\MainUtils.cs" />
     <Compile Include="vih.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
@@ -365,6 +366,10 @@
       <DependentUpon>ElisaDB.edmx</DependentUpon>
       <LastGenOutput>ElisaDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\time.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\folder.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
