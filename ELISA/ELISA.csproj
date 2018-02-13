@@ -269,6 +269,12 @@
     <Compile Include="UI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIParametros\DatosIgM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosIgM.Designer.cs">
+      <DependentUpon>DatosIgM.cs</DependentUpon>
+    </Compile>
     <Compile Include="usuario.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
@@ -323,6 +329,9 @@
     <EmbeddedResource Include="UI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosIgM.resx">
+      <DependentUpon>DatosIgM.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="ElisaDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ElisaDB.Designer.cs</LastGenOutput>
@@ -366,6 +375,7 @@
       <DependentUpon>ElisaDB.edmx</DependentUpon>
       <LastGenOutput>ElisaDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Apps-preferences-system-time-icon.png" />
     <None Include="Resources\time.png" />
     <None Include="Resources\print.png" />
     <None Include="Resources\save.png" />
