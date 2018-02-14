@@ -16,3 +16,4 @@ E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\MaterialSkin.dll
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\MetroFramework.Design.dll
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\MetroFramework.dll
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\MetroFramework.Fonts.dll
+E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParametros.DatosIgM.resources

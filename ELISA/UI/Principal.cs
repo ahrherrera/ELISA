@@ -231,7 +231,7 @@ namespace ELISA.UI
                     cmb_1D.Enabled = false;
                     cmb_RM.Enabled = false;
                     groupProtocol.Text = "Protocolo Rotavirus";
-                    setOpcionesRV();
+                    SetOpcionesRv();
                     cmb_Protocolo_SelectedIndexChanged(null, EventArgs.Empty);
                 }
             }
@@ -318,19 +318,19 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("ELISA INH Monoclonal Chik"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA INH Hiperinmune Chik"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA INH Ensayos"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA INH R and M"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA INH Zika"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }
 
             }
@@ -341,19 +341,19 @@ namespace ELISA.UI
                 string selectedItem = cmb_IgM.SelectedItem.ToString();
                 if (selectedItem.Equals("IgM Dengue"))
                 {
-                    setOpcionesOptIgm();
+                    SetOpcionesOptIgm();
                 }else if (selectedItem.Equals("IgM Zika"))
                 {
-                    setOpcionesIgMZika();
+                    SetOpcionesIgMZika();
                 }else if (selectedItem.Equals("IgM Zika Bei"))
                 {
-                    setOpcionesIgMZikaBei();
+                    SetOpcionesIgMZikaBei();
                 }else if (selectedItem.Equals("Chikungunya CDC/CNDR"))
                 {
-                    setOpcionesChikCNDR();
+                    SetOpcionesChikCndr();
                 }else if (selectedItem.Equals("Chikungunya CNDR"))
                 {
-                    setOpcionesChik();
+                    SetOpcionesChik();
                 }
             }
             if (cmb_BOB.Enabled)
@@ -364,16 +364,16 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("Zika BOB"))
                 {
-                    setOpcionesZikaBOB();
+                    SetOpcionesZikaBob();
                 }else if (selectedItem.Equals("Zika BOB Cohorte Anual"))
                 {
-                    setOpcionesZikaBOB();
+                    SetOpcionesZikaBob();
                 }else if (selectedItem.Equals("Zika BOB Cohorte Anual Dup"))
                 {
-                    setOpcionesZikaBOB();
+                    SetOpcionesZikaBob();
                 }else if (selectedItem.Equals("Zika BOB Coh Anual/Sero 1 m"))
                 {
-                    setOpcionesZikaBOB();
+                    SetOpcionesZikaBob();
                 }
             }
             if (cmb_IgG.Enabled)
@@ -383,10 +383,10 @@ namespace ELISA.UI
                 string selectedItem = cmb_IgG.SelectedItem.ToString();
                 if (selectedItem.Equals("Saliva CIET"))
                 {
-                    setOpcionesOptIgG();
+                    SetOpcionesOptIgG();
                 }else if (selectedItem.Equals("Saliva CIET Repeticiones"))
                 {
-                    setOpcionesOptIgG();
+                    SetOpcionesOptIgG();
                 }
             }
             if (cmb_1D.Enabled)
@@ -397,25 +397,25 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("ELISA 1D Cohorte Anual"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Cohorte Anual Dup"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Cohorte Anual Chik"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Seroprevalencia Chik"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Seroprevalencia Chik Dup"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("Zika 1D Cohorte Anual"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("Zika 1D Cohorte Anual Dup"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }
 
             }
@@ -427,33 +427,33 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("R and M Cohorte Anual"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("R and M Cohorte Anual Dup"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Cohorte Anual Chik"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Cohorte Anual Chik Dup"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Seroprevalencia Chik"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Seroprevalncia Chik Dup"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ZIKA RM Cohorte Anual"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }else if (selectedItem.Equals("ZIKA RM Cohorte Anual Dup"))
                 {
-                    setOpcionesRM();
+                    SetOpcionesRm();
                 }
             }
         }
 
-        private void setOpcionesZikaBOB()
+        private void SetOpcionesZikaBob()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = false;
@@ -469,7 +469,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "Sin Muestra";
         }
 
-        private void setOpcionesIgMZikaBei()
+        private void SetOpcionesIgMZikaBei()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = false;
@@ -485,7 +485,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "Quitar";
         }
 
-        private void setOpcionesIgMZika()
+        private void SetOpcionesIgMZika()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = true;
@@ -503,7 +503,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "S/ Muestra";
         }
 
-        private void setOpcionesOptIgm()
+        private void SetOpcionesOptIgm()
         {
             rb_Opt7.Visible = true;
             rb_Opt6.Visible = true;
@@ -522,7 +522,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "S/Muestra";
         }
 
-        private void setOpcionesChik()
+        private void SetOpcionesChik()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = false;
@@ -539,7 +539,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "S/Muestra";
         }
 
-        private void setOpcionesChikCNDR()
+        private void SetOpcionesChikCndr()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = false;
@@ -555,7 +555,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "S/Muestra";
         }
 
-        private void setOpcionesRV()
+        private void SetOpcionesRv()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = false;
@@ -572,7 +572,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "S/Muestra";
         }
 
-        private void setOpcionesRM()
+        private void SetOpcionesRm()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = false;
@@ -589,7 +589,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "S/Muestra";
         }
 
-        private void setOpcionesOptIgG()
+        private void SetOpcionesOptIgG()
         {
             rb_Opt7.Visible = false;
             rb_Opt6.Visible = false;
@@ -604,6 +604,16 @@ namespace ELISA.UI
             rb_Opt3.Text = "Control Suero Negativo";
             rb_opt2.Text = "Control Negativo Saliva";
             rb_Opt1.Text = "S/Muestra";
-        } 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Principal_FormClosing(null, new FormClosingEventArgs(CloseReason.UserClosing, true));
+        }
+
+        private void IgGDatos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

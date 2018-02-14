@@ -16,6 +16,15 @@ namespace ELISA.UI.UIParametros
         {
             InitializeComponent();
         }
-        
+
+        private void DatosIgM_Load(object sender, EventArgs e)
+        {
+            date_Fecha.Value = DateTime.Now;
+        }
+
+        private async Task fillFields()
+        {
+
+        }
     }
 }

@@ -223,6 +223,11 @@
     <Compile Include="proch20.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="reactivos_bei.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
@@ -255,6 +260,7 @@
     <Compile Include="tipodiluyente.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgG.cs" />
     <Compile Include="Transaccion\LaboratoristasTrans.cs" />
     <Compile Include="Transaccion\UsuarioTrans.cs" />
     <Compile Include="UI\Login.cs">
@@ -315,14 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +376,13 @@
       <DependentUpon>ElisaDB.edmx</DependentUpon>
       <LastGenOutput>ElisaDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Down Button_25px.png" />
+    <None Include="Resources\Restore_25px.png" />
+    <None Include="Resources\Print_25px.png" />
+    <None Include="Resources\Save as_25px.png" />
+    <None Include="Resources\View Details_25px.png" />
+    <None Include="Resources\Upload_25px.png" />
+    <None Include="Resources\Upload_20px.png" />
     <None Include="Resources\Apps-preferences-system-time-icon.png" />
     <None Include="Resources\time.png" />
     <None Include="Resources\print.png" />

@@ -61,7 +61,16 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.holaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IgGDatos = new System.Windows.Forms.ToolStripMenuItem();
+            this.protocoloIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.protocoloEIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.protocoloRotavirusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.protocoloIgMZikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.protocoloEIZikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.protocoloIgMZikaBeiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.protocoloIgMZikaBOBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kitRotaviruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_Protocolo = new System.Windows.Forms.DataGridView();
             this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,12 +87,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupProtocol = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.rb_Opt1 = new System.Windows.Forms.RadioButton();
+            this.rb_Opt7 = new System.Windows.Forms.RadioButton();
+            this.rb_opt2 = new System.Windows.Forms.RadioButton();
             this.rb_Opt6 = new System.Windows.Forms.RadioButton();
+            this.rb_Opt3 = new System.Windows.Forms.RadioButton();
             this.rb_Opt5 = new System.Windows.Forms.RadioButton();
             this.rb_Opt4 = new System.Windows.Forms.RadioButton();
-            this.rb_Opt3 = new System.Windows.Forms.RadioButton();
-            this.rb_opt2 = new System.Windows.Forms.RadioButton();
-            this.rb_Opt1 = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupValidar = new System.Windows.Forms.GroupBox();
             this.optOpciones = new System.Windows.Forms.GroupBox();
@@ -104,7 +115,6 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnProtocolo = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,13 +122,28 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbl_Time = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
-            this.rb_Opt7 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_Reiniciar = new System.Windows.Forms.Button();
+            this.btn_Print = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_Leer = new System.Windows.Forms.Button();
+            this.btn_LoadProtocolo = new System.Windows.Forms.Button();
+            this.btnProtocolo = new System.Windows.Forms.Button();
+            this.resultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasladarResultadosIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revisarResultadosIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasladarResultadosEIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasladarResultadosELISAINHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.llenarCamposSinMuestraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrarProtocoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarPlacaInválidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirPlacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaDelProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeELISASoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -126,12 +151,12 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupProtocol.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.optOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -430,7 +455,10 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.resultadosToolStripMenuItem,
+            this.utilidadesToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -441,16 +469,89 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.holaToolStripMenuItem});
+            this.IgGDatos,
+            this.protocoloIgMToolStripMenuItem,
+            this.protocoloEIToolStripMenuItem,
+            this.protocoloRotavirusToolStripMenuItem,
+            this.protocoloIgMZikaToolStripMenuItem,
+            this.protocoloEIZikaToolStripMenuItem,
+            this.protocoloIgMZikaBeiToolStripMenuItem,
+            this.protocoloIgMZikaBOBToolStripMenuItem,
+            this.kitRotaviruToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(154, 24);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 24);
+            this.toolStripMenuItem1.Text = "Datos de Protocolo";
+            this.toolStripMenuItem1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
-            // holaToolStripMenuItem
+            // IgGDatos
             // 
-            this.holaToolStripMenuItem.Name = "holaToolStripMenuItem";
-            this.holaToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
-            this.holaToolStripMenuItem.Text = "Hola";
+            this.IgGDatos.Name = "IgGDatos";
+            this.IgGDatos.ShortcutKeyDisplayString = "";
+            this.IgGDatos.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.IgGDatos.Size = new System.Drawing.Size(278, 26);
+            this.IgGDatos.Text = "Protocolo IgG";
+            this.IgGDatos.Click += new System.EventHandler(this.IgGDatos_Click);
+            // 
+            // protocoloIgMToolStripMenuItem
+            // 
+            this.protocoloIgMToolStripMenuItem.Name = "protocoloIgMToolStripMenuItem";
+            this.protocoloIgMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.protocoloIgMToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.protocoloIgMToolStripMenuItem.Text = "Protocolo IgM";
+            // 
+            // protocoloEIToolStripMenuItem
+            // 
+            this.protocoloEIToolStripMenuItem.Name = "protocoloEIToolStripMenuItem";
+            this.protocoloEIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.protocoloEIToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.protocoloEIToolStripMenuItem.Text = "Protocolo EI";
+            // 
+            // protocoloRotavirusToolStripMenuItem
+            // 
+            this.protocoloRotavirusToolStripMenuItem.Name = "protocoloRotavirusToolStripMenuItem";
+            this.protocoloRotavirusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F1)));
+            this.protocoloRotavirusToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.protocoloRotavirusToolStripMenuItem.Text = "Protocolo Rotavirus";
+            // 
+            // protocoloIgMZikaToolStripMenuItem
+            // 
+            this.protocoloIgMZikaToolStripMenuItem.Name = "protocoloIgMZikaToolStripMenuItem";
+            this.protocoloIgMZikaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.protocoloIgMZikaToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.protocoloIgMZikaToolStripMenuItem.Text = "Protocolo IgM Zika";
+            // 
+            // protocoloEIZikaToolStripMenuItem
+            // 
+            this.protocoloEIZikaToolStripMenuItem.Name = "protocoloEIZikaToolStripMenuItem";
+            this.protocoloEIZikaToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.protocoloEIZikaToolStripMenuItem.Text = "Protocolo EI Zika";
+            // 
+            // protocoloIgMZikaBeiToolStripMenuItem
+            // 
+            this.protocoloIgMZikaBeiToolStripMenuItem.Name = "protocoloIgMZikaBeiToolStripMenuItem";
+            this.protocoloIgMZikaBeiToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.protocoloIgMZikaBeiToolStripMenuItem.Text = "Protocolo IgM Zika Bei";
+            // 
+            // protocoloIgMZikaBOBToolStripMenuItem
+            // 
+            this.protocoloIgMZikaBOBToolStripMenuItem.Name = "protocoloIgMZikaBOBToolStripMenuItem";
+            this.protocoloIgMZikaBOBToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.protocoloIgMZikaBOBToolStripMenuItem.Text = "Protocolo IgM Zika BOB";
+            // 
+            // kitRotaviruToolStripMenuItem
+            // 
+            this.kitRotaviruToolStripMenuItem.Name = "kitRotaviruToolStripMenuItem";
+            this.kitRotaviruToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.kitRotaviruToolStripMenuItem.Text = "Kit Rotavirus";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // dgv_Protocolo
             // 
@@ -595,6 +696,66 @@
             this.groupProtocol.TabIndex = 1;
             this.groupProtocol.TabStop = false;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.Controls.Add(this.rb_Opt1, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rb_Opt7, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rb_opt2, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rb_Opt6, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rb_Opt3, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rb_Opt5, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rb_Opt4, 3, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1169, 65);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // rb_Opt1
+            // 
+            this.rb_Opt1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rb_Opt1.Location = new System.Drawing.Point(1000, 4);
+            this.rb_Opt1.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_Opt1.Name = "rb_Opt1";
+            this.rb_Opt1.Size = new System.Drawing.Size(165, 57);
+            this.rb_Opt1.TabIndex = 0;
+            this.rb_Opt1.TabStop = true;
+            this.rb_Opt1.Text = "radioButton1";
+            this.rb_Opt1.UseVisualStyleBackColor = true;
+            // 
+            // rb_Opt7
+            // 
+            this.rb_Opt7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rb_Opt7.Location = new System.Drawing.Point(3, 3);
+            this.rb_Opt7.Name = "rb_Opt7";
+            this.rb_Opt7.Size = new System.Drawing.Size(160, 59);
+            this.rb_Opt7.TabIndex = 6;
+            this.rb_Opt7.TabStop = true;
+            this.rb_Opt7.Text = "radioButton7";
+            this.rb_Opt7.UseVisualStyleBackColor = true;
+            // 
+            // rb_opt2
+            // 
+            this.rb_opt2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rb_opt2.Location = new System.Drawing.Point(834, 4);
+            this.rb_opt2.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_opt2.Name = "rb_opt2";
+            this.rb_opt2.Size = new System.Drawing.Size(158, 57);
+            this.rb_opt2.TabIndex = 1;
+            this.rb_opt2.TabStop = true;
+            this.rb_opt2.Text = "radioButton2";
+            this.rb_opt2.UseVisualStyleBackColor = true;
+            // 
             // rb_Opt6
             // 
             this.rb_Opt6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -606,6 +767,18 @@
             this.rb_Opt6.TabStop = true;
             this.rb_Opt6.Text = "radioButton6";
             this.rb_Opt6.UseVisualStyleBackColor = true;
+            // 
+            // rb_Opt3
+            // 
+            this.rb_Opt3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rb_Opt3.Location = new System.Drawing.Point(668, 4);
+            this.rb_Opt3.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_Opt3.Name = "rb_Opt3";
+            this.rb_Opt3.Size = new System.Drawing.Size(158, 57);
+            this.rb_Opt3.TabIndex = 2;
+            this.rb_Opt3.TabStop = true;
+            this.rb_Opt3.Text = "radioButton3";
+            this.rb_Opt3.UseVisualStyleBackColor = true;
             // 
             // rb_Opt5
             // 
@@ -630,42 +803,6 @@
             this.rb_Opt4.TabStop = true;
             this.rb_Opt4.Text = "radioButton4";
             this.rb_Opt4.UseVisualStyleBackColor = true;
-            // 
-            // rb_Opt3
-            // 
-            this.rb_Opt3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt3.Location = new System.Drawing.Point(668, 4);
-            this.rb_Opt3.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_Opt3.Name = "rb_Opt3";
-            this.rb_Opt3.Size = new System.Drawing.Size(158, 57);
-            this.rb_Opt3.TabIndex = 2;
-            this.rb_Opt3.TabStop = true;
-            this.rb_Opt3.Text = "radioButton3";
-            this.rb_Opt3.UseVisualStyleBackColor = true;
-            // 
-            // rb_opt2
-            // 
-            this.rb_opt2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_opt2.Location = new System.Drawing.Point(834, 4);
-            this.rb_opt2.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_opt2.Name = "rb_opt2";
-            this.rb_opt2.Size = new System.Drawing.Size(158, 57);
-            this.rb_opt2.TabIndex = 1;
-            this.rb_opt2.TabStop = true;
-            this.rb_opt2.Text = "radioButton2";
-            this.rb_opt2.UseVisualStyleBackColor = true;
-            // 
-            // rb_Opt1
-            // 
-            this.rb_Opt1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt1.Location = new System.Drawing.Point(1000, 4);
-            this.rb_Opt1.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_Opt1.Name = "rb_Opt1";
-            this.rb_Opt1.Size = new System.Drawing.Size(165, 57);
-            this.rb_Opt1.TabIndex = 0;
-            this.rb_Opt1.TabStop = true;
-            this.rb_Opt1.Text = "radioButton1";
-            this.rb_Opt1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -851,20 +988,6 @@
             this.dataGridViewTextBoxColumn12.HeaderText = "12";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // btnProtocolo
-            // 
-            this.btnProtocolo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnProtocolo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProtocolo.Location = new System.Drawing.Point(973, 223);
-            this.btnProtocolo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnProtocolo.Name = "btnProtocolo";
-            this.btnProtocolo.Size = new System.Drawing.Size(119, 36);
-            this.btnProtocolo.TabIndex = 4;
-            this.btnProtocolo.TabStop = false;
-            this.btnProtocolo.Text = "Protocolo  ▼";
-            this.btnProtocolo.UseVisualStyleBackColor = true;
-            this.btnProtocolo.Click += new System.EventHandler(this.btnProtocolo_Click);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -923,102 +1046,218 @@
             // 
             this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
             // 
-            // rb_Opt7
+            // btn_Reiniciar
             // 
-            this.rb_Opt7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt7.Location = new System.Drawing.Point(3, 3);
-            this.rb_Opt7.Name = "rb_Opt7";
-            this.rb_Opt7.Size = new System.Drawing.Size(160, 59);
-            this.rb_Opt7.TabIndex = 6;
-            this.rb_Opt7.TabStop = true;
-            this.rb_Opt7.Text = "radioButton7";
-            this.rb_Opt7.UseVisualStyleBackColor = true;
+            this.btn_Reiniciar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Reiniciar.Image = global::ELISA.Properties.Resources.Restore_25px;
+            this.btn_Reiniciar.Location = new System.Drawing.Point(1064, 742);
+            this.btn_Reiniciar.Name = "btn_Reiniciar";
+            this.btn_Reiniciar.Size = new System.Drawing.Size(175, 48);
+            this.btn_Reiniciar.TabIndex = 11;
+            this.btn_Reiniciar.Text = "  Reiniciar";
+            this.btn_Reiniciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Reiniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Reiniciar.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // btn_Print
             // 
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Controls.Add(this.rb_Opt1, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rb_Opt7, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rb_opt2, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rb_Opt6, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rb_Opt3, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rb_Opt5, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rb_Opt4, 3, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1169, 65);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.btn_Print.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Print.Image = global::ELISA.Properties.Resources.Print_25px;
+            this.btn_Print.Location = new System.Drawing.Point(881, 742);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Size = new System.Drawing.Size(175, 48);
+            this.btn_Print.TabIndex = 10;
+            this.btn_Print.Text = "  Imprimir";
+            this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Print.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Save
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(337, 742);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 48);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cargar Protocolo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Save.Image = global::ELISA.Properties.Resources.Save_as_25px;
+            this.btn_Save.Location = new System.Drawing.Point(699, 742);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(175, 48);
+            this.btn_Save.TabIndex = 9;
+            this.btn_Save.Text = "  Guardar";
+            this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Save.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Leer
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(518, 742);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 48);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Lectura";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Leer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Leer.Image = global::ELISA.Properties.Resources.View_Details_25px;
+            this.btn_Leer.Location = new System.Drawing.Point(518, 742);
+            this.btn_Leer.Name = "btn_Leer";
+            this.btn_Leer.Size = new System.Drawing.Size(175, 48);
+            this.btn_Leer.TabIndex = 8;
+            this.btn_Leer.Text = "  Lectura";
+            this.btn_Leer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Leer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Leer.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_LoadProtocolo
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button4.Location = new System.Drawing.Point(699, 742);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 48);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Guardar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_LoadProtocolo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LoadProtocolo.Image = global::ELISA.Properties.Resources.Upload_25px;
+            this.btn_LoadProtocolo.Location = new System.Drawing.Point(337, 742);
+            this.btn_LoadProtocolo.Name = "btn_LoadProtocolo";
+            this.btn_LoadProtocolo.Size = new System.Drawing.Size(175, 48);
+            this.btn_LoadProtocolo.TabIndex = 7;
+            this.btn_LoadProtocolo.Text = "  Cargar Protocolo";
+            this.btn_LoadProtocolo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_LoadProtocolo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_LoadProtocolo.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnProtocolo
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button5.Location = new System.Drawing.Point(881, 742);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(175, 48);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Imprimir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnProtocolo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnProtocolo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProtocolo.Location = new System.Drawing.Point(997, 227);
+            this.btnProtocolo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProtocolo.Name = "btnProtocolo";
+            this.btnProtocolo.Size = new System.Drawing.Size(119, 36);
+            this.btnProtocolo.TabIndex = 4;
+            this.btnProtocolo.TabStop = false;
+            this.btnProtocolo.Text = "Protocolo  ▼";
+            this.btnProtocolo.UseVisualStyleBackColor = true;
+            this.btnProtocolo.Click += new System.EventHandler(this.btnProtocolo_Click);
             // 
-            // button6
+            // resultadosToolStripMenuItem
             // 
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button6.Location = new System.Drawing.Point(1064, 742);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(175, 48);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Reiniciar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.resultadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trasladarResultadosIgMToolStripMenuItem,
+            this.revisarResultadosIgMToolStripMenuItem,
+            this.trasladarResultadosEIToolStripMenuItem,
+            this.trasladarResultadosELISAINHToolStripMenuItem});
+            this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
+            this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
+            this.resultadosToolStripMenuItem.Text = "Resultados";
+            // 
+            // trasladarResultadosIgMToolStripMenuItem
+            // 
+            this.trasladarResultadosIgMToolStripMenuItem.Name = "trasladarResultadosIgMToolStripMenuItem";
+            this.trasladarResultadosIgMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.trasladarResultadosIgMToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.trasladarResultadosIgMToolStripMenuItem.Text = "Trasladar Resultados IgM";
+            // 
+            // revisarResultadosIgMToolStripMenuItem
+            // 
+            this.revisarResultadosIgMToolStripMenuItem.Name = "revisarResultadosIgMToolStripMenuItem";
+            this.revisarResultadosIgMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.revisarResultadosIgMToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.revisarResultadosIgMToolStripMenuItem.Text = "Revisar Resultados IgM";
+            // 
+            // trasladarResultadosEIToolStripMenuItem
+            // 
+            this.trasladarResultadosEIToolStripMenuItem.Name = "trasladarResultadosEIToolStripMenuItem";
+            this.trasladarResultadosEIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.trasladarResultadosEIToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.trasladarResultadosEIToolStripMenuItem.Text = "Trasladar Resultados EI";
+            // 
+            // trasladarResultadosELISAINHToolStripMenuItem
+            // 
+            this.trasladarResultadosELISAINHToolStripMenuItem.Name = "trasladarResultadosELISAINHToolStripMenuItem";
+            this.trasladarResultadosELISAINHToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.trasladarResultadosELISAINHToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.trasladarResultadosELISAINHToolStripMenuItem.Text = "Trasladar Resultados ELISA INH";
+            // 
+            // utilidadesToolStripMenuItem
+            // 
+            this.utilidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.llenarCamposSinMuestraToolStripMenuItem,
+            this.borrarProtocoloToolStripMenuItem,
+            this.guardarPlacaInválidaToolStripMenuItem,
+            this.imprimirPlacaToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.cambiarContraseñaToolStripMenuItem,
+            this.gestiónDeUsuariosToolStripMenuItem});
+            this.utilidadesToolStripMenuItem.Name = "utilidadesToolStripMenuItem";
+            this.utilidadesToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.utilidadesToolStripMenuItem.Text = "Utilidades";
+            // 
+            // llenarCamposSinMuestraToolStripMenuItem
+            // 
+            this.llenarCamposSinMuestraToolStripMenuItem.Name = "llenarCamposSinMuestraToolStripMenuItem";
+            this.llenarCamposSinMuestraToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.llenarCamposSinMuestraToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.llenarCamposSinMuestraToolStripMenuItem.Text = "Llenar Campos Sin Muestra";
+            // 
+            // borrarProtocoloToolStripMenuItem
+            // 
+            this.borrarProtocoloToolStripMenuItem.Name = "borrarProtocoloToolStripMenuItem";
+            this.borrarProtocoloToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.borrarProtocoloToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.borrarProtocoloToolStripMenuItem.Text = "Borrar Protocolo";
+            // 
+            // guardarPlacaInválidaToolStripMenuItem
+            // 
+            this.guardarPlacaInválidaToolStripMenuItem.Name = "guardarPlacaInválidaToolStripMenuItem";
+            this.guardarPlacaInválidaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.guardarPlacaInválidaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.guardarPlacaInválidaToolStripMenuItem.Text = "Guardar Placa Inválida";
+            // 
+            // imprimirPlacaToolStripMenuItem
+            // 
+            this.imprimirPlacaToolStripMenuItem.Name = "imprimirPlacaToolStripMenuItem";
+            this.imprimirPlacaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F11)));
+            this.imprimirPlacaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.imprimirPlacaToolStripMenuItem.Text = "Imprimir Placa";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(312, 6);
+            // 
+            // cambiarContraseñaToolStripMenuItem
+            // 
+            this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
+            this.cambiarContraseñaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar Contraseña";
+            // 
+            // gestiónDeUsuariosToolStripMenuItem
+            // 
+            this.gestiónDeUsuariosToolStripMenuItem.Name = "gestiónDeUsuariosToolStripMenuItem";
+            this.gestiónDeUsuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.gestiónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.gestiónDeUsuariosToolStripMenuItem.Text = "Gestión de Usuarios";
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ayudaDelProgramaToolStripMenuItem,
+            this.acercaDeELISASoftwareToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // ayudaDelProgramaToolStripMenuItem
+            // 
+            this.ayudaDelProgramaToolStripMenuItem.Name = "ayudaDelProgramaToolStripMenuItem";
+            this.ayudaDelProgramaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.ayudaDelProgramaToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.ayudaDelProgramaToolStripMenuItem.Text = "Ayuda del Programa";
+            // 
+            // acercaDeELISASoftwareToolStripMenuItem
+            // 
+            this.acercaDeELISASoftwareToolStripMenuItem.Name = "acercaDeELISASoftwareToolStripMenuItem";
+            this.acercaDeELISASoftwareToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.acercaDeELISASoftwareToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.acercaDeELISASoftwareToolStripMenuItem.Text = "Acerca de ELISA Software";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 844);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Reiniciar);
+            this.Controls.Add(this.btn_Print);
+            this.Controls.Add(this.btn_Save);
+            this.Controls.Add(this.btn_Leer);
+            this.Controls.Add(this.btn_LoadProtocolo);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnProtocolo);
             this.Controls.Add(this.tabControl1);
@@ -1046,6 +1285,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupProtocol.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.optOpciones.ResumeLayout(false);
             this.optOpciones.PerformLayout();
@@ -1053,7 +1293,6 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1081,7 +1320,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem holaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem IgGDatos;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripTextBox txt_Placa;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -1142,10 +1381,35 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.RadioButton rb_Opt7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_LoadProtocolo;
+        private System.Windows.Forms.Button btn_Leer;
+        private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.Button btn_Print;
+        private System.Windows.Forms.Button btn_Reiniciar;
+        private System.Windows.Forms.ToolStripMenuItem protocoloIgMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem protocoloEIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem protocoloRotavirusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem protocoloIgMZikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem protocoloEIZikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem protocoloIgMZikaBeiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem protocoloIgMZikaBOBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kitRotaviruToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resultadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trasladarResultadosIgMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem revisarResultadosIgMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trasladarResultadosEIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trasladarResultadosELISAINHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem utilidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem llenarCamposSinMuestraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem borrarProtocoloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guardarPlacaInválidaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imprimirPlacaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestiónDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaDelProgramaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeELISASoftwareToolStripMenuItem;
     }
 }
