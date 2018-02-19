@@ -18,7 +18,6 @@ namespace ELISA
         public byte posicion { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Placa { get; set; }
-        public System.DateTime Hora { get; set; }
         public float Lectura { get; set; }
         public Nullable<float> m3men { get; set; }
         public string Unidades { get; set; }
@@ -37,6 +36,9 @@ namespace ELISA
         public Nullable<bool> Valido { get; set; }
         public string Lab1 { get; set; }
         public string Lab2 { get; set; }
-        public string user { get; set; }
+        public Nullable<int> user { get; set; }
+    
+        public virtual laboratorista laboratorista { get; set; }
+        public virtual usuario usuario { get; set; }
     }
 }

@@ -64,6 +64,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="antigeno_viral.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anti_human_igg.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anti_human_igm.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="chikungunyainhhiper.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
@@ -77,6 +86,18 @@
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="componentesvih.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="conjugado.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="controles_ei.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="controles_igg.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="controles_igm.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="controles_ns1.cs">
@@ -205,6 +226,9 @@
     <Compile Include="estudio.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="gammaglobulina.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="kit_elisa_ns1.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
@@ -218,6 +242,15 @@
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ns1.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pbs1x.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pbs20x.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ph_9_6__coatting_.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="proch20.cs">
@@ -246,6 +279,9 @@
     <Compile Include="rotaviru.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="shn.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,10 +290,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="substrato.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="tipobloqueo.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="tipodiluyente.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_control.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgG.cs" />
@@ -366,16 +408,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ElisaDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ElisaDB.edmx</DependentUpon>
-      <LastGenOutput>ElisaDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ElisaDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ElisaDB.edmx</DependentUpon>
-      <LastGenOutput>ElisaDB.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\Down Button_25px.png" />
     <None Include="Resources\Restore_25px.png" />
     <None Include="Resources\Print_25px.png" />
@@ -389,6 +421,17 @@
     <None Include="Resources\save.png" />
     <None Include="Resources\folder.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ElisaDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ElisaDB.edmx</DependentUpon>
+      <LastGenOutput>ElisaDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ElisaDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ElisaDB.edmx</DependentUpon>
+      <LastGenOutput>ElisaDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

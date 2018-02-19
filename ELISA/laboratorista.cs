@@ -14,7 +14,14 @@ namespace ELISA
     
     public partial class laboratorista
     {
+        public laboratorista()
+        {
+            this.elisaiggrepeticiones = new HashSet<elisaiggrepeticione>();
+        }
+    
         public string Cod { get; set; }
         public string Descrip { get; set; }
+    
+        public virtual ICollection<elisaiggrepeticione> elisaiggrepeticiones { get; set; }
     }
 }

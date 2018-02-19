@@ -13,10 +13,10 @@ namespace ELISA
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class elisaEntities1 : DbContext
+    public partial class elisaEntities2 : DbContext
     {
-        public elisaEntities1()
-            : base("name=elisaEntities1")
+        public elisaEntities2()
+            : base("name=elisaEntities2")
         {
         }
     
@@ -25,14 +25,21 @@ namespace ELISA
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<anti_human_igg> anti_human_igg { get; set; }
+        public DbSet<anti_human_igm> anti_human_igm { get; set; }
+        public DbSet<antigeno_viral> antigeno_viral { get; set; }
         public DbSet<chikungunyainhhiper> chikungunyainhhipers { get; set; }
         public DbSet<chikungunyainhmono> chikungunyainhmonoes { get; set; }
         public DbSet<componentesns1> componentesns1 { get; set; }
         public DbSet<componentesrotaviru> componentesrotavirus { get; set; }
         public DbSet<componentesvih> componentesvihs { get; set; }
+        public DbSet<conjugado> conjugadoes { get; set; }
         public DbSet<controles_ns1> controles_ns1 { get; set; }
         public DbSet<controles_rotaviru> controles_rotavirus { get; set; }
         public DbSet<controles_vih> controles_vihs { get; set; }
+        public DbSet<controles_ei> controles_ei { get; set; }
+        public DbSet<controles_igg> controles_igg { get; set; }
+        public DbSet<controles_igm> controles_igm { get; set; }
         public DbSet<datosprotocolons1> datosprotocolons1 { get; set; }
         public DbSet<datosprotocolorotaviru> datosprotocolorotavirus { get; set; }
         public DbSet<datosprotocolovih> datosprotocolovihs { get; set; }
@@ -56,11 +63,15 @@ namespace ELISA
         public DbSet<elisainhzika> elisainhzikas { get; set; }
         public DbSet<ensayo> ensayos { get; set; }
         public DbSet<estudio> estudios { get; set; }
+        public DbSet<gammaglobulina> gammaglobulinas { get; set; }
         public DbSet<kit_elisa_ns1> kit_elisa_ns1 { get; set; }
         public DbSet<kit_elisa_rotaviru> kit_elisa_rotavirus { get; set; }
         public DbSet<kit_elisa_vih> kit_elisa_vihs { get; set; }
         public DbSet<laboratorista> laboratoristas { get; set; }
         public DbSet<ns1> ns1 { get; set; }
+        public DbSet<pbs1x> pbs1x { get; set; }
+        public DbSet<pbs20x> pbs20x { get; set; }
+        public DbSet<ph_9_6__coatting_> ph_9_6__coatting_ { get; set; }
         public DbSet<proch20> proch20 { get; set; }
         public DbSet<reactivos_ns1> reactivos_ns1 { get; set; }
         public DbSet<reactivos_rotaviru> reactivos_rotavirus { get; set; }
@@ -68,6 +79,9 @@ namespace ELISA
         public DbSet<reactivos_bei> reactivos_bei { get; set; }
         public DbSet<reactivos_bob> reactivos_bob { get; set; }
         public DbSet<rotaviru> rotavirus { get; set; }
+        public DbSet<shn> shns { get; set; }
+        public DbSet<substrato> substratoes { get; set; }
+        public DbSet<tipo_control> tipo_control { get; set; }
         public DbSet<tipobloqueo> tipobloqueos { get; set; }
         public DbSet<tipodiluyente> tipodiluyentes { get; set; }
         public DbSet<usuario> usuarios { get; set; }

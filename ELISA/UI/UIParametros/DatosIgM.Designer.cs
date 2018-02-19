@@ -44,48 +44,48 @@
             this.cmb_TipoEstudio = new System.Windows.Forms.ComboBox();
             this.chk_TipoEstudio = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_PB = new System.Windows.Forms.TextBox();
+            this.txt_Coatting = new System.Windows.Forms.TextBox();
             this.chk_PB = new System.Windows.Forms.CheckBox();
             this.chk_Coatting = new System.Windows.Forms.CheckBox();
-            this.txt_Coatting = new System.Windows.Forms.TextBox();
-            this.txt_PB = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.date_Fecha = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_Tiempo = new System.Windows.Forms.TextBox();
+            this.chk_Tiempo = new System.Windows.Forms.CheckBox();
+            this.txt_Temp = new System.Windows.Forms.TextBox();
+            this.chk_Temp = new System.Windows.Forms.CheckBox();
             this.txt_Tipo = new System.Windows.Forms.TextBox();
             this.chk_Fecha = new System.Windows.Forms.CheckBox();
             this.chk_Tipo = new System.Windows.Forms.CheckBox();
-            this.txt_Temp = new System.Windows.Forms.TextBox();
-            this.chk_Temp = new System.Windows.Forms.CheckBox();
-            this.txt_Tiempo = new System.Windows.Forms.TextBox();
-            this.chk_Tiempo = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txt_SUBST = new System.Windows.Forms.TextBox();
-            this.txt_ANT = new System.Windows.Forms.TextBox();
-            this.chk_SUBST = new System.Windows.Forms.CheckBox();
-            this.chk_ANT = new System.Windows.Forms.CheckBox();
-            this.txt_Conjug = new System.Windows.Forms.TextBox();
-            this.chk_Conjug = new System.Windows.Forms.CheckBox();
-            this.txt_TiempoSubs = new System.Windows.Forms.TextBox();
-            this.chk_TiempoSubs = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txt_STOP = new System.Windows.Forms.TextBox();
             this.txt_SHN = new System.Windows.Forms.TextBox();
             this.chk_Stop = new System.Windows.Forms.CheckBox();
             this.chk_SHN = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_TiempoSubs = new System.Windows.Forms.TextBox();
+            this.chk_TiempoSubs = new System.Windows.Forms.CheckBox();
+            this.txt_Conjug = new System.Windows.Forms.TextBox();
+            this.chk_Conjug = new System.Windows.Forms.CheckBox();
+            this.txt_SUBST = new System.Windows.Forms.TextBox();
+            this.txt_ANT = new System.Windows.Forms.TextBox();
+            this.chk_SUBST = new System.Windows.Forms.CheckBox();
+            this.chk_ANT = new System.Windows.Forms.CheckBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txt_ControlPos = new System.Windows.Forms.TextBox();
-            this.chk_ControlPos = new System.Windows.Forms.CheckBox();
-            this.txt_ControlNeg = new System.Windows.Forms.TextBox();
-            this.chk_ControlNeg = new System.Windows.Forms.CheckBox();
+            this.txt_ControlNegSalLS = new System.Windows.Forms.TextBox();
+            this.txt_ControlNegLS = new System.Windows.Forms.TextBox();
+            this.txt_ControlNegSalLI = new System.Windows.Forms.TextBox();
+            this.txt_ControlNegLI = new System.Windows.Forms.TextBox();
             this.txt_ControlNegSal = new System.Windows.Forms.TextBox();
             this.chk_ControlNegSal = new System.Windows.Forms.CheckBox();
-            this.txt_ControlNegLI = new System.Windows.Forms.TextBox();
-            this.txt_ControlNegSalLI = new System.Windows.Forms.TextBox();
-            this.txt_ControlNegLS = new System.Windows.Forms.TextBox();
-            this.txt_ControlNegSalLS = new System.Windows.Forms.TextBox();
+            this.txt_ControlNeg = new System.Windows.Forms.TextBox();
+            this.chk_ControlNeg = new System.Windows.Forms.CheckBox();
+            this.txt_ControlPos = new System.Windows.Forms.TextBox();
+            this.chk_ControlPos = new System.Windows.Forms.CheckBox();
             this.btn_Aceptar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.date_Fecha = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -266,6 +266,20 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "BUFFERS UTILIZADOS";
             // 
+            // txt_PB
+            // 
+            this.txt_PB.Location = new System.Drawing.Point(102, 64);
+            this.txt_PB.Name = "txt_PB";
+            this.txt_PB.Size = new System.Drawing.Size(176, 27);
+            this.txt_PB.TabIndex = 7;
+            // 
+            // txt_Coatting
+            // 
+            this.txt_Coatting.Location = new System.Drawing.Point(118, 27);
+            this.txt_Coatting.Name = "txt_Coatting";
+            this.txt_Coatting.Size = new System.Drawing.Size(160, 27);
+            this.txt_Coatting.TabIndex = 6;
+            // 
             // chk_PB
             // 
             this.chk_PB.AutoSize = true;
@@ -288,20 +302,6 @@
             this.chk_Coatting.Text = "Coatting :";
             this.chk_Coatting.UseVisualStyleBackColor = true;
             // 
-            // txt_Coatting
-            // 
-            this.txt_Coatting.Location = new System.Drawing.Point(118, 27);
-            this.txt_Coatting.Name = "txt_Coatting";
-            this.txt_Coatting.Size = new System.Drawing.Size(160, 27);
-            this.txt_Coatting.TabIndex = 6;
-            // 
-            // txt_PB
-            // 
-            this.txt_PB.Location = new System.Drawing.Point(102, 64);
-            this.txt_PB.Name = "txt_PB";
-            this.txt_PB.Size = new System.Drawing.Size(176, 27);
-            this.txt_PB.TabIndex = 7;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.date_Fecha);
@@ -320,6 +320,62 @@
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "BLOQUEO";
+            // 
+            // date_Fecha
+            // 
+            this.date_Fecha.CustomFormat = "dd/MM/yyyy";
+            this.date_Fecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date_Fecha.Location = new System.Drawing.Point(104, 59);
+            this.date_Fecha.Name = "date_Fecha";
+            this.date_Fecha.Size = new System.Drawing.Size(174, 27);
+            this.date_Fecha.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(224, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Horas";
+            // 
+            // txt_Tiempo
+            // 
+            this.txt_Tiempo.Location = new System.Drawing.Point(113, 126);
+            this.txt_Tiempo.Name = "txt_Tiempo";
+            this.txt_Tiempo.Size = new System.Drawing.Size(106, 27);
+            this.txt_Tiempo.TabIndex = 11;
+            // 
+            // chk_Tiempo
+            // 
+            this.chk_Tiempo.AutoSize = true;
+            this.chk_Tiempo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Tiempo.Location = new System.Drawing.Point(16, 128);
+            this.chk_Tiempo.Name = "chk_Tiempo";
+            this.chk_Tiempo.Size = new System.Drawing.Size(97, 24);
+            this.chk_Tiempo.TabIndex = 10;
+            this.chk_Tiempo.Text = "Tiempo   :";
+            this.chk_Tiempo.UseVisualStyleBackColor = true;
+            // 
+            // txt_Temp
+            // 
+            this.txt_Temp.Location = new System.Drawing.Point(102, 93);
+            this.txt_Temp.Name = "txt_Temp";
+            this.txt_Temp.Size = new System.Drawing.Size(176, 27);
+            this.txt_Temp.TabIndex = 9;
+            // 
+            // chk_Temp
+            // 
+            this.chk_Temp.AutoSize = true;
+            this.chk_Temp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Temp.Location = new System.Drawing.Point(16, 95);
+            this.chk_Temp.Name = "chk_Temp";
+            this.chk_Temp.Size = new System.Drawing.Size(87, 24);
+            this.chk_Temp.TabIndex = 8;
+            this.chk_Temp.Text = "Temp    :";
+            this.chk_Temp.UseVisualStyleBackColor = true;
             // 
             // txt_Tipo
             // 
@@ -350,52 +406,6 @@
             this.chk_Tipo.Text = "Tipo :";
             this.chk_Tipo.UseVisualStyleBackColor = true;
             // 
-            // txt_Temp
-            // 
-            this.txt_Temp.Location = new System.Drawing.Point(102, 93);
-            this.txt_Temp.Name = "txt_Temp";
-            this.txt_Temp.Size = new System.Drawing.Size(176, 27);
-            this.txt_Temp.TabIndex = 9;
-            // 
-            // chk_Temp
-            // 
-            this.chk_Temp.AutoSize = true;
-            this.chk_Temp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Temp.Location = new System.Drawing.Point(16, 95);
-            this.chk_Temp.Name = "chk_Temp";
-            this.chk_Temp.Size = new System.Drawing.Size(87, 24);
-            this.chk_Temp.TabIndex = 8;
-            this.chk_Temp.Text = "Temp    :";
-            this.chk_Temp.UseVisualStyleBackColor = true;
-            // 
-            // txt_Tiempo
-            // 
-            this.txt_Tiempo.Location = new System.Drawing.Point(113, 126);
-            this.txt_Tiempo.Name = "txt_Tiempo";
-            this.txt_Tiempo.Size = new System.Drawing.Size(106, 27);
-            this.txt_Tiempo.TabIndex = 11;
-            // 
-            // chk_Tiempo
-            // 
-            this.chk_Tiempo.AutoSize = true;
-            this.chk_Tiempo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Tiempo.Location = new System.Drawing.Point(16, 128);
-            this.chk_Tiempo.Name = "chk_Tiempo";
-            this.chk_Tiempo.Size = new System.Drawing.Size(97, 24);
-            this.chk_Tiempo.TabIndex = 10;
-            this.chk_Tiempo.Text = "Tiempo   :";
-            this.chk_Tiempo.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Horas";
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.txt_STOP);
@@ -418,96 +428,6 @@
             this.groupBox6.Size = new System.Drawing.Size(592, 139);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
-            // 
-            // txt_SUBST
-            // 
-            this.txt_SUBST.Location = new System.Drawing.Point(111, 57);
-            this.txt_SUBST.Name = "txt_SUBST";
-            this.txt_SUBST.Size = new System.Drawing.Size(167, 27);
-            this.txt_SUBST.TabIndex = 7;
-            // 
-            // txt_ANT
-            // 
-            this.txt_ANT.Location = new System.Drawing.Point(90, 21);
-            this.txt_ANT.Name = "txt_ANT";
-            this.txt_ANT.Size = new System.Drawing.Size(188, 27);
-            this.txt_ANT.TabIndex = 6;
-            // 
-            // chk_SUBST
-            // 
-            this.chk_SUBST.AutoSize = true;
-            this.chk_SUBST.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_SUBST.Location = new System.Drawing.Point(16, 59);
-            this.chk_SUBST.Name = "chk_SUBST";
-            this.chk_SUBST.Size = new System.Drawing.Size(89, 24);
-            this.chk_SUBST.TabIndex = 5;
-            this.chk_SUBST.Text = "SUBST   :";
-            this.chk_SUBST.UseVisualStyleBackColor = true;
-            // 
-            // chk_ANT
-            // 
-            this.chk_ANT.AutoSize = true;
-            this.chk_ANT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ANT.Location = new System.Drawing.Point(16, 24);
-            this.chk_ANT.Name = "chk_ANT";
-            this.chk_ANT.Size = new System.Drawing.Size(67, 24);
-            this.chk_ANT.TabIndex = 0;
-            this.chk_ANT.Text = "ANT :";
-            this.chk_ANT.UseVisualStyleBackColor = true;
-            // 
-            // txt_Conjug
-            // 
-            this.txt_Conjug.Location = new System.Drawing.Point(118, 92);
-            this.txt_Conjug.Name = "txt_Conjug";
-            this.txt_Conjug.Size = new System.Drawing.Size(160, 27);
-            this.txt_Conjug.TabIndex = 9;
-            // 
-            // chk_Conjug
-            // 
-            this.chk_Conjug.AutoSize = true;
-            this.chk_Conjug.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Conjug.Location = new System.Drawing.Point(16, 94);
-            this.chk_Conjug.Name = "chk_Conjug";
-            this.chk_Conjug.Size = new System.Drawing.Size(102, 24);
-            this.chk_Conjug.TabIndex = 8;
-            this.chk_Conjug.Text = "CONJUG   :";
-            this.chk_Conjug.UseVisualStyleBackColor = true;
-            // 
-            // txt_TiempoSubs
-            // 
-            this.txt_TiempoSubs.Location = new System.Drawing.Point(487, 21);
-            this.txt_TiempoSubs.Name = "txt_TiempoSubs";
-            this.txt_TiempoSubs.Size = new System.Drawing.Size(60, 27);
-            this.txt_TiempoSubs.TabIndex = 11;
-            // 
-            // chk_TiempoSubs
-            // 
-            this.chk_TiempoSubs.AutoSize = true;
-            this.chk_TiempoSubs.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_TiempoSubs.Location = new System.Drawing.Point(311, 24);
-            this.chk_TiempoSubs.Name = "chk_TiempoSubs";
-            this.chk_TiempoSubs.Size = new System.Drawing.Size(177, 24);
-            this.chk_TiempoSubs.TabIndex = 10;
-            this.chk_TiempoSubs.Text = "Tiempo de Substrato :";
-            this.chk_TiempoSubs.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(295, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(2, 110);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(549, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 24);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "mins";
             // 
             // txt_STOP
             // 
@@ -545,6 +465,96 @@
             this.chk_SHN.Text = "SHN :";
             this.chk_SHN.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(549, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 24);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "mins";
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(295, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(2, 110);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "label2";
+            // 
+            // txt_TiempoSubs
+            // 
+            this.txt_TiempoSubs.Location = new System.Drawing.Point(487, 21);
+            this.txt_TiempoSubs.Name = "txt_TiempoSubs";
+            this.txt_TiempoSubs.Size = new System.Drawing.Size(60, 27);
+            this.txt_TiempoSubs.TabIndex = 11;
+            // 
+            // chk_TiempoSubs
+            // 
+            this.chk_TiempoSubs.AutoSize = true;
+            this.chk_TiempoSubs.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_TiempoSubs.Location = new System.Drawing.Point(311, 24);
+            this.chk_TiempoSubs.Name = "chk_TiempoSubs";
+            this.chk_TiempoSubs.Size = new System.Drawing.Size(177, 24);
+            this.chk_TiempoSubs.TabIndex = 10;
+            this.chk_TiempoSubs.Text = "Tiempo de Substrato :";
+            this.chk_TiempoSubs.UseVisualStyleBackColor = true;
+            // 
+            // txt_Conjug
+            // 
+            this.txt_Conjug.Location = new System.Drawing.Point(118, 92);
+            this.txt_Conjug.Name = "txt_Conjug";
+            this.txt_Conjug.Size = new System.Drawing.Size(160, 27);
+            this.txt_Conjug.TabIndex = 9;
+            // 
+            // chk_Conjug
+            // 
+            this.chk_Conjug.AutoSize = true;
+            this.chk_Conjug.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Conjug.Location = new System.Drawing.Point(16, 94);
+            this.chk_Conjug.Name = "chk_Conjug";
+            this.chk_Conjug.Size = new System.Drawing.Size(102, 24);
+            this.chk_Conjug.TabIndex = 8;
+            this.chk_Conjug.Text = "CONJUG   :";
+            this.chk_Conjug.UseVisualStyleBackColor = true;
+            // 
+            // txt_SUBST
+            // 
+            this.txt_SUBST.Location = new System.Drawing.Point(111, 57);
+            this.txt_SUBST.Name = "txt_SUBST";
+            this.txt_SUBST.Size = new System.Drawing.Size(167, 27);
+            this.txt_SUBST.TabIndex = 7;
+            // 
+            // txt_ANT
+            // 
+            this.txt_ANT.Location = new System.Drawing.Point(90, 21);
+            this.txt_ANT.Name = "txt_ANT";
+            this.txt_ANT.Size = new System.Drawing.Size(188, 27);
+            this.txt_ANT.TabIndex = 6;
+            // 
+            // chk_SUBST
+            // 
+            this.chk_SUBST.AutoSize = true;
+            this.chk_SUBST.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_SUBST.Location = new System.Drawing.Point(16, 59);
+            this.chk_SUBST.Name = "chk_SUBST";
+            this.chk_SUBST.Size = new System.Drawing.Size(89, 24);
+            this.chk_SUBST.TabIndex = 5;
+            this.chk_SUBST.Text = "SUBST   :";
+            this.chk_SUBST.UseVisualStyleBackColor = true;
+            // 
+            // chk_ANT
+            // 
+            this.chk_ANT.AutoSize = true;
+            this.chk_ANT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_ANT.Location = new System.Drawing.Point(16, 24);
+            this.chk_ANT.Name = "chk_ANT";
+            this.chk_ANT.Size = new System.Drawing.Size(67, 24);
+            this.chk_ANT.TabIndex = 0;
+            this.chk_ANT.Text = "ANT :";
+            this.chk_ANT.UseVisualStyleBackColor = true;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.txt_ControlNegSalLS);
@@ -565,43 +575,33 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "CONTROLES";
             // 
-            // txt_ControlPos
+            // txt_ControlNegSalLS
             // 
-            this.txt_ControlPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ControlPos.Location = new System.Drawing.Point(226, 36);
-            this.txt_ControlPos.Name = "txt_ControlPos";
-            this.txt_ControlPos.Size = new System.Drawing.Size(158, 27);
-            this.txt_ControlPos.TabIndex = 1;
+            this.txt_ControlNegSalLS.Location = new System.Drawing.Point(485, 103);
+            this.txt_ControlNegSalLS.Name = "txt_ControlNegSalLS";
+            this.txt_ControlNegSalLS.Size = new System.Drawing.Size(88, 27);
+            this.txt_ControlNegSalLS.TabIndex = 9;
             // 
-            // chk_ControlPos
+            // txt_ControlNegLS
             // 
-            this.chk_ControlPos.AutoSize = true;
-            this.chk_ControlPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ControlPos.Location = new System.Drawing.Point(23, 37);
-            this.chk_ControlPos.Name = "chk_ControlPos";
-            this.chk_ControlPos.Size = new System.Drawing.Size(142, 24);
-            this.chk_ControlPos.TabIndex = 0;
-            this.chk_ControlPos.Text = "Control Positivo :";
-            this.chk_ControlPos.UseVisualStyleBackColor = true;
+            this.txt_ControlNegLS.Location = new System.Drawing.Point(485, 70);
+            this.txt_ControlNegLS.Name = "txt_ControlNegLS";
+            this.txt_ControlNegLS.Size = new System.Drawing.Size(88, 27);
+            this.txt_ControlNegLS.TabIndex = 8;
             // 
-            // txt_ControlNeg
+            // txt_ControlNegSalLI
             // 
-            this.txt_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ControlNeg.Location = new System.Drawing.Point(226, 70);
-            this.txt_ControlNeg.Name = "txt_ControlNeg";
-            this.txt_ControlNeg.Size = new System.Drawing.Size(158, 27);
-            this.txt_ControlNeg.TabIndex = 3;
+            this.txt_ControlNegSalLI.Location = new System.Drawing.Point(391, 104);
+            this.txt_ControlNegSalLI.Name = "txt_ControlNegSalLI";
+            this.txt_ControlNegSalLI.Size = new System.Drawing.Size(88, 27);
+            this.txt_ControlNegSalLI.TabIndex = 7;
             // 
-            // chk_ControlNeg
+            // txt_ControlNegLI
             // 
-            this.chk_ControlNeg.AutoSize = true;
-            this.chk_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ControlNeg.Location = new System.Drawing.Point(23, 70);
-            this.chk_ControlNeg.Name = "chk_ControlNeg";
-            this.chk_ControlNeg.Size = new System.Drawing.Size(152, 24);
-            this.chk_ControlNeg.TabIndex = 2;
-            this.chk_ControlNeg.Text = "Control Negativo :";
-            this.chk_ControlNeg.UseVisualStyleBackColor = true;
+            this.txt_ControlNegLI.Location = new System.Drawing.Point(391, 70);
+            this.txt_ControlNegLI.Name = "txt_ControlNegLI";
+            this.txt_ControlNegLI.Size = new System.Drawing.Size(88, 27);
+            this.txt_ControlNegLI.TabIndex = 6;
             // 
             // txt_ControlNegSal
             // 
@@ -622,33 +622,43 @@
             this.chk_ControlNegSal.Text = "Control Negativo Saliva :";
             this.chk_ControlNegSal.UseVisualStyleBackColor = true;
             // 
-            // txt_ControlNegLI
+            // txt_ControlNeg
             // 
-            this.txt_ControlNegLI.Location = new System.Drawing.Point(391, 70);
-            this.txt_ControlNegLI.Name = "txt_ControlNegLI";
-            this.txt_ControlNegLI.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlNegLI.TabIndex = 6;
+            this.txt_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ControlNeg.Location = new System.Drawing.Point(226, 70);
+            this.txt_ControlNeg.Name = "txt_ControlNeg";
+            this.txt_ControlNeg.Size = new System.Drawing.Size(158, 27);
+            this.txt_ControlNeg.TabIndex = 3;
             // 
-            // txt_ControlNegSalLI
+            // chk_ControlNeg
             // 
-            this.txt_ControlNegSalLI.Location = new System.Drawing.Point(391, 104);
-            this.txt_ControlNegSalLI.Name = "txt_ControlNegSalLI";
-            this.txt_ControlNegSalLI.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlNegSalLI.TabIndex = 7;
+            this.chk_ControlNeg.AutoSize = true;
+            this.chk_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_ControlNeg.Location = new System.Drawing.Point(23, 70);
+            this.chk_ControlNeg.Name = "chk_ControlNeg";
+            this.chk_ControlNeg.Size = new System.Drawing.Size(152, 24);
+            this.chk_ControlNeg.TabIndex = 2;
+            this.chk_ControlNeg.Text = "Control Negativo :";
+            this.chk_ControlNeg.UseVisualStyleBackColor = true;
             // 
-            // txt_ControlNegLS
+            // txt_ControlPos
             // 
-            this.txt_ControlNegLS.Location = new System.Drawing.Point(485, 70);
-            this.txt_ControlNegLS.Name = "txt_ControlNegLS";
-            this.txt_ControlNegLS.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlNegLS.TabIndex = 8;
+            this.txt_ControlPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ControlPos.Location = new System.Drawing.Point(226, 36);
+            this.txt_ControlPos.Name = "txt_ControlPos";
+            this.txt_ControlPos.Size = new System.Drawing.Size(158, 27);
+            this.txt_ControlPos.TabIndex = 1;
             // 
-            // txt_ControlNegSalLS
+            // chk_ControlPos
             // 
-            this.txt_ControlNegSalLS.Location = new System.Drawing.Point(485, 103);
-            this.txt_ControlNegSalLS.Name = "txt_ControlNegSalLS";
-            this.txt_ControlNegSalLS.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlNegSalLS.TabIndex = 9;
+            this.chk_ControlPos.AutoSize = true;
+            this.chk_ControlPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_ControlPos.Location = new System.Drawing.Point(23, 37);
+            this.chk_ControlPos.Name = "chk_ControlPos";
+            this.chk_ControlPos.Size = new System.Drawing.Size(142, 24);
+            this.chk_ControlPos.TabIndex = 0;
+            this.chk_ControlPos.Text = "Control Positivo :";
+            this.chk_ControlPos.UseVisualStyleBackColor = true;
             // 
             // btn_Aceptar
             // 
@@ -660,6 +670,7 @@
             this.btn_Aceptar.TabIndex = 10;
             this.btn_Aceptar.Text = "Aceptar";
             this.btn_Aceptar.UseVisualStyleBackColor = true;
+            this.btn_Aceptar.Click += new System.EventHandler(this.btn_Aceptar_Click);
             // 
             // btn_Cancelar
             // 
@@ -671,16 +682,6 @@
             this.btn_Cancelar.TabIndex = 11;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
-            // 
-            // date_Fecha
-            // 
-            this.date_Fecha.CustomFormat = "dd/MM/yyyy";
-            this.date_Fecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_Fecha.Location = new System.Drawing.Point(104, 59);
-            this.date_Fecha.Name = "date_Fecha";
-            this.date_Fecha.Size = new System.Drawing.Size(174, 27);
-            this.date_Fecha.TabIndex = 13;
             // 
             // DatosIgM
             // 

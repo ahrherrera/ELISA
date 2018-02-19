@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ELISA.Transaccion.DatosProtocoloTrans;
 
 namespace ELISA.UI.UIParametros
 {
@@ -23,6 +24,12 @@ namespace ELISA.UI.UIParametros
         }
 
         private async Task fillFields()
+        {
+            datosprotocoloigg data = DatosProtocoloIgG.TraerDatosProtocoloIgG();
+            txt_LoteIgG.Text = data.LoteIgG;
+        }
+
+        private void btn_Aceptar_Click(object sender, EventArgs e)
         {
 
         }

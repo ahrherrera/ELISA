@@ -18,6 +18,7 @@ namespace ELISA.UI
         public static usuario user;
         public string SelectedProtocol;
         CheckBox cb = new CheckBox();
+        public static Boolean ControlP = true;
         public Principal(usuario logged)
         {
             InitializeComponent();
@@ -611,9 +612,15 @@ namespace ELISA.UI
             Principal_FormClosing(null, new FormClosingEventArgs(CloseReason.UserClosing, true));
         }
 
-        private void IgGDatos_Click(object sender, EventArgs e)
+        private void btn_Save_Click(object sender, EventArgs e)
         {
-
+            if (txt_Placa.Text.Equals(""))
+            {
+                
+            }else if (cmb_Lab1.SelectedIndex!=-1)
+            {
+                
+            }
         }
     }
 }

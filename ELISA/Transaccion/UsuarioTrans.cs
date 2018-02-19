@@ -22,7 +22,7 @@ namespace ELISA.Transaccion
         {
             try
             {
-                using (var context = new elisaEntities1())
+                using (var context = new elisaEntities2())
                 {
                     var listaUsuarios = context.usuarios.ToList();
                     cmb.DataSource = listaUsuarios;

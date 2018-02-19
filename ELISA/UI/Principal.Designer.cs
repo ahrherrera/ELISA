@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_RM = new System.Windows.Forms.ComboBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -61,7 +61,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.IgGDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.protocoloIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.protocoloEIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.protocoloRotavirusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +70,22 @@
             this.protocoloIgMZikaBOBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kitRotaviruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasladarResultadosIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revisarResultadosIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasladarResultadosEIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasladarResultadosELISAINHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.llenarCamposSinMuestraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrarProtocoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarPlacaInválidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirPlacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaDelProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeELISASoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_Protocolo = new System.Windows.Forms.DataGridView();
             this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,22 +143,6 @@
             this.btn_Leer = new System.Windows.Forms.Button();
             this.btn_LoadProtocolo = new System.Windows.Forms.Button();
             this.btnProtocolo = new System.Windows.Forms.Button();
-            this.resultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trasladarResultadosIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.revisarResultadosIgMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trasladarResultadosEIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trasladarResultadosELISAINHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.utilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.llenarCamposSinMuestraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrarProtocoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarPlacaInválidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirPlacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaDelProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeELISASoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -469,7 +468,6 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.IgGDatos,
             this.protocoloIgMToolStripMenuItem,
             this.protocoloEIToolStripMenuItem,
             this.protocoloRotavirusToolStripMenuItem,
@@ -483,15 +481,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 24);
             this.toolStripMenuItem1.Text = "Datos de Protocolo";
             this.toolStripMenuItem1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            // 
-            // IgGDatos
-            // 
-            this.IgGDatos.Name = "IgGDatos";
-            this.IgGDatos.ShortcutKeyDisplayString = "";
-            this.IgGDatos.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.IgGDatos.Size = new System.Drawing.Size(278, 26);
-            this.IgGDatos.Text = "Protocolo IgG";
-            this.IgGDatos.Click += new System.EventHandler(this.IgGDatos_Click);
             // 
             // protocoloIgMToolStripMenuItem
             // 
@@ -553,6 +542,129 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // resultadosToolStripMenuItem
+            // 
+            this.resultadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trasladarResultadosIgMToolStripMenuItem,
+            this.revisarResultadosIgMToolStripMenuItem,
+            this.trasladarResultadosEIToolStripMenuItem,
+            this.trasladarResultadosELISAINHToolStripMenuItem});
+            this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
+            this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
+            this.resultadosToolStripMenuItem.Text = "Resultados";
+            // 
+            // trasladarResultadosIgMToolStripMenuItem
+            // 
+            this.trasladarResultadosIgMToolStripMenuItem.Name = "trasladarResultadosIgMToolStripMenuItem";
+            this.trasladarResultadosIgMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.trasladarResultadosIgMToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.trasladarResultadosIgMToolStripMenuItem.Text = "Trasladar Resultados IgM";
+            // 
+            // revisarResultadosIgMToolStripMenuItem
+            // 
+            this.revisarResultadosIgMToolStripMenuItem.Name = "revisarResultadosIgMToolStripMenuItem";
+            this.revisarResultadosIgMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.revisarResultadosIgMToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.revisarResultadosIgMToolStripMenuItem.Text = "Revisar Resultados IgM";
+            // 
+            // trasladarResultadosEIToolStripMenuItem
+            // 
+            this.trasladarResultadosEIToolStripMenuItem.Name = "trasladarResultadosEIToolStripMenuItem";
+            this.trasladarResultadosEIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.trasladarResultadosEIToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.trasladarResultadosEIToolStripMenuItem.Text = "Trasladar Resultados EI";
+            // 
+            // trasladarResultadosELISAINHToolStripMenuItem
+            // 
+            this.trasladarResultadosELISAINHToolStripMenuItem.Name = "trasladarResultadosELISAINHToolStripMenuItem";
+            this.trasladarResultadosELISAINHToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.trasladarResultadosELISAINHToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.trasladarResultadosELISAINHToolStripMenuItem.Text = "Trasladar Resultados ELISA INH";
+            // 
+            // utilidadesToolStripMenuItem
+            // 
+            this.utilidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.llenarCamposSinMuestraToolStripMenuItem,
+            this.borrarProtocoloToolStripMenuItem,
+            this.guardarPlacaInválidaToolStripMenuItem,
+            this.imprimirPlacaToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.cambiarContraseñaToolStripMenuItem,
+            this.gestiónDeUsuariosToolStripMenuItem});
+            this.utilidadesToolStripMenuItem.Name = "utilidadesToolStripMenuItem";
+            this.utilidadesToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.utilidadesToolStripMenuItem.Text = "Utilidades";
+            // 
+            // llenarCamposSinMuestraToolStripMenuItem
+            // 
+            this.llenarCamposSinMuestraToolStripMenuItem.Name = "llenarCamposSinMuestraToolStripMenuItem";
+            this.llenarCamposSinMuestraToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.llenarCamposSinMuestraToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.llenarCamposSinMuestraToolStripMenuItem.Text = "Llenar Campos Sin Muestra";
+            // 
+            // borrarProtocoloToolStripMenuItem
+            // 
+            this.borrarProtocoloToolStripMenuItem.Name = "borrarProtocoloToolStripMenuItem";
+            this.borrarProtocoloToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.borrarProtocoloToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.borrarProtocoloToolStripMenuItem.Text = "Borrar Protocolo";
+            // 
+            // guardarPlacaInválidaToolStripMenuItem
+            // 
+            this.guardarPlacaInválidaToolStripMenuItem.Name = "guardarPlacaInválidaToolStripMenuItem";
+            this.guardarPlacaInválidaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.guardarPlacaInválidaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.guardarPlacaInválidaToolStripMenuItem.Text = "Guardar Placa Inválida";
+            // 
+            // imprimirPlacaToolStripMenuItem
+            // 
+            this.imprimirPlacaToolStripMenuItem.Name = "imprimirPlacaToolStripMenuItem";
+            this.imprimirPlacaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F11)));
+            this.imprimirPlacaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.imprimirPlacaToolStripMenuItem.Text = "Imprimir Placa";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(312, 6);
+            // 
+            // cambiarContraseñaToolStripMenuItem
+            // 
+            this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
+            this.cambiarContraseñaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar Contraseña";
+            // 
+            // gestiónDeUsuariosToolStripMenuItem
+            // 
+            this.gestiónDeUsuariosToolStripMenuItem.Name = "gestiónDeUsuariosToolStripMenuItem";
+            this.gestiónDeUsuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.gestiónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.gestiónDeUsuariosToolStripMenuItem.Text = "Gestión de Usuarios";
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ayudaDelProgramaToolStripMenuItem,
+            this.acercaDeELISASoftwareToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // ayudaDelProgramaToolStripMenuItem
+            // 
+            this.ayudaDelProgramaToolStripMenuItem.Name = "ayudaDelProgramaToolStripMenuItem";
+            this.ayudaDelProgramaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.ayudaDelProgramaToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.ayudaDelProgramaToolStripMenuItem.Text = "Ayuda del Programa";
+            // 
+            // acercaDeELISASoftwareToolStripMenuItem
+            // 
+            this.acercaDeELISASoftwareToolStripMenuItem.Name = "acercaDeELISASoftwareToolStripMenuItem";
+            this.acercaDeELISASoftwareToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.acercaDeELISASoftwareToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
+            this.acercaDeELISASoftwareToolStripMenuItem.Text = "Acerca de ELISA Software";
+            // 
             // dgv_Protocolo
             // 
             this.dgv_Protocolo.AllowUserToAddRows = false;
@@ -560,14 +672,14 @@
             this.dgv_Protocolo.AllowUserToResizeColumns = false;
             this.dgv_Protocolo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Protocolo.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Protocolo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Protocolo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col1,
@@ -586,14 +698,14 @@
             this.dgv_Protocolo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Protocolo.MultiSelect = false;
             this.dgv_Protocolo.Name = "dgv_Protocolo";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Protocolo.RowTemplate.Height = 24;
             this.dgv_Protocolo.Size = new System.Drawing.Size(1175, 274);
             this.dgv_Protocolo.TabIndex = 0;
@@ -890,14 +1002,14 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -916,14 +1028,14 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1175, 274);
             this.dataGridView1.TabIndex = 1;
@@ -1084,6 +1196,7 @@
             this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Leer
             // 
@@ -1124,129 +1237,6 @@
             this.btnProtocolo.Text = "Protocolo  ▼";
             this.btnProtocolo.UseVisualStyleBackColor = true;
             this.btnProtocolo.Click += new System.EventHandler(this.btnProtocolo_Click);
-            // 
-            // resultadosToolStripMenuItem
-            // 
-            this.resultadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trasladarResultadosIgMToolStripMenuItem,
-            this.revisarResultadosIgMToolStripMenuItem,
-            this.trasladarResultadosEIToolStripMenuItem,
-            this.trasladarResultadosELISAINHToolStripMenuItem});
-            this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
-            this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
-            this.resultadosToolStripMenuItem.Text = "Resultados";
-            // 
-            // trasladarResultadosIgMToolStripMenuItem
-            // 
-            this.trasladarResultadosIgMToolStripMenuItem.Name = "trasladarResultadosIgMToolStripMenuItem";
-            this.trasladarResultadosIgMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.trasladarResultadosIgMToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
-            this.trasladarResultadosIgMToolStripMenuItem.Text = "Trasladar Resultados IgM";
-            // 
-            // revisarResultadosIgMToolStripMenuItem
-            // 
-            this.revisarResultadosIgMToolStripMenuItem.Name = "revisarResultadosIgMToolStripMenuItem";
-            this.revisarResultadosIgMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.revisarResultadosIgMToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
-            this.revisarResultadosIgMToolStripMenuItem.Text = "Revisar Resultados IgM";
-            // 
-            // trasladarResultadosEIToolStripMenuItem
-            // 
-            this.trasladarResultadosEIToolStripMenuItem.Name = "trasladarResultadosEIToolStripMenuItem";
-            this.trasladarResultadosEIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.trasladarResultadosEIToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
-            this.trasladarResultadosEIToolStripMenuItem.Text = "Trasladar Resultados EI";
-            // 
-            // trasladarResultadosELISAINHToolStripMenuItem
-            // 
-            this.trasladarResultadosELISAINHToolStripMenuItem.Name = "trasladarResultadosELISAINHToolStripMenuItem";
-            this.trasladarResultadosELISAINHToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.trasladarResultadosELISAINHToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
-            this.trasladarResultadosELISAINHToolStripMenuItem.Text = "Trasladar Resultados ELISA INH";
-            // 
-            // utilidadesToolStripMenuItem
-            // 
-            this.utilidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.llenarCamposSinMuestraToolStripMenuItem,
-            this.borrarProtocoloToolStripMenuItem,
-            this.guardarPlacaInválidaToolStripMenuItem,
-            this.imprimirPlacaToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.cambiarContraseñaToolStripMenuItem,
-            this.gestiónDeUsuariosToolStripMenuItem});
-            this.utilidadesToolStripMenuItem.Name = "utilidadesToolStripMenuItem";
-            this.utilidadesToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
-            this.utilidadesToolStripMenuItem.Text = "Utilidades";
-            // 
-            // llenarCamposSinMuestraToolStripMenuItem
-            // 
-            this.llenarCamposSinMuestraToolStripMenuItem.Name = "llenarCamposSinMuestraToolStripMenuItem";
-            this.llenarCamposSinMuestraToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.llenarCamposSinMuestraToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
-            this.llenarCamposSinMuestraToolStripMenuItem.Text = "Llenar Campos Sin Muestra";
-            // 
-            // borrarProtocoloToolStripMenuItem
-            // 
-            this.borrarProtocoloToolStripMenuItem.Name = "borrarProtocoloToolStripMenuItem";
-            this.borrarProtocoloToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.borrarProtocoloToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
-            this.borrarProtocoloToolStripMenuItem.Text = "Borrar Protocolo";
-            // 
-            // guardarPlacaInválidaToolStripMenuItem
-            // 
-            this.guardarPlacaInválidaToolStripMenuItem.Name = "guardarPlacaInválidaToolStripMenuItem";
-            this.guardarPlacaInválidaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.guardarPlacaInválidaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
-            this.guardarPlacaInválidaToolStripMenuItem.Text = "Guardar Placa Inválida";
-            // 
-            // imprimirPlacaToolStripMenuItem
-            // 
-            this.imprimirPlacaToolStripMenuItem.Name = "imprimirPlacaToolStripMenuItem";
-            this.imprimirPlacaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F11)));
-            this.imprimirPlacaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
-            this.imprimirPlacaToolStripMenuItem.Text = "Imprimir Placa";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(312, 6);
-            // 
-            // cambiarContraseñaToolStripMenuItem
-            // 
-            this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
-            this.cambiarContraseñaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
-            this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar Contraseña";
-            // 
-            // gestiónDeUsuariosToolStripMenuItem
-            // 
-            this.gestiónDeUsuariosToolStripMenuItem.Name = "gestiónDeUsuariosToolStripMenuItem";
-            this.gestiónDeUsuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.gestiónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
-            this.gestiónDeUsuariosToolStripMenuItem.Text = "Gestión de Usuarios";
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ayudaDelProgramaToolStripMenuItem,
-            this.acercaDeELISASoftwareToolStripMenuItem});
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // ayudaDelProgramaToolStripMenuItem
-            // 
-            this.ayudaDelProgramaToolStripMenuItem.Name = "ayudaDelProgramaToolStripMenuItem";
-            this.ayudaDelProgramaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.ayudaDelProgramaToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
-            this.ayudaDelProgramaToolStripMenuItem.Text = "Ayuda del Programa";
-            // 
-            // acercaDeELISASoftwareToolStripMenuItem
-            // 
-            this.acercaDeELISASoftwareToolStripMenuItem.Name = "acercaDeELISASoftwareToolStripMenuItem";
-            this.acercaDeELISASoftwareToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.acercaDeELISASoftwareToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
-            this.acercaDeELISASoftwareToolStripMenuItem.Text = "Acerca de ELISA Software";
             // 
             // Principal
             // 
@@ -1320,7 +1310,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem IgGDatos;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripTextBox txt_Placa;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;

@@ -5,6 +5,57 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="elisaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="anti_human_igg">
+          <Key>
+            <PropertyRef Name="Lote_Asign_IgG" />
+          </Key>
+          <Property Name="Lote_Asign_IgG" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lote" Type="varchar" MaxLength="10" />
+          <Property Name="Distribuidora" Type="varchar" MaxLength="25" />
+          <Property Name="Cod_Catalago_IgG" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Inicia" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Termina" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" />
+          <Property Name="Vol_total" Type="float" />
+          <Property Name="Vol_Pozo" Type="float" />
+          <Property Name="Concentracion_Inc" Type="float" />
+          <Property Name="Concentracion_Uso" Type="float" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="anti_human_igm">
+          <Key>
+            <PropertyRef Name="Lote_Asign_IgM" />
+          </Key>
+          <Property Name="Lote_Asign_IgM" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lote" Type="varchar" MaxLength="10" />
+          <Property Name="Distribuidora" Type="varchar" MaxLength="25" />
+          <Property Name="Cod_Catalogo_IgM" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Inicia" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Termina" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" />
+          <Property Name="Vol_total" Type="float" />
+          <Property Name="Vol_Pozo" Type="float" />
+          <Property Name="Concentracion_Inc" Type="float" />
+          <Property Name="Concentracion_Uso" Type="float" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="antigeno_viral">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Anti" />
+          </Key>
+          <Property Name="Lote_Asign_Anti" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="T20" Type="varchar" MaxLength="10" />
+          <Property Name="BSA" Type="varchar" MaxLength="10" />
+          <Property Name="Cod_Glicerol" Type="varchar" MaxLength="10" />
+          <Property Name="PBST 1X" Type="varchar" MaxLength="10" />
+          <Property Name="Fecha_Preparacion" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Termina" Type="datetime" Precision="0" />
+          <Property Name="IgM" Type="varchar" MaxLength="5" />
+          <Property Name="EI" Type="varchar" MaxLength="5" />
+          <Property Name="IgG" Type="varchar" MaxLength="5" />
+          <Property Name="IgA" Type="varchar" MaxLength="5" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="30" />
+        </EntityType>
         <EntityType Name="chikungunyainhhiper">
           <Key>
             <PropertyRef Name="Cod_Pozo" />
@@ -121,6 +172,27 @@
           <Property Name="Vironostika" Type="bool" />
           <Property Name="Adaltis" Type="bool" />
         </EntityType>
+        <EntityType Name="conjugado">
+          <Key>
+            <PropertyRef Name="NoLote_Conjugado" />
+          </Key>
+          <Property Name="NoLote_Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="NH4SO4" Type="varchar" MaxLength="10" />
+          <Property Name="PBS1X" Type="varchar" MaxLength="10" />
+          <Property Name="CH3COONa" Type="varchar" MaxLength="10" />
+          <Property Name="CH3COOH" Type="varchar" MaxLength="10" />
+          <Property Name="Na2CO3" Type="varchar" MaxLength="10" />
+          <Property Name="NaHCO3" Type="varchar" MaxLength="10" />
+          <Property Name="PEROX" Type="varchar" MaxLength="10" />
+          <Property Name="NaJO4" Type="varchar" MaxLength="10" />
+          <Property Name="NaHBO" Type="varchar" MaxLength="10" />
+          <Property Name="BSA" Type="varchar" MaxLength="10" />
+          <Property Name="GLIC" Type="varchar" MaxLength="10" />
+          <Property Name="MEMBR" Type="varchar" MaxLength="10" />
+          <Property Name="Fecha_Preparacion" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Terminacion" Type="datetime" Precision="0" />
+        </EntityType>
         <EntityType Name="controles ns1">
           <Key>
             <PropertyRef Name="CodControl" />
@@ -141,6 +213,43 @@
           </Key>
           <Property Name="CodControl" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="TipoControl" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="controles_ei">
+          <Key>
+            <PropertyRef Name="Codigo_Asig_ContEI" />
+          </Key>
+          <Property Name="Codigo_Asig_ContEI" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tipo" Type="varchar" MaxLength="3" />
+          <Property Name="MxC" Type="varchar" MaxLength="10" />
+          <Property Name="D_Optica" Type="float" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="Fecha_Inicio" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Finalizacion" Type="datetime" Precision="0" />
+          <Property Name="Oservaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="controles_igg">
+          <Key>
+            <PropertyRef Name="Cod_Asign_ContIgG" />
+          </Key>
+          <Property Name="Cod_Asign_ContIgG" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tipo_Control" Type="varchar" MaxLength="3" />
+          <Property Name="D_Optica" Type="float" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="Fecha_Inicio" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Finalizacion" Type="datetime" Precision="0" />
+          <Property Name="Oservaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="controles_igm">
+          <Key>
+            <PropertyRef Name="Cod_Asign_ContIgM" />
+          </Key>
+          <Property Name="Cod_Asign_ContIgM" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tipo_Control" Type="varchar" MaxLength="3" />
+          <Property Name="D_Optica" Type="float" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="Fecha_Inicio" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Finalizacion" Type="datetime" Precision="0" />
+          <Property Name="Oservaciones" Type="varchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'def.elisa.datosprotocolochik' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -666,7 +775,6 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <Property Name="posicion" Type="utinyint" Nullable="false" />
           <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="Lectura" Type="float" Nullable="false" />
           <Property Name="m3men" Type="float" />
           <Property Name="Unidades" Type="varchar" MaxLength="25" Nullable="false" />
@@ -685,7 +793,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <Property Name="Valido" Type="bool" />
           <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
           <Property Name="Lab2" Type="varchar" MaxLength="3" />
-          <Property Name="user" Type="varchar" MaxLength="3" />
+          <Property Name="user" Type="int" />
         </EntityType>
         <EntityType Name="elisaigm">
           <Key>
@@ -1474,6 +1582,20 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           </Key>
           <Property Name="Estudio" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="gammaglobulina">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Gamma1" />
+          </Key>
+          <Property Name="Lote_Asign_Gamma1" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Codigo_Mx" Type="varchar" MaxLength="10" />
+          <Property Name="PBS1X" Type="varchar" MaxLength="10" />
+          <Property Name="NH4SO4" Type="varchar" MaxLength="10" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="Concen_Gamma" Type="float" />
+          <Property Name="Fecha_Preparacion" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Terminacion" Type="datetime" Precision="0" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="kit elisa ns1">
           <Key>
             <PropertyRef Name="Codigo" />
@@ -1536,6 +1658,44 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <Property Name="Lab2" Type="varchar" MaxLength="3" />
           <Property Name="User" Type="varchar" MaxLength="3" />
           <Property Name="Tras" Type="bool" />
+        </EntityType>
+        <EntityType Name="pbs1x">
+          <Key>
+            <PropertyRef Name="Lote_Asign_1X" />
+          </Key>
+          <Property Name="Lote_Asign_20X" Type="varchar" MaxLength="10" />
+          <Property Name="Numero" Type="int" />
+          <Property Name="Lote_Asign_1X" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="H2ODEST" Type="varchar" MaxLength="10" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="pbs20x">
+          <Key>
+            <PropertyRef Name="Lote_Asign_20X" />
+          </Key>
+          <Property Name="Lote_Asign_20X" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="NaCl" Type="varchar" MaxLength="10" />
+          <Property Name="KCl" Type="varchar" MaxLength="10" />
+          <Property Name="KH2PO4" Type="varchar" MaxLength="10" />
+          <Property Name="Na2HPO4" Type="varchar" MaxLength="10" />
+          <Property Name="H2ODEST" Type="varchar" MaxLength="10" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ph 9,6 (coatting)">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Coatting" />
+          </Key>
+          <Property Name="Lote_Asign_Coatting" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Volumen" Type="int" />
+          <Property Name="Na2CO3" Type="varchar" MaxLength="10" />
+          <Property Name="NaHCO3" Type="varchar" MaxLength="10" />
+          <Property Name="H2ODEST" Type="varchar" MaxLength="10" />
+          <Property Name="pH" Type="float" />
+          <Property Name="Fecha_Preparacion" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" />
+          <Property Name="Oservaciones" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="proch20">
           <Key>
@@ -1640,6 +1800,49 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <Property Name="Lab2" Type="varchar" MaxLength="3" />
           <Property Name="User" Type="varchar" MaxLength="3" />
           <Property Name="Tras" Type="bool" />
+        </EntityType>
+        <EntityType Name="shn">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Ser" />
+          </Key>
+          <Property Name="Lote_Asign_Ser" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lote" Type="varchar" MaxLength="10" />
+          <Property Name="Distribuidora" Type="varchar" MaxLength="25" />
+          <Property Name="Cod_Catalogo_Ser" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Inicia" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Termina" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" />
+          <Property Name="Vol_total" Type="float" />
+          <Property Name="Vol_Pozo" Type="float" />
+          <Property Name="Concentracion_Inc" Type="int" />
+          <Property Name="Concentracion_Uso" Type="int" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="substrato">
+          <Key>
+            <PropertyRef Name="Lote_Asign_TMB" />
+          </Key>
+          <Property Name="Lote_Asign_TMB" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lote" Type="varchar" MaxLength="10" />
+          <Property Name="Distribuidora" Type="varchar" MaxLength="25" />
+          <Property Name="Cod_Catalogo_TMB" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Inicia" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Termina" Type="datetime" Precision="0" />
+          <Property Name="Fecha_Expiracion" Type="datetime" Precision="0" />
+          <Property Name="Vol_total" Type="float" />
+          <Property Name="Vol_Pozo" Type="float" />
+          <Property Name="Concentracion_Inc" Type="int" />
+          <Property Name="Concentracion_Uso" Type="int" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tipo_control">
+          <Key>
+            <PropertyRef Name="Descripcion" />
+          </Key>
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EI" Type="bool" />
+          <Property Name="IgM" Type="bool" />
+          <Property Name="IgG" Type="bool" />
         </EntityType>
         <EntityType Name="tipobloqueo">
           <Key>
@@ -2056,6 +2259,18 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <Property Name="user" Type="varchar" MaxLength="3" />
           <Property Name="contaux" Type="int" />
         </EntityType>
+        <Association Name="fk_Lab1IGGRep">
+          <End Role="laboratoristas" Type="Self.laboratoristas" Multiplicity="1" />
+          <End Role="elisaiggrepeticiones" Type="Self.elisaiggrepeticiones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="laboratoristas">
+              <PropertyRef Name="Cod" />
+            </Principal>
+            <Dependent Role="elisaiggrepeticiones">
+              <PropertyRef Name="Lab1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_NS1kit">
           <End Role="kit elisa ns1" Type="Self.kit elisa ns1" Multiplicity="0..1" />
           <End Role="ns1" Type="Self.ns1" Multiplicity="*" />
@@ -2116,6 +2331,18 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_UserIGGRep">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="elisaiggrepeticiones" Type="Self.elisaiggrepeticiones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="idUsuario" />
+            </Principal>
+            <Dependent Role="elisaiggrepeticiones">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_VIHkit">
           <End Role="kit elisa vih" Type="Self.kit elisa vih" Multiplicity="0..1" />
           <End Role="vih" Type="Self.vih" Multiplicity="*" />
@@ -2129,14 +2356,21 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="elisaModelStoreContainer">
+          <EntitySet Name="anti_human_igg" EntityType="Self.anti_human_igg" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="anti_human_igm" EntityType="Self.anti_human_igm" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="antigeno_viral" EntityType="Self.antigeno_viral" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="chikungunyainhhiper" EntityType="Self.chikungunyainhhiper" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="chikungunyainhmono" EntityType="Self.chikungunyainhmono" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="componentesns1" EntityType="Self.componentesns1" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="componentesrotavirus" EntityType="Self.componentesrotavirus" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="componentesvih" EntityType="Self.componentesvih" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="conjugado" EntityType="Self.conjugado" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="controles ns1" EntityType="Self.controles ns1" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="controles rotavirus" EntityType="Self.controles rotavirus" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="controles vih" EntityType="Self.controles vih" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="controles_ei" EntityType="Self.controles_ei" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="controles_igg" EntityType="Self.controles_igg" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="controles_igm" EntityType="Self.controles_igm" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotavirus" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolovih" EntityType="Self.datosprotocolovih" Schema="elisa" store:Type="Tables" />
@@ -2160,11 +2394,15 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <EntitySet Name="elisainhzika" EntityType="Self.elisainhzika" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="ensayos" EntityType="Self.ensayos" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="estudios" EntityType="Self.estudios" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="gammaglobulina" EntityType="Self.gammaglobulina" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="kit elisa ns1" EntityType="Self.kit elisa ns1" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="kit elisa rotavirus" EntityType="Self.kit elisa rotavirus" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="kit elisa vih" EntityType="Self.kit elisa vih" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="laboratoristas" EntityType="Self.laboratoristas" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="ns1" EntityType="Self.ns1" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="pbs1x" EntityType="Self.pbs1x" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="pbs20x" EntityType="Self.pbs20x" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="ph 9,6 (coatting)" EntityType="Self.ph 9,6 (coatting)" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="proch20" EntityType="Self.proch20" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="reactivos ns1" EntityType="Self.reactivos ns1" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="reactivos rotavirus" EntityType="Self.reactivos rotavirus" Schema="elisa" store:Type="Tables" />
@@ -2172,6 +2410,9 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <EntitySet Name="reactivos_bei" EntityType="Self.reactivos_bei" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="reactivos_bob" EntityType="Self.reactivos_bob" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="rotavirus" EntityType="Self.rotavirus" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="shn" EntityType="Self.shn" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="substrato" EntityType="Self.substrato" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="tipo_control" EntityType="Self.tipo_control" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="tipobloqueo" EntityType="Self.tipobloqueo" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="tipodiluyente" EntityType="Self.tipodiluyente" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="usuario" EntityType="Self.usuario" Schema="elisa" store:Type="Tables" />
@@ -2477,6 +2718,10 @@ FROM `datosprotocolozikabob` AS `datosprotocolozikabob`</DefiningQuery>
 `datosprotocolozikaigmbei`.`STOP`
 FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="fk_Lab1IGGRep" Association="Self.fk_Lab1IGGRep">
+            <End Role="laboratoristas" EntitySet="laboratoristas" />
+            <End Role="elisaiggrepeticiones" EntitySet="elisaiggrepeticiones" />
+          </AssociationSet>
           <AssociationSet Name="fk_NS1kit" Association="Self.fk_NS1kit">
             <End Role="kit elisa ns1" EntitySet="kit elisa ns1" />
             <End Role="ns1" EntitySet="ns1" />
@@ -2497,6 +2742,10 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
             <End Role="kit elisa rotavirus" EntitySet="kit elisa rotavirus" />
             <End Role="rotavirus" EntitySet="rotavirus" />
           </AssociationSet>
+          <AssociationSet Name="fk_UserIGGRep" Association="Self.fk_UserIGGRep">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="elisaiggrepeticiones" EntitySet="elisaiggrepeticiones" />
+          </AssociationSet>
           <AssociationSet Name="fk_VIHkit" Association="Self.fk_VIHkit">
             <End Role="kit elisa vih" EntitySet="kit elisa vih" />
             <End Role="vih" EntitySet="vih" />
@@ -2507,6 +2756,57 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="elisaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="anti_human_igg">
+          <Key>
+            <PropertyRef Name="Lote_Asign_IgG" />
+          </Key>
+          <Property Name="Lote_Asign_IgG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Distribuidora" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Cod_Catalago_IgG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Inicia" Type="DateTime" />
+          <Property Name="Fecha_Termina" Type="DateTime" />
+          <Property Name="Fecha_Expiracion" Type="DateTime" />
+          <Property Name="Vol_total" Type="Single" />
+          <Property Name="Vol_Pozo" Type="Single" />
+          <Property Name="Concentracion_Inc" Type="Single" />
+          <Property Name="Concentracion_Uso" Type="Single" />
+          <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="anti_human_igm">
+          <Key>
+            <PropertyRef Name="Lote_Asign_IgM" />
+          </Key>
+          <Property Name="Lote_Asign_IgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Distribuidora" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Cod_Catalogo_IgM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Inicia" Type="DateTime" />
+          <Property Name="Fecha_Termina" Type="DateTime" />
+          <Property Name="Fecha_Expiracion" Type="DateTime" />
+          <Property Name="Vol_total" Type="Single" />
+          <Property Name="Vol_Pozo" Type="Single" />
+          <Property Name="Concentracion_Inc" Type="Single" />
+          <Property Name="Concentracion_Uso" Type="Single" />
+          <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="antigeno_viral">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Anti" />
+          </Key>
+          <Property Name="Lote_Asign_Anti" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="T20" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BSA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Cod_Glicerol" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PBST_1X" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Preparacion" Type="DateTime" />
+          <Property Name="Fecha_Termina" Type="DateTime" />
+          <Property Name="IgM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="EI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="IgG" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="IgA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="chikungunyainhhiper">
           <Key>
             <PropertyRef Name="Cod_Pozo" />
@@ -2623,6 +2923,27 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="Vironostika" Type="Boolean" />
           <Property Name="Adaltis" Type="Boolean" />
         </EntityType>
+        <EntityType Name="conjugado">
+          <Key>
+            <PropertyRef Name="NoLote_Conjugado" />
+          </Key>
+          <Property Name="NoLote_Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="NH4SO4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PBS1X" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CH3COONa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CH3COOH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Na2CO3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NaHCO3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PEROX" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NaJO4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NaHBO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BSA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="GLIC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MEMBR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Preparacion" Type="DateTime" />
+          <Property Name="Fecha_Terminacion" Type="DateTime" />
+        </EntityType>
         <EntityType Name="controles_ns1">
           <Key>
             <PropertyRef Name="CodControl" />
@@ -2643,6 +2964,43 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           </Key>
           <Property Name="CodControl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TipoControl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="controles_ei">
+          <Key>
+            <PropertyRef Name="Codigo_Asig_ContEI" />
+          </Key>
+          <Property Name="Codigo_Asig_ContEI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tipo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="MxC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="D_Optica" Type="Single" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="Fecha_Inicio" Type="DateTime" />
+          <Property Name="Fecha_Finalizacion" Type="DateTime" />
+          <Property Name="Oservaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="controles_igg">
+          <Key>
+            <PropertyRef Name="Cod_Asign_ContIgG" />
+          </Key>
+          <Property Name="Cod_Asign_ContIgG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tipo_Control" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="D_Optica" Type="Single" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="Fecha_Inicio" Type="DateTime" />
+          <Property Name="Fecha_Finalizacion" Type="DateTime" />
+          <Property Name="Oservaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="controles_igm">
+          <Key>
+            <PropertyRef Name="Cod_Asign_ContIgM" />
+          </Key>
+          <Property Name="Cod_Asign_ContIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tipo_Control" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="D_Optica" Type="Single" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="Fecha_Inicio" Type="DateTime" />
+          <Property Name="Fecha_Finalizacion" Type="DateTime" />
+          <Property Name="Oservaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="datosprotocolons1">
           <Key>
@@ -2730,7 +3088,6 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="posicion" Type="Byte" Nullable="false" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" />
           <Property Name="Placa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Hora" Type="DateTime" Nullable="false" />
           <Property Name="Lectura" Type="Single" Nullable="false" />
           <Property Name="m3men" Type="Single" />
           <Property Name="Unidades" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
@@ -2749,7 +3106,9 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="Valido" Type="Boolean" />
           <Property Name="Lab1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-          <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="user" Type="Int32" />
+          <NavigationProperty Name="laboratorista" Relationship="Self.fk_Lab1IGGRep" FromRole="elisaiggrepeticiones" ToRole="laboratoristas" />
+          <NavigationProperty Name="usuario" Relationship="Self.fk_UserIGGRep" FromRole="elisaiggrepeticiones" ToRole="usuario" />
         </EntityType>
         <EntityType Name="elisaigm">
           <Key>
@@ -3538,6 +3897,20 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           </Key>
           <Property Name="Estudio1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
+        <EntityType Name="gammaglobulina">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Gamma1" />
+          </Key>
+          <Property Name="Lote_Asign_Gamma1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Codigo_Mx" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PBS1X" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NH4SO4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="Concen_Gamma" Type="Single" />
+          <Property Name="Fecha_Preparacion" Type="DateTime" />
+          <Property Name="Fecha_Terminacion" Type="DateTime" />
+          <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="kit_elisa_ns1">
           <Key>
             <PropertyRef Name="Codigo" />
@@ -3577,6 +3950,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           </Key>
           <Property Name="Cod" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="elisaiggrepeticiones" Relationship="Self.fk_Lab1IGGRep" FromRole="laboratoristas" ToRole="elisaiggrepeticiones" />
         </EntityType>
         <EntityType Name="ns1">
           <Key>
@@ -3607,6 +3981,44 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="User" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Name="Tras" Type="Boolean" />
           <NavigationProperty Name="kit_elisa_ns1" Relationship="Self.fk_NS1kit" FromRole="ns1" ToRole="kit_elisa_ns1" />
+        </EntityType>
+        <EntityType Name="pbs1x">
+          <Key>
+            <PropertyRef Name="Lote_Asign_1X" />
+          </Key>
+          <Property Name="Lote_Asign_20X" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Numero" Type="Int32" />
+          <Property Name="Lote_Asign_1X" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="H2ODEST" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pbs20x">
+          <Key>
+            <PropertyRef Name="Lote_Asign_20X" />
+          </Key>
+          <Property Name="Lote_Asign_20X" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="NaCl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="KCl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="KH2PO4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Na2HPO4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="H2ODEST" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ph_9_6__coatting_">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Coatting" />
+          </Key>
+          <Property Name="Lote_Asign_Coatting" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Volumen" Type="Int32" />
+          <Property Name="Na2CO3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NaHCO3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="H2ODEST" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="pH" Type="Single" />
+          <Property Name="Fecha_Preparacion" Type="DateTime" />
+          <Property Name="Fecha_Expiracion" Type="DateTime" />
+          <Property Name="Oservaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="proch20">
           <Key>
@@ -3716,6 +4128,49 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="Tras" Type="Boolean" />
           <NavigationProperty Name="kit_elisa_rotavirus" Relationship="Self.fk_Rotaviruskit" FromRole="rotavirus" ToRole="kit_elisa_rotavirus" />
         </EntityType>
+        <EntityType Name="shn">
+          <Key>
+            <PropertyRef Name="Lote_Asign_Ser" />
+          </Key>
+          <Property Name="Lote_Asign_Ser" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Distribuidora" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Cod_Catalogo_Ser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Inicia" Type="DateTime" />
+          <Property Name="Fecha_Termina" Type="DateTime" />
+          <Property Name="Fecha_Expiracion" Type="DateTime" />
+          <Property Name="Vol_total" Type="Single" />
+          <Property Name="Vol_Pozo" Type="Single" />
+          <Property Name="Concentracion_Inc" Type="Int32" />
+          <Property Name="Concentracion_Uso" Type="Int32" />
+          <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="substrato">
+          <Key>
+            <PropertyRef Name="Lote_Asign_TMB" />
+          </Key>
+          <Property Name="Lote_Asign_TMB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lote" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Distribuidora" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Cod_Catalogo_TMB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Inicia" Type="DateTime" />
+          <Property Name="Fecha_Termina" Type="DateTime" />
+          <Property Name="Fecha_Expiracion" Type="DateTime" />
+          <Property Name="Vol_total" Type="Single" />
+          <Property Name="Vol_Pozo" Type="Single" />
+          <Property Name="Concentracion_Inc" Type="Int32" />
+          <Property Name="Concentracion_Uso" Type="Int32" />
+          <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tipo_control">
+          <Key>
+            <PropertyRef Name="Descripcion" />
+          </Key>
+          <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EI" Type="Boolean" />
+          <Property Name="IgM" Type="Boolean" />
+          <Property Name="IgG" Type="Boolean" />
+        </EntityType>
         <EntityType Name="tipobloqueo">
           <Key>
             <PropertyRef Name="TipoBloqueo1" />
@@ -3737,6 +4192,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="pass" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="rol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="elisaiggrepeticiones" Relationship="Self.fk_UserIGGRep" FromRole="usuario" ToRole="elisaiggrepeticiones" />
         </EntityType>
         <EntityType Name="vih">
           <Key>
@@ -4548,6 +5004,30 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
+        <Association Name="fk_Lab1IGGRep">
+          <End Role="laboratoristas" Type="Self.laboratorista" Multiplicity="1" />
+          <End Role="elisaiggrepeticiones" Type="Self.elisaiggrepeticione" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="laboratoristas">
+              <PropertyRef Name="Cod" />
+            </Principal>
+            <Dependent Role="elisaiggrepeticiones">
+              <PropertyRef Name="Lab1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_UserIGGRep">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="elisaiggrepeticiones" Type="Self.elisaiggrepeticione" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="idUsuario" />
+            </Principal>
+            <Dependent Role="elisaiggrepeticiones">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_NS1kit">
           <End Role="kit_elisa_ns1" Type="Self.kit_elisa_ns1" Multiplicity="0..1" />
           <End Role="ns1" Type="Self.ns1" Multiplicity="*" />
@@ -4620,15 +5100,22 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="elisaEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="elisaEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="anti_human_igg" EntityType="Self.anti_human_igg" />
+          <EntitySet Name="anti_human_igm" EntityType="Self.anti_human_igm" />
+          <EntitySet Name="antigeno_viral" EntityType="Self.antigeno_viral" />
           <EntitySet Name="chikungunyainhhipers" EntityType="Self.chikungunyainhhiper" />
           <EntitySet Name="chikungunyainhmonoes" EntityType="Self.chikungunyainhmono" />
           <EntitySet Name="componentesns1" EntityType="Self.componentesns1" />
           <EntitySet Name="componentesrotavirus" EntityType="Self.componentesrotaviru" />
           <EntitySet Name="componentesvihs" EntityType="Self.componentesvih" />
+          <EntitySet Name="conjugadoes" EntityType="Self.conjugado" />
           <EntitySet Name="controles_ns1" EntityType="Self.controles_ns1" />
           <EntitySet Name="controles_rotavirus" EntityType="Self.controles_rotaviru" />
           <EntitySet Name="controles_vihs" EntityType="Self.controles_vih" />
+          <EntitySet Name="controles_ei" EntityType="Self.controles_ei" />
+          <EntitySet Name="controles_igg" EntityType="Self.controles_igg" />
+          <EntitySet Name="controles_igm" EntityType="Self.controles_igm" />
           <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" />
           <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotaviru" />
           <EntitySet Name="datosprotocolovihs" EntityType="Self.datosprotocolovih" />
@@ -4652,11 +5139,15 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySet Name="elisainhzikas" EntityType="Self.elisainhzika" />
           <EntitySet Name="ensayos" EntityType="Self.ensayo" />
           <EntitySet Name="estudios" EntityType="Self.estudio" />
+          <EntitySet Name="gammaglobulinas" EntityType="Self.gammaglobulina" />
           <EntitySet Name="kit_elisa_ns1" EntityType="Self.kit_elisa_ns1" />
           <EntitySet Name="kit_elisa_rotavirus" EntityType="Self.kit_elisa_rotaviru" />
           <EntitySet Name="kit_elisa_vihs" EntityType="Self.kit_elisa_vih" />
           <EntitySet Name="laboratoristas" EntityType="Self.laboratorista" />
           <EntitySet Name="ns1" EntityType="Self.ns1" />
+          <EntitySet Name="pbs1x" EntityType="Self.pbs1x" />
+          <EntitySet Name="pbs20x" EntityType="Self.pbs20x" />
+          <EntitySet Name="ph_9_6__coatting_" EntityType="Self.ph_9_6__coatting_" />
           <EntitySet Name="proch20" EntityType="Self.proch20" />
           <EntitySet Name="reactivos_ns1" EntityType="Self.reactivos_ns1" />
           <EntitySet Name="reactivos_rotavirus" EntityType="Self.reactivos_rotaviru" />
@@ -4664,6 +5155,9 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySet Name="reactivos_bei" EntityType="Self.reactivos_bei" />
           <EntitySet Name="reactivos_bob" EntityType="Self.reactivos_bob" />
           <EntitySet Name="rotavirus" EntityType="Self.rotaviru" />
+          <EntitySet Name="shns" EntityType="Self.shn" />
+          <EntitySet Name="substratoes" EntityType="Self.substrato" />
+          <EntitySet Name="tipo_control" EntityType="Self.tipo_control" />
           <EntitySet Name="tipobloqueos" EntityType="Self.tipobloqueo" />
           <EntitySet Name="tipodiluyentes" EntityType="Self.tipodiluyente" />
           <EntitySet Name="usuarios" EntityType="Self.usuario" />
@@ -4688,6 +5182,14 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySet Name="datosprotocoloigmzikas" EntityType="Self.datosprotocoloigmzika" />
           <EntitySet Name="datosprotocolozikabobs" EntityType="Self.datosprotocolozikabob" />
           <EntitySet Name="datosprotocolozikaigmbeis" EntityType="Self.datosprotocolozikaigmbei" />
+          <AssociationSet Name="fk_Lab1IGGRep" Association="Self.fk_Lab1IGGRep">
+            <End Role="laboratoristas" EntitySet="laboratoristas" />
+            <End Role="elisaiggrepeticiones" EntitySet="elisaiggrepeticiones" />
+          </AssociationSet>
+          <AssociationSet Name="fk_UserIGGRep" Association="Self.fk_UserIGGRep">
+            <End Role="usuario" EntitySet="usuarios" />
+            <End Role="elisaiggrepeticiones" EntitySet="elisaiggrepeticiones" />
+          </AssociationSet>
           <AssociationSet Name="fk_NS1kit" Association="Self.fk_NS1kit">
             <End Role="kit_elisa_ns1" EntitySet="kit_elisa_ns1" />
             <End Role="ns1" EntitySet="ns1" />
@@ -4718,7 +5220,61 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="elisaModelStoreContainer" CdmEntityContainer="elisaEntities1">
+        <EntityContainerMapping StorageEntityContainer="elisaModelStoreContainer" CdmEntityContainer="elisaEntities2">
+          <EntitySetMapping Name="anti_human_igg">
+            <EntityTypeMapping TypeName="elisaModel.anti_human_igg">
+              <MappingFragment StoreEntitySet="anti_human_igg">
+                <ScalarProperty Name="Lote_Asign_IgG" ColumnName="Lote_Asign_IgG" />
+                <ScalarProperty Name="Lote" ColumnName="Lote" />
+                <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+                <ScalarProperty Name="Cod_Catalago_IgG" ColumnName="Cod_Catalago_IgG" />
+                <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+                <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+                <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+                <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+                <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+                <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+                <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="anti_human_igm">
+            <EntityTypeMapping TypeName="elisaModel.anti_human_igm">
+              <MappingFragment StoreEntitySet="anti_human_igm">
+                <ScalarProperty Name="Lote_Asign_IgM" ColumnName="Lote_Asign_IgM" />
+                <ScalarProperty Name="Lote" ColumnName="Lote" />
+                <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+                <ScalarProperty Name="Cod_Catalogo_IgM" ColumnName="Cod_Catalogo_IgM" />
+                <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+                <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+                <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+                <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+                <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+                <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+                <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="antigeno_viral">
+            <EntityTypeMapping TypeName="elisaModel.antigeno_viral">
+              <MappingFragment StoreEntitySet="antigeno_viral">
+                <ScalarProperty Name="Lote_Asign_Anti" ColumnName="Lote_Asign_Anti" />
+                <ScalarProperty Name="T20" ColumnName="T20" />
+                <ScalarProperty Name="BSA" ColumnName="BSA" />
+                <ScalarProperty Name="Cod_Glicerol" ColumnName="Cod_Glicerol" />
+                <ScalarProperty Name="PBST_1X" ColumnName="PBST 1X" />
+                <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+                <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+                <ScalarProperty Name="IgM" ColumnName="IgM" />
+                <ScalarProperty Name="EI" ColumnName="EI" />
+                <ScalarProperty Name="IgG" ColumnName="IgG" />
+                <ScalarProperty Name="IgA" ColumnName="IgA" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="chikungunyainhhipers">
             <EntityTypeMapping TypeName="elisaModel.chikungunyainhhiper">
               <MappingFragment StoreEntitySet="chikungunyainhhiper">
@@ -4834,6 +5390,28 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="conjugadoes">
+            <EntityTypeMapping TypeName="elisaModel.conjugado">
+              <MappingFragment StoreEntitySet="conjugado">
+                <ScalarProperty Name="NoLote_Conjugado" ColumnName="NoLote_Conjugado" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="NH4SO4" ColumnName="NH4SO4" />
+                <ScalarProperty Name="PBS1X" ColumnName="PBS1X" />
+                <ScalarProperty Name="CH3COONa" ColumnName="CH3COONa" />
+                <ScalarProperty Name="CH3COOH" ColumnName="CH3COOH" />
+                <ScalarProperty Name="Na2CO3" ColumnName="Na2CO3" />
+                <ScalarProperty Name="NaHCO3" ColumnName="NaHCO3" />
+                <ScalarProperty Name="PEROX" ColumnName="PEROX" />
+                <ScalarProperty Name="NaJO4" ColumnName="NaJO4" />
+                <ScalarProperty Name="NaHBO" ColumnName="NaHBO" />
+                <ScalarProperty Name="BSA" ColumnName="BSA" />
+                <ScalarProperty Name="GLIC" ColumnName="GLIC" />
+                <ScalarProperty Name="MEMBR" ColumnName="MEMBR" />
+                <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+                <ScalarProperty Name="Fecha_Terminacion" ColumnName="Fecha_Terminacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="controles_ns1">
             <EntityTypeMapping TypeName="elisaModel.controles_ns1">
               <MappingFragment StoreEntitySet="controles ns1">
@@ -4855,6 +5433,46 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
               <MappingFragment StoreEntitySet="controles vih">
                 <ScalarProperty Name="CodControl" ColumnName="CodControl" />
                 <ScalarProperty Name="TipoControl" ColumnName="TipoControl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="controles_ei">
+            <EntityTypeMapping TypeName="elisaModel.controles_ei">
+              <MappingFragment StoreEntitySet="controles_ei">
+                <ScalarProperty Name="Codigo_Asig_ContEI" ColumnName="Codigo_Asig_ContEI" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="MxC" ColumnName="MxC" />
+                <ScalarProperty Name="D_Optica" ColumnName="D_Optica" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+                <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="controles_igg">
+            <EntityTypeMapping TypeName="elisaModel.controles_igg">
+              <MappingFragment StoreEntitySet="controles_igg">
+                <ScalarProperty Name="Cod_Asign_ContIgG" ColumnName="Cod_Asign_ContIgG" />
+                <ScalarProperty Name="Tipo_Control" ColumnName="Tipo_Control" />
+                <ScalarProperty Name="D_Optica" ColumnName="D_Optica" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+                <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="controles_igm">
+            <EntityTypeMapping TypeName="elisaModel.controles_igm">
+              <MappingFragment StoreEntitySet="controles_igm">
+                <ScalarProperty Name="Cod_Asign_ContIgM" ColumnName="Cod_Asign_ContIgM" />
+                <ScalarProperty Name="Tipo_Control" ColumnName="Tipo_Control" />
+                <ScalarProperty Name="D_Optica" ColumnName="D_Optica" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+                <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4941,7 +5559,6 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
                 <ScalarProperty Name="posicion" ColumnName="posicion" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="Placa" ColumnName="Placa" />
-                <ScalarProperty Name="Hora" ColumnName="Hora" />
                 <ScalarProperty Name="Lectura" ColumnName="Lectura" />
                 <ScalarProperty Name="m3men" ColumnName="m3men" />
                 <ScalarProperty Name="Unidades" ColumnName="Unidades" />
@@ -5718,6 +6335,21 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="gammaglobulinas">
+            <EntityTypeMapping TypeName="elisaModel.gammaglobulina">
+              <MappingFragment StoreEntitySet="gammaglobulina">
+                <ScalarProperty Name="Lote_Asign_Gamma1" ColumnName="Lote_Asign_Gamma1" />
+                <ScalarProperty Name="Codigo_Mx" ColumnName="Codigo_Mx" />
+                <ScalarProperty Name="PBS1X" ColumnName="PBS1X" />
+                <ScalarProperty Name="NH4SO4" ColumnName="NH4SO4" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="Concen_Gamma" ColumnName="Concen_Gamma" />
+                <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+                <ScalarProperty Name="Fecha_Terminacion" ColumnName="Fecha_Terminacion" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="kit_elisa_ns1">
             <EntityTypeMapping TypeName="elisaModel.kit_elisa_ns1">
               <MappingFragment StoreEntitySet="kit elisa ns1">
@@ -5780,6 +6412,47 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
                 <ScalarProperty Name="Lab2" ColumnName="Lab2" />
                 <ScalarProperty Name="User" ColumnName="User" />
                 <ScalarProperty Name="Tras" ColumnName="Tras" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pbs1x">
+            <EntityTypeMapping TypeName="elisaModel.pbs1x">
+              <MappingFragment StoreEntitySet="pbs1x">
+                <ScalarProperty Name="Lote_Asign_20X" ColumnName="Lote_Asign_20X" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Lote_Asign_1X" ColumnName="Lote_Asign_1X" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="H2ODEST" ColumnName="H2ODEST" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pbs20x">
+            <EntityTypeMapping TypeName="elisaModel.pbs20x">
+              <MappingFragment StoreEntitySet="pbs20x">
+                <ScalarProperty Name="Lote_Asign_20X" ColumnName="Lote_Asign_20X" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="NaCl" ColumnName="NaCl" />
+                <ScalarProperty Name="KCl" ColumnName="KCl" />
+                <ScalarProperty Name="KH2PO4" ColumnName="KH2PO4" />
+                <ScalarProperty Name="Na2HPO4" ColumnName="Na2HPO4" />
+                <ScalarProperty Name="H2ODEST" ColumnName="H2ODEST" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ph_9_6__coatting_">
+            <EntityTypeMapping TypeName="elisaModel.ph_9_6__coatting_">
+              <MappingFragment StoreEntitySet="ph 9,6 (coatting)">
+                <ScalarProperty Name="Lote_Asign_Coatting" ColumnName="Lote_Asign_Coatting" />
+                <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+                <ScalarProperty Name="Na2CO3" ColumnName="Na2CO3" />
+                <ScalarProperty Name="NaHCO3" ColumnName="NaHCO3" />
+                <ScalarProperty Name="H2ODEST" ColumnName="H2ODEST" />
+                <ScalarProperty Name="pH" ColumnName="pH" />
+                <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+                <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+                <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5882,6 +6555,52 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
                 <ScalarProperty Name="Lab2" ColumnName="Lab2" />
                 <ScalarProperty Name="User" ColumnName="User" />
                 <ScalarProperty Name="Tras" ColumnName="Tras" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="shns">
+            <EntityTypeMapping TypeName="elisaModel.shn">
+              <MappingFragment StoreEntitySet="shn">
+                <ScalarProperty Name="Lote_Asign_Ser" ColumnName="Lote_Asign_Ser" />
+                <ScalarProperty Name="Lote" ColumnName="Lote" />
+                <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+                <ScalarProperty Name="Cod_Catalogo_Ser" ColumnName="Cod_Catalogo_Ser" />
+                <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+                <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+                <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+                <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+                <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+                <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+                <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="substratoes">
+            <EntityTypeMapping TypeName="elisaModel.substrato">
+              <MappingFragment StoreEntitySet="substrato">
+                <ScalarProperty Name="Lote_Asign_TMB" ColumnName="Lote_Asign_TMB" />
+                <ScalarProperty Name="Lote" ColumnName="Lote" />
+                <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+                <ScalarProperty Name="Cod_Catalogo_TMB" ColumnName="Cod_Catalogo_TMB" />
+                <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+                <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+                <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+                <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+                <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+                <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+                <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_control">
+            <EntityTypeMapping TypeName="elisaModel.tipo_control">
+              <MappingFragment StoreEntitySet="tipo_control">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="EI" ColumnName="EI" />
+                <ScalarProperty Name="IgM" ColumnName="IgM" />
+                <ScalarProperty Name="IgG" ColumnName="IgG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

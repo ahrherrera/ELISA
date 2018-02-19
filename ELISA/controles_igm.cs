@@ -12,19 +12,14 @@ namespace ELISA
     using System;
     using System.Collections.Generic;
     
-    public partial class usuario
+    public partial class controles_igm
     {
-        public usuario()
-        {
-            this.elisaiggrepeticiones = new HashSet<elisaiggrepeticione>();
-        }
-    
-        public int idUsuario { get; set; }
-        public string nombreUsuario { get; set; }
-        public byte[] pass { get; set; }
-        public string rol { get; set; }
-        public bool Estado { get; set; }
-    
-        public virtual ICollection<elisaiggrepeticione> elisaiggrepeticiones { get; set; }
+        public string Cod_Asign_ContIgM { get; set; }
+        public string Tipo_Control { get; set; }
+        public Nullable<float> D_Optica { get; set; }
+        public Nullable<int> Volumen { get; set; }
+        public Nullable<System.DateTime> Fecha_Inicio { get; set; }
+        public Nullable<System.DateTime> Fecha_Finalizacion { get; set; }
+        public string Oservaciones { get; set; }
     }
 }

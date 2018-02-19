@@ -16,7 +16,7 @@ namespace ELISA.Transaccion.DatosProtocoloTrans
             datosprotocoloigg dat;
             try
             {
-                using (var context = new elisaEntities1())
+                using (var context = new elisaEntities2())
                 {
                     var listaProtocolo = context.datosprotocoloiggs.First();
                     dat = listaProtocolo;

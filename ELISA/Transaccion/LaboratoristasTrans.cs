@@ -16,7 +16,7 @@ namespace ELISA.Transaccion
         {
             try
             {
-                using (var context = new elisaEntities1())
+                using (var context = new elisaEntities2())
                 {
                     var listaLaboratoristas = context.laboratoristas.ToList();
                     cmb.DataSource = listaLaboratoristas;

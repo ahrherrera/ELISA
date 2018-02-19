@@ -12,19 +12,15 @@ namespace ELISA
     using System;
     using System.Collections.Generic;
     
-    public partial class usuario
+    public partial class pbs20x
     {
-        public usuario()
-        {
-            this.elisaiggrepeticiones = new HashSet<elisaiggrepeticione>();
-        }
-    
-        public int idUsuario { get; set; }
-        public string nombreUsuario { get; set; }
-        public byte[] pass { get; set; }
-        public string rol { get; set; }
-        public bool Estado { get; set; }
-    
-        public virtual ICollection<elisaiggrepeticione> elisaiggrepeticiones { get; set; }
+        public string Lote_Asign_20X { get; set; }
+        public Nullable<int> Volumen { get; set; }
+        public string NaCl { get; set; }
+        public string KCl { get; set; }
+        public string KH2PO4 { get; set; }
+        public string Na2HPO4 { get; set; }
+        public string H2ODEST { get; set; }
+        public string Observaciones { get; set; }
     }
 }
