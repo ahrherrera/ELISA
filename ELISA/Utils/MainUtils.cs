@@ -22,5 +22,49 @@ namespace ELISA.Utils
             abc.Add("H");
             return abc;
         }
+
+        public enum Test
+        {
+            //IgM
+            IgMDengue,
+            IgMZika,
+            IgMZikaBei,
+            ChinkungunyaCDCCNDR,
+            ChinkungunyaCNDR,
+            //IgG
+            SalivaCIET,
+            SalivaCIETRep,
+            //EI
+            ELISAINHMonoChik,
+            ELISAINHHiperChik,
+            ELISAINHEnsa,
+            ELISAINHRM,
+            ELISAINHZika,
+            //BOB
+            ZikaBOB,
+            ZikaBOBCohAnual,
+            ZikaBOBCohAnualDup,
+            ZikaBOBCohAnualSero,
+            //1D
+            ELISA1DCohAnual,
+            ELISA1DCohAnualDup,
+            ELISA1DCohAnualChik,
+            ELISA1DCohAnualChikDup,
+            ELISA1DSeroChik,
+            ELISA1DSeroChikDup,
+            Zika1DCohAnual,
+            Zika1DCohAnualDup,
+            //RM
+            RMCohAnual,
+            RMCohAnualDup,
+            ELISARMCohAnualChik,
+            ELISARMCohAnualChikDup,
+            ELISARMSeroChik,
+            ELISARMSeroChikDup,
+            ZIKARMCohAnual,
+            ZIKARMCohAnualDup,
+            //Rotavirus
+            Rotavirus
+        }
     }
 }

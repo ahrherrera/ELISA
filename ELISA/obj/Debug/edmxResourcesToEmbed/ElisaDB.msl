@@ -1,6 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="elisaModelStoreContainer" CdmEntityContainer="elisaEntities1">
+  <EntityContainerMapping StorageEntityContainer="elisaModelStoreContainer" CdmEntityContainer="elisaEntities2">
+    <EntitySetMapping Name="anti_human_igg">
+      <EntityTypeMapping TypeName="elisaModel.anti_human_igg">
+        <MappingFragment StoreEntitySet="anti_human_igg">
+          <ScalarProperty Name="Lote_Asign_IgG" ColumnName="Lote_Asign_IgG" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+          <ScalarProperty Name="Cod_Catalago_IgG" ColumnName="Cod_Catalago_IgG" />
+          <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+          <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+          <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+          <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+          <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="anti_human_igm">
+      <EntityTypeMapping TypeName="elisaModel.anti_human_igm">
+        <MappingFragment StoreEntitySet="anti_human_igm">
+          <ScalarProperty Name="Lote_Asign_IgM" ColumnName="Lote_Asign_IgM" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+          <ScalarProperty Name="Cod_Catalogo_IgM" ColumnName="Cod_Catalogo_IgM" />
+          <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+          <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+          <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+          <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+          <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="antigeno_viral">
+      <EntityTypeMapping TypeName="elisaModel.antigeno_viral">
+        <MappingFragment StoreEntitySet="antigeno_viral">
+          <ScalarProperty Name="Lote_Asign_Anti" ColumnName="Lote_Asign_Anti" />
+          <ScalarProperty Name="T20" ColumnName="T20" />
+          <ScalarProperty Name="BSA" ColumnName="BSA" />
+          <ScalarProperty Name="Cod_Glicerol" ColumnName="Cod_Glicerol" />
+          <ScalarProperty Name="PBST_1X" ColumnName="PBST 1X" />
+          <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+          <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+          <ScalarProperty Name="IgM" ColumnName="IgM" />
+          <ScalarProperty Name="EI" ColumnName="EI" />
+          <ScalarProperty Name="IgG" ColumnName="IgG" />
+          <ScalarProperty Name="IgA" ColumnName="IgA" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="chikungunyainhhipers">
       <EntityTypeMapping TypeName="elisaModel.chikungunyainhhiper">
         <MappingFragment StoreEntitySet="chikungunyainhhiper">
@@ -116,6 +170,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="conjugadoes">
+      <EntityTypeMapping TypeName="elisaModel.conjugado">
+        <MappingFragment StoreEntitySet="conjugado">
+          <ScalarProperty Name="NoLote_Conjugado" ColumnName="NoLote_Conjugado" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="NH4SO4" ColumnName="NH4SO4" />
+          <ScalarProperty Name="PBS1X" ColumnName="PBS1X" />
+          <ScalarProperty Name="CH3COONa" ColumnName="CH3COONa" />
+          <ScalarProperty Name="CH3COOH" ColumnName="CH3COOH" />
+          <ScalarProperty Name="Na2CO3" ColumnName="Na2CO3" />
+          <ScalarProperty Name="NaHCO3" ColumnName="NaHCO3" />
+          <ScalarProperty Name="PEROX" ColumnName="PEROX" />
+          <ScalarProperty Name="NaJO4" ColumnName="NaJO4" />
+          <ScalarProperty Name="NaHBO" ColumnName="NaHBO" />
+          <ScalarProperty Name="BSA" ColumnName="BSA" />
+          <ScalarProperty Name="GLIC" ColumnName="GLIC" />
+          <ScalarProperty Name="MEMBR" ColumnName="MEMBR" />
+          <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+          <ScalarProperty Name="Fecha_Terminacion" ColumnName="Fecha_Terminacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="controles_ns1">
       <EntityTypeMapping TypeName="elisaModel.controles_ns1">
         <MappingFragment StoreEntitySet="controles ns1">
@@ -137,6 +213,46 @@
         <MappingFragment StoreEntitySet="controles vih">
           <ScalarProperty Name="CodControl" ColumnName="CodControl" />
           <ScalarProperty Name="TipoControl" ColumnName="TipoControl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="controles_ei">
+      <EntityTypeMapping TypeName="elisaModel.controles_ei">
+        <MappingFragment StoreEntitySet="controles_ei">
+          <ScalarProperty Name="Codigo_Asig_ContEI" ColumnName="Codigo_Asig_ContEI" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="MxC" ColumnName="MxC" />
+          <ScalarProperty Name="D_Optica" ColumnName="D_Optica" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+          <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="controles_igg">
+      <EntityTypeMapping TypeName="elisaModel.controles_igg">
+        <MappingFragment StoreEntitySet="controles_igg">
+          <ScalarProperty Name="Cod_Asign_ContIgG" ColumnName="Cod_Asign_ContIgG" />
+          <ScalarProperty Name="Tipo_Control" ColumnName="Tipo_Control" />
+          <ScalarProperty Name="D_Optica" ColumnName="D_Optica" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+          <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="controles_igm">
+      <EntityTypeMapping TypeName="elisaModel.controles_igm">
+        <MappingFragment StoreEntitySet="controles_igm">
+          <ScalarProperty Name="Cod_Asign_ContIgM" ColumnName="Cod_Asign_ContIgM" />
+          <ScalarProperty Name="Tipo_Control" ColumnName="Tipo_Control" />
+          <ScalarProperty Name="D_Optica" ColumnName="D_Optica" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
+          <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -223,7 +339,6 @@
           <ScalarProperty Name="posicion" ColumnName="posicion" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Placa" ColumnName="Placa" />
-          <ScalarProperty Name="Hora" ColumnName="Hora" />
           <ScalarProperty Name="Lectura" ColumnName="Lectura" />
           <ScalarProperty Name="m3men" ColumnName="m3men" />
           <ScalarProperty Name="Unidades" ColumnName="Unidades" />
@@ -1000,6 +1115,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="gammaglobulinas">
+      <EntityTypeMapping TypeName="elisaModel.gammaglobulina">
+        <MappingFragment StoreEntitySet="gammaglobulina">
+          <ScalarProperty Name="Lote_Asign_Gamma1" ColumnName="Lote_Asign_Gamma1" />
+          <ScalarProperty Name="Codigo_Mx" ColumnName="Codigo_Mx" />
+          <ScalarProperty Name="PBS1X" ColumnName="PBS1X" />
+          <ScalarProperty Name="NH4SO4" ColumnName="NH4SO4" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="Concen_Gamma" ColumnName="Concen_Gamma" />
+          <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+          <ScalarProperty Name="Fecha_Terminacion" ColumnName="Fecha_Terminacion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="kit_elisa_ns1">
       <EntityTypeMapping TypeName="elisaModel.kit_elisa_ns1">
         <MappingFragment StoreEntitySet="kit elisa ns1">
@@ -1062,6 +1192,47 @@
           <ScalarProperty Name="Lab2" ColumnName="Lab2" />
           <ScalarProperty Name="User" ColumnName="User" />
           <ScalarProperty Name="Tras" ColumnName="Tras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pbs1x">
+      <EntityTypeMapping TypeName="elisaModel.pbs1x">
+        <MappingFragment StoreEntitySet="pbs1x">
+          <ScalarProperty Name="Lote_Asign_20X" ColumnName="Lote_Asign_20X" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Lote_Asign_1X" ColumnName="Lote_Asign_1X" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="H2ODEST" ColumnName="H2ODEST" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pbs20x">
+      <EntityTypeMapping TypeName="elisaModel.pbs20x">
+        <MappingFragment StoreEntitySet="pbs20x">
+          <ScalarProperty Name="Lote_Asign_20X" ColumnName="Lote_Asign_20X" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="NaCl" ColumnName="NaCl" />
+          <ScalarProperty Name="KCl" ColumnName="KCl" />
+          <ScalarProperty Name="KH2PO4" ColumnName="KH2PO4" />
+          <ScalarProperty Name="Na2HPO4" ColumnName="Na2HPO4" />
+          <ScalarProperty Name="H2ODEST" ColumnName="H2ODEST" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ph_9_6__coatting_">
+      <EntityTypeMapping TypeName="elisaModel.ph_9_6__coatting_">
+        <MappingFragment StoreEntitySet="ph 9,6 (coatting)">
+          <ScalarProperty Name="Lote_Asign_Coatting" ColumnName="Lote_Asign_Coatting" />
+          <ScalarProperty Name="Volumen" ColumnName="Volumen" />
+          <ScalarProperty Name="Na2CO3" ColumnName="Na2CO3" />
+          <ScalarProperty Name="NaHCO3" ColumnName="NaHCO3" />
+          <ScalarProperty Name="H2ODEST" ColumnName="H2ODEST" />
+          <ScalarProperty Name="pH" ColumnName="pH" />
+          <ScalarProperty Name="Fecha_Preparacion" ColumnName="Fecha_Preparacion" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1164,6 +1335,52 @@
           <ScalarProperty Name="Lab2" ColumnName="Lab2" />
           <ScalarProperty Name="User" ColumnName="User" />
           <ScalarProperty Name="Tras" ColumnName="Tras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shns">
+      <EntityTypeMapping TypeName="elisaModel.shn">
+        <MappingFragment StoreEntitySet="shn">
+          <ScalarProperty Name="Lote_Asign_Ser" ColumnName="Lote_Asign_Ser" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+          <ScalarProperty Name="Cod_Catalogo_Ser" ColumnName="Cod_Catalogo_Ser" />
+          <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+          <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+          <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+          <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+          <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="substratoes">
+      <EntityTypeMapping TypeName="elisaModel.substrato">
+        <MappingFragment StoreEntitySet="substrato">
+          <ScalarProperty Name="Lote_Asign_TMB" ColumnName="Lote_Asign_TMB" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Distribuidora" ColumnName="Distribuidora" />
+          <ScalarProperty Name="Cod_Catalogo_TMB" ColumnName="Cod_Catalogo_TMB" />
+          <ScalarProperty Name="Fecha_Inicia" ColumnName="Fecha_Inicia" />
+          <ScalarProperty Name="Fecha_Termina" ColumnName="Fecha_Termina" />
+          <ScalarProperty Name="Fecha_Expiracion" ColumnName="Fecha_Expiracion" />
+          <ScalarProperty Name="Vol_total" ColumnName="Vol_total" />
+          <ScalarProperty Name="Vol_Pozo" ColumnName="Vol_Pozo" />
+          <ScalarProperty Name="Concentracion_Inc" ColumnName="Concentracion_Inc" />
+          <ScalarProperty Name="Concentracion_Uso" ColumnName="Concentracion_Uso" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_control">
+      <EntityTypeMapping TypeName="elisaModel.tipo_control">
+        <MappingFragment StoreEntitySet="tipo_control">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="EI" ColumnName="EI" />
+          <ScalarProperty Name="IgM" ColumnName="IgM" />
+          <ScalarProperty Name="IgG" ColumnName="IgG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

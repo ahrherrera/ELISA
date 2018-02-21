@@ -16,9 +16,13 @@ namespace ELISA.UI
     public partial class Principal : Form
     {
         public static usuario user;
-        public string SelectedProtocol;
         CheckBox cb = new CheckBox();
         public static Boolean ControlP = true;
+        ErrorProvider ErrorProviderPlaca = new ErrorProvider();
+        ErrorProvider ErrorProviderLab = new ErrorProvider();
+
+        //Variables
+        private int selectedTest = -1;
         public Principal(usuario logged)
         {
             InitializeComponent();
@@ -51,6 +55,7 @@ namespace ELISA.UI
             addCheckbox();
             alignHeaders();
             timerClock.Enabled = true;
+            
         }
 
         private void alignHeaders()
@@ -122,6 +127,7 @@ namespace ELISA.UI
             OneDList.Add("ELISA 1D Cohorte Anual");
             OneDList.Add("ELISA 1D Cohorte Anual Dup");
             OneDList.Add("ELISA 1D Cohorte Anual Chik");
+            OneDList.Add("ELISA 1D Cohorte Anual Chik Dup");
             OneDList.Add("ELISA 1D Seroprevalencia Chik");
             OneDList.Add("ELISA 1D Seroprevalencia Chik Dup");
             OneDList.Add("Zika 1D Cohorte Anual");
@@ -162,7 +168,6 @@ namespace ELISA.UI
 
             if (send.Checked)
             {
-                SelectedProtocol = send.Text;
                 if (send.Text.Contains("IgM"))
                 {
                     cmb_IgM.Enabled = true;
@@ -234,8 +239,14 @@ namespace ELISA.UI
                     groupProtocol.Text = "Protocolo Rotavirus";
                     SetOpcionesRv();
                     cmb_Protocolo_SelectedIndexChanged(null, EventArgs.Empty);
+                    SelectTest(MainUtils.Test.Rotavirus);
                 }
             }
+        }
+
+        private void SelectTest(MainUtils.Test prueba)
+        {
+            selectedTest = (int) prueba;
         }
 
         private void btnProtocolo_Click(object sender, EventArgs e)
@@ -320,17 +331,22 @@ namespace ELISA.UI
                 if (selectedItem.Equals("ELISA INH Monoclonal Chik"))
                 {
                     SetOpcionesRm();
+                    SelectTest(MainUtils.Test.ELISAINHMonoChik);
                 }else if (selectedItem.Equals("ELISA INH Hiperinmune Chik"))
                 {
+                    SelectTest(MainUtils.Test.ELISAINHHiperChik);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA INH Ensayos"))
                 {
+                    SelectTest(MainUtils.Test.ELISAINHEnsa);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA INH R and M"))
                 {
+                    SelectTest(MainUtils.Test.ELISAINHRM);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA INH Zika"))
                 {
+                    SelectTest(MainUtils.Test.ELISAINHZika);
                     SetOpcionesRm();
                 }
 
@@ -342,18 +358,23 @@ namespace ELISA.UI
                 string selectedItem = cmb_IgM.SelectedItem.ToString();
                 if (selectedItem.Equals("IgM Dengue"))
                 {
+                    SelectTest(MainUtils.Test.IgMDengue);
                     SetOpcionesOptIgm();
                 }else if (selectedItem.Equals("IgM Zika"))
                 {
+                    SelectTest(MainUtils.Test.IgMZika);
                     SetOpcionesIgMZika();
                 }else if (selectedItem.Equals("IgM Zika Bei"))
                 {
+                    SelectTest(MainUtils.Test.IgMZikaBei);
                     SetOpcionesIgMZikaBei();
                 }else if (selectedItem.Equals("Chikungunya CDC/CNDR"))
                 {
+                    SelectTest(MainUtils.Test.ChinkungunyaCDCCNDR);
                     SetOpcionesChikCndr();
                 }else if (selectedItem.Equals("Chikungunya CNDR"))
                 {
+                    SelectTest(MainUtils.Test.ChinkungunyaCNDR);
                     SetOpcionesChik();
                 }
             }
@@ -365,15 +386,19 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("Zika BOB"))
                 {
+                    SelectTest(MainUtils.Test.ZikaBOB);
                     SetOpcionesZikaBob();
                 }else if (selectedItem.Equals("Zika BOB Cohorte Anual"))
                 {
+                    SelectTest(MainUtils.Test.ZikaBOBCohAnual);
                     SetOpcionesZikaBob();
                 }else if (selectedItem.Equals("Zika BOB Cohorte Anual Dup"))
                 {
+                    SelectTest(MainUtils.Test.ZikaBOBCohAnualDup);
                     SetOpcionesZikaBob();
                 }else if (selectedItem.Equals("Zika BOB Coh Anual/Sero 1 m"))
                 {
+                    SelectTest(MainUtils.Test.ZikaBOBCohAnualSero);
                     SetOpcionesZikaBob();
                 }
             }
@@ -384,9 +409,11 @@ namespace ELISA.UI
                 string selectedItem = cmb_IgG.SelectedItem.ToString();
                 if (selectedItem.Equals("Saliva CIET"))
                 {
+                    SelectTest(MainUtils.Test.SalivaCIET);
                     SetOpcionesOptIgG();
                 }else if (selectedItem.Equals("Saliva CIET Repeticiones"))
                 {
+                    SelectTest(MainUtils.Test.SalivaCIETRep);
                     SetOpcionesOptIgG();
                 }
             }
@@ -398,24 +425,35 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("ELISA 1D Cohorte Anual"))
                 {
+                    SelectTest(MainUtils.Test.ELISA1DCohAnual);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Cohorte Anual Dup"))
                 {
+                    SelectTest(MainUtils.Test.ELISA1DCohAnualDup);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Cohorte Anual Chik"))
                 {
+                    SelectTest(MainUtils.Test.ELISA1DCohAnualChik);
+                    SetOpcionesRm();
+                }else if (selectedItem.Equals("ELISA 1D Cohorte Anual Chik Dup"))
+                {
+                    SelectTest(MainUtils.Test.ELISA1DCohAnualChikDup);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Seroprevalencia Chik"))
                 {
+                    SelectTest(MainUtils.Test.ELISA1DSeroChik);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA 1D Seroprevalencia Chik Dup"))
                 {
+                    SelectTest(MainUtils.Test.ELISA1DSeroChikDup);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("Zika 1D Cohorte Anual"))
                 {
+                    SelectTest(MainUtils.Test.Zika1DCohAnual);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("Zika 1D Cohorte Anual Dup"))
                 {
+                    SelectTest(MainUtils.Test.Zika1DCohAnualDup);
                     SetOpcionesRm();
                 }
 
@@ -428,27 +466,35 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("R and M Cohorte Anual"))
                 {
+                    SelectTest(MainUtils.Test.RMCohAnual);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("R and M Cohorte Anual Dup"))
                 {
+                    SelectTest(MainUtils.Test.RMCohAnualDup);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Cohorte Anual Chik"))
                 {
+                    SelectTest(MainUtils.Test.ELISARMCohAnualChik);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Cohorte Anual Chik Dup"))
                 {
+                    SelectTest(MainUtils.Test.ELISARMCohAnualChikDup);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Seroprevalencia Chik"))
                 {
+                    SelectTest(MainUtils.Test.ELISARMSeroChik);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ELISA RM Seroprevalncia Chik Dup"))
                 {
+                    SelectTest(MainUtils.Test.ELISARMSeroChikDup);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ZIKA RM Cohorte Anual"))
                 {
+                    SelectTest(MainUtils.Test.ZIKARMCohAnual);
                     SetOpcionesRm();
                 }else if (selectedItem.Equals("ZIKA RM Cohorte Anual Dup"))
                 {
+                    SelectTest(MainUtils.Test.ZIKARMCohAnualDup);
                     SetOpcionesRm();
                 }
             }
@@ -616,10 +662,55 @@ namespace ELISA.UI
         {
             if (txt_Placa.Text.Equals(""))
             {
-                
-            }else if (cmb_Lab1.SelectedIndex!=-1)
+                Task.Run(() =>
+                {
+                    MessageBox.Show("Ingrese el número de la placa", "Error", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                });
+               
+                ErrorProviderPlaca.SetError(txt_Placa.TextBox, "Debe escribir el número de placa");
+            }else if (!cmb_Lab1.Text.Equals(""))
             {
-                
+                //verificar la validez del laboratorista
+                //MessageBox.Show("CMb1Text = " + cmb_Lab1.Text + "  CmbIndex= " +cmb_Lab1.SelectedIndex);
+                if (cmb_Lab1.SelectedIndex!=-1)
+                {
+
+                }
+                else
+                {
+                    Task.Run(() => { MessageBox.Show("Seleccione un laboratorista válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); });
+                    
+                    ErrorProviderLab.SetError(cmb_Lab1.ComboBox, "Seleccione o escriba el número de Laboratorista");
+                }
+
+            }
+            else
+            {
+                Task.Run(() =>
+                {
+                    MessageBox.Show("Seleccione un laboratorista", "Error", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                });
+                ErrorProviderLab.SetError(cmb_Lab1.ComboBox, "Seleccione o escriba el número de Laboratorista");
+            }
+        }
+
+        private void txt_Placa_TextChanged(object sender, EventArgs e)
+        {
+            ErrorProviderPlaca.Clear();
+        }
+
+        private void cmb_Lab1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ErrorProviderLab.Clear();
+        }
+
+        private void txt_Placa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
             }
         }
     }

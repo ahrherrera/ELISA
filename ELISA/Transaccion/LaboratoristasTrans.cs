@@ -20,8 +20,10 @@ namespace ELISA.Transaccion
                 {
                     var listaLaboratoristas = context.laboratoristas.ToList();
                     cmb.DataSource = listaLaboratoristas;
-                    cmb.DisplayMember = "Descrip";
+                    cmb.DisplayMember = "Cod";
                     cmb.ValueMember = "Cod";
+                    cmb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb.AutoCompleteSource = AutoCompleteSource.ListItems;
                     cmb.Invalidate();
                     ELISA.Utils.Log.logInfo("Lista de laboratorista cargado correctamente");
                     cmb.SelectedItem = null;

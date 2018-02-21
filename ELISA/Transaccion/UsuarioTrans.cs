@@ -47,7 +47,7 @@ namespace ELISA.Transaccion
             try { 
             Utils.Log.logInfo("Inicio de la consulta a la Base de Datos");
             string password = pass.Text;
-            using (var context = new elisaEntities1())
+            using (var context = new elisaEntities2())
             {
                 var query = context.Database.SqlQuery<string>(
                     "select CAST(aes_decrypt(pass, '"+password+"') AS CHAR(50)) from Usuario" +

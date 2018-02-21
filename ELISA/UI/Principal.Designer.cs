@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_RM = new System.Windows.Forms.ComboBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -353,6 +353,7 @@
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -368,14 +369,15 @@
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1284, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(1284, 31);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
+            this.toolStripLabel1.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(154, 27);
+            this.toolStripLabel1.Size = new System.Drawing.Size(154, 28);
             this.toolStripLabel1.Text = "Seleccione el Equipo :";
             // 
             // cmb_Equipo
@@ -403,9 +405,12 @@
             // 
             this.txt_Placa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Placa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Placa.Margin = new System.Windows.Forms.Padding(1, 0, 15, 0);
             this.txt_Placa.Name = "txt_Placa";
-            this.txt_Placa.Size = new System.Drawing.Size(119, 30);
+            this.txt_Placa.Size = new System.Drawing.Size(119, 31);
             this.txt_Placa.Tag = "";
+            this.txt_Placa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Placa_KeyPress);
+            this.txt_Placa.TextChanged += new System.EventHandler(this.txt_Placa_TextChanged);
             // 
             // toolStripSeparator2
             // 
@@ -422,15 +427,17 @@
             // cmb_Lab1
             // 
             this.cmb_Lab1.AutoSize = false;
-            this.cmb_Lab1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Lab1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmb_Lab1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Lab1.Margin = new System.Windows.Forms.Padding(3, 0, 1, 0);
             this.cmb_Lab1.Name = "cmb_Lab1";
-            this.cmb_Lab1.Size = new System.Drawing.Size(169, 28);
+            this.cmb_Lab1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmb_Lab1.Size = new System.Drawing.Size(80, 31);
+            this.cmb_Lab1.SelectedIndexChanged += new System.EventHandler(this.cmb_Lab1_SelectedIndexChanged);
             // 
             // toolStripLabel4
             // 
-            this.toolStripLabel4.Margin = new System.Windows.Forms.Padding(3, 1, 0, 2);
+            this.toolStripLabel4.Margin = new System.Windows.Forms.Padding(15, 1, 0, 2);
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(116, 27);
             this.toolStripLabel4.Text = "Laboratorista 2 :";
@@ -438,15 +445,15 @@
             // cmb_Lab2
             // 
             this.cmb_Lab2.AutoSize = false;
-            this.cmb_Lab2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Lab2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmb_Lab2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Lab2.Margin = new System.Windows.Forms.Padding(3, 0, 1, 0);
             this.cmb_Lab2.Name = "cmb_Lab2";
-            this.cmb_Lab2.Size = new System.Drawing.Size(169, 28);
+            this.cmb_Lab2.Size = new System.Drawing.Size(80, 31);
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 30);
             // 
@@ -654,7 +661,7 @@
             // ayudaDelProgramaToolStripMenuItem
             // 
             this.ayudaDelProgramaToolStripMenuItem.Name = "ayudaDelProgramaToolStripMenuItem";
-            this.ayudaDelProgramaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.ayudaDelProgramaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.ayudaDelProgramaToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.ayudaDelProgramaToolStripMenuItem.Text = "Ayuda del Programa";
             // 
@@ -670,16 +677,17 @@
             this.dgv_Protocolo.AllowUserToAddRows = false;
             this.dgv_Protocolo.AllowUserToDeleteRows = false;
             this.dgv_Protocolo.AllowUserToResizeColumns = false;
+            this.dgv_Protocolo.AllowUserToResizeRows = false;
             this.dgv_Protocolo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Protocolo.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_Protocolo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Protocolo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col1,
@@ -698,14 +706,14 @@
             this.dgv_Protocolo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Protocolo.MultiSelect = false;
             this.dgv_Protocolo.Name = "dgv_Protocolo";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_Protocolo.RowTemplate.Height = 24;
             this.dgv_Protocolo.Size = new System.Drawing.Size(1175, 274);
             this.dgv_Protocolo.TabIndex = 0;
@@ -850,6 +858,7 @@
             this.rb_Opt7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rb_Opt7.Location = new System.Drawing.Point(3, 3);
             this.rb_Opt7.Name = "rb_Opt7";
+            this.rb_Opt7.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.rb_Opt7.Size = new System.Drawing.Size(160, 59);
             this.rb_Opt7.TabIndex = 6;
             this.rb_Opt7.TabStop = true;
@@ -1002,14 +1011,14 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1028,14 +1037,14 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1175, 274);
             this.dataGridView1.TabIndex = 1;
@@ -1242,6 +1251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1284, 844);
             this.Controls.Add(this.btn_Reiniciar);
             this.Controls.Add(this.btn_Print);
