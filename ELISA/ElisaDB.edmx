@@ -530,28 +530,9 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a prima
           <Property Name="ControlNegSalLI" Type="float" Nullable="false" />
           <Property Name="ControlNegSalLS" Type="float" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocoloigm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="datosprotocoloigm">
           <Key>
-            <PropertyRef Name="ControlPosA" />
-            <PropertyRef Name="ControlPosB" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="ControlRadPos" />
-            <PropertyRef Name="ControlRadNeg" />
-            <PropertyRef Name="LoteIgM" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="GGLOB" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
-            <PropertyRef Name="ControlPosRadLI" />
-            <PropertyRef Name="ControlPosRadLS" />
-            <PropertyRef Name="ControlNegRadLI" />
-            <PropertyRef Name="ControlNegRadLS" />
+            <PropertyRef Name="idDatosProtocoloIgM" />
           </Key>
           <Property Name="ControlPosA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ControlPosB" Type="varchar" MaxLength="10" Nullable="false" />
@@ -582,6 +563,7 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigm' does not have a prima
           <Property Name="ControlPosRadLS" Type="float" Nullable="false" />
           <Property Name="ControlNegRadLI" Type="float" Nullable="false" />
           <Property Name="ControlNegRadLS" Type="float" Nullable="false" />
+          <Property Name="idDatosProtocoloIgM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'def.elisa.datosprotocoloigmzika' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -2371,6 +2353,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <EntitySet Name="controles_ei" EntityType="Self.controles_ei" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="controles_igg" EntityType="Self.controles_igg" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="controles_igm" EntityType="Self.controles_igm" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="datosprotocoloigm" EntityType="Self.datosprotocoloigm" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotavirus" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolovih" EntityType="Self.datosprotocolovih" Schema="elisa" store:Type="Tables" />
@@ -2613,39 +2596,6 @@ FROM `datosprotocoloeizika` AS `datosprotocoloeizika`</DefiningQuery>
 `datosprotocoloigg`.`ControlNegSalLI`, 
 `datosprotocoloigg`.`ControlNegSalLS`
 FROM `datosprotocoloigg` AS `datosprotocoloigg`</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="datosprotocoloigm" EntityType="Self.datosprotocoloigm" store:Type="Tables" store:Schema="elisa">
-            <DefiningQuery>SELECT
-`datosprotocoloigm`.`ControlPosA`, 
-`datosprotocoloigm`.`ControlPosB`, 
-`datosprotocoloigm`.`ControlNeg`, 
-`datosprotocoloigm`.`ControlRadPos`, 
-`datosprotocoloigm`.`ControlRadNeg`, 
-`datosprotocoloigm`.`LoteIgM`, 
-`datosprotocoloigm`.`LoteAntigeno`, 
-`datosprotocoloigm`.`GGLOB`, 
-`datosprotocoloigm`.`fechafijGG`, 
-`datosprotocoloigm`.`VolUsado`, 
-`datosprotocoloigm`.`ProcH2O`, 
-`datosprotocoloigm`.`TipoEstudio`, 
-`datosprotocoloigm`.`Coatting`, 
-`datosprotocoloigm`.`PB`, 
-`datosprotocoloigm`.`TB`, 
-`datosprotocoloigm`.`FB`, 
-`datosprotocoloigm`.`TMPB`, 
-`datosprotocoloigm`.`TIMEB`, 
-`datosprotocoloigm`.`Conjugado`, 
-`datosprotocoloigm`.`Substrato`, 
-`datosprotocoloigm`.`TSubstrato`, 
-`datosprotocoloigm`.`SHN`, 
-`datosprotocoloigm`.`STOP`, 
-`datosprotocoloigm`.`ControlNegLI`, 
-`datosprotocoloigm`.`ControlNegLS`, 
-`datosprotocoloigm`.`ControlPosRadLI`, 
-`datosprotocoloigm`.`ControlPosRadLS`, 
-`datosprotocoloigm`.`ControlNegRadLI`, 
-`datosprotocoloigm`.`ControlNegRadLS`
-FROM `datosprotocoloigm` AS `datosprotocoloigm`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="datosprotocoloigmzika" EntityType="Self.datosprotocoloigmzika" store:Type="Tables" store:Schema="elisa">
             <DefiningQuery>SELECT
@@ -3001,6 +2951,41 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="Fecha_Inicio" Type="DateTime" />
           <Property Name="Fecha_Finalizacion" Type="DateTime" />
           <Property Name="Oservaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="datosprotocoloigm">
+          <Key>
+            <PropertyRef Name="idDatosProtocoloIgM" />
+          </Key>
+          <Property Name="ControlPosA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ControlPosB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LoteAntigeno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechafijGG" Type="DateTime" />
+          <Property Name="VolUsado" Type="Single" />
+          <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FB" Type="DateTime" />
+          <Property Name="TMPB" Type="Byte" />
+          <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TSubstrato" Type="Single" />
+          <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+          <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+          <Property Name="ControlPosRadLI" Type="Single" Nullable="false" />
+          <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
+          <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
+          <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
+          <Property Name="idDatosProtocoloIgM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="datosprotocolons1">
           <Key>
@@ -4853,57 +4838,6 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="ControlNegSalLI" Type="Single" Nullable="false" />
           <Property Name="ControlNegSalLS" Type="Single" Nullable="false" />
         </EntityType>
-        <EntityType Name="datosprotocoloigm">
-          <Key>
-            <PropertyRef Name="ControlPosA" />
-            <PropertyRef Name="ControlPosB" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="ControlRadPos" />
-            <PropertyRef Name="ControlRadNeg" />
-            <PropertyRef Name="LoteIgM" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="GGLOB" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
-            <PropertyRef Name="ControlPosRadLI" />
-            <PropertyRef Name="ControlPosRadLS" />
-            <PropertyRef Name="ControlNegRadLI" />
-            <PropertyRef Name="ControlNegRadLS" />
-          </Key>
-          <Property Name="ControlPosA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ControlPosB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LoteAntigeno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="fechafijGG" Type="DateTime" />
-          <Property Name="VolUsado" Type="Single" />
-          <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FB" Type="DateTime" />
-          <Property Name="TMPB" Type="Byte" />
-          <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TSubstrato" Type="Single" />
-          <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ControlNegLI" Type="Single" Nullable="false" />
-          <Property Name="ControlNegLS" Type="Single" Nullable="false" />
-          <Property Name="ControlPosRadLI" Type="Single" Nullable="false" />
-          <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
-          <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
-          <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
-        </EntityType>
         <EntityType Name="datosprotocoloigmzika">
           <Key>
             <PropertyRef Name="ControlPos" />
@@ -5116,6 +5050,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySet Name="controles_ei" EntityType="Self.controles_ei" />
           <EntitySet Name="controles_igg" EntityType="Self.controles_igg" />
           <EntitySet Name="controles_igm" EntityType="Self.controles_igm" />
+          <EntitySet Name="datosprotocoloigms" EntityType="Self.datosprotocoloigm" />
           <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" />
           <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotaviru" />
           <EntitySet Name="datosprotocolovihs" EntityType="Self.datosprotocolovih" />
@@ -5178,7 +5113,6 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySet Name="datosprotocoloeiensayos" EntityType="Self.datosprotocoloeiensayo" />
           <EntitySet Name="datosprotocoloeizikas" EntityType="Self.datosprotocoloeizika" />
           <EntitySet Name="datosprotocoloiggs" EntityType="Self.datosprotocoloigg" />
-          <EntitySet Name="datosprotocoloigms" EntityType="Self.datosprotocoloigm" />
           <EntitySet Name="datosprotocoloigmzikas" EntityType="Self.datosprotocoloigmzika" />
           <EntitySet Name="datosprotocolozikabobs" EntityType="Self.datosprotocolozikabob" />
           <EntitySet Name="datosprotocolozikaigmbeis" EntityType="Self.datosprotocolozikaigmbei" />
@@ -5473,6 +5407,42 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
                 <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
                 <ScalarProperty Name="Fecha_Finalizacion" ColumnName="Fecha_Finalizacion" />
                 <ScalarProperty Name="Oservaciones" ColumnName="Oservaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="datosprotocoloigms">
+            <EntityTypeMapping TypeName="elisaModel.datosprotocoloigm">
+              <MappingFragment StoreEntitySet="datosprotocoloigm">
+                <ScalarProperty Name="ControlPosA" ColumnName="ControlPosA" />
+                <ScalarProperty Name="ControlPosB" ColumnName="ControlPosB" />
+                <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+                <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
+                <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
+                <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+                <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+                <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+                <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+                <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+                <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+                <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+                <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+                <ScalarProperty Name="PB" ColumnName="PB" />
+                <ScalarProperty Name="TB" ColumnName="TB" />
+                <ScalarProperty Name="FB" ColumnName="FB" />
+                <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+                <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+                <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+                <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+                <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+                <ScalarProperty Name="SHN" ColumnName="SHN" />
+                <ScalarProperty Name="STOP" ColumnName="STOP" />
+                <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+                <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+                <ScalarProperty Name="ControlPosRadLI" ColumnName="ControlPosRadLI" />
+                <ScalarProperty Name="ControlPosRadLS" ColumnName="ControlPosRadLS" />
+                <ScalarProperty Name="ControlNegRadLI" ColumnName="ControlNegRadLI" />
+                <ScalarProperty Name="ControlNegRadLS" ColumnName="ControlNegRadLS" />
+                <ScalarProperty Name="idDatosProtocoloIgM" ColumnName="idDatosProtocoloIgM" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -7201,41 +7171,6 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
                 <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
                 <ScalarProperty Name="ControlNegSalLI" ColumnName="ControlNegSalLI" />
                 <ScalarProperty Name="ControlNegSalLS" ColumnName="ControlNegSalLS" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="datosprotocoloigms">
-            <EntityTypeMapping TypeName="elisaModel.datosprotocoloigm">
-              <MappingFragment StoreEntitySet="datosprotocoloigm">
-                <ScalarProperty Name="ControlPosA" ColumnName="ControlPosA" />
-                <ScalarProperty Name="ControlPosB" ColumnName="ControlPosB" />
-                <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
-                <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
-                <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
-                <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
-                <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
-                <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
-                <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
-                <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
-                <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
-                <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
-                <ScalarProperty Name="Coatting" ColumnName="Coatting" />
-                <ScalarProperty Name="PB" ColumnName="PB" />
-                <ScalarProperty Name="TB" ColumnName="TB" />
-                <ScalarProperty Name="FB" ColumnName="FB" />
-                <ScalarProperty Name="TMPB" ColumnName="TMPB" />
-                <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
-                <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
-                <ScalarProperty Name="Substrato" ColumnName="Substrato" />
-                <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
-                <ScalarProperty Name="SHN" ColumnName="SHN" />
-                <ScalarProperty Name="STOP" ColumnName="STOP" />
-                <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
-                <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
-                <ScalarProperty Name="ControlPosRadLI" ColumnName="ControlPosRadLI" />
-                <ScalarProperty Name="ControlPosRadLS" ColumnName="ControlPosRadLS" />
-                <ScalarProperty Name="ControlNegRadLI" ColumnName="ControlNegRadLI" />
-                <ScalarProperty Name="ControlNegRadLS" ColumnName="ControlNegRadLS" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

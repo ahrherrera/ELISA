@@ -1,23 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Transaccion;
-using MaterialSkin;
-using MaterialSkin.Controls;
 
 namespace ELISA.UI
 {
     public partial class Login : Form
     {
-        private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        private Timer timer = new Timer();
         public Login()
         {
             InitializeComponent();
@@ -43,7 +32,7 @@ namespace ELISA.UI
         {
             //Muestra durante 1 segundo el campo de contraseña
             timer.Interval = 1000;
-            timer.Tick += new EventHandler(timer_Tick);
+            timer.Tick += timer_Tick;
             timer.Start();
             this.txt_Password.UseSystemPasswordChar = false;
         }
@@ -72,7 +61,7 @@ namespace ELISA.UI
                     lbl_Error.Visible = false;
                     //Mostrar ventana principal
                     new Principal(user).Show();
-                    this.Hide();
+                    Hide();
                 }
                 else
                 {
@@ -86,6 +75,9 @@ namespace ELISA.UI
             if (e.KeyChar == (char)Keys.Return)
             {
                 IniciarSesion();
+                e.Handled = true;
+                
+
             }
         }
 

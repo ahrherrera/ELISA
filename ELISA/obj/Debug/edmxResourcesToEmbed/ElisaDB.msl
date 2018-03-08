@@ -256,6 +256,42 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="datosprotocoloigms">
+      <EntityTypeMapping TypeName="elisaModel.datosprotocoloigm">
+        <MappingFragment StoreEntitySet="datosprotocoloigm">
+          <ScalarProperty Name="ControlPosA" ColumnName="ControlPosA" />
+          <ScalarProperty Name="ControlPosB" ColumnName="ControlPosB" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
+          <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
+          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
+          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
+          <ScalarProperty Name="ControlPosRadLI" ColumnName="ControlPosRadLI" />
+          <ScalarProperty Name="ControlPosRadLS" ColumnName="ControlPosRadLS" />
+          <ScalarProperty Name="ControlNegRadLI" ColumnName="ControlNegRadLI" />
+          <ScalarProperty Name="ControlNegRadLS" ColumnName="ControlNegRadLS" />
+          <ScalarProperty Name="idDatosProtocoloIgM" ColumnName="idDatosProtocoloIgM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="datosprotocolons1">
       <EntityTypeMapping TypeName="elisaModel.datosprotocolons1">
         <MappingFragment StoreEntitySet="datosprotocolons1">
@@ -1981,41 +2017,6 @@
           <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
           <ScalarProperty Name="ControlNegSalLI" ColumnName="ControlNegSalLI" />
           <ScalarProperty Name="ControlNegSalLS" ColumnName="ControlNegSalLS" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="datosprotocoloigms">
-      <EntityTypeMapping TypeName="elisaModel.datosprotocoloigm">
-        <MappingFragment StoreEntitySet="datosprotocoloigm">
-          <ScalarProperty Name="ControlPosA" ColumnName="ControlPosA" />
-          <ScalarProperty Name="ControlPosB" ColumnName="ControlPosB" />
-          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
-          <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />
-          <ScalarProperty Name="ControlRadNeg" ColumnName="ControlRadNeg" />
-          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
-          <ScalarProperty Name="LoteAntigeno" ColumnName="LoteAntigeno" />
-          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
-          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
-          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
-          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
-          <ScalarProperty Name="TipoEstudio" ColumnName="TipoEstudio" />
-          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
-          <ScalarProperty Name="PB" ColumnName="PB" />
-          <ScalarProperty Name="TB" ColumnName="TB" />
-          <ScalarProperty Name="FB" ColumnName="FB" />
-          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
-          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
-          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
-          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
-          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
-          <ScalarProperty Name="SHN" ColumnName="SHN" />
-          <ScalarProperty Name="STOP" ColumnName="STOP" />
-          <ScalarProperty Name="ControlNegLI" ColumnName="ControlNegLI" />
-          <ScalarProperty Name="ControlNegLS" ColumnName="ControlNegLS" />
-          <ScalarProperty Name="ControlPosRadLI" ColumnName="ControlPosRadLI" />
-          <ScalarProperty Name="ControlPosRadLS" ColumnName="ControlPosRadLS" />
-          <ScalarProperty Name="ControlNegRadLI" ColumnName="ControlNegRadLI" />
-          <ScalarProperty Name="ControlNegRadLS" ColumnName="ControlNegRadLS" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -17,3 +17,5 @@ E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\MetroFramework.De
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\MetroFramework.dll
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\MetroFramework.Fonts.dll
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParametros.DatosIgM.resources
+E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParametros.Controles.resources
+E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParametros.NuevoControlIgM.resources

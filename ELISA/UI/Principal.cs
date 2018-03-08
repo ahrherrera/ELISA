@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Transaccion;
+using ELISA.Transaccion.DatosProtocoloTrans;
+using ELISA.UI.UIParametros;
 using ELISA.Utils;
 
 namespace ELISA.UI
@@ -23,6 +25,7 @@ namespace ELISA.UI
 
         //Variables
         private int selectedTest = -1;
+        public static Boolean invalid;
         public Principal(usuario logged)
         {
             InitializeComponent();
@@ -38,7 +41,7 @@ namespace ELISA.UI
                 MessageBoxButtons.YesNo);
             if (dialogo == DialogResult.Yes)
             {
-                Environment.Exit(1);
+                Environment.Exit(0);
             }
             else
             {
@@ -330,6 +333,7 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("ELISA INH Monoclonal Chik"))
                 {
+
                     SetOpcionesRm();
                     SelectTest(MainUtils.Test.ELISAINHMonoChik);
                 }else if (selectedItem.Equals("ELISA INH Hiperinmune Chik"))
@@ -358,6 +362,7 @@ namespace ELISA.UI
                 string selectedItem = cmb_IgM.SelectedItem.ToString();
                 if (selectedItem.Equals("IgM Dengue"))
                 {
+                    //fmeResultsIgM
                     SelectTest(MainUtils.Test.IgMDengue);
                     SetOpcionesOptIgm();
                 }else if (selectedItem.Equals("IgM Zika"))
@@ -675,7 +680,7 @@ namespace ELISA.UI
                 //MessageBox.Show("CMb1Text = " + cmb_Lab1.Text + "  CmbIndex= " +cmb_Lab1.SelectedIndex);
                 if (cmb_Lab1.SelectedIndex!=-1)
                 {
-
+                    Guardar();
                 }
                 else
                 {
@@ -696,6 +701,221 @@ namespace ELISA.UI
             }
         }
 
+        private void Guardar()
+        {
+            //Pasa los datos contenidos en la tabla a un arreglo multidimensional
+            String [,] protocolo = new String[dgv_Protocolo.RowCount,dgv_Protocolo.ColumnCount];
+            foreach (DataGridViewRow i in dgv_Protocolo.Rows)
+            {
+                if (i.IsNewRow)
+                {
+                    foreach (DataGridViewCell j in i.Cells)
+                    {
+                        protocolo[j.RowIndex, j.ColumnIndex] = (string) j.Value;
+                    }
+                }
+            }
+            switch (selectedTest)
+            {
+                case 5:
+                    {
+                        //GuardarIgG
+                        
+                        break;
+                    }
+                case 6:
+                    {
+                        //GuardarIgG
+                        break;
+                    }
+                case 0:
+                    {
+                        ControlP = false;
+                        //GuardarIgM
+                        break;
+                    }
+                case 10:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 7:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 8:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 9:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 26:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 27:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 28:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 29:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 11:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 30:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 31:
+                    {
+                        ControlP = false;
+                        //GuardarEI2
+                        break;
+                    }
+                case 16:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 17:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 18:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 19:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 20:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 21:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 22:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 23:
+                    {
+                        ControlP = false;
+                        //GuardarEI1D
+                        break;
+                    }
+                case 24:
+                    {
+                        ControlP = false;
+                        //GuardarEIPDVI
+                        break;
+                    }
+                case 25:
+                    {
+                        ControlP = false;
+                        //GuardarEIPPDVIDup
+                        break;
+                    }
+                case 32:
+                    {
+                        ControlP = false;
+                        //GuardarRV
+                        break;
+                    }
+                case 3:
+                    {
+                        //GuardarChik
+                        break;
+                    }
+                case 4:
+                    {
+                        //GuardarChikCNDR
+                        break;
+                    }
+                case 1:
+                    {
+                        ControlP = false;
+                        //GuardarIgMZika
+                        break;
+                    }
+                case 2:
+                    {
+                        ControlP = false;
+                        //GuardarIgMZikaBei
+                        break;
+                    }
+                case 12:
+                    {
+                        ControlP = false;
+                        //GuardarZikaBob
+                        break;
+                    }
+                case 13:
+                    {
+                        ControlP = false;
+                        //GuardarZikaBob
+                        break;
+                    }
+                case 14:
+                    {
+                        ControlP = false;
+                        //GuardarZikaBob
+                        break;
+                    }
+                case 15:
+                    {
+                        ControlP = false;
+                        //GuardarZikaBob
+                        break;
+                    }
+
+            }
+        }
+
         private void txt_Placa_TextChanged(object sender, EventArgs e)
         {
             ErrorProviderPlaca.Clear();
@@ -712,6 +932,24 @@ namespace ELISA.UI
             {
                 e.Handled = true;
             }
+        }
+
+        private void guardarPlacaInválidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            invalid = true;
+        }
+
+        private void protocoloIgMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatosIgM protoIgM = new DatosIgM();
+            DialogResult result = protoIgM.ShowDialog(this);
+
+
+        }
+
+        private void btn_LoadProtocolo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

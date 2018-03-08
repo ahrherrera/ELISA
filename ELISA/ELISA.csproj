@@ -49,6 +49,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
@@ -302,8 +303,11 @@
     <Compile Include="tipo_control.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgG.cs" />
+    <Compile Include="Transaccion\ControlesTrans.cs" />
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs" />
+    <Compile Include="Transaccion\EstudioTrans.cs" />
     <Compile Include="Transaccion\LaboratoristasTrans.cs" />
+    <Compile Include="Transaccion\ProcH2OTrans.cs" />
     <Compile Include="Transaccion\UsuarioTrans.cs" />
     <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
@@ -317,15 +321,28 @@
     <Compile Include="UI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIParametros\Controles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles.Designer.cs">
+      <DependentUpon>Controles.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UIParametros\DatosIgM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\UIParametros\DatosIgM.Designer.cs">
       <DependentUpon>DatosIgM.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIParametros\NuevoControlIgM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoControlIgM.Designer.cs">
+      <DependentUpon>NuevoControlIgM.cs</DependentUpon>
+    </Compile>
     <Compile Include="usuario.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utils\GuardarDatos.cs" />
     <Compile Include="Utils\Log.cs" />
     <Compile Include="Utils\MainUtils.cs" />
     <Compile Include="vih.cs">
@@ -372,8 +389,14 @@
     <EmbeddedResource Include="UI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\Controles.resx">
+      <DependentUpon>Controles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosIgM.resx">
       <DependentUpon>DatosIgM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoControlIgM.resx">
+      <DependentUpon>NuevoControlIgM.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="ElisaDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -420,6 +443,9 @@
     <None Include="Resources\print.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ElisaDB.Context.tt">

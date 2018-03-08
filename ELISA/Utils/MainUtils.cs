@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ELISA.Utils
 {
-    class MainUtils
+    public class MainUtils
     {
 
         public static List<String> abc()
@@ -21,6 +21,16 @@ namespace ELISA.Utils
             abc.Add("G");
             abc.Add("H");
             return abc;
+        }
+
+        public enum Controles
+        {
+            ControlesIgM_CPA,
+            ControlesIgM_CPB,
+            ControlesIgM_C,
+            ControlesIgM_CRP,
+            ControlesIgM_CRN
+
         }
 
         public enum Test

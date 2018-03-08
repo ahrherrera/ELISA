@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Utils;
-using MetroFramework.Drawing;
 
 namespace ELISA.Transaccion
 {
@@ -25,7 +21,7 @@ namespace ELISA.Transaccion
                     cmb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                     cmb.AutoCompleteSource = AutoCompleteSource.ListItems;
                     cmb.Invalidate();
-                    ELISA.Utils.Log.logInfo("Lista de laboratorista cargado correctamente");
+                    Log.logInfo("Lista de laboratorista cargado correctamente");
                     cmb.SelectedItem = null;
                     cmb.SelectedText = "";
                 }

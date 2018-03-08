@@ -40,6 +40,7 @@ namespace ELISA
         public DbSet<controles_ei> controles_ei { get; set; }
         public DbSet<controles_igg> controles_igg { get; set; }
         public DbSet<controles_igm> controles_igm { get; set; }
+        public DbSet<datosprotocoloigm> datosprotocoloigms { get; set; }
         public DbSet<datosprotocolons1> datosprotocolons1 { get; set; }
         public DbSet<datosprotocolorotaviru> datosprotocolorotavirus { get; set; }
         public DbSet<datosprotocolovih> datosprotocolovihs { get; set; }
@@ -102,7 +103,6 @@ namespace ELISA
         public DbSet<datosprotocoloeiensayo> datosprotocoloeiensayos { get; set; }
         public DbSet<datosprotocoloeizika> datosprotocoloeizikas { get; set; }
         public DbSet<datosprotocoloigg> datosprotocoloiggs { get; set; }
-        public DbSet<datosprotocoloigm> datosprotocoloigms { get; set; }
         public DbSet<datosprotocoloigmzika> datosprotocoloigmzikas { get; set; }
         public DbSet<datosprotocolozikabob> datosprotocolozikabobs { get; set; }
         public DbSet<datosprotocolozikaigmbei> datosprotocolozikaigmbeis { get; set; }

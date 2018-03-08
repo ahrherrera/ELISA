@@ -246,6 +246,41 @@
     <Property Name="Fecha_Finalizacion" Type="DateTime" />
     <Property Name="Oservaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="datosprotocoloigm">
+    <Key>
+      <PropertyRef Name="idDatosProtocoloIgM" />
+    </Key>
+    <Property Name="ControlPosA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlPosB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoteAntigeno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="ControlPosRadLI" Type="Single" Nullable="false" />
+    <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
+    <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
+    <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
+    <Property Name="idDatosProtocoloIgM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
   <EntityType Name="datosprotocolons1">
     <Key>
       <PropertyRef Name="Codigo" />
@@ -2097,57 +2132,6 @@
     <Property Name="ControlNegSalLI" Type="Single" Nullable="false" />
     <Property Name="ControlNegSalLS" Type="Single" Nullable="false" />
   </EntityType>
-  <EntityType Name="datosprotocoloigm">
-    <Key>
-      <PropertyRef Name="ControlPosA" />
-      <PropertyRef Name="ControlPosB" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="ControlRadPos" />
-      <PropertyRef Name="ControlRadNeg" />
-      <PropertyRef Name="LoteIgM" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="GGLOB" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
-      <PropertyRef Name="ControlPosRadLI" />
-      <PropertyRef Name="ControlPosRadLS" />
-      <PropertyRef Name="ControlNegRadLI" />
-      <PropertyRef Name="ControlNegRadLS" />
-    </Key>
-    <Property Name="ControlPosA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ControlPosB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ControlRadPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ControlRadNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="LoteIgM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="LoteAntigeno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="GGLOB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fechafijGG" Type="DateTime" />
-    <Property Name="VolUsado" Type="Single" />
-    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TipoEstudio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="FB" Type="DateTime" />
-    <Property Name="TMPB" Type="Byte" />
-    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Conjugado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Substrato" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="TSubstrato" Type="Single" />
-    <Property Name="SHN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ControlNegLI" Type="Single" Nullable="false" />
-    <Property Name="ControlNegLS" Type="Single" Nullable="false" />
-    <Property Name="ControlPosRadLI" Type="Single" Nullable="false" />
-    <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
-    <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
-    <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
-  </EntityType>
   <EntityType Name="datosprotocoloigmzika">
     <Key>
       <PropertyRef Name="ControlPos" />
@@ -2360,6 +2344,7 @@
     <EntitySet Name="controles_ei" EntityType="Self.controles_ei" />
     <EntitySet Name="controles_igg" EntityType="Self.controles_igg" />
     <EntitySet Name="controles_igm" EntityType="Self.controles_igm" />
+    <EntitySet Name="datosprotocoloigms" EntityType="Self.datosprotocoloigm" />
     <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" />
     <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotaviru" />
     <EntitySet Name="datosprotocolovihs" EntityType="Self.datosprotocolovih" />
@@ -2422,7 +2407,6 @@
     <EntitySet Name="datosprotocoloeiensayos" EntityType="Self.datosprotocoloeiensayo" />
     <EntitySet Name="datosprotocoloeizikas" EntityType="Self.datosprotocoloeizika" />
     <EntitySet Name="datosprotocoloiggs" EntityType="Self.datosprotocoloigg" />
-    <EntitySet Name="datosprotocoloigms" EntityType="Self.datosprotocoloigm" />
     <EntitySet Name="datosprotocoloigmzikas" EntityType="Self.datosprotocoloigmzika" />
     <EntitySet Name="datosprotocolozikabobs" EntityType="Self.datosprotocolozikabob" />
     <EntitySet Name="datosprotocolozikaigmbeis" EntityType="Self.datosprotocolozikaigmbei" />
