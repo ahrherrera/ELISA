@@ -13,15 +13,13 @@ using ELISA.Utils;
 
 namespace ELISA.UI.UIParametros
 {
-    public partial class NuevoControlIgM : Form
+    public partial class NuevoControlEI : Form
     {
-
-        string previousInput = "";
         private Boolean fechaFinMod = false;
         private Boolean fechaInicioMod = false;
         private MainUtils.Controles control;
 
-        public NuevoControlIgM(Utils.MainUtils.Controles control)
+        public NuevoControlEI(Utils.MainUtils.Controles control)
         {
             InitializeComponent();
             time_FechaFin.Value = DateTime.Now;
@@ -35,8 +33,9 @@ namespace ELISA.UI.UIParametros
         {
             if (!txtCodigoControl.Text.Equals("") || !txt_DOptica.Text.Equals("") || !txt_Volumen.Text.Equals(""))
             {
-                controles_igm nuevo = new controles_igm();
-                nuevo.Cod_Asign_ContIgM = txtCodigoControl.Text;
+                controles_ei nuevo = new controles_ei();
+                nuevo.Codigo_Asig_ContEI = txtCodigoControl.Text;
+                nuevo.MxC = txt_MxC.Text;
                 nuevo.D_Optica = float.Parse(txt_DOptica.Text);
                 nuevo.Volumen = Int32.Parse(txt_Volumen.Text);
                 if (fechaFinMod)
@@ -56,33 +55,18 @@ namespace ELISA.UI.UIParametros
                 
                 switch (control)
                 {
-                    case MainUtils.Controles.ControlesIgM_CPA:
+                    case MainUtils.Controles.ControlesEI_CMin:
                     {
-                        nuevo.Tipo_Control = "CPA";
+                        nuevo.Tipo = "C-";
                             break;
                     }
-                    case MainUtils.Controles.ControlesIgM_C:
+                    case MainUtils.Controles.ControlesEI_CPlus:
                     {
-                        nuevo.Tipo_Control = "C-";
-                            break;
-                    }
-                    case MainUtils.Controles.ControlesIgM_CPB:
-                    {
-                        nuevo.Tipo_Control = "CPB";
-                            break;
-                    }
-                    case MainUtils.Controles.ControlesIgM_CRP:
-                    {
-                        nuevo.Tipo_Control = "CRP";
-                            break;
-                    }
-                    case MainUtils.Controles.ControlesIgM_CRN:
-                    {
-                        nuevo.Tipo_Control = "CRN";
+                        nuevo.Tipo = "C+";
                             break;
                     }
                 }
-                ControlesTrans.addControlesIgM(nuevo);
+                ControlesTrans.addControlesEI(nuevo);
 
             }
             else

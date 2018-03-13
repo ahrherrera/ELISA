@@ -509,6 +509,7 @@
             this.protocoloEIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.protocoloEIToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.protocoloEIToolStripMenuItem.Text = "Protocolo EI";
+            this.protocoloEIToolStripMenuItem.Click += new System.EventHandler(this.protocoloEIToolStripMenuItem_Click);
             // 
             // protocoloRotavirusToolStripMenuItem
             // 

@@ -1,6 +1,6 @@
 ﻿namespace ELISA.UI.UIParametros
 {
-    partial class NuevoControlIgM
+    partial class NuevoControlEI
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,8 @@
             this.txt_Observacion = new System.Windows.Forms.TextBox();
             this.btn_Aceptar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_MxC = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtCodigoControl
@@ -57,14 +59,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 40);
+            this.label1.Size = new System.Drawing.Size(81, 40);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Código \r\nControl IgM :";
+            this.label1.Text = "Código \r\nControl EI :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 88);
+            this.label2.Location = new System.Drawing.Point(33, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 3;
@@ -72,7 +74,7 @@
             // 
             // txt_DOptica
             // 
-            this.txt_DOptica.Location = new System.Drawing.Point(137, 85);
+            this.txt_DOptica.Location = new System.Drawing.Point(137, 117);
             this.txt_DOptica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_DOptica.Name = "txt_DOptica";
             this.txt_DOptica.Size = new System.Drawing.Size(122, 27);
@@ -82,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 125);
+            this.label3.Location = new System.Drawing.Point(33, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 5;
@@ -90,7 +92,7 @@
             // 
             // txt_Volumen
             // 
-            this.txt_Volumen.Location = new System.Drawing.Point(137, 122);
+            this.txt_Volumen.Location = new System.Drawing.Point(137, 154);
             this.txt_Volumen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Volumen.Name = "txt_Volumen";
             this.txt_Volumen.Size = new System.Drawing.Size(122, 27);
@@ -101,7 +103,7 @@
             // 
             this.time_FechaInicio.CustomFormat = "dd-MM-yyyy";
             this.time_FechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.time_FechaInicio.Location = new System.Drawing.Point(138, 167);
+            this.time_FechaInicio.Location = new System.Drawing.Point(138, 199);
             this.time_FechaInicio.Name = "time_FechaInicio";
             this.time_FechaInicio.Size = new System.Drawing.Size(120, 27);
             this.time_FechaInicio.TabIndex = 6;
@@ -109,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 162);
+            this.label4.Location = new System.Drawing.Point(33, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 40);
             this.label4.TabIndex = 7;
@@ -118,7 +120,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 212);
+            this.label5.Location = new System.Drawing.Point(32, 244);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 40);
             this.label5.TabIndex = 9;
@@ -128,7 +130,7 @@
             // 
             this.time_FechaFin.CustomFormat = "dd-MM-yyyy";
             this.time_FechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.time_FechaFin.Location = new System.Drawing.Point(137, 217);
+            this.time_FechaFin.Location = new System.Drawing.Point(137, 249);
             this.time_FechaFin.Name = "time_FechaFin";
             this.time_FechaFin.Size = new System.Drawing.Size(120, 27);
             this.time_FechaFin.TabIndex = 8;
@@ -136,7 +138,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 263);
+            this.label6.Location = new System.Drawing.Point(31, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 20);
             this.label6.TabIndex = 11;
@@ -144,7 +146,7 @@
             // 
             // txt_Observacion
             // 
-            this.txt_Observacion.Location = new System.Drawing.Point(135, 260);
+            this.txt_Observacion.Location = new System.Drawing.Point(135, 292);
             this.txt_Observacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Observacion.Multiline = true;
             this.txt_Observacion.Name = "txt_Observacion";
@@ -154,7 +156,7 @@
             // btn_Aceptar
             // 
             this.btn_Aceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_Aceptar.Location = new System.Drawing.Point(44, 333);
+            this.btn_Aceptar.Location = new System.Drawing.Point(44, 377);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(105, 39);
             this.btn_Aceptar.TabIndex = 12;
@@ -164,7 +166,7 @@
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(155, 333);
+            this.btn_Cancelar.Location = new System.Drawing.Point(155, 377);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(111, 39);
             this.btn_Cancelar.TabIndex = 13;
@@ -172,12 +174,31 @@
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // NuevoControlIgM
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(33, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "MxC :";
+            // 
+            // txt_MxC
+            // 
+            this.txt_MxC.Location = new System.Drawing.Point(137, 77);
+            this.txt_MxC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_MxC.Name = "txt_MxC";
+            this.txt_MxC.Size = new System.Drawing.Size(122, 27);
+            this.txt_MxC.TabIndex = 14;
+            // 
+            // NuevoControlEI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 383);
+            this.ClientSize = new System.Drawing.Size(303, 435);
             this.ControlBox = false;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txt_MxC);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Aceptar);
             this.Controls.Add(this.label6);
@@ -195,11 +216,11 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "NuevoControlIgM";
+            this.Name = "NuevoControlEI";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Nuevo Control IgM";
+            this.Text = "Nuevo Control EI";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +242,7 @@
         private System.Windows.Forms.TextBox txt_Observacion;
         private System.Windows.Forms.Button btn_Aceptar;
         private System.Windows.Forms.Button btn_Cancelar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_MxC;
     }
 }

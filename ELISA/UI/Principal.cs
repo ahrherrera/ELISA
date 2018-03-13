@@ -951,5 +951,11 @@ namespace ELISA.UI
         {
 
         }
+
+        private void protocoloEIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatosEI protoEI = new DatosEI();
+            DialogResult result = protoEI.ShowDialog(this);
+        }
     }
 }

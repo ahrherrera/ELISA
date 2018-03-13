@@ -13,10 +13,10 @@ using ELISA.Utils;
 
 namespace ELISA.UI.UIParametros
 {
-    public partial class DatosIgM : Form
+    public partial class DatosEI : Form
     {
         List<CheckBox> listaCheck = new List<CheckBox>();
-        public DatosIgM()
+        public DatosEI()
         {
             InitializeComponent();
         }
@@ -27,8 +27,8 @@ namespace ELISA.UI.UIParametros
             fillCombobox();
             fillFields();
             //Eventos
-            this.txt_ControlPosBajo.Click += new System.EventHandler(this.txt_ControlPosBajo_Click);
-            this.txt_ControlPosAlto.Click += new System.EventHandler(this.txt_ControlPosAlto_Click);
+            this.txt_ControlNeg.Click += new System.EventHandler(this.txt_ControlNeg_Click);
+            this.txt_ControlPos.Click += new System.EventHandler(this.txt_ControlPosAlto_Click);
             addList();
         }
 
@@ -39,10 +39,7 @@ namespace ELISA.UI.UIParametros
             listaCheck.Add(chk_AntiGlobulina);
             listaCheck.Add(chk_Coatting);
             listaCheck.Add(chk_Conjug);
-            listaCheck.Add(chk_ControlNegRadio);
-            listaCheck.Add(chk_ControlPosAlto);
-            listaCheck.Add(chk_ControlPosBajo);
-            listaCheck.Add(chk_ControlPosRadio);
+            listaCheck.Add(chk_ControlPos);
             listaCheck.Add(chk_Fecha);
             listaCheck.Add(chk_Fijacion);
             listaCheck.Add(chk_Volumen);
@@ -67,9 +64,9 @@ namespace ELISA.UI.UIParametros
 
         private void fillFields()
         {
-            //Llena los campos desde la tabla datosprotocoloigm
-            datosprotocoloigm data = DatosProtocoloIgM.TraerDatosProtocoloIgM();
-            txt_LoteIgM.Text = data.LoteIgM;
+            //Llena los campos desde la tabla datosprotocoloei
+            datosprotocoloei data = DatosProtocoloEI.TraerDatosProtocoloEI();
+            txt_LoteEI.Text = data.LoteEI;
             txt_LoteAsignado.Text = data.GGLOB;
             if (data.fechafijGG != null) date_Fijacion.Value = data.fechafijGG.Value;
             if (data.VolUsado != null) txt_Volumen.Text = data.VolUsado.Value.ToString();
@@ -87,17 +84,10 @@ namespace ELISA.UI.UIParametros
             txt_STOP.Text = data.STOP;
             txt_SUBST.Text = data.Substrato;
             if (data.TSubstrato != null) txt_TiempoSubs.Text = data.TSubstrato.Value.ToString();
-            txt_ControlPosAlto.Text = data.ControlPosA;
-            txt_ControlPosBajo.Text = data.ControlPosB;
+            txt_ControlPos.Text = data.ControlPos;
             txt_ControlNeg.Text = data.ControlNeg;
             txt_ControlNegLI.Text = data.ControlNegLI.ToString();
             txt_ControlNegLS.Text = data.ControlNegLS.ToString();
-            txt_ControlPosRadio.Text = data.ControlRadPos;
-            txt_ControlPosRadioLI.Text = data.ControlPosRadLI.ToString();
-            txt_ControlPosRadioLS.Text = data.ControlPosRadLS.ToString();
-            txt_ControlNegRadio.Text = data.ControlRadNeg;
-            txt_ControlNegRadioLI.Text = data.ControlNegRadLI.ToString();
-            txt_ControlNegRadioLS.Text = data.ControlNegRadLS.ToString();
 
 
             if (Principal.ControlP)
@@ -117,10 +107,7 @@ namespace ELISA.UI.UIParametros
             chk_AntiGlobulina.Checked = stat;
             chk_Coatting.Checked = stat;
             chk_Conjug.Checked = stat;
-            chk_ControlNegRadio.Checked = stat;
-            chk_ControlPosAlto.Checked = stat;
-            chk_ControlPosBajo.Checked = stat;
-            chk_ControlPosRadio.Checked = stat;
+            chk_ControlPos.Checked = stat;
             chk_Fecha.Checked = stat;
             chk_Fijacion.Checked = stat;
             chk_Volumen.Checked = stat;
@@ -152,8 +139,8 @@ namespace ELISA.UI.UIParametros
             try
             {
                 //Guardar los datos del protocolo
-                datosprotocoloigm nuevo = new datosprotocoloigm();
-                nuevo.LoteIgM = txt_LoteIgM.Text;
+                datosprotocoloei nuevo = new datosprotocoloei();
+                nuevo.LoteEI = txt_LoteEI.Text;
                 nuevo.GGLOB = txt_LoteAsignado.Text;
                 nuevo.VolUsado = float.Parse(txt_Volumen.Text);
                 estudio selectedestudio = (estudio) cmb_TipoEstudio.SelectedValue;
@@ -173,20 +160,13 @@ namespace ELISA.UI.UIParametros
                 nuevo.Conjugado = txt_Conjug.Text;
                 nuevo.FB = date_Fecha.Value;
                 nuevo.fechafijGG = date_Fijacion.Value;
-                nuevo.ControlPosA = txt_ControlPosAlto.Text;
-                nuevo.ControlPosB = txt_ControlPosBajo.Text;
+                nuevo.ControlPos = txt_ControlPos.Text;
                 nuevo.ControlNeg = txt_ControlNeg.Text;
                 nuevo.ControlNegLI = float.Parse(txt_ControlNegLI.Text);
                 nuevo.ControlNegLS = float.Parse(txt_ControlNegLS.Text);
-                nuevo.ControlNegRadLI = float.Parse(txt_ControlNegRadioLI.Text);
-                nuevo.ControlRadPos = txt_ControlPosRadio.Text;
-                nuevo.ControlPosRadLI = float.Parse(txt_ControlPosRadioLI.Text);
-                nuevo.ControlPosRadLS = float.Parse(txt_ControlPosRadioLS.Text);
-                nuevo.ControlRadNeg = txt_ControlNegRadio.Text;
-                nuevo.ControlNegRadLS = float.Parse(txt_ControlNegRadioLS.Text);
-                nuevo.ControlNegRadLI = float.Parse(txt_ControlNegRadioLI.Text);
 
-                DatosProtocoloIgM.updateProtocoloIgM(nuevo);
+
+                DatosProtocoloEI.updateProtocoloEI(nuevo);
                 if (allchecked)
                 {
                     Principal.invalid = false;
@@ -205,27 +185,12 @@ namespace ELISA.UI.UIParametros
 
         private void txt_ControlPosAlto_Click(object sender, EventArgs e)
         {
-            DialogResult res = new ControlesIgM(MainUtils.Controles.ControlesIgM_CPA, this).ShowDialog(this);
-        }
-
-        private void txt_ControlPosBajo_Click(object sender, EventArgs e)
-        {
-            DialogResult res = new ControlesIgM(MainUtils.Controles.ControlesIgM_CPB, this).ShowDialog(this);
+            DialogResult res = new ControlesEI(MainUtils.Controles.ControlesEI_CPlus, this).ShowDialog(this);
         }
 
         private void txt_ControlNeg_Click(object sender, EventArgs e)
         {
-            DialogResult res = new ControlesIgM(MainUtils.Controles.ControlesIgM_C, this).ShowDialog(this);
-        }
-
-        private void txt_ControlPosRadio_Click(object sender, EventArgs e)
-        {
-            DialogResult res = new ControlesIgM(MainUtils.Controles.ControlesIgM_CRP, this).ShowDialog(this);
-        }
-
-        private void txt_ControlNegRadio_Click(object sender, EventArgs e)
-        {
-            DialogResult res = new ControlesIgM(MainUtils.Controles.ControlesIgM_CRN, this).ShowDialog(this);
+            DialogResult res = new ControlesEI(MainUtils.Controles.ControlesEI_CMin, this).ShowDialog(this);
         }
     }
 }

@@ -1,25 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Utils;
 
 namespace ELISA.Transaccion.DatosProtocoloTrans
 {
-    class DatosProtocoloIgM
+    class DatosProtocoloEI
     {
 
-        public static datosprotocoloigm TraerDatosProtocoloIgM()
+        public static datosprotocoloei TraerDatosProtocoloEI()
         {
-
             try
             {
                 using (var context = new elisaEntities2())
                 {
-                    datosprotocoloigm dat;
-                    //var listaProtocolo = (from u in context.datosprotocoloigms select u).FirstOrDefault();
-                    //dat = listaProtocolo;
-                    var listaProtocolo = context.datosprotocoloigms.ToList();
+                    datosprotocoloei dat;
+                    var listaProtocolo = context.datosprotocoloeis.ToList();
                     dat = listaProtocolo[0];
                     return dat;
                 }
@@ -32,14 +31,14 @@ namespace ELISA.Transaccion.DatosProtocoloTrans
             }
         }
 
-        public static void updateProtocoloIgM(datosprotocoloigm data)
+        public static void updateProtocoloEI(datosprotocoloei data)
         {
             try
             {
                 using (var context = new elisaEntities2())
                 {
-                    datosprotocoloigm datos = context.datosprotocoloigms.Single(x => x.idDatosProtocoloIgM == 1);
-                    datos.LoteIgM = data.LoteIgM;
+                    datosprotocoloei datos = context.datosprotocoloeis.Single(x => x.idDatosProtocoloEI == 1);
+                    datos.LoteEI = data.LoteEI;
                     datos.GGLOB = data.GGLOB;
                     datos.VolUsado = data.VolUsado;
                     datos.TipoEstudio = data.TipoEstudio;
@@ -57,23 +56,15 @@ namespace ELISA.Transaccion.DatosProtocoloTrans
                     datos.Conjugado = data.Conjugado;
                     datos.FB = data.FB;
                     datos.fechafijGG = data.fechafijGG;
-                    datos.ControlPosA = data.ControlPosA;
-                    datos.ControlPosB = data.ControlPosB;
+                    datos.ControlPos = data.ControlPos;
                     datos.ControlNeg = data.ControlNeg;
                     datos.ControlNegLI = data.ControlNegLI;
                     datos.ControlNegLS = data.ControlNegLS;
-                    datos.ControlNegRadLI = data.ControlNegRadLI;
-                    datos.ControlRadPos = data.ControlRadPos;
-                    datos.ControlPosRadLI = data.ControlPosRadLI;
-                    datos.ControlPosRadLS = data.ControlPosRadLS;
-                    datos.ControlRadNeg = data.ControlRadNeg;
-                    datos.ControlNegRadLS = data.ControlNegRadLS;
-                    datos.ControlNegRadLI = data.ControlNegRadLI;
                     context.SaveChanges();
-                        Task.Run(() =>
-                        {
-                            MessageBox.Show("Ha sido actualizado correctamente");
-                        });
+                    Task.Run(() =>
+                    {
+                        MessageBox.Show("Ha sido actualizado correctamente");
+                    });
                 }
             }
             catch (Exception ex)
@@ -83,6 +74,5 @@ namespace ELISA.Transaccion.DatosProtocoloTrans
 
             }
         }
-
     }
 }

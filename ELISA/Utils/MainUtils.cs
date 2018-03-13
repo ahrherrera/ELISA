@@ -29,7 +29,9 @@ namespace ELISA.Utils
             ControlesIgM_CPB,
             ControlesIgM_C,
             ControlesIgM_CRP,
-            ControlesIgM_CRN
+            ControlesIgM_CRN,
+            ControlesEI_CMin,
+            ControlesEI_CPlus
 
         }
 

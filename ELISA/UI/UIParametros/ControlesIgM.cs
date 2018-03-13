@@ -12,14 +12,14 @@ using ELISA.Utils;
 
 namespace ELISA.UI.UIParametros
 {
-    public partial class Controles : Form
+    public partial class ControlesIgM : Form
     {
         private DatosIgM parent;
         private Boolean cambiosPendientes = false;
         private MainUtils.Controles param;
         private int indexEditRow = -1;
         private string updateId = "";
-        public Controles(MainUtils.Controles param, DatosIgM parent)
+        public ControlesIgM(MainUtils.Controles param, DatosIgM parent)
         {
             InitializeComponent();
             switchParam(param);
@@ -35,8 +35,6 @@ namespace ELISA.UI.UIParametros
                 {
                     //Select * from Controles_IgM Where Tipo_Control = 'CPA'
                     ControlesTrans.getControles("IgM", "CPA", dgv_Controles);
-                    dgv_Controles.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
-                    dgv_Controles.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
                         break;
                 }
                 case MainUtils.Controles.ControlesIgM_CPB:
@@ -65,6 +63,16 @@ namespace ELISA.UI.UIParametros
                 }
             }
             dgv_Controles.Columns[0].ReadOnly = true;
+
+            dgv_Controles.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgv_Controles.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgv_Controles.Columns[0].HeaderText = "Código Control IgM";
+            dgv_Controles.Columns[1].HeaderText = "Tipo";
+            dgv_Controles.Columns[2].HeaderText = "D Optica";
+            dgv_Controles.Columns[3].HeaderText = "Volumen";
+            dgv_Controles.Columns[4].HeaderText = "Fecha de Inicio";
+            dgv_Controles.Columns[5].HeaderText = "Fecha de Finalización";
+            dgv_Controles.Columns[6].HeaderText = "Observaciones";
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -98,7 +106,7 @@ namespace ELISA.UI.UIParametros
                     break;
                 }
             }
-            
+            this.Close();
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace ELISA.UI.UIParametros
 {
-    partial class Controles
+    partial class ControlesIgM
     {
         /// <summary>
         /// Required designer variable.

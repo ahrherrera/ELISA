@@ -1,6 +1,6 @@
 ﻿namespace ELISA.UI.UIParametros
 {
-    partial class DatosIgM
+    partial class DatosEI
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.chk_AntiGlobulina = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_LoteIgM = new System.Windows.Forms.TextBox();
+            this.txt_LoteEI = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.date_Fijacion = new System.Windows.Forms.DateTimePicker();
             this.txt_Volumen = new System.Windows.Forms.TextBox();
@@ -74,22 +74,12 @@
             this.chk_SUBST = new System.Windows.Forms.CheckBox();
             this.chk_ANT = new System.Windows.Forms.CheckBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txt_ControlNegRadioLS = new System.Windows.Forms.TextBox();
-            this.txt_ControlNegRadioLI = new System.Windows.Forms.TextBox();
-            this.txt_ControlNegRadio = new System.Windows.Forms.TextBox();
-            this.chk_ControlNegRadio = new System.Windows.Forms.CheckBox();
-            this.txt_ControlPosBajo = new System.Windows.Forms.TextBox();
-            this.chk_ControlPosBajo = new System.Windows.Forms.CheckBox();
-            this.txt_ControlPosRadioLS = new System.Windows.Forms.TextBox();
             this.txt_ControlNegLS = new System.Windows.Forms.TextBox();
-            this.txt_ControlPosRadioLI = new System.Windows.Forms.TextBox();
             this.txt_ControlNegLI = new System.Windows.Forms.TextBox();
-            this.txt_ControlPosRadio = new System.Windows.Forms.TextBox();
-            this.chk_ControlPosRadio = new System.Windows.Forms.CheckBox();
             this.txt_ControlNeg = new System.Windows.Forms.TextBox();
             this.chk_ControlNeg = new System.Windows.Forms.CheckBox();
-            this.txt_ControlPosAlto = new System.Windows.Forms.TextBox();
-            this.chk_ControlPosAlto = new System.Windows.Forms.CheckBox();
+            this.txt_ControlPos = new System.Windows.Forms.TextBox();
+            this.chk_ControlPos = new System.Windows.Forms.CheckBox();
             this.btn_Aceptar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -114,7 +104,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt_LoteIgM);
+            this.groupBox1.Controls.Add(this.txt_LoteEI);
             this.groupBox1.Controls.Add(this.chk_AntiGlobulina);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -122,15 +112,15 @@
             this.groupBox1.Size = new System.Drawing.Size(323, 70);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "MÉTODO ELISA IgM";
+            this.groupBox1.Text = "MÉTODO ELISA INH";
             // 
-            // txt_LoteIgM
+            // txt_LoteEI
             // 
-            this.txt_LoteIgM.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LoteIgM.Location = new System.Drawing.Point(157, 28);
-            this.txt_LoteIgM.Name = "txt_LoteIgM";
-            this.txt_LoteIgM.Size = new System.Drawing.Size(151, 27);
-            this.txt_LoteIgM.TabIndex = 24;
+            this.txt_LoteEI.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LoteEI.Location = new System.Drawing.Point(157, 28);
+            this.txt_LoteEI.Name = "txt_LoteEI";
+            this.txt_LoteEI.Size = new System.Drawing.Size(151, 27);
+            this.txt_LoteEI.TabIndex = 24;
             // 
             // groupBox2
             // 
@@ -549,9 +539,9 @@
             // txt_ANT
             // 
             this.txt_ANT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_ANT.Location = new System.Drawing.Point(92, 21);
+            this.txt_ANT.Location = new System.Drawing.Point(102, 21);
             this.txt_ANT.Name = "txt_ANT";
-            this.txt_ANT.Size = new System.Drawing.Size(186, 27);
+            this.txt_ANT.Size = new System.Drawing.Size(176, 27);
             this.txt_ANT.TabIndex = 34;
             // 
             // chk_SUBST
@@ -571,198 +561,90 @@
             this.chk_ANT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_ANT.Location = new System.Drawing.Point(16, 24);
             this.chk_ANT.Name = "chk_ANT";
-            this.chk_ANT.Size = new System.Drawing.Size(67, 24);
+            this.chk_ANT.Size = new System.Drawing.Size(81, 24);
             this.chk_ANT.TabIndex = 13;
-            this.chk_ANT.Text = "ANT :";
+            this.chk_ANT.Text = "ANTIG :";
             this.chk_ANT.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.txt_ControlNegRadioLS);
-            this.groupBox7.Controls.Add(this.txt_ControlNegRadioLI);
-            this.groupBox7.Controls.Add(this.txt_ControlNegRadio);
-            this.groupBox7.Controls.Add(this.chk_ControlNegRadio);
-            this.groupBox7.Controls.Add(this.txt_ControlPosBajo);
-            this.groupBox7.Controls.Add(this.chk_ControlPosBajo);
-            this.groupBox7.Controls.Add(this.txt_ControlPosRadioLS);
             this.groupBox7.Controls.Add(this.txt_ControlNegLS);
-            this.groupBox7.Controls.Add(this.txt_ControlPosRadioLI);
             this.groupBox7.Controls.Add(this.txt_ControlNegLI);
-            this.groupBox7.Controls.Add(this.txt_ControlPosRadio);
-            this.groupBox7.Controls.Add(this.chk_ControlPosRadio);
             this.groupBox7.Controls.Add(this.txt_ControlNeg);
             this.groupBox7.Controls.Add(this.chk_ControlNeg);
-            this.groupBox7.Controls.Add(this.txt_ControlPosAlto);
-            this.groupBox7.Controls.Add(this.chk_ControlPosAlto);
+            this.groupBox7.Controls.Add(this.txt_ControlPos);
+            this.groupBox7.Controls.Add(this.chk_ControlPos);
             this.groupBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(12, 469);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(621, 217);
+            this.groupBox7.Size = new System.Drawing.Size(621, 115);
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "CONTROLES";
             // 
-            // txt_ControlNegRadioLS
-            // 
-            this.txt_ControlNegRadioLS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_ControlNegRadioLS.Location = new System.Drawing.Point(484, 166);
-            this.txt_ControlNegRadioLS.Name = "txt_ControlNegRadioLS";
-            this.txt_ControlNegRadioLS.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlNegRadioLS.TabIndex = 50;
-            // 
-            // txt_ControlNegRadioLI
-            // 
-            this.txt_ControlNegRadioLI.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_ControlNegRadioLI.Location = new System.Drawing.Point(390, 167);
-            this.txt_ControlNegRadioLI.Name = "txt_ControlNegRadioLI";
-            this.txt_ControlNegRadioLI.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlNegRadioLI.TabIndex = 49;
-            // 
-            // txt_ControlNegRadio
-            // 
-            this.txt_ControlNegRadio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txt_ControlNegRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ControlNegRadio.Location = new System.Drawing.Point(226, 166);
-            this.txt_ControlNegRadio.Name = "txt_ControlNegRadio";
-            this.txt_ControlNegRadio.ReadOnly = true;
-            this.txt_ControlNegRadio.Size = new System.Drawing.Size(158, 27);
-            this.txt_ControlNegRadio.TabIndex = 48;
-            this.txt_ControlNegRadio.Click += new System.EventHandler(this.txt_ControlNegRadio_Click);
-            // 
-            // chk_ControlNegRadio
-            // 
-            this.chk_ControlNegRadio.AutoSize = true;
-            this.chk_ControlNegRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ControlNegRadio.Location = new System.Drawing.Point(22, 167);
-            this.chk_ControlNegRadio.Name = "chk_ControlNegRadio";
-            this.chk_ControlNegRadio.Size = new System.Drawing.Size(195, 24);
-            this.chk_ControlNegRadio.TabIndex = 23;
-            this.chk_ControlNegRadio.Text = "Control Negativo Radio :";
-            this.chk_ControlNegRadio.UseVisualStyleBackColor = true;
-            // 
-            // txt_ControlPosBajo
-            // 
-            this.txt_ControlPosBajo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txt_ControlPosBajo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ControlPosBajo.Location = new System.Drawing.Point(226, 68);
-            this.txt_ControlPosBajo.Name = "txt_ControlPosBajo";
-            this.txt_ControlPosBajo.ReadOnly = true;
-            this.txt_ControlPosBajo.Size = new System.Drawing.Size(158, 27);
-            this.txt_ControlPosBajo.TabIndex = 41;
-            // 
-            // chk_ControlPosBajo
-            // 
-            this.chk_ControlPosBajo.AutoSize = true;
-            this.chk_ControlPosBajo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ControlPosBajo.Location = new System.Drawing.Point(23, 69);
-            this.chk_ControlPosBajo.Name = "chk_ControlPosBajo";
-            this.chk_ControlPosBajo.Size = new System.Drawing.Size(176, 24);
-            this.chk_ControlPosBajo.TabIndex = 20;
-            this.chk_ControlPosBajo.Text = "Control Positivo Bajo :";
-            this.chk_ControlPosBajo.UseVisualStyleBackColor = true;
-            // 
-            // txt_ControlPosRadioLS
-            // 
-            this.txt_ControlPosRadioLS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_ControlPosRadioLS.Location = new System.Drawing.Point(485, 133);
-            this.txt_ControlPosRadioLS.Name = "txt_ControlPosRadioLS";
-            this.txt_ControlPosRadioLS.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlPosRadioLS.TabIndex = 47;
-            // 
             // txt_ControlNegLS
             // 
             this.txt_ControlNegLS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_ControlNegLS.Location = new System.Drawing.Point(485, 100);
+            this.txt_ControlNegLS.Location = new System.Drawing.Point(485, 69);
             this.txt_ControlNegLS.Name = "txt_ControlNegLS";
             this.txt_ControlNegLS.Size = new System.Drawing.Size(88, 27);
             this.txt_ControlNegLS.TabIndex = 44;
             // 
-            // txt_ControlPosRadioLI
-            // 
-            this.txt_ControlPosRadioLI.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_ControlPosRadioLI.Location = new System.Drawing.Point(391, 134);
-            this.txt_ControlPosRadioLI.Name = "txt_ControlPosRadioLI";
-            this.txt_ControlPosRadioLI.Size = new System.Drawing.Size(88, 27);
-            this.txt_ControlPosRadioLI.TabIndex = 46;
-            // 
             // txt_ControlNegLI
             // 
             this.txt_ControlNegLI.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_ControlNegLI.Location = new System.Drawing.Point(391, 100);
+            this.txt_ControlNegLI.Location = new System.Drawing.Point(391, 69);
             this.txt_ControlNegLI.Name = "txt_ControlNegLI";
             this.txt_ControlNegLI.Size = new System.Drawing.Size(88, 27);
             this.txt_ControlNegLI.TabIndex = 43;
-            // 
-            // txt_ControlPosRadio
-            // 
-            this.txt_ControlPosRadio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txt_ControlPosRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ControlPosRadio.Location = new System.Drawing.Point(227, 133);
-            this.txt_ControlPosRadio.Name = "txt_ControlPosRadio";
-            this.txt_ControlPosRadio.ReadOnly = true;
-            this.txt_ControlPosRadio.Size = new System.Drawing.Size(158, 27);
-            this.txt_ControlPosRadio.TabIndex = 45;
-            this.txt_ControlPosRadio.Click += new System.EventHandler(this.txt_ControlPosRadio_Click);
-            // 
-            // chk_ControlPosRadio
-            // 
-            this.chk_ControlPosRadio.AutoSize = true;
-            this.chk_ControlPosRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ControlPosRadio.Location = new System.Drawing.Point(23, 134);
-            this.chk_ControlPosRadio.Name = "chk_ControlPosRadio";
-            this.chk_ControlPosRadio.Size = new System.Drawing.Size(185, 24);
-            this.chk_ControlPosRadio.TabIndex = 22;
-            this.chk_ControlPosRadio.Text = "Control Positivo Radio :";
-            this.chk_ControlPosRadio.UseVisualStyleBackColor = true;
             // 
             // txt_ControlNeg
             // 
             this.txt_ControlNeg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ControlNeg.Location = new System.Drawing.Point(226, 100);
+            this.txt_ControlNeg.Location = new System.Drawing.Point(226, 69);
             this.txt_ControlNeg.Name = "txt_ControlNeg";
             this.txt_ControlNeg.ReadOnly = true;
             this.txt_ControlNeg.Size = new System.Drawing.Size(158, 27);
             this.txt_ControlNeg.TabIndex = 42;
-            this.txt_ControlNeg.Click += new System.EventHandler(this.txt_ControlNeg_Click);
             // 
             // chk_ControlNeg
             // 
             this.chk_ControlNeg.AutoSize = true;
             this.chk_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ControlNeg.Location = new System.Drawing.Point(23, 100);
+            this.chk_ControlNeg.Location = new System.Drawing.Point(23, 69);
             this.chk_ControlNeg.Name = "chk_ControlNeg";
             this.chk_ControlNeg.Size = new System.Drawing.Size(152, 24);
             this.chk_ControlNeg.TabIndex = 21;
             this.chk_ControlNeg.Text = "Control Negativo :";
             this.chk_ControlNeg.UseVisualStyleBackColor = true;
             // 
-            // txt_ControlPosAlto
+            // txt_ControlPos
             // 
-            this.txt_ControlPosAlto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txt_ControlPosAlto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ControlPosAlto.Location = new System.Drawing.Point(226, 36);
-            this.txt_ControlPosAlto.Name = "txt_ControlPosAlto";
-            this.txt_ControlPosAlto.ReadOnly = true;
-            this.txt_ControlPosAlto.Size = new System.Drawing.Size(158, 27);
-            this.txt_ControlPosAlto.TabIndex = 40;
+            this.txt_ControlPos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt_ControlPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ControlPos.Location = new System.Drawing.Point(226, 36);
+            this.txt_ControlPos.Name = "txt_ControlPos";
+            this.txt_ControlPos.ReadOnly = true;
+            this.txt_ControlPos.Size = new System.Drawing.Size(158, 27);
+            this.txt_ControlPos.TabIndex = 40;
             // 
-            // chk_ControlPosAlto
+            // chk_ControlPos
             // 
-            this.chk_ControlPosAlto.AutoSize = true;
-            this.chk_ControlPosAlto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ControlPosAlto.Location = new System.Drawing.Point(23, 37);
-            this.chk_ControlPosAlto.Name = "chk_ControlPosAlto";
-            this.chk_ControlPosAlto.Size = new System.Drawing.Size(174, 24);
-            this.chk_ControlPosAlto.TabIndex = 19;
-            this.chk_ControlPosAlto.Text = "Control Positivo Alto :";
-            this.chk_ControlPosAlto.UseVisualStyleBackColor = true;
+            this.chk_ControlPos.AutoSize = true;
+            this.chk_ControlPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_ControlPos.Location = new System.Drawing.Point(23, 37);
+            this.chk_ControlPos.Name = "chk_ControlPos";
+            this.chk_ControlPos.Size = new System.Drawing.Size(142, 24);
+            this.chk_ControlPos.TabIndex = 19;
+            this.chk_ControlPos.Text = "Control Positivo :";
+            this.chk_ControlPos.UseVisualStyleBackColor = true;
             // 
             // btn_Aceptar
             // 
             this.btn_Aceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_Aceptar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Aceptar.Location = new System.Drawing.Point(104, 724);
+            this.btn_Aceptar.Location = new System.Drawing.Point(104, 623);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(199, 41);
             this.btn_Aceptar.TabIndex = 51;
@@ -774,18 +656,18 @@
             // 
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(309, 724);
+            this.btn_Cancelar.Location = new System.Drawing.Point(309, 623);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(199, 41);
             this.btn_Cancelar.TabIndex = 52;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             // 
-            // DatosIgM
+            // DatosEI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 777);
+            this.ClientSize = new System.Drawing.Size(645, 680);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Aceptar);
             this.Controls.Add(this.groupBox7);
@@ -797,11 +679,11 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "DatosIgM";
+            this.Name = "DatosEI";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Datos Protocolo IgM";
+            this.Text = "Datos Protocolo EI";
             this.Load += new System.EventHandler(this.DatosIgM_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -825,7 +707,7 @@
 
         private System.Windows.Forms.CheckBox chk_AntiGlobulina;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_LoteIgM;
+        private System.Windows.Forms.TextBox txt_LoteEI;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_Volumen;
         private System.Windows.Forms.CheckBox chk_Volumen;
@@ -867,25 +749,15 @@
         private System.Windows.Forms.CheckBox chk_SUBST;
         private System.Windows.Forms.CheckBox chk_ANT;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.CheckBox chk_ControlPosRadio;
         private System.Windows.Forms.CheckBox chk_ControlNeg;
-        private System.Windows.Forms.CheckBox chk_ControlPosAlto;
+        private System.Windows.Forms.CheckBox chk_ControlPos;
         private System.Windows.Forms.Button btn_Aceptar;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.DateTimePicker date_Fecha;
-        private System.Windows.Forms.CheckBox chk_ControlNegRadio;
-        private System.Windows.Forms.CheckBox chk_ControlPosBajo;
         private System.Windows.Forms.DateTimePicker date_Fijacion;
-        public System.Windows.Forms.TextBox txt_ControlPosAlto;
-        public System.Windows.Forms.TextBox txt_ControlPosRadio;
+        public System.Windows.Forms.TextBox txt_ControlPos;
         public System.Windows.Forms.TextBox txt_ControlNeg;
-        public System.Windows.Forms.TextBox txt_ControlNegRadio;
-        public System.Windows.Forms.TextBox txt_ControlPosBajo;
-        public System.Windows.Forms.TextBox txt_ControlPosRadioLS;
         public System.Windows.Forms.TextBox txt_ControlNegLS;
-        public System.Windows.Forms.TextBox txt_ControlPosRadioLI;
         public System.Windows.Forms.TextBox txt_ControlNegLI;
-        public System.Windows.Forms.TextBox txt_ControlNegRadioLS;
-        public System.Windows.Forms.TextBox txt_ControlNegRadioLI;
     }
 }

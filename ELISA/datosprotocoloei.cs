@@ -36,5 +36,6 @@ namespace ELISA
         public string STOP { get; set; }
         public float ControlNegLI { get; set; }
         public float ControlNegLS { get; set; }
+        public int idDatosProtocoloEI { get; set; }
     }
 }

@@ -72,7 +72,9 @@ namespace ELISA.Transaccion
                     }
                     else if (test.Contains("EI"))
                     {
+                        controles_ei control = context.controles_ei.Single(x => x.Codigo_Asig_ContEI == CodigoControl);
 
+                        context.controles_ei.Remove(control);
                     }
                     else
                     {
@@ -94,7 +96,7 @@ namespace ELISA.Transaccion
             }
         }
 
-        public static void addControles(controles_igm controlNuevo)
+        public static void addControlesIgM(controles_igm controlNuevo)
         {
             try
             {
@@ -115,6 +117,26 @@ namespace ELISA.Transaccion
             }
         }
 
+        public static void addControlesEI(controles_ei controlNuevo)
+        {
+            try
+            {
+                using (var context = new elisaEntities2())
+                {
+                    context.controles_ei.Add(controlNuevo);
+                    context.SaveChanges();
+                    Task.Run(() =>
+                    {
+                        MessageBox.Show("Ha sido agregado correctamente");
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema conectando a la base de datos.\n Por favor contacte al administrador del Sistema", "Error detectado");
+                Log.logError("Error capturado: Trace: " + ex.Message);
+            }
+        }
         public static void getControles(String test, String tipoControl, DataGridView tabla)
         {
             tabla.DataSource = null;
@@ -122,20 +144,24 @@ namespace ELISA.Transaccion
             {
                 using (var context = new elisaEntities2())
                 {
-                    List<controles_igm> lista = null;
                     if (test.Contains("IgM"))
                     {
+                        List<controles_igm> lista = null;
                         lista = context.controles_igm.Where(x => x.Tipo_Control == tipoControl).ToList();
-                    }else if (test.Contains("EI"))
+                        tabla.DataSource = lista;
+                    }
+                    else if (test.Contains("EI"))
                     {
-                        //var lista = context.controles_ei.Where(x => x.Tipo)
+                        List<controles_ei> lista = null;
+                        lista = context.controles_ei.Where(x => x.Tipo == tipoControl).ToList();
+                        tabla.DataSource = lista;
                     }
                     else
                     {
                         //var lista = context.
                     }
 
-                    tabla.DataSource = lista;
+                    
                 }
                     
                 

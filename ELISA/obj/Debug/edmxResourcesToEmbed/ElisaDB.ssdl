@@ -365,21 +365,9 @@ warning 6002: The table/view 'def.elisa.datosprotocolochikmono' does not have a 
     <Property Name="ControlNegLI" Type="float" Nullable="false" />
     <Property Name="ControlNegLS" Type="float" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocoloei' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="datosprotocoloei">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="LoteEI" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="GGLOB" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="idDatosProtocoloEI" />
     </Key>
     <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
@@ -403,6 +391,7 @@ warning 6002: The table/view 'def.elisa.datosprotocoloei' does not have a primar
     <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="ControlNegLI" Type="float" Nullable="false" />
     <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="idDatosProtocoloEI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'def.elisa.datosprotocoloeiensayos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -2348,6 +2337,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
     <EntitySet Name="controles_ei" EntityType="Self.controles_ei" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="controles_igg" EntityType="Self.controles_igg" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="controles_igm" EntityType="Self.controles_igm" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="datosprotocoloei" EntityType="Self.datosprotocoloei" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocoloigm" EntityType="Self.datosprotocoloigm" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotavirus" Schema="elisa" store:Type="Tables" />
@@ -2485,32 +2475,6 @@ FROM `datosprotocolochikhiper` AS `datosprotocolochikhiper`</DefiningQuery>
 `datosprotocolochikmono`.`ControlNegLI`, 
 `datosprotocolochikmono`.`ControlNegLS`
 FROM `datosprotocolochikmono` AS `datosprotocolochikmono`</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="datosprotocoloei" EntityType="Self.datosprotocoloei" store:Type="Tables" store:Schema="elisa">
-      <DefiningQuery>SELECT
-`datosprotocoloei`.`ControlPos`, 
-`datosprotocoloei`.`ControlNeg`, 
-`datosprotocoloei`.`LoteEI`, 
-`datosprotocoloei`.`LoteAntigeno`, 
-`datosprotocoloei`.`GGLOB`, 
-`datosprotocoloei`.`fechafijGG`, 
-`datosprotocoloei`.`VolUsado`, 
-`datosprotocoloei`.`ProcH2O`, 
-`datosprotocoloei`.`TipoEstudio`, 
-`datosprotocoloei`.`Coatting`, 
-`datosprotocoloei`.`PB`, 
-`datosprotocoloei`.`TB`, 
-`datosprotocoloei`.`FB`, 
-`datosprotocoloei`.`TMPB`, 
-`datosprotocoloei`.`TIMEB`, 
-`datosprotocoloei`.`Conjugado`, 
-`datosprotocoloei`.`Substrato`, 
-`datosprotocoloei`.`TSubstrato`, 
-`datosprotocoloei`.`SHN`, 
-`datosprotocoloei`.`STOP`, 
-`datosprotocoloei`.`ControlNegLI`, 
-`datosprotocoloei`.`ControlNegLS`
-FROM `datosprotocoloei` AS `datosprotocoloei`</DefiningQuery>
     </EntitySet>
     <EntitySet Name="datosprotocoloeiensayos" EntityType="Self.datosprotocoloeiensayos" store:Type="Tables" store:Schema="elisa">
       <DefiningQuery>SELECT
