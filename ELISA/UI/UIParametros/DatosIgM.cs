@@ -227,5 +227,10 @@ namespace ELISA.UI.UIParametros
         {
             DialogResult res = new ControlesIgM(MainUtils.Controles.ControlesIgM_CRN, this).ShowDialog(this);
         }
+
+        private void txt_Coatting_Click(object sender, EventArgs e)
+        {
+            DialogResult res = new DatosCoatting(this.txt_Coatting).ShowDialog(this);
+        }
     }
 }

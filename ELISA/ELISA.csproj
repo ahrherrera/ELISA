@@ -308,6 +308,7 @@
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs" />
     <Compile Include="Transaccion\EstudioTrans.cs" />
     <Compile Include="Transaccion\LaboratoristasTrans.cs" />
+    <Compile Include="Transaccion\ph96CoattingTrans.cs" />
     <Compile Include="Transaccion\ProcH2OTrans.cs" />
     <Compile Include="Transaccion\UsuarioTrans.cs" />
     <Compile Include="UI\Login.cs">
@@ -334,6 +335,12 @@
     <Compile Include="UI\UIParametros\ControlesIgM.Designer.cs">
       <DependentUpon>ControlesIgM.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIParametros\DatosCoatting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosCoatting.Designer.cs">
+      <DependentUpon>DatosCoatting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UIParametros\DatosEI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,6 +352,18 @@
     </Compile>
     <Compile Include="UI\UIParametros\DatosIgM.Designer.cs">
       <DependentUpon>DatosIgM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosLoteIgM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosLoteIgM.Designer.cs">
+      <DependentUpon>DatosLoteIgM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoCoatting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoCoatting.Designer.cs">
+      <DependentUpon>NuevoCoatting.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UIParametros\NuevoControlEI.cs">
       <SubType>Form</SubType>
@@ -414,11 +433,20 @@
     <EmbeddedResource Include="UI\UIParametros\ControlesIgM.resx">
       <DependentUpon>ControlesIgM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosCoatting.resx">
+      <DependentUpon>DatosCoatting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosEI.resx">
       <DependentUpon>DatosEI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosIgM.resx">
       <DependentUpon>DatosIgM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosLoteIgM.resx">
+      <DependentUpon>DatosLoteIgM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoCoatting.resx">
+      <DependentUpon>NuevoCoatting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\NuevoControlEI.resx">
       <DependentUpon>NuevoControlEI.cs</DependentUpon>

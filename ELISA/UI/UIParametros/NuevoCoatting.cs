@@ -5,82 +5,55 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Transaccion;
-using ELISA.Utils;
 
 namespace ELISA.UI.UIParametros
 {
-    public partial class NuevoControlEI : Form
+    public partial class NuevoCoatting : Form
     {
         private Boolean fechaFinMod = false;
         private Boolean fechaInicioMod = false;
-        private MainUtils.Controles control;
 
-        public NuevoControlEI(Utils.MainUtils.Controles control)
+        public NuevoCoatting()
         {
             InitializeComponent();
             time_FechaFin.Value = DateTime.Now;
             time_FechaInicio.Value = DateTime.Now;
-            this.control = control;
             time_FechaInicio.ValueChanged += time_FechaInicio_ValueChanged;
             time_FechaFin.ValueChanged += time_FechaFinalizadoValueChanged;
         }
 
         private void btn_Aceptar_Click(object sender, EventArgs e)
         {
-            if (!txtCodigoControl.Text.Equals("") || !txt_DOptica.Text.Equals("") || !txt_Volumen.Text.Equals(""))
+            if (!txtCodigoControl.Text.Equals(""))
             {
-                controles_ei nuevo = new controles_ei();
-                nuevo.Codigo_Asig_ContEI = txtCodigoControl.Text;
-                nuevo.MxC = txt_MxC.Text;
-                nuevo.D_Optica = float.Parse(txt_DOptica.Text);
+                ph_9_6__coatting_ nuevo = new ph_9_6__coatting_();
+                nuevo.Lote_Asign_Coatting = txtCodigoControl.Text;
+                nuevo.H2ODEST = H2ODest.Text;
+                nuevo.Na2CO3 = txt_Na2CO3.Text;
                 nuevo.Volumen = Int32.Parse(txt_Volumen.Text);
+                nuevo.NaHCO3 = txt_NaHCO3.Text;
                 if (fechaFinMod)
                 {
-                    nuevo.Fecha_Finalizacion = time_FechaFin.Value;
+                    nuevo.Fecha_Expiracion = time_FechaFin.Value;
                 }
 
                 if (fechaInicioMod)
                 {
-                    nuevo.Fecha_Inicio = time_FechaInicio.Value;
+                    nuevo.Fecha_Preparacion = time_FechaInicio.Value;
                 }
 
                 if (!txt_Observacion.Text.Equals(""))
                 {
                     nuevo.Oservaciones = txt_Observacion.Text;
                 }
-                
-                switch (control)
-                {
-                    case MainUtils.Controles.ControlesEI_CMin:
-                    {
-                        nuevo.Tipo = "C-";
-                            break;
-                    }
-                    case MainUtils.Controles.ControlesEI_CPlus:
-                    {
-                        nuevo.Tipo = "C+";
-                            break;
-                    }
-                }
-                ControlesTrans.addControlesEI(nuevo);
-
+                ph96CoattingTrans.addph96Coatting(nuevo);
             }
             else
             {
                 Task.Run(() => MessageBox.Show("Ingrese los campos requeridos"));
-            }
-        }
-
-        private void txt_Volumen_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //Este metodo solo acepta numeros
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
             }
         }
 
@@ -93,9 +66,13 @@ namespace ELISA.UI.UIParametros
             fechaFinMod = true;
         }
 
-        private void txt_DOptica_KeyPress(object sender, KeyPressEventArgs e)
+        private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-            //Este metodo acepta numeros y solo un punto decimal.
+            this.Close();
+        }
+
+        private void txt_PH_KeyPress(object sender, KeyPressEventArgs e)
+        {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                 (e.KeyChar != '.'))
             {
@@ -107,9 +84,12 @@ namespace ELISA.UI.UIParametros
             }
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
+        private void txt_Volumen_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Close();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

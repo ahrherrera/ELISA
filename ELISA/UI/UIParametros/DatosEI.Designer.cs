@@ -276,11 +276,14 @@
             // 
             // txt_Coatting
             // 
+            this.txt_Coatting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_Coatting.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Coatting.Location = new System.Drawing.Point(118, 27);
             this.txt_Coatting.Name = "txt_Coatting";
+            this.txt_Coatting.ReadOnly = true;
             this.txt_Coatting.Size = new System.Drawing.Size(160, 27);
             this.txt_Coatting.TabIndex = 6;
+            this.txt_Coatting.Click += new System.EventHandler(this.txt_Coatting_Click);
             // 
             // chk_PB
             // 
