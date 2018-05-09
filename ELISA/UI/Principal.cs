@@ -18,14 +18,25 @@ namespace ELISA.UI
     public partial class Principal : Form
     {
         public static usuario user;
-        CheckBox cb = new CheckBox();
+        public CheckBox cb = new CheckBox();
         public static Boolean ControlP = true;
         ErrorProvider ErrorProviderPlaca = new ErrorProvider();
         ErrorProvider ErrorProviderLab = new ErrorProvider();
 
         //Variables
-        private int selectedTest = -1;
+        public int selectedTest = -1;
         public static Boolean invalid;
+
+        public Single cpA;
+        public Single cpB;
+        public Single cn;
+        public Single cpR;
+        public Single cnR;
+
+        public String [,] Unidades = new string[8,12];
+        public String [,] Absorbancia = new string[8,12];
+        public String [,] Resultados = new string[8,12];
+
         public Principal(usuario logged)
         {
             InitializeComponent();
@@ -41,7 +52,7 @@ namespace ELISA.UI
                 MessageBoxButtons.YesNo);
             if (dialogo == DialogResult.Yes)
             {
-                Environment.Exit(0);
+                Application.Exit();
             }
             else
             {
@@ -56,28 +67,30 @@ namespace ELISA.UI
             fillCombobox();
             fillComboLab();
             addCheckbox();
-            alignHeaders();
+            setHeaders();
             timerClock.Enabled = true;
             
         }
 
-        private void alignHeaders()
+        private void setHeaders()
         {
             dgv_Protocolo.Rows.Add(8);
             int rowNumber = 0;
             foreach (DataGridViewRow row in dgv_Protocolo.Rows)
             {
                 if (row.IsNewRow) continue;
-                row.HeaderCell.Value = MainUtils.abc()[rowNumber];
+                row.HeaderCell.Value = MainUtils.rowHeaderNames()[rowNumber];
                 rowNumber = rowNumber + 1;
             }
             dgv_Protocolo.AutoResizeRowHeadersWidth(
                 DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
+
+
         }
 
         private void addCheckbox()
         {
-            CheckBox cb = new CheckBox();
+            
             cb.Text = "IgM";
             cb.Checked = true;
             cb.BackColor = Color.Transparent;
@@ -333,7 +346,6 @@ namespace ELISA.UI
 
                 if (selectedItem.Equals("ELISA INH Monoclonal Chik"))
                 {
-
                     SetOpcionesRm();
                     SelectTest(MainUtils.Test.ELISAINHMonoChik);
                 }else if (selectedItem.Equals("ELISA INH Hiperinmune Chik"))
@@ -362,7 +374,13 @@ namespace ELISA.UI
                 string selectedItem = cmb_IgM.SelectedItem.ToString();
                 if (selectedItem.Equals("IgM Dengue"))
                 {
-                    //fmeResultsIgM
+                    lbl_val1.Text = "VC :";
+                    lbl_val2.Text = "Media CPR :";
+                    lbl_val3.Text = "Media CNR :";
+                    lbl_val4.Text = "CPA :";
+                    lbl_val5.Text = "CPB :";
+                    lbl_val6.Text = "Media CN :";
+                    lbl_val7.Text = "Validación :";
                     SelectTest(MainUtils.Test.IgMDengue);
                     SetOpcionesOptIgm();
                 }else if (selectedItem.Equals("IgM Zika"))
@@ -705,14 +723,13 @@ namespace ELISA.UI
         {
             //Pasa los datos contenidos en la tabla a un arreglo multidimensional
             String [,] protocolo = new String[dgv_Protocolo.RowCount,dgv_Protocolo.ColumnCount];
-            foreach (DataGridViewRow i in dgv_Protocolo.Rows)
+            String[,] lectura = new String[dgv_Lectura.RowCount, dgv_Lectura.ColumnCount];
+            for (int k = 0; k < 8; k++)
             {
-                if (i.IsNewRow)
+                for (int i = 0; i < 12; i++)
                 {
-                    foreach (DataGridViewCell j in i.Cells)
-                    {
-                        protocolo[j.RowIndex, j.ColumnIndex] = (string) j.Value;
-                    }
+                    protocolo[k, i] = dgv_Protocolo.Rows[k].Cells[i].Value.ToString();
+                    lectura[k, i] = dgv_Lectura.Rows[k].Cells[i].Value.ToString();
                 }
             }
             switch (selectedTest)
@@ -731,7 +748,111 @@ namespace ELISA.UI
                 case 0:
                     {
                         ControlP = false;
-                        //GuardarIgM
+                        //GuardarIgM Dengue
+                        if (new DatosIgM().ShowDialog(this) == DialogResult.OK)
+                        {
+                            Single lectData;
+                            String und;
+                            String res;
+                            datosprotocoloigm datos = DatosProtocoloIgM.TraerDatosProtocoloIgM();
+                            int cont = 1;
+                            for (int i = 0; i < 8; i++)
+                            {
+                                for (int j = 0; j < 12; j++)
+                                {
+                                    elisaigm newIgM = new elisaigm();
+                                    newIgM.Cod_Pozo = protocolo[i,j];
+                                    newIgM.posicion = Convert.ToByte(cont++);
+                                    if (lectura[i,j].EndsWith("a"))
+                                    {
+                                        lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                                    }
+                                    else
+                                    {
+                                        lectData = Single.Parse(lectura[i, j]);
+                                    }
+
+                                    newIgM.Lectura = lectData;
+                                    if (cb.Checked && !invalid)
+                                    {
+                                        und = (((lectData - cnR) / (cpR - cnR)) * 100).ToString("0.00");
+                                        Single par = (((lectData - cnR) / (cpR - cnR)) * 100);
+                                    }
+                                    else
+                                        und = "NA";
+
+                                    if (invalid)
+                                        und = "INV";
+                                    newIgM.Unidades = und;
+                                    Unidades[i, j] = und;
+                                    Absorbancia[i, j] = Convert.ToString(lectData);
+
+                                    if (lectData >= float.Parse(txt_val1.Text) && !invalid)
+                                    {
+                                        res = "P";
+                                    }
+                                    else
+                                    {
+                                        res = "N";
+                                    }
+
+                                    if (invalid)
+                                    {
+                                        res = "INV";
+                                    }
+                                    newIgM.VC = Single.Parse(Single.Parse(txt_val1.Text).ToString("0.000"));
+                                    newIgM.Resultado = res;
+                                    Resultados[i, j] = res;
+                                    newIgM.Placa = txt_Placa.TextBox.Text;
+                                    if (invalid)
+                                    {
+                                        newIgM.Valido = false;
+                                    }
+                                    else
+                                    {
+                                        if (lectura[i, j].EndsWith("a"))
+                                        {
+                                            newIgM.Valido = false;
+                                        }
+                                        else
+                                            newIgM.Valido = true;
+
+                                    }
+                                    newIgM.ControlPosA = datos.ControlPosA;
+                                    newIgM.ControlPosB = datos.ControlPosB;
+                                    newIgM.ControlNeg = datos.ControlNeg;
+                                    newIgM.ControlRadPos = datos.ControlRadPos;
+                                    newIgM.ControlRadNeg = datos.ControlRadNeg;
+                                    newIgM.LoteIgM = datos.LoteIgM;
+                                    newIgM.LoteAntigeno = datos.LoteAntigeno;
+                                    newIgM.GGLOB = datos.GGLOB;
+                                    newIgM.fechafijGG = datos.fechafijGG;
+                                    newIgM.VolUsado = datos.VolUsado;
+                                    newIgM.ProcH2O = datos.ProcH2O;
+                                    newIgM.TipoEstudio = datos.TipoEstudio;
+                                    newIgM.Coatting = datos.Coatting;
+                                    newIgM.PB = datos.PB;
+                                    newIgM.TB = datos.TB;
+                                    newIgM.FB = datos.FB;
+                                    newIgM.TMPB = datos.TMPB;
+                                    newIgM.TIMEB = datos.TIMEB;
+                                    newIgM.Substrato = datos.Substrato;
+                                    newIgM.TSubstrato = datos.TSubstrato;
+                                    newIgM.Conjugado = datos.Conjugado;
+                                    newIgM.SHN = datos.SHN;
+                                    newIgM.STOP = datos.STOP;
+                                    newIgM.Lab1 = cmb_Lab1.ComboBox.Text;
+                                    newIgM.Lab2 = cmb_Lab2.ComboBox.Text;
+                                    newIgM.User = Convert.ToString(user.idUsuario);
+                                    ElisaIGMTrans.saveElisaIGM(newIgM);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Verifique los datos del protocolo en el menu principal",
+                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     }
                 case 10:
@@ -956,6 +1077,202 @@ namespace ELISA.UI
         {
             DatosEI protoEI = new DatosEI();
             DialogResult result = protoEI.ShowDialog(this);
+        }
+
+        private void btn_Leer_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;  
+            if (txt_Placa.TextBox.Text.Equals(""))
+            {
+                MessageBox.Show("Ingrese el número de la placa", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                btn_Leer.Enabled = false;
+                dgv_Lectura.Rows.Clear();
+                string contenido = MainUtils.CopyAndExtract(txt_Placa.TextBox.Text, selectedTest);
+                if (contenido != null)
+                {
+                    string first = contenido.Substring(contenido.IndexOf("[DATA01]"),
+                        (contenido.LastIndexOf("[DATA02]")) - contenido.IndexOf("[DATA01]"));
+                    string second = contenido.Substring(contenido.IndexOf("[DATA02]"),
+                        contenido.Length - contenido.IndexOf("[DATA02]"));
+
+                    string[] splitfirst = first.Split('\t');
+                    string[] splitsecond = second.Split('\t');
+
+                    Single[] resultado = new float[96];
+
+                    int i = 0;
+                    for (int j = 1; j <= 192; j+= 2)
+                    {
+                        if (selectedTest == (Int32)MainUtils.Test.IgMZikaBei || selectedTest == (Int32)MainUtils.Test.ZikaBOB || selectedTest == (Int32)MainUtils.Test.ZikaBOBCohAnual || selectedTest == (Int32)MainUtils.Test.ZikaBOBCohAnualDup)
+                        {
+                            Single temp = Single.Parse(splitfirst[j]);
+                            resultado[i] =Single.Parse(temp.ToString("#.000"));
+                        }
+                        else
+                        {
+                            Single temp1 = Single.Parse(Single.Parse(splitfirst[j]).ToString("#.000"));
+                            Single temp2 = Single.Parse(Single.Parse(splitsecond[j]).ToString("#.000"));
+                            Single res = temp1 - temp2;
+                            resultado[i] = Single.Parse(res.ToString("#.000"));
+                        }
+
+                        i++;
+                    }
+
+                    string [,] tabla = new string[8,12];
+                    int m = 0;
+                    for (int j = 0; j < 8; j++)
+                    {
+                        for (int k = 0; k < 12; k++)
+                        {
+                            tabla[j, k] = resultado[m] + "";
+                            m++;
+                        }
+                        
+                    }
+
+                    for (int r = 0; r < 8; r++)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(this.dgv_Lectura);
+
+                        for (int c = 0; c < 12; c++)
+                        {
+                            row.Cells[c].Value = tabla[r, c];
+                        }
+
+                        this.dgv_Lectura.Rows.Add(row);
+                    }
+
+                    int rowNumber = 0;
+                    foreach (DataGridViewRow row in dgv_Lectura.Rows)
+                    {
+                        if (row.IsNewRow) continue;
+                        row.HeaderCell.Value = MainUtils.rowHeadersRead()[rowNumber];
+                        rowNumber = rowNumber + 1;
+                    }
+                    dgv_Lectura.AutoResizeRowHeadersWidth(
+                        DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
+
+                }
+            }
+            //Definir una ruta en el sistema para definir donde buscar el archivo.
+
+
+        }
+
+        private void btn_Calcular_Click(object sender, EventArgs e)
+        {
+            new Calculos().CalcularIgM(this);
+        }
+
+        private bool validar, invalidar, editar;
+
+        private void tsOpen_Click(object sender, EventArgs e)
+        {
+            FD_OpenProtocolo.Filter = "Hoja de Calculo de Excel|*xls";
+            FD_OpenProtocolo.InitialDirectory = MainUtils.BASE_DIR + "\\Protocolos";
+            if (DialogResult.OK == FD_OpenProtocolo.ShowDialog())
+            {
+                string selectedPath = FD_OpenProtocolo.FileName;
+                MainUtils.CargarProtocolo(selectedPath, dgv_Protocolo, txt_Placa.TextBox, this);
+                tableLayoutPanel1.Enabled = true;
+            }
+        }
+
+        private void dgv_Lectura_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string value;
+            if (dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                value = dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                if (validar)
+                {
+                    if (value[value.Length - 1].Equals('a'))
+                    {
+                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = value.Remove(value.Length - 1);
+                    }
+                }
+                else if (invalidar)
+                {
+                    if (!value[value.Length - 1].Equals('a'))
+                    {
+                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = value + "a";
+                    }
+                }
+                else if (editar)
+                {
+                    dgv_Lectura.BeginEdit(true);
+                }
+            }
+
+            
+        }
+
+        private void dgv_Protocolo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void toggleCombobox(string test)
+        {
+            RadioButton [] radioButtons = new RadioButton[7];
+            radioButtons[0] = rb_IgM;
+            radioButtons[1] = rb_IgG;
+            radioButtons[2] = rb_EI;
+            radioButtons[3] = rb_BOB;
+            radioButtons[4] = rb_1D;
+            radioButtons[5] = rb_RM;
+            radioButtons[6] = rb_Rotavirus;
+            ComboBox [] comboboxes = new ComboBox[6];
+            comboboxes[0] = cmb_IgM;
+            comboboxes[1] = cmb_IgG;
+            comboboxes[2] = cmb_EI;
+            comboboxes[3] = cmb_BOB;
+            comboboxes[4] = cmb_1D;
+            comboboxes[5] = cmb_RM;
+
+            if (test.Equals("Rotavirus"))
+            {
+                rb_Rotavirus.Checked = true;
+            }
+            else
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    if (comboboxes[i].FindStringExact(test) != -1)
+                    {
+                        radioButtons[i].Checked = true;
+                        comboboxes[i].SelectedIndex = comboboxes[i].FindStringExact(test);
+                    }
+                }
+            }
+
+        }
+
+        private void rb_CheckedButtonChanged(object sender, EventArgs e)
+        {
+            validar = false;
+            invalidar = false;
+            editar = false;
+            dgv_Lectura.ReadOnly = true;
+            if (rb_Validar.Checked)
+            {
+                validar = true;
+            }else if (rb_Invalidar.Checked)
+            {
+                invalidar = true;
+            }
+            else
+            {
+                editar = true;
+                dgv_Lectura.ReadOnly = false;
+            }
         }
     }
 }

@@ -47,6 +47,11 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -303,9 +308,11 @@
     <Compile Include="tipo_control.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Transaccion\Calculos.cs" />
     <Compile Include="Transaccion\ControlesTrans.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloEI.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs" />
+    <Compile Include="Transaccion\ElisaIGMTrans.cs" />
     <Compile Include="Transaccion\EstudioTrans.cs" />
     <Compile Include="Transaccion\LaboratoristasTrans.cs" />
     <Compile Include="Transaccion\ph96CoattingTrans.cs" />
@@ -502,6 +509,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Dialogs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ElisaDB.Context.tt">

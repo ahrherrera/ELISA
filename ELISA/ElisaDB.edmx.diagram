@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b646b4f53fd447e991d9a9d7e80aaab8" Name="Diagram1">
+      <Diagram DiagramId="304a19c09b3141a09350e326feb55df7" Name="Diagram1">
         <EntityTypeShape EntityType="elisaModel.anti_human_igg" Width="1.5" PointX="5.75" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.anti_human_igm" Width="1.5" PointX="10.75" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.antigeno_viral" Width="1.5" PointX="7.75" PointY="11.5" IsExpanded="true" />

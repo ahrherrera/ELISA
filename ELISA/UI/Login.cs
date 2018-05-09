@@ -25,7 +25,14 @@ namespace ELISA.UI
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Cierra el hilo de ejecución principal del programa
-            System.Environment.Exit(1);
+            try
+            {
+                System.Environment.Exit(1);
+            }
+            catch (System.ComponentModel.Win32Exception ex)
+            {
+
+            }
         }
 
         private void btn_showPassword_Click(object sender, EventArgs e)

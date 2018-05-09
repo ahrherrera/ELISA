@@ -772,7 +772,6 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
     <Property Name="posicion" Type="utinyint" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Hora" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="Lectura" Type="float" Nullable="false" />
     <Property Name="Unidades" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Resultado" Type="varchar" MaxLength="3" Nullable="false" />

@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ELISA.Transaccion.DatosProtocoloTrans;
 using ELISA.UI;
+using ELISA.Utils;
 
 namespace ELISA
 {
@@ -18,6 +21,7 @@ namespace ELISA
         public Splash()
         {
             InitializeComponent();
+            datosprotocoloigm data = DatosProtocoloIgM.TraerDatosProtocoloIgM();
         }
 
         private void Splash_Shown(object sender, EventArgs e)
@@ -26,6 +30,13 @@ namespace ELISA
             timer.Interval = 1000;
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
+            if (!Directory.Exists(MainUtils.BASE_DIR + "\\Protocolos"))
+            {
+                Directory.CreateDirectory(MainUtils.BASE_DIR + "\\Protocolos");
+            }
+            //Query Inicial
+            
+            
         }
 
         private void timer_Tick(object sender, EventArgs e)

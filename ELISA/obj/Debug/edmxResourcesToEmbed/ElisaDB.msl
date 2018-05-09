@@ -433,7 +433,6 @@
           <ScalarProperty Name="posicion" ColumnName="posicion" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Placa" ColumnName="Placa" />
-          <ScalarProperty Name="Hora" ColumnName="Hora" />
           <ScalarProperty Name="Lectura" ColumnName="Lectura" />
           <ScalarProperty Name="Unidades" ColumnName="Unidades" />
           <ScalarProperty Name="Resultado" ColumnName="Resultado" />

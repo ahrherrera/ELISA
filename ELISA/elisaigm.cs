@@ -18,7 +18,6 @@ namespace ELISA
         public byte posicion { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Placa { get; set; }
-        public System.DateTime Hora { get; set; }
         public float Lectura { get; set; }
         public string Unidades { get; set; }
         public string Resultado { get; set; }
