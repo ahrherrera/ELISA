@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_RM = new System.Windows.Forms.ComboBox();
             this.rb_RM = new System.Windows.Forms.RadioButton();
@@ -701,14 +701,14 @@
             this.dgv_Protocolo.AllowUserToResizeRows = false;
             this.dgv_Protocolo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Protocolo.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Protocolo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Protocolo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col1,
@@ -727,14 +727,14 @@
             this.dgv_Protocolo.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Protocolo.MultiSelect = false;
             this.dgv_Protocolo.Name = "dgv_Protocolo";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Protocolo.RowTemplate.Height = 24;
             this.dgv_Protocolo.Size = new System.Drawing.Size(881, 223);
             this.dgv_Protocolo.TabIndex = 0;
@@ -875,6 +875,7 @@
             this.rb_Opt1.TabStop = true;
             this.rb_Opt1.Text = "radioButton1";
             this.rb_Opt1.UseVisualStyleBackColor = true;
+            this.rb_Opt1.CheckedChanged += new System.EventHandler(this.rb_OptCheckedChanged);
             // 
             // rb_Opt7
             // 
@@ -888,6 +889,7 @@
             this.rb_Opt7.TabStop = true;
             this.rb_Opt7.Text = "radioButton7";
             this.rb_Opt7.UseVisualStyleBackColor = true;
+            this.rb_Opt7.CheckedChanged += new System.EventHandler(this.rb_OptCheckedChanged);
             // 
             // rb_opt2
             // 
@@ -899,6 +901,7 @@
             this.rb_opt2.TabStop = true;
             this.rb_opt2.Text = "radioButton2";
             this.rb_opt2.UseVisualStyleBackColor = true;
+            this.rb_opt2.CheckedChanged += new System.EventHandler(this.rb_OptCheckedChanged);
             // 
             // rb_Opt6
             // 
@@ -910,6 +913,7 @@
             this.rb_Opt6.TabStop = true;
             this.rb_Opt6.Text = "radioButton6";
             this.rb_Opt6.UseVisualStyleBackColor = true;
+            this.rb_Opt6.CheckedChanged += new System.EventHandler(this.rb_OptCheckedChanged);
             // 
             // rb_Opt3
             // 
@@ -921,6 +925,7 @@
             this.rb_Opt3.TabStop = true;
             this.rb_Opt3.Text = "radioButton3";
             this.rb_Opt3.UseVisualStyleBackColor = true;
+            this.rb_Opt3.CheckedChanged += new System.EventHandler(this.rb_OptCheckedChanged);
             // 
             // rb_Opt5
             // 
@@ -932,6 +937,7 @@
             this.rb_Opt5.TabStop = true;
             this.rb_Opt5.Text = "radioButton5";
             this.rb_Opt5.UseVisualStyleBackColor = true;
+            this.rb_Opt5.CheckedChanged += new System.EventHandler(this.rb_OptCheckedChanged);
             // 
             // rb_Opt4
             // 
@@ -943,6 +949,7 @@
             this.rb_Opt4.TabStop = true;
             this.rb_Opt4.Text = "radioButton4";
             this.rb_Opt4.UseVisualStyleBackColor = true;
+            this.rb_Opt4.CheckedChanged += new System.EventHandler(this.rb_OptCheckedChanged);
             // 
             // tabPage2
             // 
@@ -1184,14 +1191,14 @@
             this.dgv_Lectura.AllowUserToResizeColumns = false;
             this.dgv_Lectura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Lectura.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Lectura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Lectura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Lectura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Lectura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1211,14 +1218,14 @@
             this.dgv_Lectura.MultiSelect = false;
             this.dgv_Lectura.Name = "dgv_Lectura";
             this.dgv_Lectura.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Lectura.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Lectura.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Lectura.RowTemplate.Height = 24;
             this.dgv_Lectura.Size = new System.Drawing.Size(654, 223);
             this.dgv_Lectura.TabIndex = 1;
@@ -1310,7 +1317,7 @@
             // 
             this.tsOpen.Image = global::ELISA.Properties.Resources.folder;
             this.tsOpen.Name = "tsOpen";
-            this.tsOpen.Size = new System.Drawing.Size(184, 26);
+            this.tsOpen.Size = new System.Drawing.Size(124, 26);
             this.tsOpen.Text = "Abrir";
             this.tsOpen.Click += new System.EventHandler(this.tsOpen_Click);
             // 
@@ -1319,14 +1326,14 @@
             this.guardarToolStripMenuItem.Image = global::ELISA.Properties.Resources.save;
             this.guardarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
             this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // imprimirToolStripMenuItem
             // 
             this.imprimirToolStripMenuItem.Image = global::ELISA.Properties.Resources.print;
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // statusStrip1

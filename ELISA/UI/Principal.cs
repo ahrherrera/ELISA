@@ -1193,16 +1193,22 @@ namespace ELISA.UI
 
                 if (validar)
                 {
-                    if (value[value.Length - 1].Equals('a'))
+                    if (value[value.Length - 1].Equals((char)8203))
                     {
                         dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = value.Remove(value.Length - 1);
+                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.White;
+                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                        dgv_Lectura.ClearSelection();
                     }
                 }
                 else if (invalidar)
                 {
-                    if (!value[value.Length - 1].Equals('a'))
+                    if (!value[value.Length - 1].Equals((char)8203))
                     {
-                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = value + "a";
+                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = value + (char)8203;
+                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                        dgv_Lectura.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.White;
+                        dgv_Lectura.ClearSelection();
                     }
                 }
                 else if (editar)
@@ -1215,6 +1221,64 @@ namespace ELISA.UI
         }
 
         private void dgv_Protocolo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgv_Protocolo.ReadOnly = true;
+            string value;
+            value = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            string[,] protocolo = new string[8, 12];
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 12; j++)
+                {
+                    protocolo[i, j] = dgv_Protocolo.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            switch ((MainUtils.Test) selectedTest)
+            {
+                case MainUtils.Test.IgMDengue:
+                {
+                    if (rb_Opt6.Checked)
+                    {
+                        if (MessageBox.Show("¿Desea convertir a Control Positivo Alto (CPA) esta celda?",
+                                "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                            DialogResult.Yes)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "CA+" + MainUtils.contarCPA(protocolo);
+
+                        }
+
+                    }else if (rb_Opt5.Checked)
+                    {
+                        if (MessageBox.Show("¿Desea convertir a Control Positivo Bajo (CPB) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                "CB+" + MainUtils.contarCPB(protocolo);
+                        }
+                    }else if (rb_Opt4.Checked)
+                    {
+                        
+                    }else if (rb_Opt3.Checked)
+                    {
+                        
+                    }else if (rb_opt2.Checked)
+                    {
+                        
+                    }else if (rb_Opt1.Checked)
+                    {
+
+                        }
+                    else
+                    {
+                        dgv_Protocolo.ReadOnly = true;
+                    }
+                }
+                    break;
+            }
+        }
+
+        private void rb_OptCheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -1267,11 +1331,6 @@ namespace ELISA.UI
             }else if (rb_Invalidar.Checked)
             {
                 invalidar = true;
-            }
-            else
-            {
-                editar = true;
-                dgv_Lectura.ReadOnly = false;
             }
         }
     }

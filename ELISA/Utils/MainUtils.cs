@@ -212,5 +212,82 @@ namespace ELISA.Utils
             txtPlaca.Text = ((Excel.Range) sheet.Cells[4, 12]).Value +"";
             parent.toggleCombobox(((Excel.Range)sheet.Cells[3, 4]).Value);
         }
+
+        public static int contarCPA(string [,] protocolo)
+        {
+            //contarCPA
+            int c = 1;
+            bool exist;
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 12; j++)
+                {
+                    if (protocolo[i, j].StartsWith("CA+"))
+                    {
+                        c++;
+                    }
+                }
+            }
+
+            for (int j = 1; j <= c; j++)
+            {
+                exist = false;
+                for (int i = 0; i < 8; i++)
+                {
+                    for (int k = 0; k < 12; k++)
+                    {
+                        if (protocolo[i, k] == "CA+" + j)
+                        {
+                            exist = true;
+                        }
+                    }
+                }
+
+                if (!exist)
+                {
+                    c = j;
+                }
+            }
+
+            return c;
+        }
+
+        public static int contarCPB(string[,] protocolo)
+        {
+            int c = 1;
+            bool exist;
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 12; j++)
+                {
+                    if (protocolo[i, j].StartsWith("CB+"))
+                    {
+                        c++;
+                    }
+                }
+            }
+
+            for (int j = 1; j <= c; j++)
+            {
+                exist = false;
+                for (int i = 0; i < 8; i++)
+                {
+                    for (int k = 0; k < 12; k++)
+                    {
+                        if (protocolo[i, k] == "CB+" + j)
+                        {
+                            exist = true;
+                        }
+                    }
+                }
+
+                if (!exist)
+                {
+                    c = j;
+                }
+            }
+
+            return c;
+        }
     }
 }

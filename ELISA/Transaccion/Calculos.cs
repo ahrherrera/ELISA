@@ -31,6 +31,10 @@ namespace ELISA.Transaccion
                 {
                     lectura[i, j] = tablaLectura.Rows[i].Cells[j].Value.ToString();
                     protocolo[i, j] = tablaProtocolo.Rows[i].Cells[j].Value.ToString();
+                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                    {
+                        MessageBox.Show("Invalid " + lectura[i, j]);
+                    }
                 }
             }
 
@@ -50,7 +54,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CA+"))
                         {
-                            if (!lectura[i, j].EndsWith("a"))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -85,7 +89,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CB+"))
                         {
-                            if (!lectura[i, j].EndsWith("a"))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -120,7 +124,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("C-"))
                         {
-                            if (!lectura[i, j].EndsWith("a"))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -162,7 +166,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CR+"))
                         {
-                            if (!lectura[i, j].EndsWith("a"))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -218,7 +222,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CR-"))
                         {
-                            if (!lectura[i, j].EndsWith("a"))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);

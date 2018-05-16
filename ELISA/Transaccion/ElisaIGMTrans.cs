@@ -18,7 +18,7 @@ namespace ELISA.Transaccion
                 {
                     context.elisaigms.Add(newRecord);
                     context.SaveChanges();
-                    Task.Run(() => { MessageBox.Show("Ha sido agregado correctamente"); });
+                    //Task.Run(() => { MessageBox.Show("Ha sido agregado correctamente"); });
                 }
             }
             catch (Exception ex)
