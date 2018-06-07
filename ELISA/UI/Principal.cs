@@ -69,7 +69,7 @@ namespace ELISA.UI
             addCheckbox();
             setHeaders();
             timerClock.Enabled = true;
-            
+            btn_Print.Enabled = false;
         }
 
         private void setHeaders()
@@ -763,7 +763,7 @@ namespace ELISA.UI
                                     elisaigm newIgM = new elisaigm();
                                     newIgM.Cod_Pozo = protocolo[i,j];
                                     newIgM.posicion = Convert.ToByte(cont++);
-                                    if (lectura[i,j].EndsWith("a"))
+                                    if (lectura[i,j].EndsWith(Convert.ToString((char)8203)))
                                     {
                                         lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
                                     }
@@ -810,7 +810,7 @@ namespace ELISA.UI
                                     }
                                     else
                                     {
-                                        if (lectura[i, j].EndsWith("a"))
+                                        if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                                         {
                                             newIgM.Valido = false;
                                         }
@@ -818,6 +818,8 @@ namespace ELISA.UI
                                             newIgM.Valido = true;
 
                                     }
+
+                                    newIgM.Fecha = DateTime.Now;
                                     newIgM.ControlPosA = datos.ControlPosA;
                                     newIgM.ControlPosB = datos.ControlPosB;
                                     newIgM.ControlNeg = datos.ControlNeg;
@@ -845,6 +847,7 @@ namespace ELISA.UI
                                     newIgM.Lab2 = cmb_Lab2.ComboBox.Text;
                                     newIgM.User = Convert.ToString(user.idUsuario);
                                     ElisaIGMTrans.saveElisaIGM(newIgM);
+                                    btn_Print.Enabled = true;
                                 }
                             }
                         }
@@ -1244,34 +1247,43 @@ namespace ELISA.UI
                             DialogResult.Yes)
                         {
                             protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "CA+" + MainUtils.contarCPA(protocolo);
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CA+");
 
-                        }
+                            }
 
                     }else if (rb_Opt5.Checked)
                     {
                         if (MessageBox.Show("¿Desea convertir a Control Positivo Bajo (CPB) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                         {
                             protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
-                                "CB+" + MainUtils.contarCPB(protocolo);
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CB+");
                         }
                     }else if (rb_Opt4.Checked)
                     {
-                        
+                        if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "C-");
+                        }
                     }else if (rb_Opt3.Checked)
                     {
-                        
+                        if (MessageBox.Show("¿Desea convertir a Control Radio Positivo (CR+) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CR+");
+                        }
                     }else if (rb_opt2.Checked)
                     {
-                        
+                        if (MessageBox.Show("¿Desea convertir a Control Radio Negativo (CR-) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CR-");
+                        }
                     }else if (rb_Opt1.Checked)
                     {
-
-                        }
-                    else
-                    {
-                        dgv_Protocolo.ReadOnly = true;
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
+                        
                     }
                 }
                     break;
@@ -1281,6 +1293,12 @@ namespace ELISA.UI
         private void rb_OptCheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Print_Click(object sender, EventArgs e)
+        {
+            //Inicializar hoja de Excel
+            MainUtils.InitializeExcelWorkSheet(this, groupProtocol.Text);
         }
 
         public void toggleCombobox(string test)

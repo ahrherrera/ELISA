@@ -1,7 +1,6 @@
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\ELISA.exe.config
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\ELISA.exe
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\bin\Debug\ELISA.pdb
-E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.csprojResolveAssemblyReference.cache
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.Splash.resources
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.Properties.Resources.resources
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.csproj.GenerateResource.Cache
@@ -26,3 +25,4 @@ E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParame
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParametros.NuevoCoatting.resources
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParametros.DatosLoteIgM.resources
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.csproj.CopyComplete
+E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.csprojAssemblyReference.cache

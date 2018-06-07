@@ -31,10 +31,6 @@ namespace ELISA.Transaccion
                 {
                     lectura[i, j] = tablaLectura.Rows[i].Cells[j].Value.ToString();
                     protocolo[i, j] = tablaProtocolo.Rows[i].Cells[j].Value.ToString();
-                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
-                    {
-                        MessageBox.Show("Invalid " + lectura[i, j]);
-                    }
                 }
             }
 
