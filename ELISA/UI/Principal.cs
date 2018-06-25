@@ -6,10 +6,12 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Transaccion;
 using ELISA.Transaccion.DatosProtocoloTrans;
+using ELISA.UI.Dialogs;
 using ELISA.UI.UIParametros;
 using ELISA.Utils;
 
@@ -42,6 +44,7 @@ namespace ELISA.UI
             InitializeComponent();
             user = logged;
             cmb_Equipo.ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            InitialButtons();
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
@@ -59,6 +62,14 @@ namespace ELISA.UI
                 e.Cancel = true;
                 return;
             }
+        }
+
+        public void InitialButtons()
+        {
+            btn_Leer.Enabled = false;
+            btn_Save.Enabled = false;
+            btn_Print.Enabled = false;
+            btn_LoadProtocolo.Enabled = false;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -383,6 +394,7 @@ namespace ELISA.UI
                     lbl_val7.Text = "Validación :";
                     SelectTest(MainUtils.Test.IgMDengue);
                     SetOpcionesOptIgm();
+                    btn_LoadProtocolo.Enabled = false;
                 }else if (selectedItem.Equals("IgM Zika"))
                 {
                     SelectTest(MainUtils.Test.IgMZika);
@@ -1061,6 +1073,7 @@ namespace ELISA.UI
         private void guardarPlacaInválidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             invalid = true;
+            btn_Save_Click(null, EventArgs.Empty);
         }
 
         private void protocoloIgMToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1174,6 +1187,7 @@ namespace ELISA.UI
         }
 
         private bool validar, invalidar, editar;
+        private bool loadedProtocol = false;
 
         private void tsOpen_Click(object sender, EventArgs e)
         {
@@ -1184,6 +1198,8 @@ namespace ELISA.UI
                 string selectedPath = FD_OpenProtocolo.FileName;
                 MainUtils.CargarProtocolo(selectedPath, dgv_Protocolo, txt_Placa.TextBox, this);
                 tableLayoutPanel1.Enabled = true;
+                btn_Leer.Enabled = true;
+                loadedProtocol = true;
             }
         }
 
@@ -1225,69 +1241,77 @@ namespace ELISA.UI
 
         private void dgv_Protocolo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgv_Protocolo.ReadOnly = true;
-            string value;
-            value = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-            string[,] protocolo = new string[8, 12];
-            for (int i = 0; i < 8; i++)
+            if (e.ColumnIndex>0 && e.RowIndex>0 && loadedProtocol)
             {
-                for (int j = 0; j < 12; j++)
+                dgv_Protocolo.ReadOnly = true;
+                string value;
+                value = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string[,] protocolo = new string[8, 12];
+                for (int i = 0; i < 8; i++)
                 {
-                    protocolo[i, j] = dgv_Protocolo.Rows[i].Cells[j].Value.ToString();
-                }
-            }
-            switch ((MainUtils.Test) selectedTest)
-            {
-                case MainUtils.Test.IgMDengue:
-                {
-                    if (rb_Opt6.Checked)
+                    for (int j = 0; j < 12; j++)
                     {
-                        if (MessageBox.Show("¿Desea convertir a Control Positivo Alto (CPA) esta celda?",
-                                "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
-                            DialogResult.Yes)
-                        {
-                            protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CA+");
-
-                            }
-
-                    }else if (rb_Opt5.Checked)
-                    {
-                        if (MessageBox.Show("¿Desea convertir a Control Positivo Bajo (CPB) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-                        {
-                            protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CB+");
-                        }
-                    }else if (rb_Opt4.Checked)
-                    {
-                        if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-                        {
-                            protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "C-");
-                        }
-                    }else if (rb_Opt3.Checked)
-                    {
-                        if (MessageBox.Show("¿Desea convertir a Control Radio Positivo (CR+) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-                        {
-                            protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CR+");
-                        }
-                    }else if (rb_opt2.Checked)
-                    {
-                        if (MessageBox.Show("¿Desea convertir a Control Radio Negativo (CR-) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-                        {
-                            protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CR-");
-                        }
-                    }else if (rb_Opt1.Checked)
-                    {
-                            protocolo[e.RowIndex, e.ColumnIndex] = "";
-                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
-                        
+                        protocolo[i, j] = dgv_Protocolo.Rows[i].Cells[j].Value.ToString();
                     }
                 }
-                    break;
+                switch ((MainUtils.Test)selectedTest)
+                {
+                    case MainUtils.Test.IgMDengue:
+                        {
+                            if (rb_Opt6.Checked)
+                            {
+                                if (MessageBox.Show("¿Desea convertir a Control Positivo Alto (CPA) esta celda?",
+                                        "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                    DialogResult.Yes)
+                                {
+                                    protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CA+");
+
+                                }
+                            }
+                            else if (rb_Opt5.Checked)
+                            {
+                                if (MessageBox.Show("¿Desea convertir a Control Positivo Bajo (CPB) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                                {
+                                    protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CB+");
+                                }
+                            }
+                            else if (rb_Opt4.Checked)
+                            {
+                                if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                                {
+                                    protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "C-");
+                                }
+                            }
+                            else if (rb_Opt3.Checked)
+                            {
+                                if (MessageBox.Show("¿Desea convertir a Control Radio Positivo (CR+) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                                {
+                                    protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CR+");
+                                }
+                            }
+                            else if (rb_opt2.Checked)
+                            {
+                                if (MessageBox.Show("¿Desea convertir a Control Radio Negativo (CR-) esta celda?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                                {
+                                    protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CR-");
+                                }
+                            }
+                            else if (rb_Opt1.Checked)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
+
+                            }
+                        }
+                        break;
+                }
             }
+            
         }
 
         private void rb_OptCheckedChanged(object sender, EventArgs e)
@@ -1297,8 +1321,37 @@ namespace ELISA.UI
 
         private void btn_Print_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            
+            Thread frmLoad = new Thread(new ThreadStart(showLoadingScreen));
+            frmLoad.Start();
             //Inicializar hoja de Excel
             MainUtils.InitializeExcelWorkSheet(this, groupProtocol.Text);
+            closeLoadingScreen();
+            this.Enabled = true;
+        }
+
+        LoadingScreen load = new LoadingScreen("Creando archivo de Excel");
+
+        public void showLoadingScreen()
+        {
+            load.StartPosition = FormStartPosition.CenterScreen;
+            Application.Run(load);
+        }
+
+        public void closeLoadingScreen()
+        {
+            if (load.label1.InvokeRequired)
+            {
+                load.Invoke((MethodInvoker)delegate ()
+                {
+                    closeLoadingScreen();
+                });
+            }
+            else
+            {
+                load.Close();
+            }
         }
 
         public void toggleCombobox(string test)

@@ -487,10 +487,22 @@ namespace ELISA.Utils
                     xlWorkSheet.get_Range("I47").Value = datos.TMPB;
                     xlWorkSheet.get_Range("H48").Value = "TIEMPO";
                     xlWorkSheet.get_Range("I48").Value = "-" + datos.TIMEB + "-";
+                    xlWorkSheet.get_Range("K44").Value = "ANTIGENO";
+                    xlWorkSheet.get_Range("L44").Value = datos.LoteAntigeno;
+                    xlWorkSheet.get_Range("K45").Value = "CONJUGA";
+                    xlWorkSheet.get_Range("L45").Value = datos.Conjugado;
+                    xlWorkSheet.get_Range("K46").Value = "SHN";
+                    xlWorkSheet.get_Range("L46").Value = datos.SHN;
+                    xlWorkSheet.get_Range("K47").Value = "SUBSTRAT";
+                    xlWorkSheet.get_Range("L47").Value = datos.Substrato;
+                    xlWorkSheet.get_Range("K48").Value = "Tiempo Subs";
+                    xlWorkSheet.get_Range("L48").Value = datos.TSubstrato;
+                    xlWorkSheet.get_Range("K49").Value = "STOP";
+                    xlWorkSheet.get_Range("L49").Value = datos.STOP;
 
-                    //hacen falta mas datos, pero para probar, voy a guardarlo
+                        //hacen falta mas datos, pero para probar, voy a guardarlo
 
-                    string nombreArchivo = BASE_DIR  + testName + " " + DateTime.Now.ToString("dd-MM-yyyy") +
+                        string nombreArchivo = BASE_DIR  + testName + " " + DateTime.Now.ToString("dd-MM-yyyy") +
                                            " " + principal.txt_Placa.TextBox.Text + ".xls";
                         xlWorkBook.SaveAs(nombreArchivo);
                     xlWorkBook.Close(true);

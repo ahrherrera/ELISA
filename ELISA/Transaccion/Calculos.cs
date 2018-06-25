@@ -23,6 +23,8 @@ namespace ELISA.Transaccion
             String[,] lectura = new string[8, 12];
             String[,] protocolo = new string[8, 12];
 
+            parent.btn_Save.Enabled = true;
+
             //Recolectar los datos de las tablas a una matriz
 
             for (int i = 0; i < 8; i++)
@@ -65,7 +67,9 @@ namespace ELISA.Transaccion
                     MessageBox.Show("No existe control positivo alto", "Verifique su protocolo de trabajo",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //Deshabilitar boton Guardar btn_Save
+                    parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                     parent.cpA = 0;
                 }
                 else
@@ -100,7 +104,9 @@ namespace ELISA.Transaccion
                     MessageBox.Show("No existe control positivo bajo", "Verifique su protocolo de trabajo",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //Deshabilitar boton Guardar btn_Save
+                    parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                     parent.cpB = 0;
                 }
                 else
@@ -135,7 +141,9 @@ namespace ELISA.Transaccion
                     MessageBox.Show("Tiene que haber mas de un control negativo", "Verifique su protocolo de trabajo",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //Deshabilitar boton Guardar btn_Save
+                    parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                 }
                 else
                 {
@@ -176,7 +184,9 @@ namespace ELISA.Transaccion
                                         MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
                                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         //Deshabilitar btnSave
+                                        parent.btn_Save.Enabled = false;
                                         //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                                         break;
                                     }
                                 }
@@ -191,7 +201,9 @@ namespace ELISA.Transaccion
                         "Verifique su protocolo de trabajo",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //Deshabilitar btnSave
+                    parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                 }
                 else
                 {
@@ -231,7 +243,9 @@ namespace ELISA.Transaccion
                                         MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
                                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         //Deshabilitar btnSave
+                                        parent.btn_Save.Enabled = false;
                                         //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                                         break;
                                     }
                                 }
@@ -277,7 +291,9 @@ namespace ELISA.Transaccion
                         "Verifique sus datos", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                     //Deshabilitar btnSave
+                    parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                 }
 
                 if (parent.cpB < (parent.cn * 2))
@@ -286,7 +302,9 @@ namespace ELISA.Transaccion
                         "Verifique sus datos - No Cumple criterio de Validación", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                     //Deshabilitar btnSave
+                    parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                 }
             }
             catch (IOException ex)
@@ -294,8 +312,8 @@ namespace ELISA.Transaccion
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
             }
 
-            //Habilitar Boton Save
-            //Deshabilitar placa invalida
+            //Habilitar btnSave
+            
 
         }
 

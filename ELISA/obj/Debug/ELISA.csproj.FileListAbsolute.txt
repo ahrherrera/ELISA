@@ -26,3 +26,4 @@ E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParame
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.UIParametros.DatosLoteIgM.resources
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.csproj.CopyComplete
 E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.csprojAssemblyReference.cache
+E:\Documents\Visual Studio 2017\Projects\ELISA\ELISA\obj\Debug\ELISA.UI.Dialogs.LoadingScreen.resources

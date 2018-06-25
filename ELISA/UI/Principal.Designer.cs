@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_RM = new System.Windows.Forms.ComboBox();
             this.rb_RM = new System.Windows.Forms.RadioButton();
@@ -87,18 +87,6 @@
             this.ayudaDelProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeELISASoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_Protocolo = new System.Windows.Forms.DataGridView();
-            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupProtocol = new System.Windows.Forms.GroupBox();
@@ -158,6 +146,18 @@
             this.btn_LoadProtocolo = new System.Windows.Forms.Button();
             this.btnProtocolo = new System.Windows.Forms.Button();
             this.FD_OpenProtocolo = new System.Windows.Forms.OpenFileDialog();
+            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -701,14 +701,14 @@
             this.dgv_Protocolo.AllowUserToResizeRows = false;
             this.dgv_Protocolo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Protocolo.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_Protocolo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Protocolo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col1,
@@ -727,78 +727,18 @@
             this.dgv_Protocolo.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Protocolo.MultiSelect = false;
             this.dgv_Protocolo.Name = "dgv_Protocolo";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Protocolo.RowTemplate.Height = 24;
             this.dgv_Protocolo.Size = new System.Drawing.Size(881, 223);
             this.dgv_Protocolo.TabIndex = 0;
             this.dgv_Protocolo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Protocolo_CellClick);
-            // 
-            // col1
-            // 
-            this.col1.HeaderText = "1";
-            this.col1.Name = "col1";
-            // 
-            // col2
-            // 
-            this.col2.HeaderText = "2";
-            this.col2.Name = "col2";
-            // 
-            // col3
-            // 
-            this.col3.HeaderText = "3";
-            this.col3.Name = "col3";
-            // 
-            // col4
-            // 
-            this.col4.HeaderText = "4";
-            this.col4.Name = "col4";
-            // 
-            // col5
-            // 
-            this.col5.HeaderText = "5";
-            this.col5.Name = "col5";
-            // 
-            // col6
-            // 
-            this.col6.HeaderText = "6";
-            this.col6.Name = "col6";
-            // 
-            // col7
-            // 
-            this.col7.HeaderText = "7";
-            this.col7.Name = "col7";
-            // 
-            // col8
-            // 
-            this.col8.HeaderText = "8";
-            this.col8.Name = "col8";
-            // 
-            // col9
-            // 
-            this.col9.HeaderText = "9";
-            this.col9.Name = "col9";
-            // 
-            // col10
-            // 
-            this.col10.HeaderText = "10";
-            this.col10.Name = "col10";
-            // 
-            // col11
-            // 
-            this.col11.HeaderText = "11";
-            this.col11.Name = "col11";
-            // 
-            // col12
-            // 
-            this.col12.HeaderText = "12";
-            this.col12.Name = "col12";
             // 
             // tabControl1
             // 
@@ -1191,14 +1131,14 @@
             this.dgv_Lectura.AllowUserToResizeColumns = false;
             this.dgv_Lectura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Lectura.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Lectura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Lectura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Lectura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Lectura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1218,14 +1158,14 @@
             this.dgv_Lectura.MultiSelect = false;
             this.dgv_Lectura.Name = "dgv_Lectura";
             this.dgv_Lectura.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Lectura.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Lectura.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_Lectura.RowTemplate.Height = 24;
             this.dgv_Lectura.Size = new System.Drawing.Size(654, 223);
             this.dgv_Lectura.TabIndex = 1;
@@ -1455,6 +1395,78 @@
             this.FD_OpenProtocolo.FileName = "openFileDialog1";
             this.FD_OpenProtocolo.Title = "Seleccione un protocolo";
             // 
+            // col1
+            // 
+            this.col1.HeaderText = "1";
+            this.col1.Name = "col1";
+            this.col1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col2
+            // 
+            this.col2.HeaderText = "2";
+            this.col2.Name = "col2";
+            this.col2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col3
+            // 
+            this.col3.HeaderText = "3";
+            this.col3.Name = "col3";
+            this.col3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col4
+            // 
+            this.col4.HeaderText = "4";
+            this.col4.Name = "col4";
+            this.col4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col5
+            // 
+            this.col5.HeaderText = "5";
+            this.col5.Name = "col5";
+            this.col5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col6
+            // 
+            this.col6.HeaderText = "6";
+            this.col6.Name = "col6";
+            this.col6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col7
+            // 
+            this.col7.HeaderText = "7";
+            this.col7.Name = "col7";
+            this.col7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col8
+            // 
+            this.col8.HeaderText = "8";
+            this.col8.Name = "col8";
+            this.col8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col9
+            // 
+            this.col9.HeaderText = "9";
+            this.col9.Name = "col9";
+            this.col9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col10
+            // 
+            this.col10.HeaderText = "10";
+            this.col10.Name = "col10";
+            this.col10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col11
+            // 
+            this.col11.HeaderText = "11";
+            this.col11.Name = "col11";
+            this.col11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // col12
+            // 
+            this.col12.HeaderText = "12";
+            this.col12.Name = "col12";
+            this.col12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1536,18 +1548,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col12;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1587,7 +1587,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btn_LoadProtocolo;
         private System.Windows.Forms.Button btn_Leer;
-        private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Print;
         private System.Windows.Forms.Button btn_Reiniciar;
         private System.Windows.Forms.ToolStripMenuItem protocoloIgMToolStripMenuItem;
@@ -1607,7 +1606,6 @@
         private System.Windows.Forms.ToolStripMenuItem utilidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem llenarCamposSinMuestraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarProtocoloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem guardarPlacaInválidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirPlacaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
@@ -1636,5 +1634,19 @@
         public System.Windows.Forms.ToolStripTextBox txt_Placa;
         public System.Windows.Forms.ToolStripComboBox cmb_Lab1;
         public System.Windows.Forms.ToolStripComboBox cmb_Lab2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col12;
+        public System.Windows.Forms.Button btn_Save;
+        public System.Windows.Forms.ToolStripMenuItem guardarPlacaInválidaToolStripMenuItem;
     }
 }

@@ -318,6 +318,12 @@
     <Compile Include="Transaccion\ph96CoattingTrans.cs" />
     <Compile Include="Transaccion\ProcH2OTrans.cs" />
     <Compile Include="Transaccion\UsuarioTrans.cs" />
+    <Compile Include="UI\Dialogs\LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -428,6 +434,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -513,9 +522,7 @@
   <ItemGroup>
     <None Include="Resources\info-icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Dialogs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ElisaDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
