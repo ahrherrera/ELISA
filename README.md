@@ -39,7 +39,7 @@ La solución contiene una version compilada en modo Debug lista para ejecutar di
 
 * Dirigirse a `bin/debug` y editar el archivo `ELISA.exe.config` usando bloc de notas o algun otro editor, y editar la linea 11 como el paso anterior, cambiar el nombre de usuario y contraseña, y guardar.
 
-*Ejecutar ELISA.exe y si la conexion a la base de datos es exitosa, se habilitará el Login.
+* Ejecutar **ELISA.exe** y si la conexion a la base de datos es exitosa, se habilitará el Login.
 
 ### Usuarios y Contraseñas de acceso al Sistema
 
