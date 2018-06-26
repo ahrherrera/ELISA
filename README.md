@@ -19,7 +19,7 @@ ELISA Software 2.0
 
 **El usuario del motor de base de datos debe tener los privilegios para ejecutar DML(SELECT, INSERT, UPDATE, DELETE)**
 
-Hasta este punto la base de datos, su estructura y parte de los registros deben de estar correctamente restaurados. Tener en cuenta que siempre se usara ***localhost** como servidor.
+Hasta este punto la base de datos, su estructura y parte de los registros deben de estar correctamente restaurados. Tener en cuenta que siempre se usara **localhost** como servidor.
 
 ## Configurar el proyecto
 
