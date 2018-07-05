@@ -5,7 +5,9 @@ ELISA Software 2.0
 
 * Visual Studio 2017 (o 2015) y .Net Framework 4.5.
 * MySQL Server 5+.
-* MySQL Connector/NET 6.9.12 **Esta versión específica**
+* MySQL Connector/NET 6.9.12 **Esta versión específica**.
+
+[Descarga Connector/NET 6.9.12](https://dev.mysql.com/downloads/connector/net/6.9.12.html)
 
 ## Restaura la base de datos en MySQL
 
