@@ -43,7 +43,7 @@ namespace ELISA.Transaccion
             using (var context = new elisaEntities2())
             {
                 var query = context.Database.SqlQuery<string>(
-                    "select CAST(aes_decrypt(pass, '"+password+"') AS CHAR(50)) from Usuario" +
+                    "select CAST(aes_decrypt(pass, '"+password+"') AS CHAR(50)) from usuario" +
                     " where nombreUsuario = '"+user+"'").ToList();
                 //Primer chequeo
                 if (query[0] != null)

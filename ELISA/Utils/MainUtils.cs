@@ -499,8 +499,7 @@ namespace ELISA.Utils
                     xlWorkSheet.get_Range("L48").Value = datos.TSubstrato;
                     xlWorkSheet.get_Range("K49").Value = "STOP";
                     xlWorkSheet.get_Range("L49").Value = datos.STOP;
-
-                        //hacen falta mas datos, pero para probar, voy a guardarlo
+                        
 
                         string nombreArchivo = BASE_DIR  + testName + " " + DateTime.Now.ToString("dd-MM-yyyy") +
                                            " " + principal.txt_Placa.TextBox.Text + ".xls";

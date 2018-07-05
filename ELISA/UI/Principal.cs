@@ -101,7 +101,6 @@ namespace ELISA.UI
 
         private void addCheckbox()
         {
-            
             cb.Text = "IgM";
             cb.Checked = true;
             cb.BackColor = Color.Transparent;
@@ -393,12 +392,20 @@ namespace ELISA.UI
                     lbl_val6.Text = "Media CN :";
                     lbl_val7.Text = "Validación :";
                     SelectTest(MainUtils.Test.IgMDengue);
-                    SetOpcionesOptIgm();
+                    SetOpcionesOptIgM();
                     btn_LoadProtocolo.Enabled = false;
                 }else if (selectedItem.Equals("IgM Zika"))
                 {
                     SelectTest(MainUtils.Test.IgMZika);
+                    lbl_val1.Text = "VC Factor 1:";
+                    lbl_val2.Text = "VC Factor 2:";
+                    lbl_val3.Text = "Media CPR:";
+                    lbl_val4.Text = "Media CNR:";
+                    lbl_val5.Text = "Media CP :";
+                    lbl_val6.Text = "Media CN :";
+                    lbl_val7.Text = "Validación :";
                     SetOpcionesIgMZika();
+                    btn_LoadProtocolo.Enabled = false;
                 }else if (selectedItem.Equals("IgM Zika Bei"))
                 {
                     SelectTest(MainUtils.Test.IgMZikaBei);
@@ -585,7 +592,7 @@ namespace ELISA.UI
             rb_Opt1.Text = "S/ Muestra";
         }
 
-        private void SetOpcionesOptIgm()
+        private void SetOpcionesOptIgM()
         {
             rb_Opt7.Visible = true;
             rb_Opt6.Visible = true;
@@ -707,7 +714,6 @@ namespace ELISA.UI
             }else if (!cmb_Lab1.Text.Equals(""))
             {
                 //verificar la validez del laboratorista
-                //MessageBox.Show("CMb1Text = " + cmb_Lab1.Text + "  CmbIndex= " +cmb_Lab1.SelectedIndex);
                 if (cmb_Lab1.SelectedIndex!=-1)
                 {
                     Guardar();
@@ -1048,7 +1054,6 @@ namespace ELISA.UI
                         //GuardarZikaBob
                         break;
                     }
-
             }
         }
 
@@ -1192,7 +1197,8 @@ namespace ELISA.UI
         private void tsOpen_Click(object sender, EventArgs e)
         {
             FD_OpenProtocolo.Filter = "Hoja de Calculo de Excel|*xls";
-            FD_OpenProtocolo.InitialDirectory = MainUtils.BASE_DIR + "\\Protocolos";
+            FD_OpenProtocolo.FileName = "";
+            FD_OpenProtocolo.InitialDirectory = MainUtils.BASE_DIR + "Protocolos";
             if (DialogResult.OK == FD_OpenProtocolo.ShowDialog())
             {
                 string selectedPath = FD_OpenProtocolo.FileName;
@@ -1308,6 +1314,15 @@ namespace ELISA.UI
 
                             }
                         }
+                        break;
+
+                    case MainUtils.Test.IgMZika:
+                    {
+                        if (rb_Opt6.Checked)
+                        {
+                            
+                        }
+                    }
                         break;
                 }
             }
