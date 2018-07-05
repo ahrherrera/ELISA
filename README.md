@@ -3,8 +3,9 @@ ELISA Software 2.0
 
 ## Detalles Tecnicos
 
-* Visual Studio 2017 (o 2015) y .Net Framework 4.6.1.
+* Visual Studio 2017 (o 2015) y .Net Framework 4.5.
 * MySQL Server 5+.
+* MySQL Connector/NET 6.9.12 **Esta versión específica**
 
 ## Restaura la base de datos en MySQL
 
@@ -35,7 +36,7 @@ La solución de VS2017 contiene todas las dependencias necesarias para ejecutar 
 
 ## Alternativa
 
-La solución contiene una version compilada en modo Debug lista para ejecutar directamente, siempre y cuando tengas instalado .Net Framework 4.6.
+La solución contiene una version compilada en modo Debug lista para ejecutar directamente, siempre y cuando tengas instalado .Net Framework 4.5.
 
 * Dirigirse a `bin/debug` y editar el archivo `ELISA.exe.config` usando bloc de notas o algun otro editor, y editar la linea 11 como el paso anterior, cambiar el nombre de usuario y contraseña, y guardar.
 
