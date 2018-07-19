@@ -1021,6 +1021,7 @@ namespace ELISA.UI
                 case 1:
                     {
                         ControlP = false;
+
                         //GuardarIgMZika
                         break;
                     }
