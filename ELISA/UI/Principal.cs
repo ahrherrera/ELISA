@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace ELISA.UI
         public static Boolean ControlP = true;
         ErrorProvider ErrorProviderPlaca = new ErrorProvider();
         ErrorProvider ErrorProviderLab = new ErrorProvider();
+        private Boolean restart = false;
 
         //Variables
         public int selectedTest = -1;
@@ -34,10 +36,12 @@ namespace ELISA.UI
         public Single cn;
         public Single cpR;
         public Single cnR;
+        public Single MxCP, MxCN, MxCNS, med3men;
 
         public String [,] Unidades = new string[8,12];
         public String [,] Absorbancia = new string[8,12];
         public String [,] Resultados = new string[8,12];
+        public String [,] Resultados1 = new string[8,12];
 
         public Principal(usuario logged)
         {
@@ -50,18 +54,22 @@ namespace ELISA.UI
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Mostrar Mensaje de confirmacion
-            var dialogo = MessageBox.Show("¿Está seguro que desea Salir?",
-                "Salir",
-                MessageBoxButtons.YesNo);
-            if (dialogo == DialogResult.Yes)
+            if (!restart)
             {
-                Application.Exit();
+                var dialogo = MessageBox.Show("¿Está seguro que desea Salir?",
+                    "Salir",
+                    MessageBoxButtons.YesNo);
+                if (dialogo == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                    return;
+                }
             }
-            else
-            {
-                e.Cancel = true;
-                return;
-            }
+            
         }
 
         public void InitialButtons()
@@ -348,6 +356,14 @@ namespace ELISA.UI
 
         private void cmb_Protocolo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txt_val1.Visible = true;
+            txt_val2.Visible = true;
+            txt_val3.Visible = true;
+            txt_val4.Visible = true;
+            txt_val5.Visible = true;
+            txt_val6.Visible = true;
+            txt_val7.Visible = true;
+            //TODO Aca colocar lo label de Resultados
             if (cmb_EI.Enabled) 
             {
                 groupProtocol.Text = "Protocolo " + cmb_EI.SelectedItem.ToString();
@@ -409,7 +425,20 @@ namespace ELISA.UI
                 }else if (selectedItem.Equals("IgM Zika Bei"))
                 {
                     SelectTest(MainUtils.Test.IgMZikaBei);
+                    lbl_val1.Text = "Suero Control Negativo Humano DDO < 0.2";
+                    lbl_val2.Text = "Suero Control Positivo IgM Humano anti-Zika DDO > 0.8";
+                    lbl_val3.Text = "";
+                    lbl_val4.Text = "";
+                    lbl_val5.Text = "";
+                    lbl_val6.Text = "";
+                    lbl_val7.Text = "";
+                    txt_val3.Visible = false;
+                    txt_val4.Visible = false;
+                    txt_val5.Visible = false;
+                    txt_val6.Visible = false;
+                    txt_val7.Visible = false;
                     SetOpcionesIgMZikaBei();
+                    btn_LoadProtocolo.Enabled = false;
                 }else if (selectedItem.Equals("Chikungunya CDC/CNDR"))
                 {
                     SelectTest(MainUtils.Test.ChinkungunyaCDCCNDR);
@@ -452,6 +481,16 @@ namespace ELISA.UI
                 if (selectedItem.Equals("Saliva CIET"))
                 {
                     SelectTest(MainUtils.Test.SalivaCIET);
+                    lbl_val1.Text = "Media de los C- de Saliva: ";
+                    lbl_val2.Text = "Media de los Controles Positivos: ";
+                    lbl_val3.Text = "Media de los Controles Negativos: ";
+                    lbl_val4.Text = "Media de las 3 DO mas bajas: ";
+                    lbl_val5.Text = "";
+                    lbl_val6.Text = "";
+                    lbl_val7.Text = "";
+                    txt_val5.Visible = false;
+                    txt_val6.Visible = false;
+                    txt_val7.Visible = false;
                     SetOpcionesOptIgG();
                 }else if (selectedItem.Equals("Saliva CIET Repeticiones"))
                 {
@@ -739,6 +778,7 @@ namespace ELISA.UI
 
         private void Guardar()
         {
+            //TODO Guardar datos
             //Pasa los datos contenidos en la tabla a un arreglo multidimensional
             String [,] protocolo = new String[dgv_Protocolo.RowCount,dgv_Protocolo.ColumnCount];
             String[,] lectura = new String[dgv_Lectura.RowCount, dgv_Lectura.ColumnCount];
@@ -874,7 +914,7 @@ namespace ELISA.UI
                             MessageBox.Show("Verifique los datos del protocolo en el menu principal",
                                 "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        break;
+                        return;
                     }
                 case 10:
                     {
@@ -1021,6 +1061,133 @@ namespace ELISA.UI
                 case 1:
                     {
                         ControlP = false;
+                        if (new DatosIgMZika().ShowDialog(this) == DialogResult.OK)
+                        {
+                            Single lectData;
+                            String und, res, res1;
+                            datosprotocoloigmzika datos = DatosProtocoloIgMZika.TraerDatosprotocoloigmzika();
+                            int cont = 1;
+                            for (int i = 0; i < 8; i++)
+                            {
+                                for (int j = 0; j < 12; j++)
+                                {
+                                    zikaigm newIgM = new zikaigm();
+                                    newIgM.Cod_Pozo = protocolo[i, j];
+                                    newIgM.posicion = Convert.ToByte(cont++);
+                                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                    {
+                                        lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                                    }
+                                    else
+                                    {
+                                        lectData = Single.Parse(lectura[i, j]);
+                                    }
+                                    newIgM.Lectura = lectData;
+                                    if (cb.Checked && !invalid)
+                                    {
+                                        und = (((lectData - cnR) / (cpR - cnR)) * 100).ToString("0.00");
+                                    }
+                                    else
+                                    {
+                                        und = "NA";
+                                    }
+
+                                    if (invalid)
+                                        und = "INV";
+
+                                    newIgM.Unidades = und;
+                                    Unidades[i, j] = und;
+                                    Absorbancia[i, j] = Convert.ToString(lectData);
+                                    
+
+                                    if (lectData >= float.Parse(txt_val1.Text) && !invalid)
+                                    {
+                                        res = "P";
+                                    }
+                                    else
+                                    {
+                                        res = "N";
+                                    }
+
+                                    if (invalid)
+                                    {
+                                        res = "INV";
+
+                                    }
+
+                                    newIgM.VC = Single.Parse(Single.Parse(txt_val1.Text).ToString("0.000"));
+                                    newIgM.Resultado = res;
+                                    Resultados[i, j] = res;
+
+                                    if (lectData >= float.Parse(txt_val2.Text) && !invalid)
+                                    {
+                                        res1 = "P";
+                                    }
+                                    else
+                                    {
+                                        res1 = "N";
+                                    }
+
+                                    if (invalid)
+                                    {
+                                        res1 = "INV";
+                                    }
+
+                                    newIgM.VC2 = Single.Parse(Single.Parse(txt_val2.Text).ToString("0.000"));
+                                    newIgM.Resultado2 = res1;
+                                    Resultados1[i, j] = res1;
+                                    newIgM.Placa = txt_Placa.TextBox.Text;
+                                    if (invalid)
+                                    {
+                                        newIgM.Valido = false;
+                                    }
+                                    else
+                                    {
+                                        if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                        {
+                                            newIgM.Valido = false;
+                                        }
+                                        else
+                                            newIgM.Valido = true;
+                                    }
+
+                                    newIgM.Fecha = DateTime.Now;
+                                    newIgM.ControlPos = datos.ControlPos;
+                                    newIgM.ControlNeg = datos.ControlNeg;
+                                    newIgM.ControlRadPos = datos.ControlRadPos;
+                                    newIgM.ControlRadNeg = datos.ControlRadNeg;
+                                    newIgM.LoteIgM = datos.LoteIgM;
+                                    newIgM.LoteAntigeno = datos.LoteAntigeno;
+                                    newIgM.fechafijIGM = datos.fechafijIGM;
+                                    newIgM.VolUsadoIGM = datos.VolUsadoIGM;
+                                    newIgM.ProcH2O = datos.ProcH2O;
+                                    newIgM.TipoEstudio = datos.TipoEstudio;
+                                    newIgM.Coatting = datos.Coatting;
+                                    newIgM.PB = datos.PB;
+                                    newIgM.TB = datos.TB;
+                                    newIgM.FB = datos.FB;
+                                    newIgM.TMPB = datos.TMPB;
+                                    newIgM.TIMEB = datos.TIMEB;
+                                    newIgM.Substrato = datos.Substrato;
+                                    newIgM.TSubstrato = datos.TSubstrato;
+                                    newIgM.Conjugado = datos.Conjugado;
+                                    newIgM.SHN = datos.SHN;
+                                    newIgM.STOP = datos.STOP;
+                                    newIgM.Factor = datos.Factor;
+                                    newIgM.Factor2 = datos.Factor2;
+                                    newIgM.Lab2 = cmb_Lab2.ComboBox.Text;
+                                    newIgM.User = Convert.ToString(user.idUsuario);
+                                    ElisaIGMTrans.saveElisaImGZika(newIgM);
+                                    btn_Print.Enabled = true;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Verifique los datos del protocolo en el menu principal",
+                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        return;
 
                         //GuardarIgMZika
                         break;
@@ -1189,7 +1356,30 @@ namespace ELISA.UI
 
         private void btn_Calcular_Click(object sender, EventArgs e)
         {
-            new Calculos().CalcularIgM(this);
+            //TODO Realiza la accion del boton de calcular.
+            switch (selectedTest)
+            {
+                case 0:
+                {
+                    new Calculos().CalcularIgM(this);
+                }
+                    break;
+                case 1:
+                {
+                    new Calculos().CalcularIgmZika(this);
+                }
+                    break;
+                case 5:
+                {
+                        new Calculos().CalcularIgG(this);
+                }break;
+                case 6:
+                {
+                        new Calculos().CalcularIgG(this);
+                }
+                    break;
+            }
+            
         }
 
         private bool validar, invalidar, editar;
@@ -1261,6 +1451,7 @@ namespace ELISA.UI
                         protocolo[i, j] = dgv_Protocolo.Rows[i].Cells[j].Value.ToString();
                     }
                 }
+                //TODO Accion de los controles 
                 switch ((MainUtils.Test)selectedTest)
                 {
                     case MainUtils.Test.IgMDengue:
@@ -1273,7 +1464,6 @@ namespace ELISA.UI
                                 {
                                     protocolo[e.RowIndex, e.ColumnIndex] = "";
                                     dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "CA+");
-
                                 }
                             }
                             else if (rb_Opt5.Checked)
@@ -1312,16 +1502,102 @@ namespace ELISA.UI
                             {
                                 protocolo[e.RowIndex, e.ColumnIndex] = "";
                                 dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
-
                             }
                         }
                         break;
 
                     case MainUtils.Test.IgMZika:
                     {
-                        if (rb_Opt6.Checked)
+                        if (rb_Opt5.Checked)
                         {
-                            
+                            if (MessageBox.Show("¿Desea convertir a Control Positivo (C+) esta celda?",
+                                "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "C+");
+                            }
+                        }else if (rb_Opt4.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "C-");
+                            }
+                        }else if (rb_Opt3.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Radio Positivo (CR+) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "CR+");
+                            }
+                        }else if (rb_opt2.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Radio Negativo (CR-) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "CR-");
+                            }
+                        }
+                        else if (rb_Opt1.Checked)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
+
+                        }
+                        }
+                        break;
+                    case MainUtils.Test.IgMZikaBei:
+                    {
+                            //Queda Pendiente
+                    }break;
+                    case MainUtils.Test.SalivaCIET:
+                    {
+                        if (rb_Opt4.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Positivo (C+) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "C+");
+                            }
+                        }else if (rb_Opt3.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "C-");
+                            }
+                        }else if (rb_opt2.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Negativo Saliva (S-) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "S-");
+                            }
+                        }else if (rb_Opt1.Checked)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
                         }
                     }
                         break;
@@ -1349,6 +1625,17 @@ namespace ELISA.UI
 
         LoadingScreen load = new LoadingScreen("Creando archivo de Excel");
 
+        private void btn_Reiniciar_Click(object sender, EventArgs e)
+        {
+            Principal p = new Principal(user);
+            p.Location = this.Location;
+            this.Hide();
+            p.Show();
+            restart = true;
+            this.Close();
+            
+        }
+
         public void showLoadingScreen()
         {
             load.StartPosition = FormStartPosition.CenterScreen;
@@ -1368,6 +1655,12 @@ namespace ELISA.UI
             {
                 load.Close();
             }
+        }
+
+        private void protocoloIgMZikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatosIgMZika protoIgM = new DatosIgMZika();
+            DialogResult result = protoIgM.ShowDialog(this);
         }
 
         public void toggleCombobox(string test)

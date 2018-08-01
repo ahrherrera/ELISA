@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="elisaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="elisaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="anti_human_igg">
           <Key>
             <PropertyRef Name="Lote_Asign_IgG" />
@@ -554,30 +554,9 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a prima
           <Property Name="ControlNegRadLS" Type="float" Nullable="false" />
           <Property Name="idDatosProtocoloIgM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocoloigmzika' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="datosprotocoloigmzika">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="ControlRadPos" />
-            <PropertyRef Name="ControlRadNeg" />
-            <PropertyRef Name="LoteIgM" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="Factor" />
-            <PropertyRef Name="Factor2" />
-            <PropertyRef Name="ControlPosLI" />
-            <PropertyRef Name="ControlPosLS" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
-            <PropertyRef Name="ControlPosRadLI" />
-            <PropertyRef Name="ControlPosRadLS" />
-            <PropertyRef Name="ControlNegRadLI" />
-            <PropertyRef Name="ControlNegRadLS" />
+            <PropertyRef Name="idDatosProtocoloIgM" />
           </Key>
           <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
@@ -610,6 +589,7 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigmzika' does not have a p
           <Property Name="ControlPosRadLS" Type="float" Nullable="false" />
           <Property Name="ControlNegRadLI" Type="float" Nullable="false" />
           <Property Name="ControlNegRadLS" Type="float" Nullable="false" />
+          <Property Name="idDatosProtocoloIgM" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocolons1">
           <Key>
@@ -2343,6 +2323,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <EntitySet Name="controles_igm" EntityType="Self.controles_igm" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocoloei" EntityType="Self.datosprotocoloei" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocoloigm" EntityType="Self.datosprotocoloigm" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="datosprotocoloigmzika" EntityType="Self.datosprotocoloigmzika" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotavirus" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolovih" EntityType="Self.datosprotocolovih" Schema="elisa" store:Type="Tables" />
@@ -2560,41 +2541,6 @@ FROM `datosprotocoloeizika` AS `datosprotocoloeizika`</DefiningQuery>
 `datosprotocoloigg`.`ControlNegSalLS`
 FROM `datosprotocoloigg` AS `datosprotocoloigg`</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="datosprotocoloigmzika" EntityType="Self.datosprotocoloigmzika" store:Type="Tables" store:Schema="elisa">
-            <DefiningQuery>SELECT
-`datosprotocoloigmzika`.`ControlPos`, 
-`datosprotocoloigmzika`.`ControlNeg`, 
-`datosprotocoloigmzika`.`ControlRadPos`, 
-`datosprotocoloigmzika`.`ControlRadNeg`, 
-`datosprotocoloigmzika`.`LoteIgM`, 
-`datosprotocoloigmzika`.`LoteAntigeno`, 
-`datosprotocoloigmzika`.`fechafijIGM`, 
-`datosprotocoloigmzika`.`VolUsadoIGM`, 
-`datosprotocoloigmzika`.`ProcH2O`, 
-`datosprotocoloigmzika`.`TipoEstudio`, 
-`datosprotocoloigmzika`.`Coatting`, 
-`datosprotocoloigmzika`.`PB`, 
-`datosprotocoloigmzika`.`TB`, 
-`datosprotocoloigmzika`.`FB`, 
-`datosprotocoloigmzika`.`TMPB`, 
-`datosprotocoloigmzika`.`TIMEB`, 
-`datosprotocoloigmzika`.`Conjugado`, 
-`datosprotocoloigmzika`.`Substrato`, 
-`datosprotocoloigmzika`.`TSubstrato`, 
-`datosprotocoloigmzika`.`SHN`, 
-`datosprotocoloigmzika`.`STOP`, 
-`datosprotocoloigmzika`.`Factor`, 
-`datosprotocoloigmzika`.`Factor2`, 
-`datosprotocoloigmzika`.`ControlPosLI`, 
-`datosprotocoloigmzika`.`ControlPosLS`, 
-`datosprotocoloigmzika`.`ControlNegLI`, 
-`datosprotocoloigmzika`.`ControlNegLS`, 
-`datosprotocoloigmzika`.`ControlPosRadLI`, 
-`datosprotocoloigmzika`.`ControlPosRadLS`, 
-`datosprotocoloigmzika`.`ControlNegRadLI`, 
-`datosprotocoloigmzika`.`ControlNegRadLS`
-FROM `datosprotocoloigmzika` AS `datosprotocoloigmzika`</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="datosprotocolozikabob" EntityType="Self.datosprotocolozikabob" store:Type="Tables" store:Schema="elisa">
             <DefiningQuery>SELECT
 `datosprotocolozikabob`.`ControlMax`, 
@@ -2664,8 +2610,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
             <End Role="vih" EntitySet="vih" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="elisaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -4793,26 +4738,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
         </EntityType>
         <EntityType Name="datosprotocoloigmzika">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="ControlRadPos" />
-            <PropertyRef Name="ControlRadNeg" />
-            <PropertyRef Name="LoteIgM" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="Factor" />
-            <PropertyRef Name="Factor2" />
-            <PropertyRef Name="ControlPosLI" />
-            <PropertyRef Name="ControlPosLS" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
-            <PropertyRef Name="ControlPosRadLI" />
-            <PropertyRef Name="ControlPosRadLS" />
-            <PropertyRef Name="ControlNegRadLI" />
-            <PropertyRef Name="ControlNegRadLS" />
+            <PropertyRef Name="idDatosProtocoloIgM" />
           </Key>
           <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -4845,6 +4771,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
           <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
           <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
+          <Property Name="idDatosProtocoloIgM" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocolozikabob">
           <Key>
@@ -7130,6 +7057,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySetMapping Name="datosprotocoloigmzikas">
             <EntityTypeMapping TypeName="elisaModel.datosprotocoloigmzika">
               <MappingFragment StoreEntitySet="datosprotocoloigmzika">
+                <ScalarProperty Name="idDatosProtocoloIgM" ColumnName="idDatosProtocoloIgM" />
                 <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
                 <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
                 <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />

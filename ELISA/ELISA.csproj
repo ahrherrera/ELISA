@@ -315,7 +315,9 @@
     <Compile Include="Transaccion\Calculos.cs" />
     <Compile Include="Transaccion\ControlesTrans.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloEI.cs" />
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgG.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs" />
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgMZika.cs" />
     <Compile Include="Transaccion\ElisaIGMTrans.cs" />
     <Compile Include="Transaccion\EstudioTrans.cs" />
     <Compile Include="Transaccion\LaboratoristasTrans.cs" />
@@ -363,6 +365,12 @@
     </Compile>
     <Compile Include="UI\UIParametros\DatosEI.Designer.cs">
       <DependentUpon>DatosEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosIgMZika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosIgMZika.Designer.cs">
+      <DependentUpon>DatosIgMZika.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UIParametros\DatosIgM.cs">
       <SubType>Form</SubType>
@@ -458,6 +466,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosEI.resx">
       <DependentUpon>DatosEI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosIgMZika.resx">
+      <DependentUpon>DatosIgMZika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosIgM.resx">
       <DependentUpon>DatosIgM.cs</DependentUpon>

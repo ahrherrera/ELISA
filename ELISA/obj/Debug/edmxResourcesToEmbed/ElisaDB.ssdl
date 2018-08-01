@@ -549,30 +549,9 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a prima
     <Property Name="ControlNegRadLS" Type="float" Nullable="false" />
     <Property Name="idDatosProtocoloIgM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocoloigmzika' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="datosprotocoloigmzika">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="ControlRadPos" />
-      <PropertyRef Name="ControlRadNeg" />
-      <PropertyRef Name="LoteIgM" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="Factor" />
-      <PropertyRef Name="Factor2" />
-      <PropertyRef Name="ControlPosLI" />
-      <PropertyRef Name="ControlPosLS" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
-      <PropertyRef Name="ControlPosRadLI" />
-      <PropertyRef Name="ControlPosRadLS" />
-      <PropertyRef Name="ControlNegRadLI" />
-      <PropertyRef Name="ControlNegRadLS" />
+      <PropertyRef Name="idDatosProtocoloIgM" />
     </Key>
     <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
@@ -605,6 +584,7 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigmzika' does not have a p
     <Property Name="ControlPosRadLS" Type="float" Nullable="false" />
     <Property Name="ControlNegRadLI" Type="float" Nullable="false" />
     <Property Name="ControlNegRadLS" Type="float" Nullable="false" />
+    <Property Name="idDatosProtocoloIgM" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocolons1">
     <Key>
@@ -2338,6 +2318,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
     <EntitySet Name="controles_igm" EntityType="Self.controles_igm" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocoloei" EntityType="Self.datosprotocoloei" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocoloigm" EntityType="Self.datosprotocoloigm" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="datosprotocoloigmzika" EntityType="Self.datosprotocoloigmzika" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocolorotavirus" EntityType="Self.datosprotocolorotavirus" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocolovih" EntityType="Self.datosprotocolovih" Schema="elisa" store:Type="Tables" />
@@ -2554,41 +2535,6 @@ FROM `datosprotocoloeizika` AS `datosprotocoloeizika`</DefiningQuery>
 `datosprotocoloigg`.`ControlNegSalLI`, 
 `datosprotocoloigg`.`ControlNegSalLS`
 FROM `datosprotocoloigg` AS `datosprotocoloigg`</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="datosprotocoloigmzika" EntityType="Self.datosprotocoloigmzika" store:Type="Tables" store:Schema="elisa">
-      <DefiningQuery>SELECT
-`datosprotocoloigmzika`.`ControlPos`, 
-`datosprotocoloigmzika`.`ControlNeg`, 
-`datosprotocoloigmzika`.`ControlRadPos`, 
-`datosprotocoloigmzika`.`ControlRadNeg`, 
-`datosprotocoloigmzika`.`LoteIgM`, 
-`datosprotocoloigmzika`.`LoteAntigeno`, 
-`datosprotocoloigmzika`.`fechafijIGM`, 
-`datosprotocoloigmzika`.`VolUsadoIGM`, 
-`datosprotocoloigmzika`.`ProcH2O`, 
-`datosprotocoloigmzika`.`TipoEstudio`, 
-`datosprotocoloigmzika`.`Coatting`, 
-`datosprotocoloigmzika`.`PB`, 
-`datosprotocoloigmzika`.`TB`, 
-`datosprotocoloigmzika`.`FB`, 
-`datosprotocoloigmzika`.`TMPB`, 
-`datosprotocoloigmzika`.`TIMEB`, 
-`datosprotocoloigmzika`.`Conjugado`, 
-`datosprotocoloigmzika`.`Substrato`, 
-`datosprotocoloigmzika`.`TSubstrato`, 
-`datosprotocoloigmzika`.`SHN`, 
-`datosprotocoloigmzika`.`STOP`, 
-`datosprotocoloigmzika`.`Factor`, 
-`datosprotocoloigmzika`.`Factor2`, 
-`datosprotocoloigmzika`.`ControlPosLI`, 
-`datosprotocoloigmzika`.`ControlPosLS`, 
-`datosprotocoloigmzika`.`ControlNegLI`, 
-`datosprotocoloigmzika`.`ControlNegLS`, 
-`datosprotocoloigmzika`.`ControlPosRadLI`, 
-`datosprotocoloigmzika`.`ControlPosRadLS`, 
-`datosprotocoloigmzika`.`ControlNegRadLI`, 
-`datosprotocoloigmzika`.`ControlNegRadLS`
-FROM `datosprotocoloigmzika` AS `datosprotocoloigmzika`</DefiningQuery>
     </EntitySet>
     <EntitySet Name="datosprotocolozikabob" EntityType="Self.datosprotocolozikabob" store:Type="Tables" store:Schema="elisa">
       <DefiningQuery>SELECT

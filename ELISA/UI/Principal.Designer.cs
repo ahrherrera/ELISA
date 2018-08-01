@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_RM = new System.Windows.Forms.ComboBox();
             this.rb_RM = new System.Windows.Forms.RadioButton();
@@ -151,13 +152,13 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbl_Time = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
+            this.btnProtocolo = new System.Windows.Forms.Button();
+            this.FD_OpenProtocolo = new System.Windows.Forms.OpenFileDialog();
             this.btn_Reiniciar = new System.Windows.Forms.Button();
             this.btn_Print = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Leer = new System.Windows.Forms.Button();
             this.btn_LoadProtocolo = new System.Windows.Forms.Button();
-            this.btnProtocolo = new System.Windows.Forms.Button();
-            this.FD_OpenProtocolo = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -197,7 +198,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(916, 116);
+            this.groupBox1.Size = new System.Drawing.Size(985, 116);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione el tipo de Test";
@@ -207,7 +208,7 @@
             this.cmb_RM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_RM.DropDownWidth = 200;
             this.cmb_RM.FormattingEnabled = true;
-            this.cmb_RM.Location = new System.Drawing.Point(435, 76);
+            this.cmb_RM.Location = new System.Drawing.Point(463, 76);
             this.cmb_RM.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_RM.Name = "cmb_RM";
             this.cmb_RM.Size = new System.Drawing.Size(182, 23);
@@ -218,7 +219,7 @@
             // 
             this.rb_RM.AutoSize = true;
             this.rb_RM.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.rb_RM.Location = new System.Drawing.Point(388, 76);
+            this.rb_RM.Location = new System.Drawing.Point(416, 76);
             this.rb_RM.Margin = new System.Windows.Forms.Padding(2);
             this.rb_RM.Name = "rb_RM";
             this.rb_RM.Size = new System.Drawing.Size(48, 17);
@@ -232,7 +233,7 @@
             this.cmb_1D.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_1D.DropDownWidth = 200;
             this.cmb_1D.FormattingEnabled = true;
-            this.cmb_1D.Location = new System.Drawing.Point(184, 76);
+            this.cmb_1D.Location = new System.Drawing.Point(211, 76);
             this.cmb_1D.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_1D.Name = "cmb_1D";
             this.cmb_1D.Size = new System.Drawing.Size(167, 23);
@@ -243,7 +244,7 @@
             // 
             this.rb_1D.AutoSize = true;
             this.rb_1D.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.rb_1D.Location = new System.Drawing.Point(137, 76);
+            this.rb_1D.Location = new System.Drawing.Point(164, 76);
             this.rb_1D.Margin = new System.Windows.Forms.Padding(2);
             this.rb_1D.Name = "rb_1D";
             this.rb_1D.Size = new System.Drawing.Size(40, 17);
@@ -256,7 +257,7 @@
             // 
             this.rb_Rotavirus.AutoSize = true;
             this.rb_Rotavirus.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.rb_Rotavirus.Location = new System.Drawing.Point(640, 76);
+            this.rb_Rotavirus.Location = new System.Drawing.Point(694, 76);
             this.rb_Rotavirus.Margin = new System.Windows.Forms.Padding(2);
             this.rb_Rotavirus.Name = "rb_Rotavirus";
             this.rb_Rotavirus.Size = new System.Drawing.Size(73, 17);
@@ -270,7 +271,7 @@
             this.cmb_IgG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IgG.DropDownWidth = 200;
             this.cmb_IgG.FormattingEnabled = true;
-            this.cmb_IgG.Location = new System.Drawing.Point(739, 32);
+            this.cmb_IgG.Location = new System.Drawing.Point(796, 32);
             this.cmb_IgG.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IgG.Name = "cmb_IgG";
             this.cmb_IgG.Size = new System.Drawing.Size(161, 23);
@@ -281,7 +282,7 @@
             // 
             this.rb_IgG.AutoSize = true;
             this.rb_IgG.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.rb_IgG.Location = new System.Drawing.Point(692, 32);
+            this.rb_IgG.Location = new System.Drawing.Point(749, 32);
             this.rb_IgG.Margin = new System.Windows.Forms.Padding(2);
             this.rb_IgG.Name = "rb_IgG";
             this.rb_IgG.Size = new System.Drawing.Size(49, 17);
@@ -295,7 +296,7 @@
             this.cmb_BOB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_BOB.DropDownWidth = 200;
             this.cmb_BOB.FormattingEnabled = true;
-            this.cmb_BOB.Location = new System.Drawing.Point(528, 32);
+            this.cmb_BOB.Location = new System.Drawing.Point(564, 32);
             this.cmb_BOB.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_BOB.Name = "cmb_BOB";
             this.cmb_BOB.Size = new System.Drawing.Size(150, 23);
@@ -306,7 +307,7 @@
             // 
             this.rb_BOB.AutoSize = true;
             this.rb_BOB.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_BOB.Location = new System.Drawing.Point(477, 32);
+            this.rb_BOB.Location = new System.Drawing.Point(513, 32);
             this.rb_BOB.Margin = new System.Windows.Forms.Padding(2);
             this.rb_BOB.Name = "rb_BOB";
             this.rb_BOB.Size = new System.Drawing.Size(53, 17);
@@ -320,7 +321,7 @@
             this.cmb_EI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_EI.DropDownWidth = 200;
             this.cmb_EI.FormattingEnabled = true;
-            this.cmb_EI.Location = new System.Drawing.Point(298, 32);
+            this.cmb_EI.Location = new System.Drawing.Point(316, 32);
             this.cmb_EI.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_EI.Name = "cmb_EI";
             this.cmb_EI.Size = new System.Drawing.Size(166, 23);
@@ -343,7 +344,7 @@
             // 
             this.rb_EI.AutoSize = true;
             this.rb_EI.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_EI.Location = new System.Drawing.Point(262, 32);
+            this.rb_EI.Location = new System.Drawing.Point(280, 32);
             this.rb_EI.Margin = new System.Windows.Forms.Padding(2);
             this.rb_EI.Name = "rb_EI";
             this.rb_EI.Size = new System.Drawing.Size(40, 17);
@@ -386,7 +387,7 @@
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(963, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1020, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -485,7 +486,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(963, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1020, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -535,6 +536,7 @@
             this.protocoloIgMZikaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.protocoloIgMZikaToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.protocoloIgMZikaToolStripMenuItem.Text = "Protocolo IgM Zika";
+            this.protocoloIgMZikaToolStripMenuItem.Click += new System.EventHandler(this.protocoloIgMZikaToolStripMenuItem_Click);
             // 
             // protocoloEIZikaToolStripMenuItem
             // 
@@ -736,7 +738,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Protocolo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Protocolo.RowTemplate.Height = 24;
-            this.dgv_Protocolo.Size = new System.Drawing.Size(881, 223);
+            this.dgv_Protocolo.Size = new System.Drawing.Size(951, 223);
             this.dgv_Protocolo.TabIndex = 0;
             this.dgv_Protocolo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Protocolo_CellClick);
             // 
@@ -821,7 +823,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(916, 366);
+            this.tabControl1.Size = new System.Drawing.Size(985, 366);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 3;
             // 
@@ -833,7 +835,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(908, 338);
+            this.tabPage1.Size = new System.Drawing.Size(977, 338);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Protocolo";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -846,7 +848,7 @@
             this.groupProtocol.Margin = new System.Windows.Forms.Padding(2);
             this.groupProtocol.Name = "groupProtocol";
             this.groupProtocol.Padding = new System.Windows.Forms.Padding(2);
-            this.groupProtocol.Size = new System.Drawing.Size(881, 72);
+            this.groupProtocol.Size = new System.Drawing.Size(951, 72);
             this.groupProtocol.TabIndex = 1;
             this.groupProtocol.TabStop = false;
             // 
@@ -874,15 +876,15 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(877, 52);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(947, 52);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // rb_Opt1
             // 
             this.rb_Opt1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt1.Location = new System.Drawing.Point(753, 3);
+            this.rb_Opt1.Location = new System.Drawing.Point(813, 3);
             this.rb_Opt1.Name = "rb_Opt1";
-            this.rb_Opt1.Size = new System.Drawing.Size(121, 46);
+            this.rb_Opt1.Size = new System.Drawing.Size(131, 46);
             this.rb_Opt1.TabIndex = 0;
             this.rb_Opt1.TabStop = true;
             this.rb_Opt1.Text = "radioButton1";
@@ -896,7 +898,7 @@
             this.rb_Opt7.Margin = new System.Windows.Forms.Padding(2);
             this.rb_Opt7.Name = "rb_Opt7";
             this.rb_Opt7.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.rb_Opt7.Size = new System.Drawing.Size(121, 48);
+            this.rb_Opt7.Size = new System.Drawing.Size(131, 48);
             this.rb_Opt7.TabIndex = 6;
             this.rb_Opt7.TabStop = true;
             this.rb_Opt7.Text = "radioButton7";
@@ -905,9 +907,9 @@
             // rb_opt2
             // 
             this.rb_opt2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_opt2.Location = new System.Drawing.Point(628, 3);
+            this.rb_opt2.Location = new System.Drawing.Point(678, 3);
             this.rb_opt2.Name = "rb_opt2";
-            this.rb_opt2.Size = new System.Drawing.Size(119, 46);
+            this.rb_opt2.Size = new System.Drawing.Size(129, 46);
             this.rb_opt2.TabIndex = 1;
             this.rb_opt2.TabStop = true;
             this.rb_opt2.Text = "radioButton2";
@@ -917,9 +919,9 @@
             // rb_Opt6
             // 
             this.rb_Opt6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt6.Location = new System.Drawing.Point(128, 3);
+            this.rb_Opt6.Location = new System.Drawing.Point(138, 3);
             this.rb_Opt6.Name = "rb_Opt6";
-            this.rb_Opt6.Size = new System.Drawing.Size(119, 46);
+            this.rb_Opt6.Size = new System.Drawing.Size(129, 46);
             this.rb_Opt6.TabIndex = 5;
             this.rb_Opt6.TabStop = true;
             this.rb_Opt6.Text = "radioButton6";
@@ -929,9 +931,9 @@
             // rb_Opt3
             // 
             this.rb_Opt3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt3.Location = new System.Drawing.Point(503, 3);
+            this.rb_Opt3.Location = new System.Drawing.Point(543, 3);
             this.rb_Opt3.Name = "rb_Opt3";
-            this.rb_Opt3.Size = new System.Drawing.Size(119, 46);
+            this.rb_Opt3.Size = new System.Drawing.Size(129, 46);
             this.rb_Opt3.TabIndex = 2;
             this.rb_Opt3.TabStop = true;
             this.rb_Opt3.Text = "radioButton3";
@@ -941,9 +943,9 @@
             // rb_Opt5
             // 
             this.rb_Opt5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt5.Location = new System.Drawing.Point(253, 3);
+            this.rb_Opt5.Location = new System.Drawing.Point(273, 3);
             this.rb_Opt5.Name = "rb_Opt5";
-            this.rb_Opt5.Size = new System.Drawing.Size(119, 46);
+            this.rb_Opt5.Size = new System.Drawing.Size(129, 46);
             this.rb_Opt5.TabIndex = 4;
             this.rb_Opt5.TabStop = true;
             this.rb_Opt5.Text = "radioButton5";
@@ -953,9 +955,9 @@
             // rb_Opt4
             // 
             this.rb_Opt4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rb_Opt4.Location = new System.Drawing.Point(378, 3);
+            this.rb_Opt4.Location = new System.Drawing.Point(408, 3);
             this.rb_Opt4.Name = "rb_Opt4";
-            this.rb_Opt4.Size = new System.Drawing.Size(119, 46);
+            this.rb_Opt4.Size = new System.Drawing.Size(129, 46);
             this.rb_Opt4.TabIndex = 3;
             this.rb_Opt4.TabStop = true;
             this.rb_Opt4.Text = "radioButton4";
@@ -971,7 +973,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(908, 338);
+            this.tabPage2.Size = new System.Drawing.Size(977, 338);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lectura";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -983,7 +985,7 @@
             this.groupValidar.Margin = new System.Windows.Forms.Padding(2);
             this.groupValidar.Name = "groupValidar";
             this.groupValidar.Padding = new System.Windows.Forms.Padding(2);
-            this.groupValidar.Size = new System.Drawing.Size(218, 297);
+            this.groupValidar.Size = new System.Drawing.Size(296, 297);
             this.groupValidar.TabIndex = 3;
             this.groupValidar.TabStop = false;
             this.groupValidar.Text = "Validación";
@@ -991,8 +993,8 @@
             // layoutValidacion
             // 
             this.layoutValidacion.ColumnCount = 2;
-            this.layoutValidacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.90909F));
-            this.layoutValidacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.09091F));
+            this.layoutValidacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.layoutValidacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.layoutValidacion.Controls.Add(this.txt_val1, 1, 0);
             this.layoutValidacion.Controls.Add(this.txt_val2, 1, 1);
             this.layoutValidacion.Controls.Add(this.txt_val3, 1, 2);
@@ -1018,63 +1020,63 @@
             this.layoutValidacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.layoutValidacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.layoutValidacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.layoutValidacion.Size = new System.Drawing.Size(202, 257);
+            this.layoutValidacion.Size = new System.Drawing.Size(280, 257);
             this.layoutValidacion.TabIndex = 0;
             // 
             // txt_val1
             // 
-            this.txt_val1.Location = new System.Drawing.Point(85, 3);
+            this.txt_val1.Location = new System.Drawing.Point(199, 3);
             this.txt_val1.Name = "txt_val1";
             this.txt_val1.ReadOnly = true;
-            this.txt_val1.Size = new System.Drawing.Size(100, 23);
+            this.txt_val1.Size = new System.Drawing.Size(78, 23);
             this.txt_val1.TabIndex = 0;
             // 
             // txt_val2
             // 
-            this.txt_val2.Location = new System.Drawing.Point(85, 39);
+            this.txt_val2.Location = new System.Drawing.Point(199, 39);
             this.txt_val2.Name = "txt_val2";
             this.txt_val2.ReadOnly = true;
-            this.txt_val2.Size = new System.Drawing.Size(100, 23);
+            this.txt_val2.Size = new System.Drawing.Size(78, 23);
             this.txt_val2.TabIndex = 1;
             // 
             // txt_val3
             // 
-            this.txt_val3.Location = new System.Drawing.Point(85, 75);
+            this.txt_val3.Location = new System.Drawing.Point(199, 75);
             this.txt_val3.Name = "txt_val3";
             this.txt_val3.ReadOnly = true;
-            this.txt_val3.Size = new System.Drawing.Size(100, 23);
+            this.txt_val3.Size = new System.Drawing.Size(78, 23);
             this.txt_val3.TabIndex = 2;
             // 
             // txt_val4
             // 
-            this.txt_val4.Location = new System.Drawing.Point(85, 111);
+            this.txt_val4.Location = new System.Drawing.Point(199, 111);
             this.txt_val4.Name = "txt_val4";
             this.txt_val4.ReadOnly = true;
-            this.txt_val4.Size = new System.Drawing.Size(100, 23);
+            this.txt_val4.Size = new System.Drawing.Size(78, 23);
             this.txt_val4.TabIndex = 3;
             // 
             // txt_val5
             // 
-            this.txt_val5.Location = new System.Drawing.Point(85, 147);
+            this.txt_val5.Location = new System.Drawing.Point(199, 147);
             this.txt_val5.Name = "txt_val5";
             this.txt_val5.ReadOnly = true;
-            this.txt_val5.Size = new System.Drawing.Size(100, 23);
+            this.txt_val5.Size = new System.Drawing.Size(78, 23);
             this.txt_val5.TabIndex = 4;
             // 
             // txt_val6
             // 
-            this.txt_val6.Location = new System.Drawing.Point(85, 183);
+            this.txt_val6.Location = new System.Drawing.Point(199, 183);
             this.txt_val6.Name = "txt_val6";
             this.txt_val6.ReadOnly = true;
-            this.txt_val6.Size = new System.Drawing.Size(100, 23);
+            this.txt_val6.Size = new System.Drawing.Size(78, 23);
             this.txt_val6.TabIndex = 5;
             // 
             // txt_val7
             // 
-            this.txt_val7.Location = new System.Drawing.Point(85, 219);
+            this.txt_val7.Location = new System.Drawing.Point(199, 219);
             this.txt_val7.Name = "txt_val7";
             this.txt_val7.ReadOnly = true;
-            this.txt_val7.Size = new System.Drawing.Size(100, 23);
+            this.txt_val7.Size = new System.Drawing.Size(78, 23);
             this.txt_val7.TabIndex = 6;
             // 
             // lbl_val1
@@ -1355,7 +1357,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 664);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(963, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1020, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
@@ -1373,85 +1375,11 @@
             // 
             this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
             // 
-            // btn_Reiniciar
-            // 
-            this.btn_Reiniciar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Reiniciar.Image = global::ELISA.Properties.Resources.Restore_25px;
-            this.btn_Reiniciar.Location = new System.Drawing.Point(798, 603);
-            this.btn_Reiniciar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Reiniciar.Name = "btn_Reiniciar";
-            this.btn_Reiniciar.Size = new System.Drawing.Size(131, 39);
-            this.btn_Reiniciar.TabIndex = 11;
-            this.btn_Reiniciar.Text = "  Reiniciar";
-            this.btn_Reiniciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Reiniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Reiniciar.UseVisualStyleBackColor = true;
-            // 
-            // btn_Print
-            // 
-            this.btn_Print.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Print.Image = global::ELISA.Properties.Resources.Print_25px;
-            this.btn_Print.Location = new System.Drawing.Point(661, 603);
-            this.btn_Print.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Print.Name = "btn_Print";
-            this.btn_Print.Size = new System.Drawing.Size(131, 39);
-            this.btn_Print.TabIndex = 10;
-            this.btn_Print.Text = "  Imprimir";
-            this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Print.UseVisualStyleBackColor = true;
-            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Save.Image = global::ELISA.Properties.Resources.Save_as_25px;
-            this.btn_Save.Location = new System.Drawing.Point(524, 603);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(131, 39);
-            this.btn_Save.TabIndex = 9;
-            this.btn_Save.Text = "  Guardar";
-            this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Save.UseVisualStyleBackColor = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
-            // btn_Leer
-            // 
-            this.btn_Leer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Leer.Image = global::ELISA.Properties.Resources.View_Details_25px;
-            this.btn_Leer.Location = new System.Drawing.Point(388, 603);
-            this.btn_Leer.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Leer.Name = "btn_Leer";
-            this.btn_Leer.Size = new System.Drawing.Size(131, 39);
-            this.btn_Leer.TabIndex = 8;
-            this.btn_Leer.Text = "  Lectura";
-            this.btn_Leer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Leer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Leer.UseVisualStyleBackColor = true;
-            this.btn_Leer.Click += new System.EventHandler(this.btn_Leer_Click);
-            // 
-            // btn_LoadProtocolo
-            // 
-            this.btn_LoadProtocolo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LoadProtocolo.Image = global::ELISA.Properties.Resources.Upload_25px;
-            this.btn_LoadProtocolo.Location = new System.Drawing.Point(208, 603);
-            this.btn_LoadProtocolo.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_LoadProtocolo.Name = "btn_LoadProtocolo";
-            this.btn_LoadProtocolo.Size = new System.Drawing.Size(176, 39);
-            this.btn_LoadProtocolo.TabIndex = 7;
-            this.btn_LoadProtocolo.Text = "  Cargar Protocolo";
-            this.btn_LoadProtocolo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_LoadProtocolo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_LoadProtocolo.UseVisualStyleBackColor = true;
-            this.btn_LoadProtocolo.Click += new System.EventHandler(this.btn_LoadProtocolo_Click);
-            // 
             // btnProtocolo
             // 
             this.btnProtocolo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnProtocolo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProtocolo.Location = new System.Drawing.Point(748, 184);
+            this.btnProtocolo.Location = new System.Drawing.Point(846, 186);
             this.btnProtocolo.Margin = new System.Windows.Forms.Padding(2);
             this.btnProtocolo.Name = "btnProtocolo";
             this.btnProtocolo.Size = new System.Drawing.Size(89, 29);
@@ -1466,12 +1394,87 @@
             this.FD_OpenProtocolo.FileName = "openFileDialog1";
             this.FD_OpenProtocolo.Title = "Seleccione un protocolo";
             // 
+            // btn_Reiniciar
+            // 
+            this.btn_Reiniciar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Reiniciar.Image = global::ELISA.Properties.Resources.Restore_25px;
+            this.btn_Reiniciar.Location = new System.Drawing.Point(874, 610);
+            this.btn_Reiniciar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Reiniciar.Name = "btn_Reiniciar";
+            this.btn_Reiniciar.Size = new System.Drawing.Size(131, 39);
+            this.btn_Reiniciar.TabIndex = 11;
+            this.btn_Reiniciar.Text = "  Reiniciar";
+            this.btn_Reiniciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Reiniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Reiniciar.UseVisualStyleBackColor = true;
+            this.btn_Reiniciar.Click += new System.EventHandler(this.btn_Reiniciar_Click);
+            // 
+            // btn_Print
+            // 
+            this.btn_Print.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Print.Image = global::ELISA.Properties.Resources.Print_25px;
+            this.btn_Print.Location = new System.Drawing.Point(737, 610);
+            this.btn_Print.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Size = new System.Drawing.Size(131, 39);
+            this.btn_Print.TabIndex = 10;
+            this.btn_Print.Text = "  Imprimir";
+            this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Print.UseVisualStyleBackColor = true;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Save.Image = global::ELISA.Properties.Resources.Save_as_25px;
+            this.btn_Save.Location = new System.Drawing.Point(600, 610);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(131, 39);
+            this.btn_Save.TabIndex = 9;
+            this.btn_Save.Text = "  Guardar";
+            this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
+            // btn_Leer
+            // 
+            this.btn_Leer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Leer.Image = global::ELISA.Properties.Resources.View_Details_25px;
+            this.btn_Leer.Location = new System.Drawing.Point(464, 610);
+            this.btn_Leer.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Leer.Name = "btn_Leer";
+            this.btn_Leer.Size = new System.Drawing.Size(131, 39);
+            this.btn_Leer.TabIndex = 8;
+            this.btn_Leer.Text = "  Lectura";
+            this.btn_Leer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Leer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Leer.UseVisualStyleBackColor = true;
+            this.btn_Leer.Click += new System.EventHandler(this.btn_Leer_Click);
+            // 
+            // btn_LoadProtocolo
+            // 
+            this.btn_LoadProtocolo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LoadProtocolo.Image = global::ELISA.Properties.Resources.Upload_25px;
+            this.btn_LoadProtocolo.Location = new System.Drawing.Point(284, 610);
+            this.btn_LoadProtocolo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LoadProtocolo.Name = "btn_LoadProtocolo";
+            this.btn_LoadProtocolo.Size = new System.Drawing.Size(176, 39);
+            this.btn_LoadProtocolo.TabIndex = 7;
+            this.btn_LoadProtocolo.Text = "  Cargar Protocolo";
+            this.btn_LoadProtocolo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_LoadProtocolo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_LoadProtocolo.UseVisualStyleBackColor = true;
+            this.btn_LoadProtocolo.Click += new System.EventHandler(this.btn_LoadProtocolo_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(963, 686);
+            this.ClientSize = new System.Drawing.Size(1020, 686);
             this.Controls.Add(this.btn_Reiniciar);
             this.Controls.Add(this.btn_Print);
             this.Controls.Add(this.btn_Save);
@@ -1484,11 +1487,11 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Principal";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Centro Nacional de Diagnóstico y Referencia | Departamento de Virología | ELISA S" +
     "oftware";

@@ -2023,6 +2023,7 @@
     <EntitySetMapping Name="datosprotocoloigmzikas">
       <EntityTypeMapping TypeName="elisaModel.datosprotocoloigmzika">
         <MappingFragment StoreEntitySet="datosprotocoloigmzika">
+          <ScalarProperty Name="idDatosProtocoloIgM" ColumnName="idDatosProtocoloIgM" />
           <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
           <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
           <ScalarProperty Name="ControlRadPos" ColumnName="ControlRadPos" />

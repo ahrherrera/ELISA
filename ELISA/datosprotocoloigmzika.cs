@@ -45,5 +45,6 @@ namespace ELISA
         public float ControlPosRadLS { get; set; }
         public float ControlNegRadLI { get; set; }
         public float ControlNegRadLS { get; set; }
+        public int idDatosProtocoloIgM { get; set; }
     }
 }

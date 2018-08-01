@@ -27,5 +27,22 @@ namespace ELISA.Transaccion
                 Log.logError("Error capturado: Trace: " + ex.Message);
             }
         }
+
+        public static void saveElisaImGZika(zikaigm newRecord)
+        {
+            try
+            {
+                using (var context = new elisaEntities2())
+                {
+                    context.zikaigms.Add(newRecord);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido una excepcion.\n Por favor contacte al administrador del Sistema", "Error detectado");
+                Log.logError("Error capturado: Trace: " + ex.Message);
+            }
+        }
     }
 }

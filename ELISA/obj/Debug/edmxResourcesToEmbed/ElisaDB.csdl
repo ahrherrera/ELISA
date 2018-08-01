@@ -2124,26 +2124,7 @@
   </EntityType>
   <EntityType Name="datosprotocoloigmzika">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="ControlRadPos" />
-      <PropertyRef Name="ControlRadNeg" />
-      <PropertyRef Name="LoteIgM" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="Factor" />
-      <PropertyRef Name="Factor2" />
-      <PropertyRef Name="ControlPosLI" />
-      <PropertyRef Name="ControlPosLS" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
-      <PropertyRef Name="ControlPosRadLI" />
-      <PropertyRef Name="ControlPosRadLS" />
-      <PropertyRef Name="ControlNegRadLI" />
-      <PropertyRef Name="ControlNegRadLS" />
+      <PropertyRef Name="idDatosProtocoloIgM" />
     </Key>
     <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -2176,6 +2157,7 @@
     <Property Name="ControlPosRadLS" Type="Single" Nullable="false" />
     <Property Name="ControlNegRadLI" Type="Single" Nullable="false" />
     <Property Name="ControlNegRadLS" Type="Single" Nullable="false" />
+    <Property Name="idDatosProtocoloIgM" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocolozikabob">
     <Key>

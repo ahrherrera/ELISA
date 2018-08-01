@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lbl_userName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_showPassword = new System.Windows.Forms.Button();
@@ -46,9 +47,10 @@
             // 
             this.lbl_userName.BackColor = System.Drawing.Color.Transparent;
             this.lbl_userName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_userName.Location = new System.Drawing.Point(20, 44);
+            this.lbl_userName.Location = new System.Drawing.Point(15, 36);
+            this.lbl_userName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_userName.Name = "lbl_userName";
-            this.lbl_userName.Size = new System.Drawing.Size(117, 54);
+            this.lbl_userName.Size = new System.Drawing.Size(88, 44);
             this.lbl_userName.TabIndex = 2;
             this.lbl_userName.Text = "Nombre de Usuario :";
             this.lbl_userName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -57,9 +59,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 121);
+            this.label1.Location = new System.Drawing.Point(16, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 25);
+            this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Contraseña :";
             // 
@@ -67,10 +70,10 @@
             // 
             this.btn_showPassword.BackgroundImage = global::ELISA.Properties.Resources.if_icon_22_eye_315220;
             this.btn_showPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_showPassword.Location = new System.Drawing.Point(449, 110);
-            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_showPassword.Location = new System.Drawing.Point(337, 89);
+            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_showPassword.Name = "btn_showPassword";
-            this.btn_showPassword.Size = new System.Drawing.Size(40, 39);
+            this.btn_showPassword.Size = new System.Drawing.Size(30, 32);
             this.btn_showPassword.TabIndex = 6;
             this.btn_showPassword.UseVisualStyleBackColor = true;
             this.btn_showPassword.Click += new System.EventHandler(this.btn_showPassword_Click);
@@ -83,21 +86,21 @@
             this.groupBox1.Controls.Add(this.btn_showPassword);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(22, 22);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(16, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(509, 194);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(382, 158);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inicie Sesión";
             // 
             // txt_Password
             // 
-            this.txt_Password.Location = new System.Drawing.Point(145, 116);
-            this.txt_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Password.Location = new System.Drawing.Point(109, 94);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(297, 30);
+            this.txt_Password.Size = new System.Drawing.Size(224, 26);
             this.txt_Password.TabIndex = 2;
             this.txt_Password.UseSystemPasswordChar = true;
             this.txt_Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Password_KeyPress);
@@ -105,11 +108,11 @@
             // cmbUsuario
             // 
             this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.ItemHeight = 24;
-            this.cmbUsuario.Location = new System.Drawing.Point(145, 58);
-            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbUsuario.ItemHeight = 23;
+            this.cmbUsuario.Location = new System.Drawing.Point(109, 47);
+            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(297, 30);
+            this.cmbUsuario.Size = new System.Drawing.Size(224, 29);
             this.cmbUsuario.Style = MetroFramework.MetroColorStyle.Blue;
             this.cmbUsuario.TabIndex = 1;
             this.cmbUsuario.UseSelectable = true;
@@ -117,10 +120,10 @@
             // btn_Login
             // 
             this.btn_Login.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(413, 241);
-            this.btn_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Login.Location = new System.Drawing.Point(310, 196);
+            this.btn_Login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(115, 35);
+            this.btn_Login.Size = new System.Drawing.Size(86, 28);
             this.btn_Login.TabIndex = 3;
             this.btn_Login.Text = "Iniciar Sesión";
             this.btn_Login.UseVisualStyleBackColor = true;
@@ -129,10 +132,10 @@
             // btn_Cancel
             // 
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(301, 241);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Cancel.Location = new System.Drawing.Point(226, 196);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(107, 35);
+            this.btn_Cancel.Size = new System.Drawing.Size(80, 28);
             this.btn_Cancel.TabIndex = 4;
             this.btn_Cancel.Text = "Cancelar";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -142,9 +145,10 @@
             // 
             this.lbl_Error.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Error.Location = new System.Drawing.Point(15, 234);
+            this.lbl_Error.Location = new System.Drawing.Point(11, 190);
+            this.lbl_Error.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Error.Name = "lbl_Error";
-            this.lbl_Error.Size = new System.Drawing.Size(263, 47);
+            this.lbl_Error.Size = new System.Drawing.Size(197, 38);
             this.lbl_Error.TabIndex = 8;
             this.lbl_Error.Text = "El usuario y la contraseña no son correctos";
             this.lbl_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,21 +163,21 @@
             this.masterPanel.Controls.Add(this.btn_Cancel);
             this.masterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.masterPanel.Location = new System.Drawing.Point(0, 0);
-            this.masterPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.masterPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.masterPanel.Name = "masterPanel";
-            this.masterPanel.Size = new System.Drawing.Size(552, 300);
+            this.masterPanel.Size = new System.Drawing.Size(414, 244);
             this.masterPanel.TabIndex = 5;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 300);
+            this.ClientSize = new System.Drawing.Size(414, 244);
             this.Controls.Add(this.masterPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Login";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autenticación";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);

@@ -265,143 +265,17 @@ namespace ELISA.Utils
             Excel.Workbook xlWorkBook = MyApp.Workbooks.Add(misValue);
             Excel.Worksheet xlWorkSheet = (Excel.Worksheet) xlWorkBook.Sheets[1];
 
-            //Titulo
-            xlWorkSheet.get_Range("A1").Value = "MINISTERIO DE SALUD NICARAGUA";
-            xlWorkSheet.get_Range("A1:M1").Merge();
-            xlWorkSheet.get_Range("A1").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            xlWorkSheet.get_Range("A1").Font.Bold = true;
-            xlWorkSheet.get_Range("A1").Font.Size = 12;
-            xlWorkSheet.get_Range("A1").RowHeight = 21.75;
-
-            //Subtitulo
-            xlWorkSheet.get_Range("A2").Value =
-                "CENTRO NACIONAL DE DIAGNOSTICO Y REFERENCIA - DEPARTAMENTO DE VIROLOGIA";
-            xlWorkSheet.get_Range("A2:M2").Merge();
-            xlWorkSheet.get_Range("A2").Font.Size = 12;
-            xlWorkSheet.get_Range("A2").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            xlWorkSheet.get_Range("A2").Font.Bold = true;
-            xlWorkSheet.get_Range("A2").RowHeight = 21.75;
-
-            xlWorkSheet.get_Range("A3").Value = "TEST DE ELISA:";
-            xlWorkSheet.get_Range("A3").Font.Bold = true;
-            xlWorkSheet.get_Range("A3").RowHeight = 21.75;
-
-            xlWorkSheet.get_Range("A4").Value = "ANALISIS DE:";
-            xlWorkSheet.get_Range("A4").Font.Bold = true;
-            xlWorkSheet.get_Range("A4").RowHeight = 21.75;
-
-            xlWorkSheet.get_Range("K3").Value = "FECHA:";
-            xlWorkSheet.get_Range("K3").Font.Bold = true;
-            xlWorkSheet.get_Range("K3").RowHeight = 21.75;
-
-            xlWorkSheet.get_Range("K4").Value = "PLACA:";
-            xlWorkSheet.get_Range("K4").Font.Bold = true;
-            xlWorkSheet.get_Range("K4").RowHeight = 21.75;
-
-            int[] intArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-            Excel.Range rngHeaderNumber = xlWorkSheet.get_Range("B5", "M5");
-            rngHeaderNumber.Value = intArray;
-            rngHeaderNumber.RowHeight = 21.75;
-            rngHeaderNumber.ColumnWidth = 9;
-
-            int index = 0;
-            for (int i = 6; i <= 34; i+=4)
-            {
-                xlWorkSheet.Cells[i, 1] = rowHeaderNames()[index];
-                index++;
-            }
-
-            xlWorkSheet.get_Range("6:37").RowHeight = 10;
-
-            for (int i = 6; i <= 34; i += 4)
-            {
-                xlWorkSheet.get_Range("A" + i + ":A" + (i + 3)).Merge();
-                xlWorkSheet.get_Range("A" + i + ":A" + (i + 3)).VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
-                xlWorkSheet.get_Range("A" + i + ":A" + (i + 3)).HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            }
-
-            xlWorkSheet.get_Range("A5:M5").Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
-            xlWorkSheet.get_Range("A5:M5").Font.Bold = true;
-            xlWorkSheet.get_Range("A5:A37").Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
-            xlWorkSheet.get_Range("A5:A37").Font.Bold = true;
-            xlWorkSheet.get_Range("A5:A37").Interior.ColorIndex = 15;
-
-            var range = xlWorkSheet.get_Range("B6", "M37");
-            foreach (Excel.Range cell in range.Cells)
-            {
-                cell.Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
-                cell.Font.Size = 8;
-                cell.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
-                cell.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            }
-
-            for (int i = 9; i <= 37; i += 4)
-            {
-                xlWorkSheet.get_Range("B" + i, "M" + i).Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle =
-                    Excel.XlLineStyle.xlContinuous;
-            }
-            string[,] protocolo = new string[8, 12];
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 12; j++)
-                {
-                    protocolo[i, j] = principal.dgv_Protocolo.Rows[i].Cells[j].Value.ToString();
-                }
-            }
-
-            for (int i = 6; i <= 34; i += 4)
-            {
-                for (int j = 2; j <= 13; j++)
-                {
-                    int iIndex = ((int)(i / 4)) - 1;
-                    int jIndex = (int)(j - 2);
-                    xlWorkSheet.Cells[i, j].Value = protocolo[iIndex, jIndex];
-                }
-            }
-            xlWorkSheet.get_Range("L3").Value = "-" + DateTime.Now.ToString("dd/MM/yyyy") + "-";
-            xlWorkSheet.get_Range("L4").Value = principal.txt_Placa.TextBox.Text;
-            xlWorkSheet.get_Range("C3").Value = testName.Remove(testName.IndexOf("Protocolo "), "Protocolo ".Length);
-
-            for (int i = 7; i <= 35; i+=4)
-            {
-                for (int j = 2; j <= 13; j++)
-                {
-                    int iIndex = ((int) (i / 4)) - 1;
-                    int jIndex = ((int) (j - 2));
-                    xlWorkSheet.Cells[i, j].Value = principal.Absorbancia[iIndex, jIndex];
-                }
-            }
-
-            xlWorkSheet.get_Range("A38").Value = "LABORATORISTA 1:";
-            xlWorkSheet.get_Range("A38").Font.Bold = true;
-            xlWorkSheet.get_Range("D38").Value = principal.cmb_Lab1.ComboBox.SelectedValue;
-            xlWorkSheet.get_Range("H38").Value = "LABORATORISTA 2:";
-            xlWorkSheet.get_Range("H38").Font.Bold = true;
-            xlWorkSheet.get_Range("K38").Value = principal.cmb_Lab2.ComboBox.SelectedValue;
-
             switch ((Test) principal.selectedTest)
             {
                 case Test.IgMDengue:
                 {
-                    for (int i = 8; i <= 36; i += 4)
-                    {
-                        for (int j = 2; j <= 13; j++)
-                        {
-                            int iIndex = ((int)(i / 4)) - 2;
-                            int jIndex = ((int)(j - 2));
-                            xlWorkSheet.Cells[i, j].Value = Single.Parse(principal.Unidades[iIndex, jIndex]).ToString("0.00");
-                        }
-                    }
+                    printHeader(xlWorkSheet, principal, testName);
 
-                    for (int i = 9; i <= 37; i+=4)
-                    {
-                        for (int j = 2; j <= 13; j++)
-                        {
-                            int iIndex = ((int) (i / 4)) - 2;
-                            int jIndex = ((int) (j - 2));
-                            xlWorkSheet.Cells[i, j].Value = principal.Resultados[iIndex, jIndex];
-                        }
-                    }
+                    printLecturas(xlWorkSheet, principal);
+
+                    printUnidades(xlWorkSheet, principal);
+
+                    printResultados(xlWorkSheet, principal);
 
 
                     xlWorkSheet.get_Range("A40").Value = "Valor de Corte: ";
@@ -441,7 +315,8 @@ namespace ELISA.Utils
 
                     xlWorkSheet.get_Range("A44").Value = "ANTI-GLOBULINA";
                     xlWorkSheet.get_Range("C44").Value = datos.LoteIgM;
-
+                    
+                    // Function Datos
                     xlWorkSheet.get_Range("A44:M50").Font.Size = 8;
                     xlWorkSheet.get_Range("A44:A48").Font.Bold = true;
                     xlWorkSheet.get_Range("E44:E48").Font.Bold = true;
@@ -499,7 +374,7 @@ namespace ELISA.Utils
                     xlWorkSheet.get_Range("L48").Value = datos.TSubstrato;
                     xlWorkSheet.get_Range("K49").Value = "STOP";
                     xlWorkSheet.get_Range("L49").Value = datos.STOP;
-                        
+                        //End of Function
 
                         string nombreArchivo = BASE_DIR  + testName + " " + DateTime.Now.ToString("dd-MM-yyyy") +
                                            " " + principal.txt_Placa.TextBox.Text + ".xls";
@@ -510,6 +385,361 @@ namespace ELISA.Utils
 
                 }
                     break;
+
+                case Test.IgMZika:
+                {
+                    printUnidades(xlWorkSheet, principal);
+                    printResultados(xlWorkSheet, principal);
+
+                    //Formato_Excel_IgMZika
+                    xlWorkSheet.get_Range("A40").Value = "Valor de Corte: ";
+                    xlWorkSheet.get_Range("A40").Font.Bold = true;
+                    xlWorkSheet.get_Range("A41").Value = "Media Controles Neg: ";
+                    xlWorkSheet.get_Range("A41").Font.Bold = true;
+                    xlWorkSheet.get_Range("A42").Value = "Validación: ";
+                    xlWorkSheet.get_Range("A42").Font.Bold = true;
+                    xlWorkSheet.get_Range("D40").Value = principal.txt_val1.Text;
+                    xlWorkSheet.get_Range("D41").Value = principal.txt_val6.Text;
+                    xlWorkSheet.get_Range("D42").Value = principal.txt_val7.Text;
+
+                    datosprotocoloigmzika datos = DatosProtocoloIgMZika.TraerDatosprotocoloigmzika();
+
+                    xlWorkSheet.get_Range("F40").Value = "Codigo de Controles: ";
+                    xlWorkSheet.get_Range("H40").Value = "CP: ";
+                    xlWorkSheet.get_Range("H40").Font.Bold = true;
+                    xlWorkSheet.get_Range("H41").Value = "CN: ";
+                    xlWorkSheet.get_Range("H41").Font.Bold = true;
+                    xlWorkSheet.get_Range("H42").Font.Bold = true;
+
+                    xlWorkSheet.get_Range("I40").Value = datos.ControlPos;
+                    xlWorkSheet.get_Range("I41").Value = datos.ControlNeg;
+
+                    if (principal.cb.Checked)
+                    {
+                        xlWorkSheet.get_Range("J40").Value = "Controles de Radio: ";
+                        xlWorkSheet.get_Range("L40").Value = "CRP: ";
+                        xlWorkSheet.get_Range("L41").Value = "CRN: ";
+                        xlWorkSheet.get_Range("L40").Font.Bold = true;
+                        xlWorkSheet.get_Range("L41").Font.Bold = true;
+                        xlWorkSheet.get_Range("M40").Value = datos.ControlRadPos;
+                        xlWorkSheet.get_Range("M41").Value = datos.ControlRadNeg;
+                    }
+                    xlWorkSheet.get_Range("A44").Value = "GOAT ANTI-HUMAN IgM";
+                    xlWorkSheet.get_Range("C44").Value = datos.LoteIgM;
+
+                        // Function Datos
+                        xlWorkSheet.get_Range("A44:M50").Font.Size = 8;
+                        xlWorkSheet.get_Range("A44:A48").Font.Bold = true;
+                        xlWorkSheet.get_Range("E44:E48").Font.Bold = true;
+                        xlWorkSheet.get_Range("H44:H48").Font.Bold = true;
+                        xlWorkSheet.get_Range("K44:K48").Font.Bold = true;
+
+                        xlWorkSheet.get_Range("A45").Value = "ESTUDIO";
+                        xlWorkSheet.get_Range("C45").Value = datos.TipoEstudio;
+                        xlWorkSheet.get_Range("A46").Value = "COATTING";
+                        xlWorkSheet.get_Range("C46").Value = datos.Coatting;
+                        xlWorkSheet.get_Range("A47").Value = "PB";
+                        xlWorkSheet.get_Range("C47").Value = datos.PB;
+                        xlWorkSheet.get_Range("A48").Value = "H2O";
+                        xlWorkSheet.get_Range("C48").Value = datos.ProcH2O;
+
+                        xlWorkSheet.get_Range("E44").Value = "Fijacion IgM";
+                        xlWorkSheet.get_Range("E46").Value = "FECHA";
+                        xlWorkSheet.get_Range("F46").Value = "-" + datos.fechafijIGM.Value.ToString("dd/MM/yyyy") + "-";
+                        xlWorkSheet.get_Range("E47").Value = "VOLUMEN";
+                        xlWorkSheet.get_Range("F47").Value = datos.VolUsadoIGM;
+
+                        xlWorkSheet.get_Range("E48").Value = "";
+                        xlWorkSheet.get_Range("H44").Value = "BLOQUEO";
+                        xlWorkSheet.get_Range("H45").Value = "TIPO";
+                        xlWorkSheet.get_Range("I45").Value = datos.TB;
+                        xlWorkSheet.get_Range("H46").Value = "FECHA";
+                        xlWorkSheet.get_Range("I46").Value = "-" + datos.FB.Value.ToString("dd/MM/yyyy") + "-";
+                        xlWorkSheet.get_Range("H47").Value = "TEMP";
+                        xlWorkSheet.get_Range("I47").Value = datos.TMPB;
+                        xlWorkSheet.get_Range("H48").Value = "TIEMPO";
+                        xlWorkSheet.get_Range("I48").Value = "-" + datos.TIMEB + "-";
+                        xlWorkSheet.get_Range("K44").Value = "ANTIGENO";
+                        xlWorkSheet.get_Range("L44").Value = datos.LoteAntigeno;
+                        xlWorkSheet.get_Range("K45").Value = "CONJUGA";
+                        xlWorkSheet.get_Range("L45").Value = datos.Conjugado;
+                        xlWorkSheet.get_Range("K46").Value = "SHN";
+                        xlWorkSheet.get_Range("L46").Value = datos.SHN;
+                        xlWorkSheet.get_Range("K47").Value = "SUBSTRAT";
+                        xlWorkSheet.get_Range("L47").Value = datos.Substrato;
+                        xlWorkSheet.get_Range("K48").Value = "Tiempo Subs";
+                        xlWorkSheet.get_Range("L48").Value = datos.TSubstrato;
+                        xlWorkSheet.get_Range("K49").Value = "STOP";
+                        xlWorkSheet.get_Range("L49").Value = datos.STOP;
+                        //End of Function
+
+                        //Pagina1
+                        xlWorkSheet.PageSetup.CenterHorizontally = true;
+                    xlWorkSheet.PageSetup.CenterVertically = true;
+                    xlWorkSheet.PageSetup.Orientation = Excel.XlPageOrientation.xlLandscape;
+                    xlWorkSheet.PageSetup.Zoom = false;
+                    xlWorkSheet.PageSetup.FitToPagesWide = 1;
+                    xlWorkSheet.PageSetup.FitToPagesTall = 1;
+                    xlWorkSheet.PageSetup.LeftMargin = MyApp.InchesToPoints(0.196850393700787);
+                    xlWorkSheet.PageSetup.RightMargin = MyApp.InchesToPoints(0.196850393700787);
+                    xlWorkSheet.PageSetup.TopMargin = MyApp.InchesToPoints(0.393700787401575);
+                    xlWorkSheet.PageSetup.BottomMargin = MyApp.InchesToPoints(0.393700787401575);
+                    xlWorkSheet.PageSetup.HeaderMargin = MyApp.InchesToPoints(0);
+                    xlWorkSheet.PageSetup.FooterMargin = MyApp.InchesToPoints(0);
+
+                    //Crear Pagina 2
+
+                    Excel.Worksheet xlWorkSheet1 = (Excel.Worksheet)MyApp.Worksheets.Add(misValue, xlWorkSheet);
+
+                    //Formato_Excel_Protocolo_2
+                    printHeader(xlWorkSheet1, principal, testName);
+                    printLecturas(xlWorkSheet1, principal);
+                    printUnidades(xlWorkSheet1, principal);
+                    printResultados2(xlWorkSheet1, principal);
+                        //Formato_Excel_IgMZika
+                    xlWorkSheet1.get_Range("A40").Value = "Valor de Corte: ";
+                    xlWorkSheet1.get_Range("A40").Font.Bold = true;
+                    xlWorkSheet1.get_Range("A41").Value = "Media Controles Neg: ";
+                    xlWorkSheet1.get_Range("A41").Font.Bold = true;
+                    xlWorkSheet1.get_Range("A42").Value = "Validación: ";
+                    xlWorkSheet1.get_Range("A42").Font.Bold = true;
+                    xlWorkSheet1.get_Range("D40").Value = principal.txt_val2.Text;
+                    xlWorkSheet1.get_Range("D41").Value = principal.txt_val6.Text;
+                    xlWorkSheet1.get_Range("D42").Value = principal.txt_val7.Text;
+                    xlWorkSheet1.get_Range("F40").Value = "Codigo de Controles: ";
+                    xlWorkSheet1.get_Range("H40").Value = "CP: ";
+                    xlWorkSheet1.get_Range("H40").Font.Bold = true;
+                    xlWorkSheet1.get_Range("H41").Value = "CN: ";
+                    xlWorkSheet1.get_Range("H41").Font.Bold = true;
+                    xlWorkSheet1.get_Range("H42").Font.Bold = true;
+
+                    xlWorkSheet1.get_Range("I40").Value = datos.ControlPos;
+                    xlWorkSheet1.get_Range("I41").Value = datos.ControlNeg;
+
+                    if (principal.cb.Checked)
+                    {
+                        xlWorkSheet1.get_Range("J40").Value = "Controles de Radio: ";
+                        xlWorkSheet1.get_Range("L40").Value = "CRP: ";
+                        xlWorkSheet1.get_Range("L41").Value = "CRN: ";
+                        xlWorkSheet1.get_Range("L40").Font.Bold = true;
+                        xlWorkSheet1.get_Range("L41").Font.Bold = true;
+                        xlWorkSheet1.get_Range("M40").Value = datos.ControlRadPos;
+                        xlWorkSheet1.get_Range("M41").Value = datos.ControlRadNeg;
+                    }
+                    xlWorkSheet1.get_Range("A44").Value = "GOAT ANTI-HUMAN IgM";
+                    xlWorkSheet1.get_Range("C44").Value = datos.LoteIgM;
+
+                        xlWorkSheet1.get_Range("A44:M50").Font.Size = 8;
+                        xlWorkSheet1.get_Range("A44:A48").Font.Bold = true;
+                        xlWorkSheet1.get_Range("E44:E48").Font.Bold = true;
+                        xlWorkSheet1.get_Range("H44:H48").Font.Bold = true;
+                        xlWorkSheet1.get_Range("K44:K48").Font.Bold = true;
+
+                        xlWorkSheet1.get_Range("A45").Value = "ESTUDIO";
+                        xlWorkSheet1.get_Range("C45").Value = datos.TipoEstudio;
+                        xlWorkSheet1.get_Range("A46").Value = "COATTING";
+                        xlWorkSheet1.get_Range("C46").Value = datos.Coatting;
+                        xlWorkSheet1.get_Range("A47").Value = "PB";
+                        xlWorkSheet1.get_Range("C47").Value = datos.PB;
+                        xlWorkSheet1.get_Range("A48").Value = "H2O";
+                        xlWorkSheet1.get_Range("C48").Value = datos.ProcH2O;
+
+                        xlWorkSheet1.get_Range("E44").Value = "Fijacion IgM";
+                        xlWorkSheet1.get_Range("E46").Value = "FECHA";
+                        xlWorkSheet1.get_Range("F46").Value = "-" + datos.fechafijIGM.Value.ToString("dd/MM/yyyy") + "-";
+                        xlWorkSheet1.get_Range("E47").Value = "VOLUMEN";
+                        xlWorkSheet1.get_Range("F47").Value = datos.VolUsadoIGM;
+
+                        xlWorkSheet1.get_Range("E48").Value = "";
+                        xlWorkSheet1.get_Range("H44").Value = "BLOQUEO";
+                        xlWorkSheet1.get_Range("H45").Value = "TIPO";
+                        xlWorkSheet1.get_Range("I45").Value = datos.TB;
+                        xlWorkSheet1.get_Range("H46").Value = "FECHA";
+                        xlWorkSheet1.get_Range("I46").Value = "-" + datos.FB.Value.ToString("dd/MM/yyyy") + "-";
+                        xlWorkSheet1.get_Range("H47").Value = "TEMP";
+                        xlWorkSheet1.get_Range("I47").Value = datos.TMPB;
+                        xlWorkSheet1.get_Range("H48").Value = "TIEMPO";
+                        xlWorkSheet1.get_Range("I48").Value = "-" + datos.TIMEB + "-";
+                        xlWorkSheet1.get_Range("K44").Value = "ANTIGENO";
+                        xlWorkSheet1.get_Range("L44").Value = datos.LoteAntigeno;
+                        xlWorkSheet1.get_Range("K45").Value = "CONJUGA";
+                        xlWorkSheet1.get_Range("L45").Value = datos.Conjugado;
+                        xlWorkSheet1.get_Range("K46").Value = "SHN";
+                        xlWorkSheet1.get_Range("L46").Value = datos.SHN;
+                        xlWorkSheet1.get_Range("K47").Value = "SUBSTRAT";
+                        xlWorkSheet1.get_Range("L47").Value = datos.Substrato;
+                        xlWorkSheet1.get_Range("K48").Value = "Tiempo Subs";
+                        xlWorkSheet1.get_Range("L48").Value = datos.TSubstrato;
+                        xlWorkSheet1.get_Range("K49").Value = "STOP";
+                        xlWorkSheet1.get_Range("L49").Value = datos.STOP;
+
+                    string nombreArchivo = BASE_DIR + testName + " " + DateTime.Now.ToString("dd-MM-yyyy") +
+                                           " " + principal.txt_Placa.TextBox.Text + ".xls";
+                    xlWorkBook.SaveAs(nombreArchivo);
+                    xlWorkBook.Close(true);
+                    MyApp.Quit();
+                    }
+                    break;
+            }
+        }
+
+        private static void printResultados2(Excel.Worksheet xlWorkSheet1, Principal principal)
+        {
+            for (int i = 9; i <= 37; i += 4)
+            {
+                for (int j = 2; j <= 13; j++)
+                {
+                    int iIndex = ((int)(i / 4)) - 2;
+                    int jIndex = ((int)(j - 2));
+                    xlWorkSheet1.Cells[i, j].Value = principal.Resultados1[iIndex, jIndex];
+                }
+            }
+        }
+
+        private static void printLecturas(Excel.Worksheet xlWorkSheet, Principal principal)
+        {
+            for (int i = 7; i <= 35; i += 4)
+            {
+                for (int j = 2; j <= 13; j++)
+                {
+                    int iIndex = ((int)(i / 4)) - 1;
+                    int jIndex = ((int)(j - 2));
+                    xlWorkSheet.Cells[i, j].Value = principal.Absorbancia[iIndex, jIndex];
+                }
+            }
+
+            xlWorkSheet.get_Range("A38").Value = "LABORATORISTA 1:";
+            xlWorkSheet.get_Range("A38").Font.Bold = true;
+            xlWorkSheet.get_Range("D38").Value = principal.cmb_Lab1.ComboBox.SelectedValue;
+            xlWorkSheet.get_Range("H38").Value = "LABORATORISTA 2:";
+            xlWorkSheet.get_Range("H38").Font.Bold = true;
+            xlWorkSheet.get_Range("K38").Value = principal.cmb_Lab2.ComboBox.SelectedValue;
+        }
+
+        private static void printHeader(Excel.Worksheet xlWorkSheet, Principal principal, string testName)
+        {
+            //Titulo
+            xlWorkSheet.get_Range("A1").Value = "MINISTERIO DE SALUD NICARAGUA";
+            xlWorkSheet.get_Range("A1:M1").Merge();
+            xlWorkSheet.get_Range("A1").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            xlWorkSheet.get_Range("A1").Font.Bold = true;
+            xlWorkSheet.get_Range("A1").Font.Size = 12;
+            xlWorkSheet.get_Range("A1").RowHeight = 21.75;
+
+            //Subtitulo
+            xlWorkSheet.get_Range("A2").Value =
+                "CENTRO NACIONAL DE DIAGNOSTICO Y REFERENCIA - DEPARTAMENTO DE VIROLOGIA";
+            xlWorkSheet.get_Range("A2:M2").Merge();
+            xlWorkSheet.get_Range("A2").Font.Size = 12;
+            xlWorkSheet.get_Range("A2").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            xlWorkSheet.get_Range("A2").Font.Bold = true;
+            xlWorkSheet.get_Range("A2").RowHeight = 21.75;
+
+            xlWorkSheet.get_Range("A3").Value = "TEST DE ELISA:";
+            xlWorkSheet.get_Range("A3").Font.Bold = true;
+            xlWorkSheet.get_Range("A3").RowHeight = 21.75;
+
+            xlWorkSheet.get_Range("A4").Value = "ANALISIS DE:";
+            xlWorkSheet.get_Range("A4").Font.Bold = true;
+            xlWorkSheet.get_Range("A4").RowHeight = 21.75;
+
+            xlWorkSheet.get_Range("K3").Value = "FECHA:";
+            xlWorkSheet.get_Range("K3").Font.Bold = true;
+            xlWorkSheet.get_Range("K3").RowHeight = 21.75;
+
+            xlWorkSheet.get_Range("K4").Value = "PLACA:";
+            xlWorkSheet.get_Range("K4").Font.Bold = true;
+            xlWorkSheet.get_Range("K4").RowHeight = 21.75;
+
+            int[] intArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+            Excel.Range rngHeaderNumber = xlWorkSheet.get_Range("B5", "M5");
+            rngHeaderNumber.Value = intArray;
+            rngHeaderNumber.RowHeight = 21.75;
+            rngHeaderNumber.ColumnWidth = 9;
+
+            int index = 0;
+            for (int i = 6; i <= 34; i += 4)
+            {
+                xlWorkSheet.Cells[i, 1] = rowHeaderNames()[index];
+                index++;
+            }
+
+            xlWorkSheet.get_Range("6:37").RowHeight = 10;
+
+            for (int i = 6; i <= 34; i += 4)
+            {
+                xlWorkSheet.get_Range("A" + i + ":A" + (i + 3)).Merge();
+                xlWorkSheet.get_Range("A" + i + ":A" + (i + 3)).VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+                xlWorkSheet.get_Range("A" + i + ":A" + (i + 3)).HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            }
+
+            xlWorkSheet.get_Range("A5:M5").Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+            xlWorkSheet.get_Range("A5:M5").Font.Bold = true;
+            xlWorkSheet.get_Range("A5:A37").Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+            xlWorkSheet.get_Range("A5:A37").Font.Bold = true;
+            xlWorkSheet.get_Range("A5:A37").Interior.ColorIndex = 15;
+
+            var range = xlWorkSheet.get_Range("B6", "M37");
+            foreach (Excel.Range cell in range.Cells)
+            {
+                cell.Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+                cell.Font.Size = 8;
+                cell.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+                cell.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            }
+
+            for (int i = 9; i <= 37; i += 4)
+            {
+                xlWorkSheet.get_Range("B" + i, "M" + i).Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle =
+                    Excel.XlLineStyle.xlContinuous;
+            }
+            string[,] protocolo = new string[8, 12];
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 12; j++)
+                {
+                    protocolo[i, j] = principal.dgv_Protocolo.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            for (int i = 6; i <= 34; i += 4)
+            {
+                for (int j = 2; j <= 13; j++)
+                {
+                    int iIndex = ((int)(i / 4)) - 1;
+                    int jIndex = (int)(j - 2);
+                    xlWorkSheet.Cells[i, j].Value = protocolo[iIndex, jIndex];
+                }
+            }
+            xlWorkSheet.get_Range("L3").Value = "-" + DateTime.Now.ToString("dd/MM/yyyy") + "-";
+            xlWorkSheet.get_Range("L4").Value = principal.txt_Placa.TextBox.Text;
+            xlWorkSheet.get_Range("C3").Value = testName.Remove(testName.IndexOf("Protocolo "), "Protocolo ".Length);
+        }
+
+        private static void printResultados(Excel.Worksheet xlWorkSheet, Principal principal)
+        {
+            for (int i = 9; i <= 37; i += 4)
+            {
+                for (int j = 2; j <= 13; j++)
+                {
+                    int iIndex = ((int)(i / 4)) - 2;
+                    int jIndex = ((int)(j - 2));
+                    xlWorkSheet.Cells[i, j].Value = principal.Resultados[iIndex, jIndex];
+                }
+            }
+        }
+
+        //Formato_Excel_Unidades
+        private static void printUnidades(Excel.Worksheet xlWorkSheet, Principal principal)
+        {
+            for (int i = 8; i <= 36; i += 4)
+            {
+                for (int j = 2; j <= 13; j++)
+                {
+                    int iIndex = ((int)(i / 4)) - 2;
+                    int jIndex = ((int)(j - 2));
+                    xlWorkSheet.Cells[i, j].Value = Single.Parse(principal.Unidades[iIndex, jIndex]).ToString("0.00");
+                }
             }
         }
     }
