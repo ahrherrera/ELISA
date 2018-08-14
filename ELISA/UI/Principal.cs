@@ -36,7 +36,7 @@ namespace ELISA.UI
         public Single cn;
         public Single cpR;
         public Single cnR;
-        public Single MxCP, MxCN, MxCNS, med3men;
+        public Single MxCP, MxCN, MxCNS, med3men, MxCNEI;
 
         public String [,] Unidades = new string[8,12];
         public String [,] Absorbancia = new string[8,12];
@@ -363,12 +363,27 @@ namespace ELISA.UI
             txt_val5.Visible = true;
             txt_val6.Visible = true;
             txt_val7.Visible = true;
+            lbl_val1.Text = "";
+            lbl_val2.Text = "";
+            lbl_val3.Text = "";
+            lbl_val4.Text = "";
+            lbl_val5.Text = "";
+            lbl_val6.Text = "";
+            lbl_val7.Text = "";
             //TODO Aca colocar lo label de Resultados
             if (cmb_EI.Enabled) 
             {
                 groupProtocol.Text = "Protocolo " + cmb_EI.SelectedItem.ToString();
                 groupValidar.Text = "Validación " + cmb_EI.SelectedItem.ToString();
                 string selectedItem = cmb_EI.SelectedItem.ToString();
+
+                lbl_val1.Text = "Valor de Corte: ";
+                lbl_val2.Text = "Media de los controles positivos: ";
+                lbl_val3.Text = "Media de los controles negativos: ";
+                txt_val4.Visible = false;
+                txt_val5.Visible = false;
+                txt_val6.Visible = false;
+                txt_val7.Visible = false;
 
                 if (selectedItem.Equals("ELISA INH Monoclonal Chik"))
                 {
@@ -427,11 +442,6 @@ namespace ELISA.UI
                     SelectTest(MainUtils.Test.IgMZikaBei);
                     lbl_val1.Text = "Suero Control Negativo Humano DDO < 0.2";
                     lbl_val2.Text = "Suero Control Positivo IgM Humano anti-Zika DDO > 0.8";
-                    lbl_val3.Text = "";
-                    lbl_val4.Text = "";
-                    lbl_val5.Text = "";
-                    lbl_val6.Text = "";
-                    lbl_val7.Text = "";
                     txt_val3.Visible = false;
                     txt_val4.Visible = false;
                     txt_val5.Visible = false;

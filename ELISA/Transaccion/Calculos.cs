@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration.Internal;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -51,7 +52,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CA+"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -89,7 +90,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CB+"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -126,7 +127,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("C-"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -170,7 +171,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CR+"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -230,7 +231,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CR-"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -357,7 +358,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("C+"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -396,7 +397,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("C-"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -450,7 +451,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CR+"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -500,7 +501,7 @@ namespace ELISA.Transaccion
                     {
                         if (protocolo[i, j].StartsWith("CR+"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -604,13 +605,13 @@ namespace ELISA.Transaccion
             //Calculo Controles Positivos
             int cont;
             Single ac, cc, columpio;
-            Single[] m3men = new Single[] {3, 3, 3};
+            Single[] m3men = new Single[] { 3, 3, 3 };
             datosprotocoloigg datos = DatosProtocoloIgG.TraerDatosprotocoloIgG();
             try
             {
                 ac = 0;
                 cont = 0;
-                
+
                 for (int i = 0; i < 8; i++)
                 {
                     for (int j = 0; j < 12; j++)
@@ -618,7 +619,7 @@ namespace ELISA.Transaccion
                         cc = -120;
                         if (protocolo[i, j].StartsWith("C+"))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char) 8203)))
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
@@ -629,7 +630,7 @@ namespace ELISA.Transaccion
                     }
                 }
 
-                if (cont <2)
+                if (cont < 2)
                 {
                     MessageBox.Show("No Cumple criterios",
                         "Verifique sus datos", MessageBoxButtons.OK,
@@ -754,11 +755,13 @@ namespace ELISA.Transaccion
                                     m3men[2] = m3men[1];
                                     m3men[1] = m3men[0];
                                     m3men[0] = columpio;
-                                }else if (columpio< m3men[1])
+                                }
+                                else if (columpio < m3men[1])
                                 {
                                     m3men[2] = m3men[1];
                                     m3men[1] = columpio;
-                                }else if (columpio < m3men[2])
+                                }
+                                else if (columpio < m3men[2])
                                 {
                                     m3men[2] = columpio;
                                 }
@@ -774,8 +777,706 @@ namespace ELISA.Transaccion
             }
             catch (IOException ex)
             {
+                MessageBox.Show("Error detectado: " + ex.StackTrace);
+            }
+        }
+
+        public void CalcularIgMZikaBei(Principal parent)
+        {
+            DataGridView tablaLectura = parent.dgv_Lectura;
+            DataGridView tablaProtocolo = parent.dgv_Protocolo;
+            String[,] lectura = new string[8, 12];
+            String[,] protocolo = new string[8, 12];
+
+            parent.btn_Save.Enabled = true;
+
+            //Recolectar los datos de las tablas a una matriz
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 12; j++)
+                {
+                    lectura[i, j] = tablaLectura.Rows[i].Cells[j].Value.ToString();
+                    protocolo[i, j] = tablaProtocolo.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            //Calcular Controles Positivos / Densidad optica de los controles positivos
+            int cont;
+            Single ac, odcontrolv, odcontroln;
+            try
+            {
+                ac = 0;
+                cont = 0;
+
+                for (int i = 0; i < 8; i++)
+                {
+                    for (int j = 0; j < 12; j++)
+                    {
+                        if (protocolo[i, j].StartsWith("C+v"))
+                        {
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                            {
+                                if (i != 7 && j != 11)
+                                {
+                                    odcontrolv = Single.Parse(lectura[i, j]);
+                                    odcontroln = Single.Parse(lectura[i, j + 1]);
+                                }
+                                else
+                                {
+                                    odcontrolv = Single.Parse(lectura[i, j]);
+                                    odcontroln = 0;
+                                }
+                                cont++;
+                                if (parent.txt_val2.Text.Equals(""))
+                                {
+                                    parent.txt_val2.Text = (odcontrolv - odcontroln).ToString("0.000");
+                                }
+                                else
+                                {
+                                    parent.txt_val2.Text += " , " + (odcontrolv - odcontroln).ToString("0.000");
+                                }
+
+                                if ((odcontrolv - odcontroln) <= 0.8)
+                                {
+                                    MessageBox.Show("Control positivo no cumple criterios de validacion",
+                                        "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                                    parent.btn_Save.Enabled = false;
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                    return;
+                                }
+                            }
+
+
+                        }
+
+                    }
+                }
+
+                if (cont < 1)
+                {
+                    MessageBox.Show("No existe control positivo",
+                        "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    parent.btn_Save.Enabled = false;
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                    return;
+                }
+
+                //Calculo controles negativos / Densidad optica de los controles negativos
+
+                cont = 0;
+
+                for (int i = 0; i < 8; i++)
+                {
+                    for (int j = 0; j < 12; j++)
+                    {
+                        if (protocolo[i, j].StartsWith("C-v"))
+                        {
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                            {
+                                if (i != 7 && j != 11)
+                                {
+                                    odcontrolv = Single.Parse(lectura[i, j]);
+                                    odcontroln = Single.Parse(lectura[i, j + 1]);
+                                }
+                                else
+                                {
+                                    odcontrolv = Single.Parse(lectura[i, j]);
+                                    odcontroln = 0;
+                                }
+
+                                cont++;
+
+                                if (parent.txt_val1.Text.Equals(""))
+                                {
+                                    parent.txt_val1.Text = (odcontrolv - odcontroln).ToString("0.000");
+                                }
+                                else
+                                {
+                                    parent.txt_val1.Text += " , " + (odcontrolv - odcontroln).ToString("0.000");
+                                }
+
+                                if ((odcontrolv - odcontroln) >= 0.2)
+                                {
+                                    MessageBox.Show("Control negativo no cumple criterios de validacion",
+                                        "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                                    parent.btn_Save.Enabled = false;
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                    return;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                if (cont < 1)
+                {
+                    MessageBox.Show("No existe control negativo",
+                        "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    parent.btn_Save.Enabled = false;
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                    return;
+                }
+
+                parent.btn_Save.Enabled = true;
+                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = false;
 
             }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Error detectado: " + ex.StackTrace);
+            }
+        }
+
+        public void CalcularEINH(Principal parent)
+        {
+            DataGridView tablaLectura = parent.dgv_Lectura;
+            DataGridView tablaProtocolo = parent.dgv_Protocolo;
+            String[,] lectura = new string[8, 12];
+            String[,] protocolo = new string[8, 12];
+
+            parent.btn_Save.Enabled = true;
+
+            //Recolectar los datos de las tablas a una matriz
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 12; j++)
+                {
+                    lectura[i, j] = tablaLectura.Rows[i].Cells[j].Value.ToString();
+                    protocolo[i, j] = tablaProtocolo.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            int cont;
+            Single ac, cc;
+            List<Single> cpE = new List<Single>();
+            List<String> cpC = new List<String>();
+            int cps, e, a;
+            double w;
+            long Y = 0;
+            String Tit = "";
+            Boolean flag50;
+            datosprotocoloei datosEI = null;
+            datosprotocoloeizika datosEIZika = null;
+            try
+            {
+                ac = 0;
+                cont = 0;
+                if (parent.selectedTest == 30 || parent.selectedTest == 31)
+                {
+                    datosEIZika = DatosProtocoloEI.TraerDatosProtocoloEIZika();
+                }
+                else
+                {
+                    datosEI = DatosProtocoloEI.TraerDatosProtocoloEI();
+                }
+
+                // Calculo de Controles Negativos
+                for (int i = 0; i < 8; i++)
+                {
+                    for (int j = 0; j < 12; j++)
+                    {
+                        if (protocolo[i, j].StartsWith("C-"))
+                        {
+                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                            {
+                                cc = Single.Parse(lectura[i, j]);
+                                ac += Single.Parse(lectura[i, j]);
+                                cont++;
+
+                                if (cc != -120)
+                                {
+                                    if (cc != -120)
+                                    {
+                                        if (parent.selectedTest == 30 || parent.selectedTest == 31)
+                                        {
+                                            if (!(cc >= datosEIZika.ControlNegLI && cc <= datosEIZika.ControlNegLS))
+                                            {
+                                                MessageBox.Show(protocolo[i, j] + " No cumple Criterios",
+                                                    "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                parent.btn_Save.Enabled = false;
+                                                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                                return;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (!(cc >= datosEI.ControlNegLI && cc <= datosEI.ControlNegLS))
+                                            {
+                                                MessageBox.Show(protocolo[i, j] + " No cumple Criterios",
+                                                    "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                parent.btn_Save.Enabled = false;
+                                                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                                return;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                if (cont < 2)
+                {
+                    MessageBox.Show("No cumple Criterios en los controles negativos",
+                        "Verifique su protocolo de trabajo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    parent.btn_Save.Enabled = false;
+                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                    return;
+                }
+                else
+                {
+                    parent.MxCNEI = ac / cont;
+                    parent.txt_val3.Text = parent.MxCNEI.ToString("0.000");
+                }
+
+                parent.txt_val1.Text = (parent.MxCNEI / 2).ToString("0.000");
+
+                e = 0;
+                for (int i = 0; i < 8; i++)
+                {
+                    for (int j = 0; j < 12; j++)
+                    {
+                        if (protocolo[i, j].StartsWith("CPd"))
+                        {
+                            cpC.Add(protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2));
+                            Single lect = Single.Parse(lectura[i, j]);
+                            Single resultado = (1 - (lect / parent.MxCNEI)) * 100;
+                            cpE.Add(Convert.ToSingle(resultado.ToString("0.000")));
+                            e++;
+                        }
+                    }
+                }
+
+                flag50 = false;
+
+                for (int i = 0; i <= e - 1; i++)
+                {
+                    if (cpE[i] < 50)
+                    {
+                        flag50 = true;
+                        switch (i)
+                        {
+                            case 0:
+                                {
+                                    switch (cpC[i])
+                                    {
+                                        case "d1":
+                                            {
+                                                Tit = "<10";
+                                            }
+                                            break;
+                                        case "d2":
+                                            {
+                                                Tit = "<100";
+                                            }
+                                            break;
+
+                                        case "d3":
+                                            {
+                                                Tit = "<1000";
+                                            }
+                                            break;
+                                        case "d6":
+                                            {
+                                                Tit = "<20";
+                                            }
+                                            break;
+                                        case "d7":
+                                            {
+                                                Tit = "<200";
+                                            }
+                                            break;
+                                        case "d8":
+                                            {
+                                                Tit = "<2000";
+                                            }
+                                            break;
+                                    }
+
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    switch (cpC[i])
+                                    {
+                                        case "d2":
+                                            {
+                                                if (i==0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(10);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i-1] - 50) / (cpE[i-1] - cpE[i])) + Math.Log10(10);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "d3":
+                                        {
+                                            if (i == 0)
+                                            {
+                                                w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(100);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                            else
+                                            {
+                                                w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(100);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                        }
+                                            break;
+                                        case "d4":
+                                        {
+                                            if (i == 0)
+                                            {
+                                                w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(1000);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                            else
+                                            {
+                                                w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(1000);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                        }
+                                            break;
+                                        case "d7":
+                                        {
+                                            if (i == 0)
+                                            {
+                                                w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(20);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                            else
+                                            {
+                                                w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(20);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                        }
+                                            break;
+                                        case "d8":
+                                        {
+                                            if (i == 0)
+                                            {
+                                                w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(200);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                            else
+                                            {
+                                                w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(200);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                        }
+                                            break;
+                                        case "d9":
+                                        {
+                                            if (i == 0)
+                                            {
+                                                w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(2000);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                            else
+                                            {
+                                                w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(2000);
+                                                Y = Convert.ToInt64(Math.Pow(10, w));
+                                            }
+                                        }
+                                            
+                                            break;
+                                    }
+                                    Tit = Convert.ToString(Y);
+                                    break;
+                                }
+                            case 2:
+                            {
+                                    switch (cpC[i])
+                                    {
+                                        case "d3":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(100);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(100);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "d4":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(1000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(1000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "d5":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(10000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(10000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "d8":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(200);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(200);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "d9":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(2000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(2000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "10":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(20000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(20000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+
+                                            break;
+                                    }
+                                    Tit = Convert.ToString(Y);
+                                    break;
+                            }
+                            case 3:
+                            {
+                                    switch (cpC[i])
+                                    {
+                                        case "d4":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(1000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(1000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "d5":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(10000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(10000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "d9":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(2000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(2000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "10":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(20000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(20000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                    }
+                                    Tit = Convert.ToString(Y);
+                                    break;
+                                }
+                            case 4:
+                            {
+                                    switch (cpC[i])
+                                    {
+                                        case "d5":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(10000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(10000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                        case "10":
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    w = ((0 - 50) / (0 - cpE[i])) + Math.Log10(20000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                                else
+                                                {
+                                                    w = ((cpE[i - 1] - 50) / (cpE[i - 1] - cpE[i])) + Math.Log10(20000);
+                                                    Y = Convert.ToInt64(Math.Pow(10, w));
+                                                }
+                                            }
+                                            break;
+                                    }
+                                    Tit = Convert.ToString(Y);
+                                    break;
+                                }
+                                
+                        }
+                    }
+
+                    if (flag50)
+                    {
+                        if (flag50== false)
+                        {
+                            i = e - 1;
+                            switch (cpC[i])
+                            {
+                                case "d3":
+                                {
+                                    Tit = ">1000";
+                                    break;
+                                }
+                                case "d4":
+                                {
+                                    Tit = ">10000";
+                                    break;
+                                }
+                                case "d5":
+                                {
+                                    Tit = ">100000";
+                                    break;
+                                }
+                                case "d8":
+                                {
+                                    Tit = ">2000";
+                                    break;
+                                }
+                                case "d9":
+                                {
+                                    Tit = ">20000";
+                                    break;
+                                }
+                                case "10":
+                                {
+                                    Tit = ">200000";
+                                    break;
+                                }
+                            }
+                        }
+
+                        parent.txt_val2.Text = Tit;
+
+                        if (parent.selectedTest == 11 || parent.selectedTest == 30 || parent.selectedTest == 31)
+                        {
+                            if ((Y < 1000 && Y!=0) || Tit == "<10" || Tit == "<100" || Tit== "<1000")
+                            {
+                                parent.btn_Save.Enabled = false;
+                                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                MessageBox.Show("No cumple criterio de Validación", "Verifique", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            if ((Y < 4500 && Y != 0) || Tit == "<10" || Tit == "<100" || Tit == "<1000")
+                            {
+                                if (parent.selectedTest == 9)
+                                {
+                                    parent.btn_Save.Enabled = true;
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = false;
+                                }
+                                else
+                                {
+                                    parent.btn_Save.Enabled = false;
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                    MessageBox.Show("No cumple criterio de Validación", "Verifique", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+                parent.btn_Save.Enabled = true;
+                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = false;
+
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Error detectado: " + ex.StackTrace);
+            }
+
         }
     }
 }

@@ -30,6 +30,25 @@ namespace ELISA.Transaccion.DatosProtocoloTrans
                 return null;
             }
         }
+        public static datosprotocoloeizika TraerDatosProtocoloEIZika()
+        {
+            try
+            {
+                using (var context = new elisaEntities2())
+                {
+                    datosprotocoloeizika dat;
+                    var listaProtocolo = context.datosprotocoloeizikas.ToList();
+                    dat = listaProtocolo[0];
+                    return dat;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema conectando a la base de datos.\n Por favor contacte al administrador del Sistema", "Error detectado");
+                Log.logError("Error capturado: Trace: " + ex.StackTrace);
+                return null;
+            }
+        }
 
         public static void updateProtocoloEI(datosprotocoloei data)
         {
