@@ -314,10 +314,12 @@
     </Compile>
     <Compile Include="Transaccion\Calculos.cs" />
     <Compile Include="Transaccion\ControlesTrans.cs" />
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloChik.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloEI.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgG.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgMZika.cs" />
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloRotavirus.cs" />
     <Compile Include="Transaccion\ElisaIGMTrans.cs" />
     <Compile Include="Transaccion\EstudioTrans.cs" />
     <Compile Include="Transaccion\LaboratoristasTrans.cs" />

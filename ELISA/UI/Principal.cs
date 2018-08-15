@@ -36,7 +36,7 @@ namespace ELISA.UI
         public Single cn;
         public Single cpR;
         public Single cnR;
-        public Single MxCP, MxCN, MxCNS, med3men, MxCNEI;
+        public Single MxCP, MxCN, MxCNS, med3men, MxCNEI, MxCPEI;
 
         public String [,] Unidades = new string[8,12];
         public String [,] Absorbancia = new string[8,12];
@@ -452,10 +452,24 @@ namespace ELISA.UI
                 }else if (selectedItem.Equals("Chikungunya CDC/CNDR"))
                 {
                     SelectTest(MainUtils.Test.ChinkungunyaCDCCNDR);
+                    lbl_val1.Text = "Validación: ";
+                    lbl_val2.Text = "Media CN: ";
+                    lbl_val3.Text = "Media CP: ";
+                    txt_val4.Visible = false;
+                    txt_val5.Visible = false;
+                    txt_val6.Visible = false;
+                    txt_val7.Visible = false;
                     SetOpcionesChikCndr();
                 }else if (selectedItem.Equals("Chikungunya CNDR"))
                 {
                     SelectTest(MainUtils.Test.ChinkungunyaCNDR);
+                    lbl_val1.Text = "Validación: ";
+                    lbl_val2.Text = "Media CN: ";
+                    lbl_val3.Text = "Media CP: ";
+                    txt_val4.Visible = false;
+                    txt_val5.Visible = false;
+                    txt_val6.Visible = false;
+                    txt_val7.Visible = false;
                     SetOpcionesChik();
                 }
             }
@@ -464,6 +478,13 @@ namespace ELISA.UI
                 groupProtocol.Text = "Protocolo " + cmb_BOB.SelectedItem.ToString();
                 groupValidar.Text = "Validación " + cmb_BOB.SelectedItem.ToString();
                 string selectedItem = cmb_BOB.SelectedItem.ToString();
+                lbl_val1.Text = "MDO MAX >=0.9: ";
+                lbl_val2.Text = "MDO MIN < 0.98: ";
+                lbl_val3.Visible = false;
+                txt_val4.Visible = false;
+                txt_val5.Visible = false;
+                txt_val6.Visible = false;
+                txt_val7.Visible = false;
 
                 if (selectedItem.Equals("Zika BOB"))
                 {
@@ -488,19 +509,18 @@ namespace ELISA.UI
                 groupProtocol.Text = "Protocolo " + cmb_IgG.SelectedItem.ToString();
                 groupValidar.Text = "Validación " + cmb_IgG.SelectedItem.ToString();
                 string selectedItem = cmb_IgG.SelectedItem.ToString();
+
+                lbl_val1.Text = "Media de los C- de Saliva: ";
+                lbl_val2.Text = "Media de los Controles Positivos: ";
+                lbl_val3.Text = "Media de los Controles Negativos: ";
+                lbl_val4.Text = "Media de las 3 DO mas bajas: ";
+                txt_val5.Visible = false;
+                txt_val6.Visible = false;
+                txt_val7.Visible = false;
+
                 if (selectedItem.Equals("Saliva CIET"))
                 {
                     SelectTest(MainUtils.Test.SalivaCIET);
-                    lbl_val1.Text = "Media de los C- de Saliva: ";
-                    lbl_val2.Text = "Media de los Controles Positivos: ";
-                    lbl_val3.Text = "Media de los Controles Negativos: ";
-                    lbl_val4.Text = "Media de las 3 DO mas bajas: ";
-                    lbl_val5.Text = "";
-                    lbl_val6.Text = "";
-                    lbl_val7.Text = "";
-                    txt_val5.Visible = false;
-                    txt_val6.Visible = false;
-                    txt_val7.Visible = false;
                     SetOpcionesOptIgG();
                 }else if (selectedItem.Equals("Saliva CIET Repeticiones"))
                 {
@@ -512,6 +532,15 @@ namespace ELISA.UI
             {
                 groupProtocol.Text = "Protocolo " + cmb_1D.SelectedItem.ToString();
                 groupValidar.Text = "Validación " + cmb_1D.SelectedItem.ToString();
+
+                lbl_val1.Text = "Valor de Corte: ";
+                lbl_val2.Text = "Media de los controles positivos: ";
+                lbl_val3.Text = "Media de los controles negativos: ";
+                lbl_val4.Visible = false;
+                txt_val5.Visible = false;
+                txt_val6.Visible = false;
+                txt_val7.Visible = false;
+
                 string selectedItem = cmb_1D.SelectedItem.ToString();
 
                 if (selectedItem.Equals("ELISA 1D Cohorte Anual"))
@@ -554,6 +583,14 @@ namespace ELISA.UI
                 groupProtocol.Text = "Protocolo " + cmb_RM.SelectedItem.ToString();
                 groupValidar.Text = "Validación " + cmb_RM.SelectedItem.ToString();
                 string selectedItem = cmb_RM.SelectedItem.ToString();
+
+                lbl_val1.Text = "Valor de Corte: ";
+                lbl_val2.Text = "Media de los controles positivos: ";
+                lbl_val3.Text = "Media de los controles negativos: ";
+                lbl_val4.Visible = false;
+                txt_val5.Visible = false;
+                txt_val6.Visible = false;
+                txt_val7.Visible = false;
 
                 if (selectedItem.Equals("R and M Cohorte Anual"))
                 {
@@ -708,6 +745,30 @@ namespace ELISA.UI
             rb_Opt3.Text = "Control Positivo";
             rb_opt2.Text = "Control Negativo";
             rb_Opt1.Text = "S/Muestra";
+
+            //Label de Resultados Rotavirus
+
+            txt_val1.Visible = true;
+            txt_val2.Visible = true;
+            txt_val3.Visible = true;
+            txt_val4.Visible = true;
+            txt_val5.Visible = true;
+            txt_val6.Visible = true;
+            txt_val7.Visible = true;
+            lbl_val1.Text = "";
+            lbl_val2.Text = "";
+            lbl_val3.Text = "";
+            lbl_val4.Text = "";
+            lbl_val5.Text = "";
+            lbl_val6.Text = "";
+            lbl_val7.Text = "";
+            lbl_val1.Text = "VC: ";
+            lbl_val2.Text = "Media CN: ";
+            lbl_val3.Text = "Media CP: ";
+            txt_val4.Visible = false;
+            txt_val5.Visible = false;
+            txt_val6.Visible = false;
+            txt_val7.Visible = false;
         }
 
         private void SetOpcionesRm()
