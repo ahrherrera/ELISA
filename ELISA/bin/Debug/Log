@@ -1,56 +1,373 @@
-ELISA.exe Information: 0 : 04-07-2018 01:01:10	Aplicación Iniciada
-ELISA.exe Information: 0 : 04-07-2018 01:01:23	Splash Iniciado
-ELISA.exe Information: 0 : 04-07-2018 01:01:24	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 04-07-2018 01:01:25	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 04-07-2018 01:01:25	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 04-07-2018 01:01:25	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 04-07-2018 01:01:27	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 04-07-2018 01:01:27	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 04-07-2018 01:01:28	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 04-07-2018 01:01:28	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 04-07-2018 01:01:28	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 04-07-2018 01:01:28	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 04-07-2018 01:03:39	Aplicación Terminada
-ELISA.exe Information: 0 : 04-07-2018 01:03:39	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 04-07-2018 01:03:39	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 19-07-2018 06:53:12	Aplicación Iniciada
-ELISA.exe Error: 0 : Authentication to host 'localhost' for user 'elisa' using method 'mysql_native_password' failed with message: Access denied for user 'elisa'@'localhost' (using password: YES)
-ELISA.exe Error: 0 : 19-07-2018 06:53:19	Error capturado: Trace:    at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
-   at System.Data.EntityClient.EntityConnection.Open()
-   at System.Data.Objects.ObjectContext.EnsureConnection()
-   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
-   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
-   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
-   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   at ELISA.Transaccion.DatosProtocoloTrans.DatosProtocoloIgM.TraerDatosProtocoloIgM() in C:\Users\ahrhe\Documents\Visual Studio 2017\Projects\ELISA\ELISA\Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs:line 22
-ELISA.exe Information: 0 : 19-07-2018 06:53:19	Splash Iniciado
-ELISA.exe Information: 0 : 19-07-2018 06:53:20	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 19-07-2018 06:53:20	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 19-07-2018 06:53:20	Arrancar la ventana de autenticación
-ELISA.exe Error: 0 : Authentication to host 'localhost' for user 'elisa' using method 'mysql_native_password' failed with message: Access denied for user 'elisa'@'localhost' (using password: YES)
-ELISA.exe Information: 0 : 19-07-2018 06:55:22	Aplicación Iniciada
-ELISA.exe Information: 0 : 19-07-2018 06:55:26	Splash Iniciado
-ELISA.exe Information: 0 : 19-07-2018 06:55:27	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 19-07-2018 06:55:27	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 19-07-2018 06:55:27	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 19-07-2018 06:55:27	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 19-07-2018 06:55:29	Aplicación Terminada
-ELISA.exe Information: 0 : 19-07-2018 06:55:29	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 19-07-2018 06:55:29	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 22-07-2018 12:58:09	Aplicación Iniciada
-ELISA.exe Information: 0 : 22-07-2018 12:58:12	Splash Iniciado
-ELISA.exe Information: 0 : 22-07-2018 12:58:13	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 22-07-2018 12:58:14	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 22-07-2018 12:58:14	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 22-07-2018 12:58:14	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 22-07-2018 12:58:27	Aplicación Terminada
-ELISA.exe Information: 0 : 22-07-2018 12:58:27	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 22-07-2018 12:58:27	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 26-07-2018 12:45:18	Aplicación Iniciada
-PROBLEM: Not implied Key (V0) - <0:datosprotocoloigmzikas.idDatosProtocoloIgM-datosprotocoloigmzika.idDatosProtocoloIgM>
-ERROR (3002): Problem in Mapping Fragment starting at line 2025: Potential runtime violation of table datosprotocoloigmzika's keys (datosprotocoloigmzika.idDatosProtocoloIgM): Columns (datosprotocoloigmzika.idDatosProtocoloIgM) are mapped to EntitySet datosprotocoloigmzikas's properties (datosprotocoloigmzikas.idDatosProtocoloIgM) on the conceptual side but they do not form the EntitySet's key properties (datosprotocoloigmzikas.Conjugado, datosprotocoloigmzikas.ControlNeg, datosprotocoloigmzikas.ControlNegLI, datosprotocoloigmzikas.ControlNegLS, datosprotocoloigmzikas.ControlNegRadLI, datosprotocoloigmzikas.ControlNegRadLS, datosprotocoloigmzikas.ControlPos, datosprotocoloigmzikas.ControlPosLI, datosprotocoloigmzikas.ControlPosLS, datosprotocoloigmzikas.ControlPosRadLI, datosprotocoloigmzikas.ControlPosRadLS, datosprotocoloigmzikas.ControlRadNeg, datosprotocoloigmzikas.ControlRadPos, datosprotocoloigmzikas.Factor, datosprotocoloigmzikas.Factor2, datosprotocoloigmzikas.LoteAntigeno, datosprotocoloigmzikas.LoteIgM, datosprotocoloigmzikas.SHN, datosprotocoloigmzikas.STOP, datosprotocoloigmzikas.Substrato, datosprotocoloigmzikas.idDatosProtocoloIgM).
+ELISA.exe Information: 0 : 30-08-2018 03:12:40	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 03:12:44	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 03:12:45	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 03:12:46	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 03:12:46	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 03:12:46	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 03:12:47	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 03:12:47	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 03:12:47	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 03:12:47	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 03:12:48	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 03:12:48	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 03:15:21	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 03:15:21	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 03:19:33	Aplicación Terminada
+ELISA.exe Information: 0 : 30-08-2018 03:19:33	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 03:19:33	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 04:13:17	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 04:13:22	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 04:13:23	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 04:13:23	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 04:13:23	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 04:13:23	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 04:13:25	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 04:13:25	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 04:13:25	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 04:13:26	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:13:26	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:13:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:32:44	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:32:44	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:34:41	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:34:41	Lista de estudio cargado correctamente
+ELISA.exe Error: 0 : 30-08-2018 04:34:50	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:51	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:52	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:52	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:52	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:53	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:53	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:53	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:53	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:53	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:53	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:54	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:54	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:54	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:55	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:55	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:56	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:56	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:56	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:57	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:57	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:57	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:58	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:58	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:58	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:59	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:34:59	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:00	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:00	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:00	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:00	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:01	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:01	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:01	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:01	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:01	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:02	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:03	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:03	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:03	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:03	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:03	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:03	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:03	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:04	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:04	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:04	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:04	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:04	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:04	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:04	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:05	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:05	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:05	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:05	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:05	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:05	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:05	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:06	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:06	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:06	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:06	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:06	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:06	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:07	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:07	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:07	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:07	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:07	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:07	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:07	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 30-08-2018 04:35:08	Error capturado: Trace: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Information: 0 : 30-08-2018 04:36:58	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 04:37:02	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 04:37:03	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 04:37:03	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 04:37:03	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 04:37:03	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 04:37:06	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 04:37:06	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 04:37:06	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 04:37:07	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:37:07	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:37:07	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:37:42	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 04:37:48	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 04:37:49	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 04:37:49	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 04:37:49	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 04:37:49	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 04:37:50	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 04:37:50	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 04:37:50	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 04:37:51	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:37:51	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:37:52	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:38:29	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:38:29	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:42:20	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 04:42:23	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 04:42:24	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 04:42:24	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 04:42:24	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 04:42:25	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 04:42:26	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 04:42:26	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 04:42:26	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 04:42:26	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:42:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:42:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:42:53	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:42:53	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:42:59	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:42:59	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:45:19	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 04:45:22	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 04:45:23	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 04:45:23	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 04:45:23	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 04:45:24	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 04:45:26	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 04:45:26	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 04:45:26	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 04:45:26	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:45:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:45:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:45:53	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 04:45:53	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 05:42:17	Aplicación Terminada
+ELISA.exe Information: 0 : 30-08-2018 05:42:17	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 05:42:17	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 06:53:55	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 06:53:59	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 06:54:00	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 06:54:00	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 06:54:00	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 06:54:00	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 06:54:01	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 06:54:01	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 06:54:02	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 06:54:02	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 06:54:02	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 06:54:03	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 06:54:58	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 06:54:58	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:02:43	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:02:47	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:02:48	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:02:48	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:02:48	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:02:48	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:02:50	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:02:50	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:02:50	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:02:50	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:02:51	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:02:51	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:04:06	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:04:06	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:13:03	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:13:08	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:13:09	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:13:09	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:13:09	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:13:09	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:13:11	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:13:11	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:13:11	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:13:11	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:13:11	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:13:12	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:15:53	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:15:53	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:18:28	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:18:31	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:18:32	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:18:32	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:18:32	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:18:33	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:18:35	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:18:35	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:18:35	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:18:35	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:18:35	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:18:36	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:19:13	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:19:13	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:19:39	Aplicación Terminada
+ELISA.exe Information: 0 : 30-08-2018 07:19:39	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 07:19:39	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 07:23:14	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:23:18	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:23:19	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:23:19	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:23:19	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:23:19	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:23:20	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:23:20	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:23:20	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:23:21	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:23:21	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:23:21	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:23:46	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:23:46	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:24:22	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:24:26	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:24:27	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:24:27	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:24:27	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:24:27	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:24:29	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:24:29	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:24:29	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:24:29	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:24:29	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:24:30	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:29:18	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:29:18	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:30:20	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:30:25	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:30:26	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:30:26	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:30:26	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:30:26	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:30:39	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:30:39	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:30:39	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:30:39	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:30:40	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:30:40	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:33:17	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:33:21	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:33:22	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:33:22	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:33:22	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:33:22	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:33:32	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:33:36	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:33:37	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:33:37	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:33:37	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:33:37	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:33:39	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:33:39	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:33:39	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:33:40	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:33:40	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:33:41	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:34:12	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:34:12	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:39:38	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:39:43	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:39:44	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:39:45	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:39:45	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:39:45	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:39:46	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:39:46	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:39:46	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:39:46	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:39:47	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:39:47	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:40:14	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:40:14	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:54:34	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:54:38	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:54:39	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:54:39	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:54:40	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:54:40	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:54:41	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:54:41	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:54:41	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:54:41	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:54:42	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:54:42	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:54:52	Aplicación Terminada
+ELISA.exe Information: 0 : 30-08-2018 07:54:52	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 07:54:52	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 07:55:26	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 07:55:31	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 07:55:32	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 07:55:32	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 07:55:32	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 07:55:32	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 07:55:33	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 07:55:33	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 07:55:34	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 07:55:34	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:55:34	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:55:35	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 07:57:19	Aplicación Terminada
+ELISA.exe Information: 0 : 30-08-2018 07:57:19	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 07:57:19	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 09:06:16	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 09:06:19	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 09:06:20	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 09:06:20	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 09:06:20	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 09:06:20	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 09:06:22	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 09:06:22	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 09:06:22	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 09:06:22	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:06:23	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:06:23	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:07:02	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:07:02	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:11:26	Aplicación Iniciada
+ELISA.exe Information: 0 : 30-08-2018 09:11:31	Splash Iniciado
+ELISA.exe Information: 0 : 30-08-2018 09:11:32	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 30-08-2018 09:11:32	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 30-08-2018 09:11:32	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 30-08-2018 09:11:32	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 30-08-2018 09:11:34	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 30-08-2018 09:11:34	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 30-08-2018 09:11:34	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 30-08-2018 09:11:34	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:11:35	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:11:35	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:12:28	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:12:28	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 30-08-2018 09:14:50	Aplicación Terminada
+ELISA.exe Information: 0 : 30-08-2018 09:14:50	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 30-08-2018 09:14:50	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 10-09-2018 11:39:14	Aplicación Iniciada
+PROBLEM: Not implied Key (V0) - <0:datosprotocolochikmonoes.idDatosProtocoloChikMono-datosprotocolochikmono.idDatosProtocoloChikMono>
+ERROR (3002): Problem in Mapping Fragment starting at line 1912: Potential runtime violation of table datosprotocolochikmono's keys (datosprotocolochikmono.idDatosProtocoloChikMono): Columns (datosprotocolochikmono.idDatosProtocoloChikMono) are mapped to EntitySet datosprotocolochikmonoes's properties (datosprotocolochikmonoes.idDatosProtocoloChikMono) on the conceptual side but they do not form the EntitySet's key properties (datosprotocolochikmonoes.Conjugado, datosprotocolochikmonoes.ControlNeg, datosprotocolochikmonoes.ControlNegLI, datosprotocolochikmonoes.ControlNegLS, datosprotocolochikmonoes.ControlPos, datosprotocolochikmonoes.GGLOB, datosprotocolochikmonoes.LoteAntigeno, datosprotocolochikmonoes.LoteEI, datosprotocolochikmonoes.SHN, datosprotocolochikmonoes.STOP, datosprotocolochikmonoes.Substrato, datosprotocolochikmonoes.idDatosProtocoloChikMono).
 
-ELISA.exe Error: 0 : 26-07-2018 12:45:24	Error capturado: Trace:    at System.Data.EntityClient.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree)
+ELISA.exe Error: 0 : 10-09-2018 11:39:22	Error capturado: Trace:    at System.Data.EntityClient.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree)
    at System.Data.EntityClient.EntityProviderServices.CreateCommandDefinition(DbProviderFactory storeProviderFactory, DbCommandTree commandTree)
    at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Span span, ReadOnlyCollection`1 compiledQueryParameters, AliasGenerator aliasGenerator)
    at System.Data.Objects.EntitySqlQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
@@ -59,328 +376,1000 @@ ELISA.exe Error: 0 : 26-07-2018 12:45:24	Error capturado: Trace:    at System.Da
    at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
    at ELISA.Transaccion.DatosProtocoloTrans.DatosProtocoloIgM.TraerDatosProtocoloIgM() in C:\Users\ahrhe\Documents\Visual Studio 2017\Projects\ELISA\ELISA\Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs:line 22
-ELISA.exe Information: 0 : 26-07-2018 12:45:24	Splash Iniciado
-ELISA.exe Information: 0 : 26-07-2018 12:45:25	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 26-07-2018 12:45:25	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 26-07-2018 12:45:25	Arrancar la ventana de autenticación
-PROBLEM: Not implied Key (V0) - <0:datosprotocoloigmzikas.idDatosProtocoloIgM-datosprotocoloigmzika.idDatosProtocoloIgM>
-ERROR (3002): Problem in Mapping Fragment starting at line 2025: Potential runtime violation of table datosprotocoloigmzika's keys (datosprotocoloigmzika.idDatosProtocoloIgM): Columns (datosprotocoloigmzika.idDatosProtocoloIgM) are mapped to EntitySet datosprotocoloigmzikas's properties (datosprotocoloigmzikas.idDatosProtocoloIgM) on the conceptual side but they do not form the EntitySet's key properties (datosprotocoloigmzikas.Conjugado, datosprotocoloigmzikas.ControlNeg, datosprotocoloigmzikas.ControlNegLI, datosprotocoloigmzikas.ControlNegLS, datosprotocoloigmzikas.ControlNegRadLI, datosprotocoloigmzikas.ControlNegRadLS, datosprotocoloigmzikas.ControlPos, datosprotocoloigmzikas.ControlPosLI, datosprotocoloigmzikas.ControlPosLS, datosprotocoloigmzikas.ControlPosRadLI, datosprotocoloigmzikas.ControlPosRadLS, datosprotocoloigmzikas.ControlRadNeg, datosprotocoloigmzikas.ControlRadPos, datosprotocoloigmzikas.Factor, datosprotocoloigmzikas.Factor2, datosprotocoloigmzikas.LoteAntigeno, datosprotocoloigmzikas.LoteIgM, datosprotocoloigmzikas.SHN, datosprotocoloigmzikas.STOP, datosprotocoloigmzikas.Substrato, datosprotocoloigmzikas.idDatosProtocoloIgM).
+ELISA.exe Information: 0 : 10-09-2018 11:39:22	Splash Iniciado
+ELISA.exe Information: 0 : 10-09-2018 11:39:23	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 10-09-2018 11:39:23	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 10-09-2018 11:39:24	Arrancar la ventana de autenticación
+PROBLEM: Not implied Key (V0) - <0:datosprotocolochikmonoes.idDatosProtocoloChikMono-datosprotocolochikmono.idDatosProtocoloChikMono>
+ERROR (3002): Problem in Mapping Fragment starting at line 1912: Potential runtime violation of table datosprotocolochikmono's keys (datosprotocolochikmono.idDatosProtocoloChikMono): Columns (datosprotocolochikmono.idDatosProtocoloChikMono) are mapped to EntitySet datosprotocolochikmonoes's properties (datosprotocolochikmonoes.idDatosProtocoloChikMono) on the conceptual side but they do not form the EntitySet's key properties (datosprotocolochikmonoes.Conjugado, datosprotocolochikmonoes.ControlNeg, datosprotocolochikmonoes.ControlNegLI, datosprotocolochikmonoes.ControlNegLS, datosprotocolochikmonoes.ControlPos, datosprotocolochikmonoes.GGLOB, datosprotocolochikmonoes.LoteAntigeno, datosprotocolochikmonoes.LoteEI, datosprotocolochikmonoes.SHN, datosprotocolochikmonoes.STOP, datosprotocolochikmonoes.Substrato, datosprotocolochikmonoes.idDatosProtocoloChikMono).
 
-PROBLEM: Not implied Key (V0) - <0:datosprotocoloigmzikas.idDatosProtocoloIgM-datosprotocoloigmzika.idDatosProtocoloIgM>
-ERROR (3002): Problem in Mapping Fragment starting at line 2025: Potential runtime violation of table datosprotocoloigmzika's keys (datosprotocoloigmzika.idDatosProtocoloIgM): Columns (datosprotocoloigmzika.idDatosProtocoloIgM) are mapped to EntitySet datosprotocoloigmzikas's properties (datosprotocoloigmzikas.idDatosProtocoloIgM) on the conceptual side but they do not form the EntitySet's key properties (datosprotocoloigmzikas.Conjugado, datosprotocoloigmzikas.ControlNeg, datosprotocoloigmzikas.ControlNegLI, datosprotocoloigmzikas.ControlNegLS, datosprotocoloigmzikas.ControlNegRadLI, datosprotocoloigmzikas.ControlNegRadLS, datosprotocoloigmzikas.ControlPos, datosprotocoloigmzikas.ControlPosLI, datosprotocoloigmzikas.ControlPosLS, datosprotocoloigmzikas.ControlPosRadLI, datosprotocoloigmzikas.ControlPosRadLS, datosprotocoloigmzikas.ControlRadNeg, datosprotocoloigmzikas.ControlRadPos, datosprotocoloigmzikas.Factor, datosprotocoloigmzikas.Factor2, datosprotocoloigmzikas.LoteAntigeno, datosprotocoloigmzikas.LoteIgM, datosprotocoloigmzikas.SHN, datosprotocoloigmzikas.STOP, datosprotocoloigmzikas.Substrato, datosprotocoloigmzikas.idDatosProtocoloIgM).
+PROBLEM: Not implied Key (V0) - <0:datosprotocolochikmonoes.idDatosProtocoloChikMono-datosprotocolochikmono.idDatosProtocoloChikMono>
+ERROR (3002): Problem in Mapping Fragment starting at line 1912: Potential runtime violation of table datosprotocolochikmono's keys (datosprotocolochikmono.idDatosProtocoloChikMono): Columns (datosprotocolochikmono.idDatosProtocoloChikMono) are mapped to EntitySet datosprotocolochikmonoes's properties (datosprotocolochikmonoes.idDatosProtocoloChikMono) on the conceptual side but they do not form the EntitySet's key properties (datosprotocolochikmonoes.Conjugado, datosprotocolochikmonoes.ControlNeg, datosprotocolochikmonoes.ControlNegLI, datosprotocolochikmonoes.ControlNegLS, datosprotocolochikmonoes.ControlPos, datosprotocolochikmonoes.GGLOB, datosprotocolochikmonoes.LoteAntigeno, datosprotocolochikmonoes.LoteEI, datosprotocolochikmonoes.SHN, datosprotocolochikmonoes.STOP, datosprotocolochikmonoes.Substrato, datosprotocolochikmonoes.idDatosProtocoloChikMono).
 
-PROBLEM: Not implied Key (V0) - <0:datosprotocoloigmzikas.idDatosProtocoloIgM-datosprotocoloigmzika.idDatosProtocoloIgM>
-ERROR (3002): Problem in Mapping Fragment starting at line 2025: Potential runtime violation of table datosprotocoloigmzika's keys (datosprotocoloigmzika.idDatosProtocoloIgM): Columns (datosprotocoloigmzika.idDatosProtocoloIgM) are mapped to EntitySet datosprotocoloigmzikas's properties (datosprotocoloigmzikas.idDatosProtocoloIgM) on the conceptual side but they do not form the EntitySet's key properties (datosprotocoloigmzikas.Conjugado, datosprotocoloigmzikas.ControlNeg, datosprotocoloigmzikas.ControlNegLI, datosprotocoloigmzikas.ControlNegLS, datosprotocoloigmzikas.ControlNegRadLI, datosprotocoloigmzikas.ControlNegRadLS, datosprotocoloigmzikas.ControlPos, datosprotocoloigmzikas.ControlPosLI, datosprotocoloigmzikas.ControlPosLS, datosprotocoloigmzikas.ControlPosRadLI, datosprotocoloigmzikas.ControlPosRadLS, datosprotocoloigmzikas.ControlRadNeg, datosprotocoloigmzikas.ControlRadPos, datosprotocoloigmzikas.Factor, datosprotocoloigmzikas.Factor2, datosprotocoloigmzikas.LoteAntigeno, datosprotocoloigmzikas.LoteIgM, datosprotocoloigmzikas.SHN, datosprotocoloigmzikas.STOP, datosprotocoloigmzikas.Substrato, datosprotocoloigmzikas.idDatosProtocoloIgM).
+ELISA.exe Information: 0 : 10-09-2018 11:50:00	Aplicación Iniciada
+PROBLEM: Not implied Key (V0) - <0:datosprotocolochikmonoes.idDatosProtocoloChikMono-datosprotocolochikmono.idDatosProtocoloChikMono>
+ERROR (3002): Problem in Mapping Fragment starting at line 1912: Potential runtime violation of table datosprotocolochikmono's keys (datosprotocolochikmono.idDatosProtocoloChikMono): Columns (datosprotocolochikmono.idDatosProtocoloChikMono) are mapped to EntitySet datosprotocolochikmonoes's properties (datosprotocolochikmonoes.idDatosProtocoloChikMono) on the conceptual side but they do not form the EntitySet's key properties (datosprotocolochikmonoes.Conjugado, datosprotocolochikmonoes.ControlNeg, datosprotocolochikmonoes.ControlNegLI, datosprotocolochikmonoes.ControlNegLS, datosprotocolochikmonoes.ControlPos, datosprotocolochikmonoes.GGLOB, datosprotocolochikmonoes.LoteAntigeno, datosprotocolochikmonoes.LoteEI, datosprotocolochikmonoes.SHN, datosprotocolochikmonoes.STOP, datosprotocolochikmonoes.Substrato, datosprotocolochikmonoes.idDatosProtocoloChikMono).
 
-ELISA.exe Information: 0 : 26-07-2018 12:49:31	Aplicación Iniciada
-ELISA.exe Information: 0 : 26-07-2018 12:49:34	Splash Iniciado
-ELISA.exe Information: 0 : 26-07-2018 12:49:35	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 26-07-2018 12:49:35	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 26-07-2018 12:49:35	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 26-07-2018 12:49:35	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 26-07-2018 12:49:36	Aplicación Terminada
-ELISA.exe Information: 0 : 26-07-2018 12:49:36	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 26-07-2018 12:49:36	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 26-07-2018 12:55:03	Aplicación Iniciada
-ELISA.exe Information: 0 : 26-07-2018 12:55:07	Splash Iniciado
-ELISA.exe Information: 0 : 26-07-2018 12:55:08	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 26-07-2018 12:55:08	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 26-07-2018 12:55:08	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 26-07-2018 12:55:08	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 26-07-2018 12:55:11	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 26-07-2018 12:55:11	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 26-07-2018 12:55:11	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 26-07-2018 12:55:11	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 26-07-2018 12:55:12	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 12:55:12	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 12:55:20	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 12:55:20	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 12:56:07	Aplicación Terminada
-ELISA.exe Information: 0 : 26-07-2018 12:56:07	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 26-07-2018 12:56:07	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 26-07-2018 01:03:32	Aplicación Iniciada
-ELISA.exe Information: 0 : 26-07-2018 01:03:37	Splash Iniciado
-ELISA.exe Information: 0 : 26-07-2018 01:03:38	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 26-07-2018 01:03:38	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 26-07-2018 01:03:38	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 26-07-2018 01:03:38	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 26-07-2018 01:03:40	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 26-07-2018 01:03:40	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 26-07-2018 01:03:40	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 26-07-2018 01:03:40	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:03:41	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:03:41	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:03:46	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:03:46	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:03:59	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:03:59	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:04:07	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:04:07	Lista de estudio cargado correctamente
-ELISA.exe Information: 0 : 26-07-2018 01:04:12	Aplicación Terminada
-ELISA.exe Information: 0 : 26-07-2018 01:04:12	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 26-07-2018 01:04:12	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:02:20	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:02:26	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:02:27	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:02:27	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:02:27	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:02:27	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:02:30	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:02:30	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:02:30	Error al iniciar sesión con el usuario: Administrador
-ELISA.exe Information: 0 : 31-07-2018 12:02:34	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:02:34	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:02:34	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:02:34	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:02:36	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:02:37	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:03:17	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:03:21	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:03:22	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:03:22	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:03:23	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:03:23	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:03:25	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:03:25	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:03:25	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:03:26	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:03:28	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:03:29	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:12:22	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:12:28	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:12:29	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:12:29	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:12:29	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:12:29	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:12:32	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:12:32	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:12:32	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:12:32	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:12:34	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:12:36	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:12:57	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 12:12:57	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:12:57	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:13:50	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:13:56	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:13:57	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:13:57	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:13:57	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:13:57	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:13:59	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:13:59	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:13:59	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:14:00	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:14:02	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:14:04	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:14:29	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 12:14:29	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:14:29	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:15:21	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:15:26	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:15:27	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:15:27	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:15:27	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:15:27	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:15:29	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:15:29	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:15:29	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:15:29	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:15:31	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:15:32	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:15:58	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 12:15:58	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:15:58	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:25:40	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:25:47	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:25:48	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:25:48	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:25:48	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:25:48	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:27:21	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:27:21	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:27:21	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:27:22	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:27:23	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:27:25	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:27:48	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 12:27:48	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:27:48	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 01:57:33	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 01:57:37	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 01:57:38	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 01:57:38	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 01:57:38	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 01:57:38	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 01:57:41	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 01:57:41	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 01:57:41	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 01:57:41	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:57:43	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:57:44	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:57:51	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 01:57:51	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 01:57:51	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 01:57:56	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 01:58:00	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 01:58:01	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 01:58:02	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 01:58:02	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 01:58:02	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 01:58:04	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 01:58:04	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 01:58:04	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 01:58:05	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:58:07	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:58:08	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:58:30	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 01:58:30	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 01:58:30	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 01:59:23	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 01:59:27	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 01:59:28	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 01:59:28	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 01:59:28	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 01:59:29	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 01:59:30	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 01:59:30	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 01:59:30	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 01:59:31	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:59:32	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:59:34	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:59:36	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:59:37	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:59:39	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 01:59:41	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 01:59:41	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 01:59:41	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:02:29	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 02:02:34	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 02:02:35	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 02:02:35	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 02:02:35	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 02:02:35	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 02:02:37	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 02:02:37	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 02:02:37	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 02:02:38	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:02:39	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:02:41	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:02:47	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:02:47	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 02:02:47	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:02:47	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:03:21	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 02:03:25	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 02:03:26	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 02:03:26	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 02:03:26	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 02:03:26	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 02:03:28	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 02:03:28	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 02:03:28	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 02:03:28	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:30	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:32	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:37	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:39	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:40	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:53	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:55	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:03:56	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:04:15	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 02:04:15	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:04:15	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:14:27	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 02:14:31	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 02:14:32	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 02:14:32	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 02:14:32	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 02:14:32	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 02:14:36	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 02:14:36	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:14:36	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:25:04	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 02:25:09	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 02:25:10	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 02:25:11	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 02:25:11	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 02:25:11	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 02:25:16	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 02:25:16	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 02:25:16	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 02:25:16	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:25:18	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:25:19	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:25:28	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 02:25:28	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:25:28	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:26:46	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 02:26:52	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 02:26:53	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 02:26:53	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 02:26:53	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 02:26:53	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 02:26:58	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 02:26:58	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 02:26:58	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 02:26:58	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:27:00	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:27:02	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 02:27:13	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 02:27:13	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 02:27:13	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:35:56	Aplicación Iniciada
-ELISA.exe Error: 0 : Unable to connect to any of the specified MySQL hosts.
-ELISA.exe Error: 0 : 31-07-2018 12:36:17	Error capturado: Trace:    at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
-   at System.Data.EntityClient.EntityConnection.Open()
-   at System.Data.Objects.ObjectContext.EnsureConnection()
+ELISA.exe Error: 0 : 10-09-2018 11:50:07	Error capturado: Trace:    at System.Data.EntityClient.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree)
+   at System.Data.EntityClient.EntityProviderServices.CreateCommandDefinition(DbProviderFactory storeProviderFactory, DbCommandTree commandTree)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Span span, ReadOnlyCollection`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Objects.EntitySqlQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
    at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
    at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
    at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
    at ELISA.Transaccion.DatosProtocoloTrans.DatosProtocoloIgM.TraerDatosProtocoloIgM() in C:\Users\ahrhe\Documents\Visual Studio 2017\Projects\ELISA\ELISA\Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs:line 22
-ELISA.exe Information: 0 : 31-07-2018 12:36:17	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:36:18	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:36:18	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:36:18	Arrancar la ventana de autenticación
-ELISA.exe Error: 0 : Unable to connect to any of the specified MySQL hosts.
-ELISA.exe Information: 0 : 31-07-2018 12:37:14	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:37:28	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:37:29	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:37:30	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:37:30	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:37:30	Los usuarios han sido cargado correctamente. Numero de Usuarios: 0
-ELISA.exe Information: 0 : 31-07-2018 12:38:23	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 12:38:23	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:38:23	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:41:17	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:41:32	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:41:33	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:41:34	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:41:34	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:41:34	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:41:36	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:41:36	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:41:36	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:41:37	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:41:37	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:41:38	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:41:40	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 12:41:40	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:41:40	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:42:32	Aplicación Iniciada
-ELISA.exe Information: 0 : 31-07-2018 12:42:45	Splash Iniciado
-ELISA.exe Information: 0 : 31-07-2018 12:42:46	Splash Finalizado, Splash cerrado
-ELISA.exe Information: 0 : 31-07-2018 12:42:46	Ventana de autenticación Mostrada
-ELISA.exe Information: 0 : 31-07-2018 12:42:46	Arrancar la ventana de autenticación
-ELISA.exe Information: 0 : 31-07-2018 12:42:46	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
-ELISA.exe Information: 0 : 31-07-2018 12:43:07	Usuario seleccionado, consultar los datos
-ELISA.exe Information: 0 : 31-07-2018 12:43:07	Inicio de la consulta a la Base de Datos
-ELISA.exe Information: 0 : 31-07-2018 12:43:07	Usuario y contraseña son correctos
-ELISA.exe Information: 0 : 31-07-2018 12:43:07	Ventana principal Cargada correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:43:08	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:43:09	Lista de laboratorista cargado correctamente
-ELISA.exe Information: 0 : 31-07-2018 12:43:11	Aplicación Terminada
-ELISA.exe Information: 0 : 31-07-2018 12:43:11	=================SALTO DE LINEA=================
-ELISA.exe Information: 0 : 31-07-2018 12:43:11	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 10-09-2018 11:50:07	Splash Iniciado
+ELISA.exe Information: 0 : 10-09-2018 11:50:08	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 10-09-2018 11:50:08	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 10-09-2018 11:50:08	Arrancar la ventana de autenticación
+PROBLEM: Not implied Key (V0) - <0:datosprotocolochikmonoes.idDatosProtocoloChikMono-datosprotocolochikmono.idDatosProtocoloChikMono>
+ERROR (3002): Problem in Mapping Fragment starting at line 1912: Potential runtime violation of table datosprotocolochikmono's keys (datosprotocolochikmono.idDatosProtocoloChikMono): Columns (datosprotocolochikmono.idDatosProtocoloChikMono) are mapped to EntitySet datosprotocolochikmonoes's properties (datosprotocolochikmonoes.idDatosProtocoloChikMono) on the conceptual side but they do not form the EntitySet's key properties (datosprotocolochikmonoes.Conjugado, datosprotocolochikmonoes.ControlNeg, datosprotocolochikmonoes.ControlNegLI, datosprotocolochikmonoes.ControlNegLS, datosprotocolochikmonoes.ControlPos, datosprotocolochikmonoes.GGLOB, datosprotocolochikmonoes.LoteAntigeno, datosprotocolochikmonoes.LoteEI, datosprotocolochikmonoes.SHN, datosprotocolochikmonoes.STOP, datosprotocolochikmonoes.Substrato, datosprotocolochikmonoes.idDatosProtocoloChikMono).
+
+PROBLEM: Not implied Key (V0) - <0:datosprotocolochikmonoes.idDatosProtocoloChikMono-datosprotocolochikmono.idDatosProtocoloChikMono>
+ERROR (3002): Problem in Mapping Fragment starting at line 1912: Potential runtime violation of table datosprotocolochikmono's keys (datosprotocolochikmono.idDatosProtocoloChikMono): Columns (datosprotocolochikmono.idDatosProtocoloChikMono) are mapped to EntitySet datosprotocolochikmonoes's properties (datosprotocolochikmonoes.idDatosProtocoloChikMono) on the conceptual side but they do not form the EntitySet's key properties (datosprotocolochikmonoes.Conjugado, datosprotocolochikmonoes.ControlNeg, datosprotocolochikmonoes.ControlNegLI, datosprotocolochikmonoes.ControlNegLS, datosprotocolochikmonoes.ControlPos, datosprotocolochikmonoes.GGLOB, datosprotocolochikmonoes.LoteAntigeno, datosprotocolochikmonoes.LoteEI, datosprotocolochikmonoes.SHN, datosprotocolochikmonoes.STOP, datosprotocolochikmonoes.Substrato, datosprotocolochikmonoes.idDatosProtocoloChikMono).
+
+ELISA.exe Information: 0 : 10-09-2018 11:52:12	Aplicación Iniciada
+ELISA.exe Information: 0 : 10-09-2018 11:52:18	Splash Iniciado
+ELISA.exe Information: 0 : 10-09-2018 11:52:19	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 10-09-2018 11:52:19	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 10-09-2018 11:52:19	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 10-09-2018 11:52:19	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 10-09-2018 11:52:21	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 10-09-2018 11:52:21	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 10-09-2018 11:52:22	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 10-09-2018 11:52:22	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 10-09-2018 11:52:23	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 10-09-2018 11:52:23	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 10-09-2018 11:52:29	Lista de Codigos RV cargado correctamente
+ELISA.exe Information: 0 : 10-09-2018 11:52:29	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 10-09-2018 11:52:46	Aplicación Terminada
+ELISA.exe Information: 0 : 10-09-2018 11:52:46	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 10-09-2018 11:52:46	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 01:36:03	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 01:36:07	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 01:36:08	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 01:36:08	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 01:36:08	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 01:36:08	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 01:36:11	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 01:36:11	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 01:36:11	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 01:36:11	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 01:36:11	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 01:36:12	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 01:36:28	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 01:36:28	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 01:36:28	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 01:37:12	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 01:37:17	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 01:37:18	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 01:37:18	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 01:37:19	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 01:37:19	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 01:37:21	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 01:37:21	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 01:37:21	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 01:37:21	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 01:37:22	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 01:37:22	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 01:37:42	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 01:37:42	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 01:37:42	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:06:11	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:06:14	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:06:15	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:06:15	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:06:15	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:06:15	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:06:18	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:06:18	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:06:18	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:06:18	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:06:18	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:06:18	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:06:21	Lista de Codigos RV cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:06:21	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:06:53	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 02:06:53	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:06:53	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:07:05	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:07:07	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:07:08	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:07:08	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:07:08	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:07:09	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:07:10	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:07:10	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:07:11	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:07:11	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:07:11	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:07:11	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:08:41	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:08:45	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:08:46	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:08:46	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:08:46	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:08:46	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:08:49	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:08:49	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:08:49	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:08:49	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:08:49	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:08:49	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:09:35	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:09:38	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:09:39	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:09:39	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:09:39	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:09:39	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:09:41	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:09:41	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:09:41	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:09:41	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:09:42	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:09:42	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:11:20	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:11:25	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:11:26	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:11:26	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:11:26	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:11:26	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:11:29	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:11:29	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:11:29	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:11:29	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:11:29	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:11:29	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:12:29	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:12:33	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:12:34	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:12:34	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:12:34	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:12:34	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:12:37	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:12:37	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:12:37	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:12:37	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:12:38	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:12:38	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:20:05	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:20:11	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:20:12	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:20:12	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:20:12	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:20:12	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:20:15	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:20:15	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:20:15	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:20:15	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:20:16	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:20:16	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:23:16	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:23:22	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:23:23	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:23:23	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:23:23	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:23:23	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:23:26	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:23:26	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:23:26	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:23:26	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:23:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:23:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:23:57	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:24:00	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:24:01	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:24:01	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:24:02	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:24:02	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:24:04	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:24:04	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:24:04	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:24:04	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:24:05	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:24:05	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:25:36	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:25:41	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:25:42	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:25:43	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:25:43	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:25:43	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:25:47	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:25:47	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:25:47	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:25:47	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:25:48	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:25:48	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:26:40	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 02:26:40	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:26:40	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:28:16	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:28:19	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:28:20	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:28:20	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:28:20	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:28:20	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:28:23	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:28:23	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:28:23	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:28:23	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:28:23	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:28:24	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:31:34	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:31:39	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:31:40	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:31:40	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:31:40	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:31:40	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:31:42	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:31:42	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:31:42	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:31:42	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:31:43	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:31:43	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:31:55	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 02:31:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:31:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:36:23	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:36:28	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:36:30	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:36:30	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:36:30	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:36:30	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:36:32	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:36:32	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:36:32	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:36:32	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:36:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:36:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:38:00	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:38:04	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:38:05	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:38:05	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:38:05	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:38:05	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:38:07	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:38:07	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:38:07	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:38:07	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:38:07	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:38:07	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:38:31	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 02:38:31	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:38:31	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:49:19	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:49:24	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:49:25	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:49:26	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:49:26	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:49:26	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:49:28	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:49:28	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:49:28	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:49:28	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:49:29	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:49:29	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:49:40	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 02:49:40	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:49:40	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:50:16	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:50:20	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:50:21	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:50:21	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:50:22	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:50:22	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:50:25	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:50:25	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:50:25	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:50:25	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:50:25	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:50:26	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:50:45	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 02:50:45	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:50:45	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:52:35	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:52:40	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:52:41	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:52:41	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:52:41	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:52:41	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:52:43	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:52:43	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:52:43	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:52:43	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:52:44	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:52:44	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:53:18	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:53:23	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:53:24	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:53:24	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:53:24	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:53:24	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:53:27	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:53:27	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:53:27	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:53:27	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:53:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:53:27	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:53:53	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 02:53:53	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:53:53	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 02:56:45	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:56:51	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:56:52	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:56:52	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:56:52	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:56:52	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:56:54	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:56:54	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:56:54	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:56:55	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:56:55	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:56:55	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:58:06	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:58:10	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:58:11	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:58:11	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:58:11	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:58:11	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:58:14	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:58:14	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:58:14	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:58:14	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:58:15	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:58:15	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:59:06	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 02:59:12	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 02:59:13	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 02:59:13	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 02:59:13	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 02:59:13	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 02:59:15	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 02:59:15	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 02:59:15	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 02:59:15	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:59:15	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 02:59:16	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:00:16	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:00:21	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:00:22	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:00:22	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:00:22	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:00:22	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:00:25	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:00:25	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:00:25	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:00:25	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:00:25	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:00:26	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:04:27	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:04:33	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:04:34	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:04:34	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:04:34	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:04:34	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:04:36	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:04:36	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:04:36	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:04:36	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:04:37	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:04:37	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:06:24	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:06:29	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:06:30	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:06:30	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:06:30	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:06:31	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:06:32	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:06:32	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:06:32	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:06:32	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:06:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:06:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:07:22	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:07:25	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:07:26	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:07:26	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:07:27	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:07:27	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:07:28	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:07:28	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:07:28	Error al iniciar sesión con el usuario: Administrador
+ELISA.exe Information: 0 : 12-09-2018 03:07:32	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:07:32	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:07:32	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:07:32	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:07:32	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:07:32	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:13:49	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:13:54	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:13:55	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:13:55	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:13:55	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:13:55	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:14:00	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:14:00	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:14:00	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:14:00	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:14:00	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:14:00	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:14:29	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 03:14:29	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 03:14:29	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 03:19:52	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:19:56	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:19:57	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:19:57	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:19:57	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:19:57	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:20:00	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:20:00	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:20:00	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:20:00	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:20:01	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:20:01	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:26:47	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:26:52	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:26:53	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:26:53	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:26:53	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:26:53	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:26:55	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:26:55	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:26:55	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:26:55	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:26:55	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:26:56	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:35:14	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:35:19	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:35:20	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:35:20	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:35:20	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:35:21	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:35:23	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:35:23	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:35:23	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:35:23	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:35:23	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:35:24	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:36:15	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:36:20	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:36:21	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:36:21	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:36:22	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:36:22	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:36:23	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:36:23	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:36:23	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:36:23	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:36:24	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:36:24	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:37:32	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:37:36	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:37:37	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:37:38	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:37:38	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:37:38	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:37:44	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:37:44	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:37:44	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:37:44	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:37:44	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:37:44	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:39:31	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:39:36	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:39:37	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:39:37	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:39:37	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:39:37	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:39:39	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:39:39	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:39:39	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:39:39	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:39:40	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:39:40	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:39:48	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 03:39:48	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 03:39:48	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 03:40:40	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-09-2018 03:40:45	Splash Iniciado
+ELISA.exe Information: 0 : 12-09-2018 03:40:46	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-09-2018 03:40:46	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-09-2018 03:40:46	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-09-2018 03:40:47	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-09-2018 03:40:48	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-09-2018 03:40:48	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-09-2018 03:40:48	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-09-2018 03:40:48	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:40:49	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:40:49	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-09-2018 03:41:01	Aplicación Terminada
+ELISA.exe Information: 0 : 12-09-2018 03:41:01	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-09-2018 03:41:01	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 04:28:57	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 04:29:02	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 04:29:03	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 04:29:03	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 04:29:03	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 04:29:03	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 04:29:06	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 04:29:06	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 04:29:06	Error al iniciar sesión con el usuario: Administrador
+ELISA.exe Information: 0 : 14-09-2018 04:29:09	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 04:29:09	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 04:29:09	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 04:29:09	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:29:09	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:29:09	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:30:57	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 04:31:00	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 04:31:01	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 04:31:01	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 04:31:01	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 04:31:02	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 04:31:03	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 04:31:03	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 04:31:03	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 04:31:04	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:31:04	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:31:04	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:33:48	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 04:33:51	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 04:33:52	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 04:33:52	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 04:33:52	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 04:33:52	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 04:33:56	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 04:33:56	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 04:33:56	Error al iniciar sesión con el usuario: Administrador
+ELISA.exe Information: 0 : 14-09-2018 04:33:59	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 04:33:59	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 04:33:59	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 04:33:59	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:33:59	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:34:00	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:34:12	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 04:34:12	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 04:34:12	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 04:35:39	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 04:35:44	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 04:35:45	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 04:35:45	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 04:35:45	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 04:35:45	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 04:35:47	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 04:35:47	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 04:35:47	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 04:35:47	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:35:47	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:35:48	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 04:35:55	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 04:35:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 04:35:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:13:32	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:13:35	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:13:36	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:13:36	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:13:36	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:13:36	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:13:38	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:13:38	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:13:38	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:13:39	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:13:39	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:13:39	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:14:06	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:14:06	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:14:06	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:14:24	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:14:29	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:14:30	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:14:30	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:14:30	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:14:30	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:14:32	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:14:32	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:14:32	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:14:32	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:14:32	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:14:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:14:51	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:14:51	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:14:51	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:16:13	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:16:18	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:16:19	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:16:19	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:16:19	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:16:20	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:16:23	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:16:23	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:16:23	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:16:23	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:16:24	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:16:24	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:16:55	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:16:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:16:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:18:36	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:18:41	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:18:42	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:18:42	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:18:42	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:18:42	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:18:44	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:18:44	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:18:44	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:18:45	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:18:45	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:18:45	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:18:55	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:18:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:18:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:19:06	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:19:09	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:19:10	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:19:10	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:19:10	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:19:10	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:19:13	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:19:13	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:19:13	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:19:35	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:19:40	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:19:41	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:19:41	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:19:41	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:19:41	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:19:43	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:19:43	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:19:43	Error al iniciar sesión con el usuario: Administrador
+ELISA.exe Information: 0 : 14-09-2018 05:19:46	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:19:46	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:19:46	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:19:46	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:19:47	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:19:47	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:19:55	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:19:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:19:55	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:20:04	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:20:08	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:20:09	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:20:09	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:20:09	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:20:09	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:20:11	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:20:11	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:20:11	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:20:11	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:20:11	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:20:12	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:21:58	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:22:02	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:22:03	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:22:04	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:22:04	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:22:04	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:22:05	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:22:05	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:22:05	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:22:05	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:22:06	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:22:06	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:22:16	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:22:16	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:22:16	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:22:25	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:22:29	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:22:30	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:22:30	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:22:30	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:22:30	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:22:33	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:22:33	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:22:33	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:22:33	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:22:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:22:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:22:46	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:22:46	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:22:46	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:22:58	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:23:02	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:23:03	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:23:03	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:23:03	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:23:04	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:23:05	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:23:05	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:23:05	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:23:05	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:23:06	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:23:06	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:23:12	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:23:12	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:23:12	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:23:26	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:23:29	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:23:30	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:23:31	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:23:31	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:23:31	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:23:32	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:23:32	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:23:32	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:23:33	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:23:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:23:33	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:24:47	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:24:50	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:24:51	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:24:51	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:24:51	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:24:51	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:24:58	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:24:58	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:24:58	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:24:58	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:24:59	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:24:59	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:25:14	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:25:14	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:25:14	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:25:47	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:25:52	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:25:53	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:25:53	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:25:53	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:25:53	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:25:56	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:25:56	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:25:56	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:25:57	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:25:57	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:25:57	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:26:38	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:26:38	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:26:38	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:37:33	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:37:38	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:37:39	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:37:39	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:37:39	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:37:39	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 14-09-2018 05:37:41	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 14-09-2018 05:37:41	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 14-09-2018 05:37:41	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 14-09-2018 05:37:41	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:37:42	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:37:42	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 14-09-2018 05:38:48	Aplicación Terminada
+ELISA.exe Information: 0 : 14-09-2018 05:38:48	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:38:48	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 14-09-2018 05:42:42	Aplicación Iniciada
+ELISA.exe Information: 0 : 14-09-2018 05:42:47	Splash Iniciado
+ELISA.exe Information: 0 : 14-09-2018 05:42:48	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 14-09-2018 05:42:48	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 14-09-2018 05:42:48	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 14-09-2018 05:42:48	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:17:40	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:17:44	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:17:45	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:17:45	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:17:45	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:17:46	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:17:48	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:17:48	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:17:48	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:17:48	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:17:49	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:17:49	Lista de laboratorista cargado correctamente
+ELISA.exe Error: 0 : 19-09-2018 09:19:43	Error capturado: Nuevo Componente: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 19-09-2018 09:19:44	Error capturado: Nuevo Componente: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 19-09-2018 09:19:45	Error capturado: Nuevo Componente: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 19-09-2018 09:19:45	Error capturado: Nuevo Componente: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 19-09-2018 09:19:46	Error capturado: Nuevo Componente: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 19-09-2018 09:19:47	Error capturado: Nuevo Componente: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Error: 0 : 19-09-2018 09:19:48	Error capturado: Nuevo Componente: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+ELISA.exe Information: 0 : 19-09-2018 09:23:00	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:23:04	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:23:05	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:23:05	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:23:05	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:23:05	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:23:45	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:23:45	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:23:45	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:23:45	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:23:46	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:23:46	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:23:51	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 09:23:51	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:23:51	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:24:33	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:24:39	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:24:40	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:24:40	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:24:40	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:24:40	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:24:42	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:24:42	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:24:42	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:24:42	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:24:42	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:24:43	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:29:39	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:29:44	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:29:45	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:29:45	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:29:45	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:29:45	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:29:47	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:29:47	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:29:47	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:29:47	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:29:48	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:29:48	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:30:14	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 09:30:14	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:30:14	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:30:53	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:30:58	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:30:59	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:30:59	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:30:59	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:31:00	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:31:01	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:31:01	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:31:01	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:31:01	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:31:02	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:31:02	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:31:57	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:32:02	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:32:03	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:32:03	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:32:03	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:32:03	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:32:05	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:32:05	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:32:05	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:32:05	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:32:05	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:32:05	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:32:30	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 09:32:30	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:32:30	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:35:45	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:35:51	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:35:52	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:35:52	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:35:52	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:35:52	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:36:17	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:36:17	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:36:17	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:36:17	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:36:17	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:36:17	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:36:51	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 09:36:51	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:36:51	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 09:59:45	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 09:59:51	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 09:59:52	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 09:59:52	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 09:59:52	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 09:59:52	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 09:59:54	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 09:59:54	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 09:59:54	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 09:59:54	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:59:54	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:59:54	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:59:57	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 09:59:57	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:03:11	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 10:03:18	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 10:03:19	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 10:03:19	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 10:03:19	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 10:03:19	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 10:03:22	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 10:03:22	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 10:03:22	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 10:03:22	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:03:22	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:03:23	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:03:48	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 10:03:48	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 10:03:48	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 10:04:53	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 10:04:56	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 10:04:57	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 10:04:57	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 10:04:57	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 10:04:57	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 10:05:03	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 10:05:03	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 10:05:03	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 10:05:04	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:05:04	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:05:04	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:05:10	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:05:10	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:05:14	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:05:21	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 10:05:21	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 10:05:21	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 10:07:34	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 10:07:38	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 10:07:39	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 10:07:39	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 10:07:39	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 10:07:39	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 10:07:40	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 10:07:40	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 10:07:41	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 10:07:41	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:07:41	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:07:41	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:07:45	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:07:45	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:08:01	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 10:08:01	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 10:08:01	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 10:08:12	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 10:08:15	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 10:08:16	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 10:08:16	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 10:08:16	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 10:08:16	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 10:08:17	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 10:08:17	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 10:08:17	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 10:08:18	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:08:18	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:08:18	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:08:21	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:08:21	Lista de estudio cargado correctamente
+ELISA.exe Error: 0 : 19-09-2018 10:08:26	Error capturado: update RV:    at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at ELISA.Transaccion.DatosProtocoloTrans.DatosProtocoloRotavirus.updateProtocoloRV(datosprotocolorotaviru data) in C:\Users\ahrhe\Documents\Visual Studio 2017\Projects\ELISA\ELISA\Transaccion\DatosProtocoloTrans\DatosProtocoloRotavirus.cs:line 40
+ELISA.exe Information: 0 : 19-09-2018 10:15:12	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 10:15:17	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 10:15:18	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 10:15:18	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 10:15:18	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 10:15:19	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 10:15:20	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 10:15:20	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 10:15:20	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 10:15:20	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:15:20	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:15:21	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:15:24	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:15:24	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:15:32	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:15:32	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:27:50	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:27:50	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:28:54	Aplicación Iniciada
+ELISA.exe Information: 0 : 19-09-2018 10:28:56	Splash Iniciado
+ELISA.exe Information: 0 : 19-09-2018 10:28:57	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 19-09-2018 10:28:58	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 19-09-2018 10:28:58	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 19-09-2018 10:28:58	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 19-09-2018 10:28:59	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 19-09-2018 10:28:59	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 19-09-2018 10:28:59	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 19-09-2018 10:28:59	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:29:00	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:29:00	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:29:04	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:29:04	Lista de estudio cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:31:01	Lista de cod Kit cargado correctamente
+ELISA.exe Information: 0 : 19-09-2018 10:31:10	Aplicación Terminada
+ELISA.exe Information: 0 : 19-09-2018 10:31:10	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 19-09-2018 10:31:10	=================SALTO DE LINEA=================

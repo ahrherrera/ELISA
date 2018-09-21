@@ -24,7 +24,7 @@ namespace ELISA.Transaccion
             catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido una excepcion.\n Por favor contacte al administrador del Sistema", "Error detectado");
-                Log.logError("Error capturado: Trace: " + ex.Message);
+                Log.logError("Error capturado: Guardando ELISA IgM: " + ex.StackTrace);
             }
         }
 
@@ -37,12 +37,12 @@ namespace ELISA.Transaccion
                     context.zikaigms.Add(newRecord);
                     context.SaveChanges();
                 }
-            }
+        }
             catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido una excepcion.\n Por favor contacte al administrador del Sistema", "Error detectado");
-                Log.logError("Error capturado: Trace: " + ex.Message);
+                Log.logError("Error capturado: Guardando ELISA IgM Zika: " + ex.StackTrace);
             }
-        }
+}
     }
 }

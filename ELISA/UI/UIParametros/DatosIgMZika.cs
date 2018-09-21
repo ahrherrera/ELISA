@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Transaccion;
 using ELISA.Transaccion.DatosProtocoloTrans;
+using ELISA.UI.UIParametros.Controles;
 using ELISA.Utils;
 
 namespace ELISA.UI.UIParametros
@@ -179,6 +180,36 @@ namespace ELISA.UI.UIParametros
                 MessageBox.Show("Error en el formato de texto", "Error detectado");
                 Log.logError("Error capturado: Trace: " + fex.StackTrace);
             }
+        }
+
+        private void txt_SHN_Click(object sender, EventArgs e)
+        {
+            new SHN(this.txt_SHN).ShowDialog(this);
+        }
+
+        private void txt_LoteAntigeno_Click(object sender, EventArgs e)
+        {
+            new Gamma(this.txt_LoteAntigeno).ShowDialog(this);
+        }
+
+        private void txt_Coatting_Click(object sender, EventArgs e)
+        {
+            new DatosCoatting(this.txt_Coatting).ShowDialog(this);
+        }
+
+        private void txt_PB_Click(object sender, EventArgs e)
+        {
+            new PB(this.txt_PB).ShowDialog(this);
+        }
+
+        private void txt_SUBST_Click(object sender, EventArgs e)
+        {
+            new Substrato(this.txt_SUBST).ShowDialog(this);
+        }
+
+        private void txt_LoteIgM_Click(object sender, EventArgs e)
+        {
+            new DatosLoteIgM(this.txt_LoteIgM).ShowDialog(this);
         }
     }
 }

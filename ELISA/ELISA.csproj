@@ -83,6 +83,9 @@
     <Compile Include="anti_human_igm.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="chikungunya.cs">
+      <DependentUpon>ElisaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="chikungunyainhhiper.cs">
       <DependentUpon>ElisaDB.tt</DependentUpon>
     </Compile>
@@ -316,15 +319,23 @@
     <Compile Include="Transaccion\ControlesTrans.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloChik.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloEI.cs" />
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloEIChikMono.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgG.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgMZika.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloRotavirus.cs" />
+    <Compile Include="Transaccion\EITrans.cs" />
+    <Compile Include="Transaccion\ElisaIGGTrans.cs" />
     <Compile Include="Transaccion\ElisaIGMTrans.cs" />
     <Compile Include="Transaccion\EstudioTrans.cs" />
+    <Compile Include="Transaccion\GammaTrans.cs" />
+    <Compile Include="Transaccion\KitELISATrans.cs" />
     <Compile Include="Transaccion\LaboratoristasTrans.cs" />
+    <Compile Include="Transaccion\PBTrans.cs" />
     <Compile Include="Transaccion\ph96CoattingTrans.cs" />
     <Compile Include="Transaccion\ProcH2OTrans.cs" />
+    <Compile Include="Transaccion\SHNTrans.cs" />
+    <Compile Include="Transaccion\SubstratoTrans.cs" />
     <Compile Include="Transaccion\UsuarioTrans.cs" />
     <Compile Include="UI\Dialogs\LoadingScreen.cs">
       <SubType>Form</SubType>
@@ -344,16 +355,52 @@
     <Compile Include="UI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UIParametros\ControlesEI.cs">
+    <Compile Include="UI\UIParametros\Controles\ControlesIgG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\UIParametros\ControlesEI.Designer.cs">
+    <Compile Include="UI\UIParametros\Controles\ControlesIgG.Designer.cs">
+      <DependentUpon>ControlesIgG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\ControlesRV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\ControlesRV.Designer.cs">
+      <DependentUpon>ControlesRV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\SHN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\SHN.Designer.cs">
+      <DependentUpon>SHN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\Substrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\Substrato.Designer.cs">
+      <DependentUpon>Substrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\PB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\PB.Designer.cs">
+      <DependentUpon>PB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\Gamma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\Gamma.Designer.cs">
+      <DependentUpon>Gamma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\ControlesEI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\Controles\ControlesEI.Designer.cs">
       <DependentUpon>ControlesEI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UIParametros\ControlesIgM.cs">
+    <Compile Include="UI\UIParametros\Controles\ControlesIgM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\UIParametros\ControlesIgM.Designer.cs">
+    <Compile Include="UI\UIParametros\Controles\ControlesIgM.Designer.cs">
       <DependentUpon>ControlesIgM.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UIParametros\DatosCoatting.cs">
@@ -362,11 +409,35 @@
     <Compile Include="UI\UIParametros\DatosCoatting.Designer.cs">
       <DependentUpon>DatosCoatting.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIParametros\DatosEIChikMono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosEIChikMono.Designer.cs">
+      <DependentUpon>DatosEIChikMono.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UIParametros\DatosEI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\UIParametros\DatosEI.Designer.cs">
       <DependentUpon>DatosEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosChikCNDR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosChikCNDR.Designer.cs">
+      <DependentUpon>DatosChikCNDR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosIgG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosIgG.Designer.cs">
+      <DependentUpon>DatosIgG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosRV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosRV.Designer.cs">
+      <DependentUpon>DatosRV.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UIParametros\DatosIgMZika.cs">
       <SubType>Form</SubType>
@@ -385,6 +456,72 @@
     </Compile>
     <Compile Include="UI\UIParametros\DatosLoteIgM.Designer.cs">
       <DependentUpon>DatosLoteIgM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\frmCPEI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\frmCPEI.Designer.cs">
+      <DependentUpon>frmCPEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\KitRotavirus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\KitRotavirus.Designer.cs">
+      <DependentUpon>KitRotavirus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\MuestrasChik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\MuestrasChik.Designer.cs">
+      <DependentUpon>MuestrasChik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\MuestrasEI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\MuestrasEI.Designer.cs">
+      <DependentUpon>MuestrasEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoControlRV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoControlRV.Designer.cs">
+      <DependentUpon>NuevoControlRV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoControlIgG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoControlIgG.Designer.cs">
+      <DependentUpon>NuevoControlIgG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoReactivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoReactivo.Designer.cs">
+      <DependentUpon>NuevoReactivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoSHN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoSHN.Designer.cs">
+      <DependentUpon>NuevoSHN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoSubstrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoSubstrato.Designer.cs">
+      <DependentUpon>NuevoSubstrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoPB.Designer.cs">
+      <DependentUpon>NuevoPB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoGamma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\NuevoGamma.Designer.cs">
+      <DependentUpon>NuevoGamma.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UIParametros\NuevoCoatting.cs">
       <SubType>Form</SubType>
@@ -457,17 +594,47 @@
     <EmbeddedResource Include="UI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UIParametros\ControlesEI.resx">
+    <EmbeddedResource Include="UI\UIParametros\Controles\ControlesIgG.resx">
+      <DependentUpon>ControlesIgG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\Controles\ControlesRV.resx">
+      <DependentUpon>ControlesRV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\Controles\SHN.resx">
+      <DependentUpon>SHN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\Controles\Substrato.resx">
+      <DependentUpon>Substrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\Controles\PB.resx">
+      <DependentUpon>PB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\Controles\Gamma.resx">
+      <DependentUpon>Gamma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\Controles\ControlesEI.resx">
       <DependentUpon>ControlesEI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UIParametros\ControlesIgM.resx">
+    <EmbeddedResource Include="UI\UIParametros\Controles\ControlesIgM.resx">
       <DependentUpon>ControlesIgM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosCoatting.resx">
       <DependentUpon>DatosCoatting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosEIChikMono.resx">
+      <DependentUpon>DatosEIChikMono.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosEI.resx">
       <DependentUpon>DatosEI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosChikCNDR.resx">
+      <DependentUpon>DatosChikCNDR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosIgG.resx">
+      <DependentUpon>DatosIgG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosRV.resx">
+      <DependentUpon>DatosRV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosIgMZika.resx">
       <DependentUpon>DatosIgMZika.cs</DependentUpon>
@@ -477,6 +644,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosLoteIgM.resx">
       <DependentUpon>DatosLoteIgM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\frmCPEI.resx">
+      <DependentUpon>frmCPEI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\KitRotavirus.resx">
+      <DependentUpon>KitRotavirus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\MuestrasChik.resx">
+      <DependentUpon>MuestrasChik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\MuestrasEI.resx">
+      <DependentUpon>MuestrasEI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoControlRV.resx">
+      <DependentUpon>NuevoControlRV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoControlIgG.resx">
+      <DependentUpon>NuevoControlIgG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoReactivo.resx">
+      <DependentUpon>NuevoReactivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoSHN.resx">
+      <DependentUpon>NuevoSHN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoSubstrato.resx">
+      <DependentUpon>NuevoSubstrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoPB.resx">
+      <DependentUpon>NuevoPB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\NuevoGamma.resx">
+      <DependentUpon>NuevoGamma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\NuevoCoatting.resx">
       <DependentUpon>NuevoCoatting.cs</DependentUpon>

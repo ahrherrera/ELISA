@@ -106,5 +106,6 @@ namespace ELISA
         public DbSet<datosprotocoloigmzika> datosprotocoloigmzikas { get; set; }
         public DbSet<datosprotocolozikabob> datosprotocolozikabobs { get; set; }
         public DbSet<datosprotocolozikaigmbei> datosprotocolozikaigmbeis { get; set; }
+        public DbSet<chikungunya> chikungunyas { get; set; }
     }
 }

@@ -89,10 +89,10 @@
             this.btn_Aceptar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txt_FactorS = new System.Windows.Forms.TextBox();
             this.chk_FactorS = new System.Windows.Forms.CheckBox();
             this.txt_FactorP = new System.Windows.Forms.TextBox();
             this.chk_FactorP = new System.Windows.Forms.CheckBox();
-            this.txt_FactorS = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -108,11 +108,11 @@
             this.chk_GOAT.AutoSize = true;
             this.chk_GOAT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_GOAT.Location = new System.Drawing.Point(12, 24);
-            this.chk_GOAT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_GOAT.Margin = new System.Windows.Forms.Padding(2);
             this.chk_GOAT.Name = "chk_GOAT";
-            this.chk_GOAT.Size = new System.Drawing.Size(167, 19);
+            this.chk_GOAT.Size = new System.Drawing.Size(128, 19);
             this.chk_GOAT.TabIndex = 0;
-            this.chk_GOAT.Text = "GOAT ANTI-HUMAN IgM :";
+            this.chk_GOAT.Text = "ANTI-GLOBULINA :";
             this.chk_GOAT.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -121,9 +121,9 @@
             this.groupBox1.Controls.Add(this.chk_GOAT);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(290, 57);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -132,11 +132,12 @@
             // txt_LoteIgM
             // 
             this.txt_LoteIgM.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LoteIgM.Location = new System.Drawing.Point(183, 23);
-            this.txt_LoteIgM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_LoteIgM.Location = new System.Drawing.Point(149, 23);
+            this.txt_LoteIgM.Margin = new System.Windows.Forms.Padding(2);
             this.txt_LoteIgM.Name = "txt_LoteIgM";
             this.txt_LoteIgM.Size = new System.Drawing.Size(89, 23);
             this.txt_LoteIgM.TabIndex = 24;
+            this.txt_LoteIgM.Click += new System.EventHandler(this.txt_LoteIgM_Click);
             // 
             // groupBox2
             // 
@@ -148,9 +149,9 @@
             this.groupBox2.Controls.Add(this.chk_LoteAntigeno);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(311, 9);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(219, 115);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -161,7 +162,7 @@
             this.date_Fijacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_Fijacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.date_Fijacion.Location = new System.Drawing.Point(94, 50);
-            this.date_Fijacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date_Fijacion.Margin = new System.Windows.Forms.Padding(2);
             this.date_Fijacion.Name = "date_Fijacion";
             this.date_Fijacion.Size = new System.Drawing.Size(110, 23);
             this.date_Fijacion.TabIndex = 26;
@@ -170,7 +171,7 @@
             // 
             this.txt_Volumen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Volumen.Location = new System.Drawing.Point(94, 84);
-            this.txt_Volumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Volumen.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Volumen.Name = "txt_Volumen";
             this.txt_Volumen.Size = new System.Drawing.Size(90, 23);
             this.txt_Volumen.TabIndex = 27;
@@ -180,7 +181,7 @@
             this.chk_Volumen.AutoSize = true;
             this.chk_Volumen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Volumen.Location = new System.Drawing.Point(12, 86);
-            this.chk_Volumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Volumen.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Volumen.Name = "chk_Volumen";
             this.chk_Volumen.Size = new System.Drawing.Size(79, 19);
             this.chk_Volumen.TabIndex = 3;
@@ -192,7 +193,7 @@
             this.chk_Fijacion.AutoSize = true;
             this.chk_Fijacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Fijacion.Location = new System.Drawing.Point(12, 54);
-            this.chk_Fijacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Fijacion.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Fijacion.Name = "chk_Fijacion";
             this.chk_Fijacion.Size = new System.Drawing.Size(73, 19);
             this.chk_Fijacion.TabIndex = 2;
@@ -203,21 +204,22 @@
             // 
             this.txt_LoteAntigeno.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_LoteAntigeno.Location = new System.Drawing.Point(118, 21);
-            this.txt_LoteAntigeno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_LoteAntigeno.Margin = new System.Windows.Forms.Padding(2);
             this.txt_LoteAntigeno.Name = "txt_LoteAntigeno";
             this.txt_LoteAntigeno.Size = new System.Drawing.Size(90, 23);
             this.txt_LoteAntigeno.TabIndex = 23;
+            this.txt_LoteAntigeno.Click += new System.EventHandler(this.txt_LoteAntigeno_Click);
             // 
             // chk_LoteAntigeno
             // 
             this.chk_LoteAntigeno.AutoSize = true;
             this.chk_LoteAntigeno.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_LoteAntigeno.Location = new System.Drawing.Point(12, 22);
-            this.chk_LoteAntigeno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_LoteAntigeno.Margin = new System.Windows.Forms.Padding(2);
             this.chk_LoteAntigeno.Name = "chk_LoteAntigeno";
-            this.chk_LoteAntigeno.Size = new System.Drawing.Size(107, 19);
+            this.chk_LoteAntigeno.Size = new System.Drawing.Size(111, 19);
             this.chk_LoteAntigeno.TabIndex = 1;
-            this.chk_LoteAntigeno.Text = "Lote Antigeno :";
+            this.chk_LoteAntigeno.Text = "Lote Asignado  :";
             this.chk_LoteAntigeno.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -228,9 +230,9 @@
             this.groupBox3.Controls.Add(this.chk_TipoEstudio);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 69);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(290, 108);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -241,7 +243,7 @@
             this.cmb_ProcH2O.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmb_ProcH2O.FormattingEnabled = true;
             this.cmb_ProcH2O.Location = new System.Drawing.Point(134, 65);
-            this.cmb_ProcH2O.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_ProcH2O.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_ProcH2O.Name = "cmb_ProcH2O";
             this.cmb_ProcH2O.Size = new System.Drawing.Size(138, 23);
             this.cmb_ProcH2O.TabIndex = 29;
@@ -251,7 +253,7 @@
             this.chk_ProcH2O.AutoSize = true;
             this.chk_ProcH2O.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_ProcH2O.Location = new System.Drawing.Point(12, 54);
-            this.chk_ProcH2O.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_ProcH2O.Margin = new System.Windows.Forms.Padding(2);
             this.chk_ProcH2O.Name = "chk_ProcH2O";
             this.chk_ProcH2O.Size = new System.Drawing.Size(113, 34);
             this.chk_ProcH2O.TabIndex = 5;
@@ -264,7 +266,7 @@
             this.cmb_TipoEstudio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_TipoEstudio.FormattingEnabled = true;
             this.cmb_TipoEstudio.Location = new System.Drawing.Point(134, 21);
-            this.cmb_TipoEstudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_TipoEstudio.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_TipoEstudio.Name = "cmb_TipoEstudio";
             this.cmb_TipoEstudio.Size = new System.Drawing.Size(138, 23);
             this.cmb_TipoEstudio.TabIndex = 28;
@@ -274,7 +276,7 @@
             this.chk_TipoEstudio.AutoSize = true;
             this.chk_TipoEstudio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_TipoEstudio.Location = new System.Drawing.Point(12, 22);
-            this.chk_TipoEstudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_TipoEstudio.Margin = new System.Windows.Forms.Padding(2);
             this.chk_TipoEstudio.Name = "chk_TipoEstudio";
             this.chk_TipoEstudio.Size = new System.Drawing.Size(114, 19);
             this.chk_TipoEstudio.TabIndex = 4;
@@ -289,9 +291,9 @@
             this.groupBox4.Controls.Add(this.chk_Coatting);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 179);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(290, 89);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
@@ -301,27 +303,29 @@
             // 
             this.txt_PB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_PB.Location = new System.Drawing.Point(76, 52);
-            this.txt_PB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PB.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PB.Name = "txt_PB";
             this.txt_PB.Size = new System.Drawing.Size(133, 23);
             this.txt_PB.TabIndex = 7;
+            this.txt_PB.Click += new System.EventHandler(this.txt_PB_Click);
             // 
             // txt_Coatting
             // 
             this.txt_Coatting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_Coatting.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Coatting.Location = new System.Drawing.Point(97, 22);
-            this.txt_Coatting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Coatting.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Coatting.Name = "txt_Coatting";
             this.txt_Coatting.Size = new System.Drawing.Size(121, 23);
             this.txt_Coatting.TabIndex = 6;
+            this.txt_Coatting.Click += new System.EventHandler(this.txt_Coatting_Click);
             // 
             // chk_PB
             // 
             this.chk_PB.AutoSize = true;
             this.chk_PB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_PB.Location = new System.Drawing.Point(12, 54);
-            this.chk_PB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_PB.Margin = new System.Windows.Forms.Padding(2);
             this.chk_PB.Name = "chk_PB";
             this.chk_PB.Size = new System.Drawing.Size(55, 19);
             this.chk_PB.TabIndex = 12;
@@ -333,7 +337,7 @@
             this.chk_Coatting.AutoSize = true;
             this.chk_Coatting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Coatting.Location = new System.Drawing.Point(12, 22);
-            this.chk_Coatting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Coatting.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Coatting.Name = "chk_Coatting";
             this.chk_Coatting.Size = new System.Drawing.Size(78, 19);
             this.chk_Coatting.TabIndex = 11;
@@ -353,9 +357,9 @@
             this.groupBox5.Controls.Add(this.chk_Tipo);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(311, 127);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(219, 138);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
@@ -367,7 +371,7 @@
             this.date_Fecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.date_Fecha.Location = new System.Drawing.Point(78, 48);
-            this.date_Fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date_Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.date_Fecha.Name = "date_Fecha";
             this.date_Fecha.Size = new System.Drawing.Size(132, 23);
             this.date_Fecha.TabIndex = 31;
@@ -387,7 +391,7 @@
             // 
             this.txt_Tiempo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Tiempo.Location = new System.Drawing.Point(85, 102);
-            this.txt_Tiempo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Tiempo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Tiempo.Name = "txt_Tiempo";
             this.txt_Tiempo.Size = new System.Drawing.Size(80, 23);
             this.txt_Tiempo.TabIndex = 33;
@@ -397,7 +401,7 @@
             this.chk_Tiempo.AutoSize = true;
             this.chk_Tiempo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Tiempo.Location = new System.Drawing.Point(12, 104);
-            this.chk_Tiempo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Tiempo.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Tiempo.Name = "chk_Tiempo";
             this.chk_Tiempo.Size = new System.Drawing.Size(79, 19);
             this.chk_Tiempo.TabIndex = 9;
@@ -408,7 +412,7 @@
             // 
             this.txt_Temp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Temp.Location = new System.Drawing.Point(85, 76);
-            this.txt_Temp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Temp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Temp.Name = "txt_Temp";
             this.txt_Temp.Size = new System.Drawing.Size(125, 23);
             this.txt_Temp.TabIndex = 32;
@@ -418,7 +422,7 @@
             this.chk_Temp.AutoSize = true;
             this.chk_Temp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Temp.Location = new System.Drawing.Point(12, 77);
-            this.chk_Temp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Temp.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Temp.Name = "chk_Temp";
             this.chk_Temp.Size = new System.Drawing.Size(71, 19);
             this.chk_Temp.TabIndex = 8;
@@ -429,7 +433,7 @@
             // 
             this.txt_Tipo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Tipo.Location = new System.Drawing.Point(68, 20);
-            this.txt_Tipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Tipo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Tipo.Name = "txt_Tipo";
             this.txt_Tipo.Size = new System.Drawing.Size(142, 23);
             this.txt_Tipo.TabIndex = 30;
@@ -439,7 +443,7 @@
             this.chk_Fecha.AutoSize = true;
             this.chk_Fecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Fecha.Location = new System.Drawing.Point(12, 50);
-            this.chk_Fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Fecha.Name = "chk_Fecha";
             this.chk_Fecha.Size = new System.Drawing.Size(72, 19);
             this.chk_Fecha.TabIndex = 7;
@@ -451,7 +455,7 @@
             this.chk_Tipo.AutoSize = true;
             this.chk_Tipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Tipo.Location = new System.Drawing.Point(12, 22);
-            this.chk_Tipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Tipo.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Tipo.Name = "chk_Tipo";
             this.chk_Tipo.Size = new System.Drawing.Size(56, 19);
             this.chk_Tipo.TabIndex = 6;
@@ -474,9 +478,9 @@
             this.groupBox6.Controls.Add(this.chk_SUBST);
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(9, 268);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(521, 110);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
@@ -485,7 +489,7 @@
             // 
             this.txt_STOP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_STOP.Location = new System.Drawing.Point(358, 76);
-            this.txt_STOP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_STOP.Margin = new System.Windows.Forms.Padding(2);
             this.txt_STOP.Name = "txt_STOP";
             this.txt_STOP.Size = new System.Drawing.Size(126, 23);
             this.txt_STOP.TabIndex = 39;
@@ -494,17 +498,18 @@
             // 
             this.txt_SHN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_SHN.Location = new System.Drawing.Point(342, 46);
-            this.txt_SHN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_SHN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SHN.Name = "txt_SHN";
             this.txt_SHN.Size = new System.Drawing.Size(142, 23);
             this.txt_SHN.TabIndex = 38;
+            this.txt_SHN.Click += new System.EventHandler(this.txt_SHN_Click);
             // 
             // chk_Stop
             // 
             this.chk_Stop.AutoSize = true;
             this.chk_Stop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Stop.Location = new System.Drawing.Point(287, 77);
-            this.chk_Stop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Stop.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Stop.Name = "chk_Stop";
             this.chk_Stop.Size = new System.Drawing.Size(66, 19);
             this.chk_Stop.TabIndex = 18;
@@ -516,7 +521,7 @@
             this.chk_SHN.AutoSize = true;
             this.chk_SHN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_SHN.Location = new System.Drawing.Point(287, 49);
-            this.chk_SHN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_SHN.Margin = new System.Windows.Forms.Padding(2);
             this.chk_SHN.Name = "chk_SHN";
             this.chk_SHN.Size = new System.Drawing.Size(56, 19);
             this.chk_SHN.TabIndex = 17;
@@ -547,7 +552,7 @@
             // 
             this.txt_TiempoSubs.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_TiempoSubs.Location = new System.Drawing.Point(419, 17);
-            this.txt_TiempoSubs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TiempoSubs.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TiempoSubs.Name = "txt_TiempoSubs";
             this.txt_TiempoSubs.Size = new System.Drawing.Size(46, 23);
             this.txt_TiempoSubs.TabIndex = 37;
@@ -557,7 +562,7 @@
             this.chk_TiempoSubs.AutoSize = true;
             this.chk_TiempoSubs.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_TiempoSubs.Location = new System.Drawing.Point(287, 20);
-            this.chk_TiempoSubs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_TiempoSubs.Margin = new System.Windows.Forms.Padding(2);
             this.chk_TiempoSubs.Name = "chk_TiempoSubs";
             this.chk_TiempoSubs.Size = new System.Drawing.Size(142, 19);
             this.chk_TiempoSubs.TabIndex = 16;
@@ -568,7 +573,7 @@
             // 
             this.txt_Conjug.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Conjug.Location = new System.Drawing.Point(101, 49);
-            this.txt_Conjug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Conjug.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Conjug.Name = "txt_Conjug";
             this.txt_Conjug.Size = new System.Drawing.Size(116, 23);
             this.txt_Conjug.TabIndex = 36;
@@ -578,7 +583,7 @@
             this.chk_Conjug.AutoSize = true;
             this.chk_Conjug.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Conjug.Location = new System.Drawing.Point(12, 50);
-            this.chk_Conjug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Conjug.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Conjug.Name = "chk_Conjug";
             this.chk_Conjug.Size = new System.Drawing.Size(84, 19);
             this.chk_Conjug.TabIndex = 15;
@@ -589,17 +594,18 @@
             // 
             this.txt_SUBST.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_SUBST.Location = new System.Drawing.Point(91, 20);
-            this.txt_SUBST.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_SUBST.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SUBST.Name = "txt_SUBST";
             this.txt_SUBST.Size = new System.Drawing.Size(121, 23);
             this.txt_SUBST.TabIndex = 35;
+            this.txt_SUBST.Click += new System.EventHandler(this.txt_SUBST_Click);
             // 
             // chk_SUBST
             // 
             this.chk_SUBST.AutoSize = true;
             this.chk_SUBST.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_SUBST.Location = new System.Drawing.Point(12, 22);
-            this.chk_SUBST.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_SUBST.Margin = new System.Windows.Forms.Padding(2);
             this.chk_SUBST.Name = "chk_SUBST";
             this.chk_SUBST.Size = new System.Drawing.Size(72, 19);
             this.chk_SUBST.TabIndex = 14;
@@ -624,9 +630,9 @@
             this.groupBox7.Controls.Add(this.chk_ControlNeg);
             this.groupBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(9, 439);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(521, 141);
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
@@ -636,7 +642,7 @@
             // 
             this.txt_ControlNegRadioLS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_ControlNegRadioLS.Location = new System.Drawing.Point(363, 109);
-            this.txt_ControlNegRadioLS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlNegRadioLS.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlNegRadioLS.Name = "txt_ControlNegRadioLS";
             this.txt_ControlNegRadioLS.Size = new System.Drawing.Size(67, 23);
             this.txt_ControlNegRadioLS.TabIndex = 50;
@@ -645,7 +651,7 @@
             // 
             this.txt_ControlNegRadioLI.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_ControlNegRadioLI.Location = new System.Drawing.Point(292, 110);
-            this.txt_ControlNegRadioLI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlNegRadioLI.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlNegRadioLI.Name = "txt_ControlNegRadioLI";
             this.txt_ControlNegRadioLI.Size = new System.Drawing.Size(67, 23);
             this.txt_ControlNegRadioLI.TabIndex = 49;
@@ -655,7 +661,7 @@
             this.txt_ControlNegRadio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_ControlNegRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ControlNegRadio.Location = new System.Drawing.Point(170, 109);
-            this.txt_ControlNegRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlNegRadio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlNegRadio.Name = "txt_ControlNegRadio";
             this.txt_ControlNegRadio.Size = new System.Drawing.Size(120, 23);
             this.txt_ControlNegRadio.TabIndex = 48;
@@ -665,7 +671,7 @@
             this.chk_ControlNegRadio.AutoSize = true;
             this.chk_ControlNegRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_ControlNegRadio.Location = new System.Drawing.Point(16, 110);
-            this.chk_ControlNegRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_ControlNegRadio.Margin = new System.Windows.Forms.Padding(2);
             this.chk_ControlNegRadio.Name = "chk_ControlNegRadio";
             this.chk_ControlNegRadio.Size = new System.Drawing.Size(156, 19);
             this.chk_ControlNegRadio.TabIndex = 23;
@@ -677,7 +683,7 @@
             this.txt_ControlPos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_ControlPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ControlPos.Location = new System.Drawing.Point(170, 29);
-            this.txt_ControlPos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlPos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlPos.Name = "txt_ControlPos";
             this.txt_ControlPos.Size = new System.Drawing.Size(120, 23);
             this.txt_ControlPos.TabIndex = 41;
@@ -687,7 +693,7 @@
             this.chk_ControlPosBajo.AutoSize = true;
             this.chk_ControlPosBajo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_ControlPosBajo.Location = new System.Drawing.Point(17, 30);
-            this.chk_ControlPosBajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_ControlPosBajo.Margin = new System.Windows.Forms.Padding(2);
             this.chk_ControlPosBajo.Name = "chk_ControlPosBajo";
             this.chk_ControlPosBajo.Size = new System.Drawing.Size(117, 19);
             this.chk_ControlPosBajo.TabIndex = 20;
@@ -698,7 +704,7 @@
             // 
             this.txt_ControlPosRadioLS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_ControlPosRadioLS.Location = new System.Drawing.Point(364, 82);
-            this.txt_ControlPosRadioLS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlPosRadioLS.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlPosRadioLS.Name = "txt_ControlPosRadioLS";
             this.txt_ControlPosRadioLS.Size = new System.Drawing.Size(67, 23);
             this.txt_ControlPosRadioLS.TabIndex = 47;
@@ -707,7 +713,7 @@
             // 
             this.txt_ControlNegLS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_ControlNegLS.Location = new System.Drawing.Point(364, 55);
-            this.txt_ControlNegLS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlNegLS.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlNegLS.Name = "txt_ControlNegLS";
             this.txt_ControlNegLS.Size = new System.Drawing.Size(67, 23);
             this.txt_ControlNegLS.TabIndex = 44;
@@ -716,7 +722,7 @@
             // 
             this.txt_ControlPosRadioLI.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_ControlPosRadioLI.Location = new System.Drawing.Point(293, 83);
-            this.txt_ControlPosRadioLI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlPosRadioLI.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlPosRadioLI.Name = "txt_ControlPosRadioLI";
             this.txt_ControlPosRadioLI.Size = new System.Drawing.Size(67, 23);
             this.txt_ControlPosRadioLI.TabIndex = 46;
@@ -725,7 +731,7 @@
             // 
             this.txt_ControlNegLI.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_ControlNegLI.Location = new System.Drawing.Point(293, 55);
-            this.txt_ControlNegLI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlNegLI.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlNegLI.Name = "txt_ControlNegLI";
             this.txt_ControlNegLI.Size = new System.Drawing.Size(67, 23);
             this.txt_ControlNegLI.TabIndex = 43;
@@ -735,7 +741,7 @@
             this.txt_ControlPosRadio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_ControlPosRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ControlPosRadio.Location = new System.Drawing.Point(170, 82);
-            this.txt_ControlPosRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlPosRadio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlPosRadio.Name = "txt_ControlPosRadio";
             this.txt_ControlPosRadio.Size = new System.Drawing.Size(120, 23);
             this.txt_ControlPosRadio.TabIndex = 45;
@@ -745,7 +751,7 @@
             this.chk_ControlPosRadio.AutoSize = true;
             this.chk_ControlPosRadio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_ControlPosRadio.Location = new System.Drawing.Point(17, 83);
-            this.chk_ControlPosRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_ControlPosRadio.Margin = new System.Windows.Forms.Padding(2);
             this.chk_ControlPosRadio.Name = "chk_ControlPosRadio";
             this.chk_ControlPosRadio.Size = new System.Drawing.Size(150, 19);
             this.chk_ControlPosRadio.TabIndex = 22;
@@ -757,7 +763,7 @@
             this.txt_ControlNeg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ControlNeg.Location = new System.Drawing.Point(170, 55);
-            this.txt_ControlNeg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ControlNeg.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ControlNeg.Name = "txt_ControlNeg";
             this.txt_ControlNeg.Size = new System.Drawing.Size(120, 23);
             this.txt_ControlNeg.TabIndex = 42;
@@ -767,7 +773,7 @@
             this.chk_ControlNeg.AutoSize = true;
             this.chk_ControlNeg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_ControlNeg.Location = new System.Drawing.Point(17, 55);
-            this.chk_ControlNeg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_ControlNeg.Margin = new System.Windows.Forms.Padding(2);
             this.chk_ControlNeg.Name = "chk_ControlNeg";
             this.chk_ControlNeg.Size = new System.Drawing.Size(123, 19);
             this.chk_ControlNeg.TabIndex = 21;
@@ -780,7 +786,7 @@
             this.btn_Aceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_Aceptar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Aceptar.Location = new System.Drawing.Point(114, 614);
-            this.btn_Aceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Aceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(149, 33);
             this.btn_Aceptar.TabIndex = 51;
@@ -794,7 +800,7 @@
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.Location = new System.Drawing.Point(268, 614);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(149, 33);
             this.btn_Cancelar.TabIndex = 52;
@@ -815,6 +821,15 @@
             this.groupBox8.Size = new System.Drawing.Size(521, 53);
             this.groupBox8.TabIndex = 28;
             this.groupBox8.TabStop = false;
+            // 
+            // txt_FactorS
+            // 
+            this.txt_FactorS.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_FactorS.Location = new System.Drawing.Point(373, 21);
+            this.txt_FactorS.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_FactorS.Name = "txt_FactorS";
+            this.txt_FactorS.Size = new System.Drawing.Size(90, 23);
+            this.txt_FactorS.TabIndex = 24;
             // 
             // chk_FactorS
             // 
@@ -849,15 +864,6 @@
             this.chk_FactorP.Text = "Factor Principal :";
             this.chk_FactorP.UseVisualStyleBackColor = true;
             // 
-            // txt_FactorS
-            // 
-            this.txt_FactorS.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_FactorS.Location = new System.Drawing.Point(373, 21);
-            this.txt_FactorS.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_FactorS.Name = "txt_FactorS";
-            this.txt_FactorS.Size = new System.Drawing.Size(90, 23);
-            this.txt_FactorS.TabIndex = 24;
-            // 
             // DatosIgMZika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -874,7 +880,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "DatosIgMZika";
             this.ShowIcon = false;

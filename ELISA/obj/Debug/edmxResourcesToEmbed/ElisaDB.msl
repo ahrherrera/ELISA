@@ -340,6 +340,7 @@
     <EntitySetMapping Name="datosprotocolorotavirus">
       <EntityTypeMapping TypeName="elisaModel.datosprotocolorotaviru">
         <MappingFragment StoreEntitySet="datosprotocolorotavirus">
+          <ScalarProperty Name="idDatosProtocoloRV" ColumnName="idDatosProtocoloRV" />
           <ScalarProperty Name="Codigo" ColumnName="Codigo" />
           <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
           <ScalarProperty Name="TIMES" ColumnName="TIMES" />
@@ -1849,6 +1850,7 @@
     <EntitySetMapping Name="datosprotocolochiks">
       <EntityTypeMapping TypeName="elisaModel.datosprotocolochik">
         <MappingFragment StoreEntitySet="datosprotocolochik">
+          <ScalarProperty Name="idDatosProtocoloChik" ColumnName="idDatosProtocoloChik" />
           <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
           <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
           <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
@@ -1909,6 +1911,7 @@
     <EntitySetMapping Name="datosprotocolochikmonoes">
       <EntityTypeMapping TypeName="elisaModel.datosprotocolochikmono">
         <MappingFragment StoreEntitySet="datosprotocolochikmono">
+          <ScalarProperty Name="idDatosProtocoloChikMono" ColumnName="idDatosProtocoloChikMono" />
           <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
           <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
           <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
@@ -1992,6 +1995,7 @@
     <EntitySetMapping Name="datosprotocoloiggs">
       <EntityTypeMapping TypeName="elisaModel.datosprotocoloigg">
         <MappingFragment StoreEntitySet="datosprotocoloigg">
+          <ScalarProperty Name="idDatosProtocoloIgG" ColumnName="idDatosProtocoloIgG" />
           <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
           <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
           <ScalarProperty Name="ControlNegSal" ColumnName="ControlNegSal" />
@@ -2095,6 +2099,44 @@
           <ScalarProperty Name="CodDiluyente" ColumnName="CodDiluyente" />
           <ScalarProperty Name="Substrato" ColumnName="Substrato" />
           <ScalarProperty Name="STOP" ColumnName="STOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chikungunyas">
+      <EntityTypeMapping TypeName="elisaModel.chikungunya">
+        <MappingFragment StoreEntitySet="chikungunya">
+          <ScalarProperty Name="FVC" ColumnName="FVC" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+          <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+          <ScalarProperty Name="STOP" ColumnName="STOP" />
+          <ScalarProperty Name="SHN" ColumnName="SHN" />
+          <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+          <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+          <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+          <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+          <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+          <ScalarProperty Name="FB" ColumnName="FB" />
+          <ScalarProperty Name="TB" ColumnName="TB" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+          <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+          <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+          <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+          <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+          <ScalarProperty Name="LoteAntigenoViral" ColumnName="LoteAntigenoViral" />
+          <ScalarProperty Name="Tecnica" ColumnName="Tecnica" />
+          <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+          <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+          <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="Valido" ColumnName="Valido" />
+          <ScalarProperty Name="VC" ColumnName="VC" />
+          <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="Cod_pozo" ColumnName="Cod_pozo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

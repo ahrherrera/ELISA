@@ -60,8 +60,12 @@ namespace ELISA.Utils
             ControlesIgM_CRP,
             ControlesIgM_CRN,
             ControlesEI_CMin,
-            ControlesEI_CPlus
-
+            ControlesEI_CPlus,
+            ControlesIgG_CP,
+            ControlesIgG_CN,
+            ControlesIgG_CNS,
+            ControlesRV_CP,
+            ControlesRV_CN
         }
 
         public enum Test
@@ -110,16 +114,19 @@ namespace ELISA.Utils
 
         public static string CopyAndExtract(string NombreProtocolo, int tipoTest)
         {
-            string FullFilePath = System.IO.Path.Combine(WORK_DIR, RESP_FN);
+            //string FullFilePath = System.IO.Path.Combine(WORK_DIR, RESP_FN);
             string DestFullFilePath = System.IO.Path.Combine(BASE_DIR, RESP_FN);
             string StoragePath = System.IO.Path.Combine(BASE_DIR, STORAGE_DIR);
             string nombreTest = ((Test) tipoTest).ToString();
             string currentDate = DateTime.Now.ToString("dd-MM-yyyy");
 
+            // C:\AscSW26\RESPONSE.TXT
+
             string StorageFileName = "response_" + currentDate + "_" + NombreProtocolo + "_" + nombreTest + ".txt";
             string StorageFullFilePath = System.IO.Path.Combine(StoragePath, StorageFileName);
 
-            File.SetAttributes(DestFullFilePath, FileAttributes.Normal);
+            //File.SetAttributes(DestFullFilePath, FileAttributes.Normal);
+            File.SetAttributes("C:\\AscSW26\\RESPONSE.TXT", FileAttributes.Normal);
             
 
             if (!Directory.Exists(StoragePath))
@@ -127,11 +134,11 @@ namespace ELISA.Utils
                 Directory.CreateDirectory(StoragePath);
             }
 
-            if (System.IO.File.Exists(FullFilePath))
+            if (System.IO.File.Exists("C:\\AscSW26\\RESPONSE.TXT"))
             {
                 try
                 {
-                    File.Copy(FullFilePath, DestFullFilePath, true);
+                    File.Copy("C:\\AscSW26\\RESPONSE.TXT", DestFullFilePath, true);
                     File.Copy(DestFullFilePath, StorageFullFilePath, true);
                     File.SetAttributes(StorageFullFilePath, FileAttributes.Normal);
                     string contenido = File.ReadAllText(DestFullFilePath);
@@ -580,6 +587,15 @@ namespace ELISA.Utils
                     MyApp.Quit();
                     }
                     break;
+                case Test.ELISAINHMonoChik:
+                case Test.ELISARMCohAnualChik:
+                case Test.ELISARMCohAnualChikDup:
+                case Test.ELISARMSeroChikDup:
+                case Test.ELISARMSeroChik:
+                {
+
+                }
+                    break;
             }
         }
 
@@ -738,7 +754,7 @@ namespace ELISA.Utils
                 {
                     int iIndex = ((int)(i / 4)) - 2;
                     int jIndex = ((int)(j - 2));
-                    xlWorkSheet.Cells[i, j].Value = Single.Parse(principal.Unidades[iIndex, jIndex]).ToString("0.00");
+                    xlWorkSheet.Cells[i, j].Value = principal.Unidades[iIndex, jIndex];
                 }
             }
         }

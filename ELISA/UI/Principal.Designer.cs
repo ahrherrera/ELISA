@@ -529,6 +529,7 @@
             this.protocoloRotavirusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F1)));
             this.protocoloRotavirusToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.protocoloRotavirusToolStripMenuItem.Text = "Protocolo Rotavirus";
+            this.protocoloRotavirusToolStripMenuItem.Click += new System.EventHandler(this.protocoloRotavirusToolStripMenuItem_Click);
             // 
             // protocoloIgMZikaToolStripMenuItem
             // 
@@ -561,6 +562,7 @@
             this.kitRotaviruToolStripMenuItem.Name = "kitRotaviruToolStripMenuItem";
             this.kitRotaviruToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.kitRotaviruToolStripMenuItem.Text = "Kit Rotavirus";
+            this.kitRotaviruToolStripMenuItem.Click += new System.EventHandler(this.kitRotaviruToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -1147,6 +1149,7 @@
             this.optOpciones.Controls.Add(this.btn_Calcular);
             this.optOpciones.Controls.Add(this.rb_Invalidar);
             this.optOpciones.Controls.Add(this.rb_Validar);
+            this.optOpciones.Enabled = false;
             this.optOpciones.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optOpciones.Location = new System.Drawing.Point(14, 267);
             this.optOpciones.Margin = new System.Windows.Forms.Padding(2);

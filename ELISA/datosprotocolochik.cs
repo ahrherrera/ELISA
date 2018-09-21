@@ -40,5 +40,6 @@ namespace ELISA
         public Nullable<float> LimCNI { get; set; }
         public Nullable<float> LimCNS { get; set; }
         public Nullable<float> FVC { get; set; }
+        public int idDatosProtocoloChik { get; set; }
     }
 }

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.Entity.Infrastructure;
+using System.Data.Objects;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Globalization;
@@ -30,6 +33,8 @@ namespace ELISA.UI
         //Variables
         public int selectedTest = -1;
         public static Boolean invalid;
+        public string repetir;
+        public string cambio;
 
         public Single cpA;
         public Single cpB;
@@ -40,8 +45,10 @@ namespace ELISA.UI
 
         public String [,] Unidades = new string[8,12];
         public String [,] Absorbancia = new string[8,12];
+        public String[,] Porcentajes = new string[8, 12];
         public String [,] Resultados = new string[8,12];
         public String [,] Resultados1 = new string[8,12];
+        public String [,] Titulos = new string[8,12];
 
         public Principal(usuario logged)
         {
@@ -864,19 +871,109 @@ namespace ELISA.UI
             switch (selectedTest)
             {
                 case 5:
-                    {
-                        //GuardarIgG
-                        
-                        break;
-                    }
                 case 6:
+                {
+                    //GuardarIgG
+                    bool invalidtemp = invalid;
+                    if (new DatosIgG().ShowDialog(this) == DialogResult.OK)
                     {
-                        //GuardarIgG
-                        break;
+                        Single lectData;
+                        String und;
+                        String res;
+                        datosprotocoloigg datos = DatosProtocoloIgG.TraerDatosprotocoloIgG();
+                        int cont = 0;
+                        for (int i = 0; i < 8; i++)
+                        {
+                            for (int j = 0; j < 12; j++)
+                            {
+                                elisaigg newIgG = new elisaigg();
+                                newIgG.Cod_Pozo = protocolo[i, j];
+                                newIgG.posicion = Convert.ToByte(cont++);
+                                if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                {
+                                    lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                                }
+                                else
+                                {
+                                    lectData = Single.Parse(lectura[i, j]);
+                                }
+
+                                newIgG.Lectura = lectData;
+                                newIgG.m3men = med3men;
+
+                                if (!invalidtemp)
+                                {
+                                    und = (((lectData - med3men) / (MxCP - med3men)) * 100).ToString("0.00");
+                                    if (Int32.Parse(und) >= 8 && !invalidtemp)
+                                    {
+                                        res = "P";
+                                    }
+                                    else
+                                    {
+                                        res = "N";
+                                    }
+                                }
+                                else
+                                {
+                                    und = "INV";
+                                    res = "INV";
+                                }
+
+                                newIgG.Resultado = res;
+                                newIgG.Unidades = und;
+                                Unidades[i, j] = und;
+                                Absorbancia[i, j] = Convert.ToString(lectData);
+
+                                newIgG.Placa = txt_Placa.TextBox.Text;
+                                if (invalidtemp)
+                                {
+                                    newIgG.Valido = false;
+                                }
+                                else
+                                {
+                                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                    {
+                                        newIgG.Valido = false;
+                                    }
+                                    else
+                                        newIgG.Valido = true;
+
+                                }
+
+                                newIgG.Fecha = DateTime.Now;
+                                newIgG.ControlPos = datos.ControlPos;
+                                newIgG.ControlNeg = datos.ControlNeg;
+                                newIgG.LoteIgG = datos.LoteIgG;
+                                newIgG.LoteAntigeno = datos.LoteAntigeno;
+                                newIgG.GGLOB = datos.GGLOB;
+                                newIgG.Substrato = datos.Substrato;
+                                newIgG.TSubstrato = datos.TSubstrato;
+                                newIgG.Conjugado = datos.Conjugado;
+                                newIgG.SHN = datos.SHN;
+                                newIgG.STOP = datos.STOP;
+                                newIgG.Lab1 = cmb_Lab1.ComboBox.Text;
+                                newIgG.Lab2 = cmb_Lab2.ComboBox.Text;
+                                newIgG.user = Convert.ToString(user.idUsuario);
+                                ElisaIGGTrans.saveElisaIGG(newIgG);
+                                btn_Print.Enabled = true;
+                                cont++;
+                            }
+                        }
+                    MessageBox.Show("Datos Guardados Correctamente",
+                            "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else
+                    {
+                        MessageBox.Show("Verifique los datos del protocolo en el menu principal",
+                            "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                        break;
+                }
+
                 case 0:
                     {
                         ControlP = false;
+                        bool invalidTemp = invalid;
                         //GuardarIgM Dengue
                         if (new DatosIgM().ShowDialog(this) == DialogResult.OK)
                         {
@@ -884,7 +981,7 @@ namespace ELISA.UI
                             String und;
                             String res;
                             datosprotocoloigm datos = DatosProtocoloIgM.TraerDatosProtocoloIgM();
-                            int cont = 1;
+                            int cont = 0;
                             for (int i = 0; i < 8; i++)
                             {
                                 for (int j = 0; j < 12; j++)
@@ -977,68 +1074,475 @@ namespace ELISA.UI
                                     newIgM.User = Convert.ToString(user.idUsuario);
                                     ElisaIGMTrans.saveElisaIGM(newIgM);
                                     btn_Print.Enabled = true;
+                                    cont++;
                                 }
                             }
+
+                            MessageBox.Show("Datos Guardados Correctamente",
+                                "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
                             MessageBox.Show("Verifique los datos del protocolo en el menu principal",
                                 "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        return;
+                        break;
                     }
                 case 10:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
-                        break;
-                    }
                 case 7:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
-                        break;
-                    }
-                case 8:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
-                        break;
-                    }
-                case 9:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
-                        break;
-                    }
+                //case 8:
+                //case 9:
+                //case 11:
                 case 26:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
-                        break;
-                    }
                 case 27:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
-                        break;
-                    }
                 case 28:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
-                        break;
-                    }
                 case 29:
                     {
+                        //NOTA: //TODO: Falta integrar las demas tecnicas
                         ControlP = false;
                         //GuardarEI2
-                        break;
-                    }
-                case 11:
-                    {
-                        ControlP = false;
-                        //GuardarEI2
+                        int a;
+                        Single lect, VC;
+                        String und, codeP, codeP2, dilu;
+                        int l;
+                        long p, q, z;
+                        Single pa;
+                        Single dilmy50;
+                        Single dilmn50;
+                        Single dilA;
+                        int cont;
+                        int contador;
+                        Single w, y;
+                        DateTime today = DateTime.Now;
+
+                        bool validacionprot = false;
+                        bool invalidTemp = invalid;
+                        switch (selectedTest)
+                        {
+                            case 10:
+                            {
+                                if (new DatosEI().ShowDialog(this)==DialogResult.OK)
+                                {
+                                        validacionprot = true;
+                                }
+                                break;
+                            }
+                            case 7:
+                            case 26:
+                            case 27:
+                            case 28:
+                            case 29:
+                            {
+                                if (new DatosEIChikMono().ShowDialog(this)== DialogResult.OK)
+                                {
+                                    validacionprot = true;
+                                }
+                                break;
+                            }
+                        }
+
+                        if (validacionprot)
+                        {
+                            var context = new elisaEntities2();
+                            context.Database.ExecuteSqlCommand("Delete from ELISAINHTMP;");
+
+                            datosprotocoloei datos = DatosProtocoloEI.TraerDatosProtocoloEI();
+                            cont = 0;
+                            z = 0;
+                            contador = 0;
+
+                            for (int i = 0; i < 8; i++)
+                            {
+                                for (int j = 0; j < 12; j++)
+                                {
+                                    elisainhtmp inh = new elisainhtmp();
+                                    if (protocolo[i,j].EndsWith("d10"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 3, 3);
+                                        inh.Dilucion = "200000";
+                                    }else if (protocolo[i, j].EndsWith("d9"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "20000";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d8"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "2000";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d7"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "200";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d6"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "20";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d5"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "100000";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d4"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "10000";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d3"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "1000";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d2"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "100";
+                                    }
+                                    else if (protocolo[i, j].EndsWith("d1"))
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j].Substring(protocolo[i, j].Length - 2, 2);
+                                        inh.Dilucion = "10";
+                                    }
+                                    else
+                                    {
+                                        inh.Cod_Pozo = protocolo[i, j];
+                                        inh.Dilucion = "NA";
+                                    }
+
+                                    inh.posicion = Convert.ToByte(contador++);
+                                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                    {
+                                        lect = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                                    }
+                                    else
+                                    {
+                                        lect = Single.Parse(lectura[i, j]);
+                                    }
+
+                                    inh.Lectura = lect;
+
+                                    if (!invalidTemp)
+                                    {
+                                        und = ((1 - (lect / MxCNEI)) * 100).ToString("0.000");
+                                    }
+                                    else
+                                    {
+                                        und = "INV";
+                                    }
+
+                                    VC = Single.Parse(txt_val1.Text);
+                                    inh.VC = VC;
+                                    inh.INHP = und;
+                                    Porcentajes[i, j] = und;
+                                    Absorbancia[i, j] = Convert.ToString(lect);
+
+                                    if (inh.Dilucion != "NA")
+                                    {
+                                        if (long.Parse(inh.Dilucion) < z)
+                                        {
+                                            cont++;
+                                        }
+
+                                        z = long.Parse(inh.Dilucion);
+                                    }
+                                    else
+                                    {
+                                        z = 3000000;
+                                        cont++;
+                                    }
+
+                                    inh.Titulo = "NA";
+                                    inh.Placa = txt_Placa.TextBox.Text;
+
+                                    if (inh.Cod_Pozo == "CP")
+                                    {
+                                        inh.Titulo = txt_val2.Text;
+                                    }
+
+                                    if (invalidTemp)
+                                    {
+                                        inh.Valido = false;
+                                        Titulos[i, j] = "INV";
+                                    }
+                                    else
+                                    {
+                                        if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                        {
+                                            inh.Valido = false;
+                                        }
+                                        else
+                                            inh.Valido = true;
+                                    }
+
+                                    inh.ControlPos = datos.ControlPos;
+                                    inh.ControlNeg = datos.ControlNeg;
+
+                                    inh.LoteEI = datos.LoteEI;
+                                    inh.LoteAntigeno = datos.LoteAntigeno;
+                                    inh.GGLOB = datos.GGLOB;
+                                    inh.fechafijGG = datos.fechafijGG;
+                                    inh.VolUsado = datos.VolUsado;
+                                    inh.ProcH2O = datos.ProcH2O;
+                                    inh.TipoEstudio = datos.TipoEstudio;
+                                    inh.Coatting = datos.Coatting;
+                                    inh.PB = datos.PB;
+                                    inh.TB = datos.TB;
+                                    inh.FB = datos.FB;
+                                    inh.TMPB = datos.TMPB;
+                                    inh.TIMEB = datos.TIMEB;
+                                    inh.Substrato = datos.Substrato;
+                                    inh.TSubstrato = datos.TSubstrato;
+                                    inh.Conjugado = datos.Conjugado;
+                                    inh.SHN = datos.SHN;
+                                    inh.STOP = datos.STOP;
+                                    inh.Lab1 = cmb_Lab1.ComboBox.Text;
+                                    inh.Lab2 = cmb_Lab2.ComboBox.Text;
+                                    inh.repetir = "N";
+                                    inh.cambio = "N";
+                                    inh.user = Convert.ToString(user.idUsuario);
+                                    inh.contaux = cont;
+                                    contador++;
+                                    EITrans.saveINHTMP(inh);
+                                }
+                            }
+
+                            if (invalidTemp)
+                            {
+                                MessageBox.Show("Los resultados han sido guardados");
+                                btn_Calcular.Enabled = false;
+                                btn_Save.Enabled = false;
+                                btn_Print.Enabled = true;
+                                invalid = false;
+                                
+                            }
+
+                            //Probar este codigo
+
+                            var list = context.elisainhtmps
+                                .Where(x => x.Fecha == today && 
+                                            x.Placa == txt_Placa.TextBox.Text &&
+                                            x.Dilucion != "NA" && 
+                                            x.Cod_Pozo != "CP")
+                                .Select(x => new
+                                {
+                                    Cod_Pozo = x.Cod_Pozo,
+                                    contaux = x.contaux
+                                })
+                                .GroupBy(x => new { x.Cod_Pozo, x.contaux })
+                                .ToList();
+
+                            if (list.Count!=0)
+                            {
+                                for (int i = 0; i < list.Count; i++)
+                                {
+                                    var list2 = context.elisainhtmps
+                                        .Where(x => x.Cod_Pozo == list[i].Key.Cod_Pozo &&
+                                                    x.contaux == list[i].Key.contaux &&
+                                                    x.Fecha == today &&
+                                                    x.Placa == txt_Placa.TextBox.Text &&
+                                                    x.Dilucion != "NA")
+                                        .Select(x=> new
+                                        {
+                                            Cod_Pozo = x.Cod_Pozo,
+                                            INHP = x.INHP,
+                                            Dilucion = x.Dilucion,
+                                            Posicion = x.posicion,
+                                            act = x.act,
+                                            cambio = x.cambio,
+                                            repetir = x.repetir,
+                                            contaux = x.contaux
+                                        })
+                                        .OrderBy(x => new {x.Posicion, x.Dilucion})
+                                        .ToList();
+                                    p = long.Parse(list2[0].Dilucion);
+                                    q = long.Parse(list2[0].Dilucion);
+                                    pa = 100;
+                                    dilmy50 = 1000;
+                                    dilmn50 = -1000;
+                                    dilA = 1;
+                                    repetir = "N";
+                                    cambio = "N";
+                                    for (int j = 0; j < list2.Count; j++)
+                                    {
+                                        if (Int32.Parse(list2[j].INHP) < 50 && Int32.Parse(list2[j].INHP)>dilmn50)
+                                        {
+                                            dilmn50 = Int32.Parse(list2[j].INHP);
+                                        }
+                                        if (Int32.Parse(list2[j].INHP) > 50 && Int32.Parse(list2[j].INHP) == -1000)
+                                        {
+                                            dilmy50 = Int32.Parse(list2[j].INHP);
+                                            dilA = Single.Parse(list2[j].Dilucion);
+                                        }
+
+                                        if (pa < 50 && Int32.Parse(list2[j].INHP) >=50)
+                                        {
+                                            repetir = "S";
+                                        }
+
+                                        if (pa < Int32.Parse(list2[j].INHP))
+                                        {
+                                            cambio = "S";
+                                        }
+
+                                        p = long.Parse(list2[j].Dilucion);
+                                        pa = Single.Parse(list2[j].INHP);
+                                        var data = context.elisainhtmps.SingleOrDefault(x =>
+                                            x.Cod_Pozo == list2[j].Cod_Pozo);
+                                        data.act = true;
+                                        context.SaveChanges();
+                                    }
+
+                                    w = (float) (((dilmy50 - 50) / (dilmy50 - dilmn50)) + Math.Log10(dilA));
+                                    y = (float) Math.Pow(10, w);
+
+                                    if (dilmy50 == 1000)
+                                    {
+                                        var data = context.elisainhtmps.Where(x => x.act==true).ToList();
+                                        data.ForEach(x =>
+                                        {
+                                            x.Titulo = "<" + q;
+                                            x.repetir = repetir;
+                                            x.cambio = cambio;
+                                        });
+                                        context.SaveChanges();
+                                    }
+                                    else if(dilmn50 == -1000)
+                                    {
+                                        var data = context.elisainhtmps.Where(x => x.act == true).ToList();
+                                        data.ForEach(x =>
+                                        {
+                                            x.Titulo = ">" + p;
+                                            x.repetir = repetir;
+                                            x.cambio = cambio;
+                                        });
+                                        context.SaveChanges();
+                                    }
+                                    else
+                                    {
+                                        var data = context.elisainhtmps.Where(x => x.act == true).ToList();
+                                        data.ForEach(x =>
+                                        {
+                                            x.Titulo = Convert.ToString(y);
+                                            x.repetir = repetir;
+                                            x.cambio = cambio;
+                                        });
+                                        context.SaveChanges();
+                                    }
+                                    var update = context.elisainhtmps.Where(x => x.act == true).ToList();
+                                    update.ForEach(x => x.act = false);
+                                    context.SaveChanges();
+                                }
+                            }
+                            var checkList = context.elisainhtmps
+                                .Where(x => x.Fecha == today &&
+                                            x.Placa == txt_Placa.TextBox.Text )
+                                .Select(x => new
+                                {
+                                    Cod_Pozo = x.Cod_Pozo,
+                                    INHP = x.INHP,
+                                    Dilucion = x.Dilucion,
+                                    Posicion = x.posicion,
+                                    Titulo = x.Titulo
+                                })
+                                .OrderBy(x => x.Posicion)
+                                .ToList();
+                            List<String> TitulosList = new List<string>();
+
+                            for (int i = 0; i < checkList.Count; i++)
+                            {
+                                TitulosList[i] = checkList[i].Titulo;
+                            }
+
+                            switch (selectedTest)
+                            {
+                                case 10:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into elisainh select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 7:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into CHIKUNGUNYAINHMONO select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 8:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into CHIKUNGUNYAINHHIPER select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 9:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ENSAYOS select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 26:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ELISAINHRMChik select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 27:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ELISAINHRMChikRepeticiones select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 28:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ELISAINHRMChikSero select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 29:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ELISAINHRMChikSeroRepeticiones select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 11:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ELISAINHZIKA select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 30:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ZIKARMAnual select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                                case 31:
+                                {
+                                    context.Database.ExecuteSqlCommand(
+                                        "insert into ZIKARMAnualDup select * from elisainhtmp;");
+                                    context.Database.ExecuteSqlCommand("delete from elisainhtmp;");
+                                    break;
+                                }
+                            }
+                            MessageBox.Show("Los resultados han sido guardados");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Verifique los datos de protocolo en el menu principal", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
                         break;
                     }
                 case 30:
@@ -1117,6 +1621,7 @@ namespace ELISA.UI
                     {
                         ControlP = false;
                         //GuardarRV
+
                         break;
                     }
                 case 3:
@@ -1127,11 +1632,115 @@ namespace ELISA.UI
                 case 4:
                     {
                         //GuardarChikCNDR
+                        bool invalidTemp = invalid;
+                        if (new DatosChikCNDR().ShowDialog(this) == DialogResult.OK)
+                        {
+                            Single lectData;
+                            String und;
+                            String res;
+                            datosprotocolochik datos = DatosProtocoloChik.TraerDatosprotocoloChik();
+                            int cont = 1;
+
+                            for (int i = 0; i < 8; i++)
+                            {
+                                for (int j = 0; j < 12; j++)
+                                {
+                                    chikungunya chik = new chikungunya();
+                                    chik.Cod_pozo = protocolo[i, j];
+                                    chik.posicion = Convert.ToByte(cont++);
+                                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                    {
+                                        lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                                    }
+                                    else
+                                    {
+                                        lectData = Single.Parse(lectura[i, j]);
+                                    }
+
+                                    chik.Lectura = lectData;
+
+                                    Absorbancia[i, j] = Convert.ToString(lectData);
+
+                                    if (lectData >= (Convert.ToSingle(txt_val2.Text) * datos.FVC) && !invalidTemp)
+                                    {
+                                        res = "P";
+                                    }
+                                    else
+                                    {
+                                        res = "N";
+                                    }
+
+                                    if (invalidTemp)
+                                    {
+                                        res = "INV";
+                                    }
+
+                                    chik.VC = Single.Parse(txt_val2.Text) * datos.FVC.Value;
+                                    chik.Resultado = res;
+                                    Resultados[i, j] = res;
+
+                                    chik.Placa = txt_Placa.TextBox.Text;
+                                    if (invalidTemp)
+                                    {
+                                        chik.Valido = false;
+                                    }
+                                    else
+                                    {
+                                        if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                        {
+                                            chik.Valido = false;
+                                        }
+                                        else
+                                        {
+                                            chik.Valido = true;
+                                        }
+                                    }
+
+                                    chik.Fecha = DateTime.Now;
+                                    chik.ControlPos = datos.ControlPos;
+                                    chik.ControlNeg = datos.ControlNeg;
+                                    chik.LoteIgM = datos.LoteIgM;
+                                    chik.Tecnica = "CNDR";
+                                    chik.LoteAntigenoViral = datos.LoteAntigenoViral;
+                                    chik.GGLOB = datos.GGLOB;
+                                    chik.fechafijGG = datos.fechafijGG;
+                                    chik.VolUsado = datos.VolUsado;
+                                    chik.ProcH2O = datos.ProcH2O;
+                                    chik.Coatting = datos.Coatting;
+                                    chik.PB = datos.PB;
+                                    chik.TB = datos.TB;
+                                    chik.FB = datos.FB;
+                                    chik.TMPB = datos.TMPB;
+                                    chik.TIMEB = datos.TIMEB;
+                                    chik.Substrato = datos.Substrato;
+                                    chik.TSubstrato = datos.TSubstrato;
+                                    chik.Conjugado = datos.Conjugado;
+                                    chik.SHN = datos.SHN;
+                                    chik.STOP = datos.STOP;
+                                    chik.Lab1 = cmb_Lab1.ComboBox.Text;
+                                    chik.Lab2 = cmb_Lab2.ComboBox.Text;
+                                    chik.user = Convert.ToString(user.idUsuario);
+                                    chik.FVC = datos.FVC.Value;
+                                    DatosProtocoloChik.saveElisaChik(chik);
+                                    btn_Print.Enabled = true;
+                                    
+                                }
+                            }
+
+                            MessageBox.Show("Datos Guardados Correctamente",
+                                "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Verifique los datos del protocolo en el menu principal",
+                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     }
                 case 1:
                     {
                         ControlP = false;
+                        bool invalidTemp = invalid;
                         if (new DatosIgMZika().ShowDialog(this) == DialogResult.OK)
                         {
                             Single lectData;
@@ -1144,7 +1753,7 @@ namespace ELISA.UI
                                 {
                                     zikaigm newIgM = new zikaigm();
                                     newIgM.Cod_Pozo = protocolo[i, j];
-                                    newIgM.posicion = Convert.ToByte(cont++);
+                                    newIgM.posicion = Convert.ToByte(cont);
                                     if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                                     {
                                         lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
@@ -1154,7 +1763,7 @@ namespace ELISA.UI
                                         lectData = Single.Parse(lectura[i, j]);
                                     }
                                     newIgM.Lectura = lectData;
-                                    if (cb.Checked && !invalid)
+                                    if (cb.Checked && !invalidTemp)
                                     {
                                         und = (((lectData - cnR) / (cpR - cnR)) * 100).ToString("0.00");
                                     }
@@ -1163,7 +1772,7 @@ namespace ELISA.UI
                                         und = "NA";
                                     }
 
-                                    if (invalid)
+                                    if (invalidTemp)
                                         und = "INV";
 
                                     newIgM.Unidades = und;
@@ -1171,7 +1780,7 @@ namespace ELISA.UI
                                     Absorbancia[i, j] = Convert.ToString(lectData);
                                     
 
-                                    if (lectData >= float.Parse(txt_val1.Text) && !invalid)
+                                    if (lectData >= float.Parse(txt_val1.Text) && !invalidTemp)
                                     {
                                         res = "P";
                                     }
@@ -1180,7 +1789,7 @@ namespace ELISA.UI
                                         res = "N";
                                     }
 
-                                    if (invalid)
+                                    if (invalidTemp)
                                     {
                                         res = "INV";
 
@@ -1190,7 +1799,7 @@ namespace ELISA.UI
                                     newIgM.Resultado = res;
                                     Resultados[i, j] = res;
 
-                                    if (lectData >= float.Parse(txt_val2.Text) && !invalid)
+                                    if (lectData >= float.Parse(txt_val2.Text) && !invalidTemp)
                                     {
                                         res1 = "P";
                                     }
@@ -1199,7 +1808,7 @@ namespace ELISA.UI
                                         res1 = "N";
                                     }
 
-                                    if (invalid)
+                                    if (invalidTemp)
                                     {
                                         res1 = "INV";
                                     }
@@ -1208,7 +1817,7 @@ namespace ELISA.UI
                                     newIgM.Resultado2 = res1;
                                     Resultados1[i, j] = res1;
                                     newIgM.Placa = txt_Placa.TextBox.Text;
-                                    if (invalid)
+                                    if (invalidTemp)
                                     {
                                         newIgM.Valido = false;
                                     }
@@ -1247,11 +1856,16 @@ namespace ELISA.UI
                                     newIgM.Factor = datos.Factor;
                                     newIgM.Factor2 = datos.Factor2;
                                     newIgM.Lab2 = cmb_Lab2.ComboBox.Text;
+                                    newIgM.Lab1 = cmb_Lab1.ComboBox.Text;
                                     newIgM.User = Convert.ToString(user.idUsuario);
                                     ElisaIGMTrans.saveElisaImGZika(newIgM);
                                     btn_Print.Enabled = true;
+                                    cont++;
                                 }
                             }
+
+                            MessageBox.Show("Datos Guardados Correctamente",
+                                "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -1417,10 +2031,9 @@ namespace ELISA.UI
                     }
                     dgv_Lectura.AutoResizeRowHeadersWidth(
                         DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
-
+                    optOpciones.Enabled = true;
                 }
             }
-            //Definir una ruta en el sistema para definir donde buscar el archivo.
 
 
         }
@@ -1441,14 +2054,72 @@ namespace ELISA.UI
                 }
                     break;
                 case 5:
-                {
+                case 6:
+                    {
                         new Calculos().CalcularIgG(this);
                 }break;
-                case 6:
-                {
-                        new Calculos().CalcularIgG(this);
+                case 10:
+                case 7:
+                case 8:
+                case 9:
+                case 26:
+                case 27:
+                case 28:
+                case 29:
+                case 11:
+                case 30:
+                case 31:
+                    {
+                        new Calculos().CalcularEINH(this);
                 }
                     break;
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                {
+                        new Calculos().CalcularEI1D(this);
+                }
+                    break;
+                case 24:
+                case 25:
+                {
+                    new Calculos().CalcularEINH(this);
+                }
+                    break;
+                case 32:
+                {
+                        new Calculos().CalculoRV(this);
+                }
+                    break;
+                case 3:
+                {
+                        new Calculos().CalculoChik(this);
+                }
+                    break;
+                case 4:
+                {
+                    new Calculos().CalcularChikCNDR(this);
+                }
+                    break;
+                case 2:
+                {
+                        new Calculos().CalcularIgMZikaBei(this);
+                }
+                    break;
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                {
+                        new Calculos().CalcularZikaBob(this);
+                }
+                    break;
+
             }
             
         }
@@ -1629,10 +2300,202 @@ namespace ELISA.UI
                         }
                         }
                         break;
+
                     case MainUtils.Test.IgMZikaBei:
                     {
-                            //Queda Pendiente
+                        if (rb_Opt4.Checked)
+                        {
+                            string val = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                            int valIndex = 0;
+                            if (val =="")
+                            {
+                                MuestrasChik m = new MuestrasChik();
+                                if (m.ShowDialog(this) == DialogResult.OK)
+                                {
+                                    List<String> listArray = new List<string>();
+
+                                    DataGridView tablaProtocolo = dgv_Protocolo;
+                                    //Recolectar los datos de las tablas a una matriz
+
+                                    for (int i = 0; i < 8; i++)
+                                    {
+                                        for (int j = 0; j < 12; j++)
+                                        {
+                                            listArray.Add(tablaProtocolo.Rows[i].Cells[j].Value.ToString());
+                                            if (i == e.RowIndex && j == e.ColumnIndex)
+                                            {
+                                                valIndex = (listArray.Count - 1);
+                                            }
+                                        }
+                                    }
+
+                                    for (int i = 0; i <= m.numChik; i++)
+                                    {
+                                        if (listArray[valIndex + i *12] !="")
+                                        {
+                                            MessageBox.Show("No hay pozos libres para esta operacion");
+                                        }
+
+                                        if (listArray[valIndex + i *12 +1] !="")
+                                        {
+                                            MessageBox.Show("No hay pozos libres para esta operacion");
+                                        }
+                                    }
+
+                                    for (int i = 0; i <=m.numChik; i++)
+                                    {
+                                        listArray[valIndex + i * 12] = m.codChik + "v";
+                                        listArray[valIndex + i * 12] = m.codChik + "n";
+                                    }
+
+                                    int cont = 0;
+                                    for (int i = 0; i < 8; i++)
+                                    {
+                                        for (int j = 0; j < 12; j++)
+                                        {
+                                            dgv_Protocolo.Rows[i].Cells[j].Value = listArray[cont];
+                                            cont++;
+                                        }
+                                    }
+                                    }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No es un pozo libre para esta operacion");
+                            }
+                            
+                        }else if (rb_Opt3.Checked)
+                        {
+                                string val = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                                int valIndex = 0;
+                                if (val == "")
+                                {
+                                    MuestrasChik m = new MuestrasChik();
+                                    m.txt_codigo.Text = "C+";
+                                    m.txt_codigo.ReadOnly = true;
+                                    if (m.ShowDialog(this) == DialogResult.OK)
+                                    {
+                                        List<String> listArray = new List<string>();
+
+                                        DataGridView tablaProtocolo = dgv_Protocolo;
+                                        //Recolectar los datos de las tablas a una matriz
+
+                                        for (int i = 0; i < 8; i++)
+                                        {
+                                            for (int j = 0; j < 12; j++)
+                                            {
+                                                listArray.Add(tablaProtocolo.Rows[i].Cells[j].Value.ToString());
+                                                if (i == e.RowIndex && j == e.ColumnIndex)
+                                                {
+                                                    valIndex = (listArray.Count - 1);
+                                                }
+                                            }
+                                        }
+
+                                        for (int i = 0; i <= m.numChik; i++)
+                                        {
+                                            if (listArray[valIndex + i * 12] != "")
+                                            {
+                                                MessageBox.Show("No hay pozos libres para esta operacion");
+                                            }
+
+                                            if (listArray[valIndex + i * 12 + 1] != "")
+                                            {
+                                                MessageBox.Show("No hay pozos libres para esta operacion");
+                                            }
+                                        }
+
+                                        for (int i = 0; i <= m.numChik; i++)
+                                        {
+                                            listArray[valIndex + i * 12] = m.codChik + "v";
+                                            listArray[valIndex + i * 12] = m.codChik + "n";
+                                        }
+
+                                        int cont = 0;
+                                        for (int i = 0; i < 8; i++)
+                                        {
+                                            for (int j = 0; j < 12; j++)
+                                            {
+                                                dgv_Protocolo.Rows[i].Cells[j].Value = listArray[cont];
+                                                cont++;
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No es un pozo libre para esta operacion");
+                                }
+                            }
+                            else if (rb_opt2.Checked)
+                        {
+                                string val = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                                int valIndex = 0;
+                                if (val == "")
+                                {
+                                    MuestrasChik m = new MuestrasChik();
+                                    m.txt_codigo.Text = "C-";
+                                    m.txt_codigo.ReadOnly = true;
+                                    if (m.ShowDialog(this) == DialogResult.OK)
+                                    {
+                                        List<String> listArray = new List<string>();
+
+                                        DataGridView tablaProtocolo = dgv_Protocolo;
+                                        //Recolectar los datos de las tablas a una matriz
+
+                                        for (int i = 0; i < 8; i++)
+                                        {
+                                            for (int j = 0; j < 12; j++)
+                                            {
+                                                listArray.Add(tablaProtocolo.Rows[i].Cells[j].Value.ToString());
+                                                if (i == e.RowIndex && j == e.ColumnIndex)
+                                                {
+                                                    valIndex = (listArray.Count - 1);
+                                                }
+                                            }
+                                        }
+
+                                        for (int i = 0; i <= m.numChik; i++)
+                                        {
+                                            if (listArray[valIndex + i * 12] != "")
+                                            {
+                                                MessageBox.Show("No hay pozos libres para esta operacion");
+                                            }
+
+                                            if (listArray[valIndex + i * 12 + 1] != "")
+                                            {
+                                                MessageBox.Show("No hay pozos libres para esta operacion");
+                                            }
+                                        }
+
+                                        for (int i = 0; i <= m.numChik; i++)
+                                        {
+                                            listArray[valIndex + i * 12] = m.codChik + "v";
+                                            listArray[valIndex + i * 12] = m.codChik + "n";
+                                        }
+
+                                        int cont = 0;
+                                        for (int i = 0; i < 8; i++)
+                                        {
+                                            for (int j = 0; j < 12; j++)
+                                            {
+                                                dgv_Protocolo.Rows[i].Cells[j].Value = listArray[cont];
+                                                cont++;
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No es un pozo libre para esta operacion");
+                                }
+                            }
+                            else if (rb_Opt1.Checked)
+                        {
+                            
+                        }
                     }break;
+
                     case MainUtils.Test.SalivaCIET:
                     {
                         if (rb_Opt4.Checked)
@@ -1672,6 +2535,502 @@ namespace ELISA.UI
                         }
                     }
                         break;
+                    //ELISA INH
+                    case MainUtils.Test.ELISAINHRM:
+                    case MainUtils.Test.ELISAINHMonoChik:
+                    case MainUtils.Test.ELISAINHHiperChik:
+                    case MainUtils.Test.ELISAINHEnsa:
+                    case MainUtils.Test.ELISAINHZika:
+                    //ELISA RM
+                    case MainUtils.Test.ELISARMCohAnualChik:
+                    case MainUtils.Test.ELISARMCohAnualChikDup:
+                    case MainUtils.Test.ELISARMSeroChik:
+                    case MainUtils.Test.ELISARMSeroChikDup:
+                    //ELISA 1D
+                    case MainUtils.Test.ELISA1DCohAnual:
+                    case MainUtils.Test.ELISA1DCohAnualDup:
+                    case MainUtils.Test.ELISA1DCohAnualChik:
+                    case MainUtils.Test.ELISA1DCohAnualChikDup:
+                    case MainUtils.Test.ELISA1DSeroChik:
+                    case MainUtils.Test.ELISA1DSeroChikDup:
+                    case MainUtils.Test.Zika1DCohAnual:
+                    case MainUtils.Test.Zika1DCohAnualDup:
+                    //R and M
+                    case MainUtils.Test.RMCohAnual:
+                    case MainUtils.Test.RMCohAnualDup:
+                    //ZIKA RM
+                    case MainUtils.Test.ZIKARMCohAnual:
+                    case MainUtils.Test.ZIKARMCohAnualDup:
+                    {
+                        if (rb_Opt4.Checked)
+                        {
+                            string val = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                            int valIndex = 0;
+                            if (val == "")
+                            {
+                                MuestrasEI m = new MuestrasEI();
+                                if (m.ShowDialog(this) == DialogResult.OK)
+                                {
+                                    List<String> listArray = new List<string>();
+
+                                    DataGridView tablaProtocolo = dgv_Protocolo;
+                                    //Recolectar los datos de las tablas a una matriz
+
+                                    for (int i = 0; i < 8; i++)
+                                    {
+                                        for (int j = 0; j < 12; j++)
+                                        {
+                                            listArray.Add(tablaProtocolo.Rows[i].Cells[j].Value.ToString());
+                                            if (i == e.RowIndex && j == e.ColumnIndex)
+                                            {
+                                                valIndex = (listArray.Count - 1);
+                                            }
+                                        }
+                                    }
+
+                                    for (int i = 0; i < m.nDil - 1; i++)
+                                    {
+                                        if (listArray[valIndex + i] != "")
+                                        {
+                                            MessageBox.Show("No hay pozos libres para esta operacion");
+                                            return;
+                                        }
+                                    }
+
+                                    int ji = 0;
+                                    int g = 0;
+                                    switch (m.dil)
+                                    {
+                                        case 1:
+                                        {
+                                            if (m.dire == 1)
+                                            {
+                                                ji = 0;
+                                                for (int i = 1; i <= m.nDil; i++)
+                                                {
+                                                    listArray[valIndex + ji] = m.codEI + "d" + i;
+                                                    ji++;
+                                                }
+                                            }
+                                            else if (m.dire == 2)
+                                            {
+                                                g = valIndex;
+                                                for (int i = 0; i <= m.nDil; i++)
+                                                {
+                                                    listArray[g] = m.codEI + "d" + i;
+                                                    g += 12;
+                                                }
+                                            }
+
+                                            break;
+                                        }
+                                        case 2:
+                                        {
+                                            if (m.dire == 1)
+                                            {
+                                                ji = 0;
+                                                for (int i = 6; i <= m.nDil + 5; i++)
+                                                {
+                                                    listArray[valIndex + ji] = m.codEI + "d" + i;
+                                                    ji++;
+                                                }
+                                            }
+                                            else if (m.dire == 2)
+                                            {
+                                                g = valIndex;
+                                                for (int i = 6; i <= m.nDil + 5; i++)
+                                                {
+                                                    listArray[g] = m.codEI + "d" + i;
+                                                    g += 12;
+                                                }
+                                            }
+
+                                            break;
+                                        }
+                                        case 3:
+                                        {
+                                            if (m.dire == 1)
+                                            {
+                                                ji = 0;
+                                                for (int i = 2; i <= m.nDil + 1; i++)
+                                                {
+                                                    listArray[valIndex + ji] = m.codEI + "d" + i;
+                                                    ji++;
+                                                }
+                                            }
+                                            else if (m.dire == 2)
+                                            {
+                                                g = valIndex;
+                                                for (int i = 2; i <= m.nDil + 1; i++)
+                                                {
+                                                    listArray[g] = m.codEI + "d" + i;
+                                                    g += 12;
+                                                }
+                                            }
+
+                                            break;
+                                        }
+                                        case 4:
+                                        {
+                                            if (m.dire == 1)
+                                            {
+                                                ji = 0;
+                                                for (int i = 7; i <= m.nDil + 6; i++)
+                                                {
+                                                    listArray[valIndex + ji] = m.codEI + "d" + i;
+                                                    ji++;
+                                                }
+                                            }
+                                            else if (m.dire == 2)
+                                            {
+                                                g = valIndex;
+                                                for (int i = 7; i <= m.nDil + 6; i++)
+                                                {
+                                                    listArray[g] = m.codEI + "d" + i;
+                                                    g += 12;
+                                                }
+                                            }
+
+                                            break;
+                                        }
+                                    }
+
+                                    int cont = 0;
+                                    for (int i = 0; i < 8; i++)
+                                    {
+                                        for (int j = 0; j < 12; j++)
+                                        {
+                                            dgv_Protocolo.Rows[i].Cells[j].Value = listArray[cont];
+                                            cont++;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No es un pozo libre para esta operación");
+                            }
+                        }
+                        else if (rb_Opt3.Checked)
+                        {
+                            string val = dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                            int valIndex = 0;
+                            if (val == "")
+                            {
+                                frmCPEI cp = new frmCPEI();
+                                if (cp.ShowDialog(this) == DialogResult.OK)
+                                {
+                                    List<String> listArray = new List<string>();
+
+                                    DataGridView tablaProtocolo = dgv_Protocolo;
+                                    //Recolectar los datos de las tablas a una matriz
+
+                                    for (int i = 0; i < 8; i++)
+                                    {
+                                        for (int j = 0; j < 12; j++)
+                                        {
+                                            listArray.Add(tablaProtocolo.Rows[i].Cells[j].Value.ToString());
+                                            if (i == e.RowIndex && j == e.ColumnIndex)
+                                            {
+                                                valIndex = (listArray.Count - 1);
+                                            }
+                                        }
+                                    }
+
+                                    int g = 0;
+                                    if (cp.dire == 1)
+                                    {
+                                        for (int i = 0; i <= cp.nDil - 1; i++)
+                                        {
+                                            if (listArray[valIndex + i] != "" || valIndex + i > 95)
+                                            {
+                                                MessageBox.Show("No hay pozos libres para esta operacion");
+                                                return;
+                                            }
+                                        }
+                                    }
+                                    else if (cp.dire == 2)
+                                    {
+                                        g = valIndex;
+                                        for (int i = 0; i <= cp.nDil - 1; i++)
+                                        {
+                                            if (listArray[valIndex + i] != "" || valIndex + i > 95)
+                                            {
+                                                MessageBox.Show("No hay pozos libres para esta operacion");
+                                                return;
+                                            }
+
+                                            g += 12;
+                                        }
+                                    }
+
+                                    if (cp.codEI != "")
+                                    {
+                                        int ji = 0;
+                                        g = 0;
+                                        switch (cp.dil)
+                                        {
+                                            case 1:
+                                            {
+                                                if (cp.dire == 1)
+                                                {
+                                                    ji = 0;
+                                                    for (int i = 1; i <= cp.nDil; i++)
+                                                    {
+                                                        listArray[valIndex + ji] = cp.codEI + "d" + i;
+                                                        ji++;
+                                                    }
+                                                }
+                                                else if (cp.dire == 2)
+                                                {
+                                                    g = valIndex;
+                                                    for (int i = 0; i <= cp.nDil; i++)
+                                                    {
+                                                        listArray[g] = cp.codEI + "d" + i;
+                                                        g += 12;
+                                                    }
+                                                }
+
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                if (cp.dire == 1)
+                                                {
+                                                    ji = 0;
+                                                    for (int i = 6; i <= cp.nDil + 5; i++)
+                                                    {
+                                                        listArray[valIndex + ji] = cp.codEI + "d" + i;
+                                                        ji++;
+                                                    }
+                                                }
+                                                else if (cp.dire == 2)
+                                                {
+                                                    g = valIndex;
+                                                    for (int i = 6; i <= cp.nDil + 5; i++)
+                                                    {
+                                                        listArray[g] = cp.codEI + "d" + i;
+                                                        g += 12;
+                                                    }
+                                                }
+
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                if (cp.dire == 1)
+                                                {
+                                                    ji = 0;
+                                                    for (int i = 2; i <= cp.nDil + 1; i++)
+                                                    {
+                                                        listArray[valIndex + ji] = cp.codEI + "d" + i;
+                                                        ji++;
+                                                    }
+                                                }
+                                                else if (cp.dire == 2)
+                                                {
+                                                    g = valIndex;
+                                                    for (int i = 2; i <= cp.nDil + 1; i++)
+                                                    {
+                                                        listArray[g] = cp.codEI + "d" + i;
+                                                        g += 12;
+                                                    }
+                                                }
+
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                if (cp.dire == 1)
+                                                {
+                                                    ji = 0;
+                                                    for (int i = 7; i <= cp.nDil + 6; i++)
+                                                    {
+                                                        listArray[valIndex + ji] = cp.codEI + "d" + i;
+                                                        ji++;
+                                                    }
+                                                }
+                                                else if (cp.dire == 2)
+                                                {
+                                                    g = valIndex;
+                                                    for (int i = 7; i <= cp.nDil + 6; i++)
+                                                    {
+                                                        listArray[g] = cp.codEI + "d" + i;
+                                                        g += 12;
+                                                    }
+                                                }
+
+                                                break;
+                                            }
+                                        }
+
+                                        int cont = 0;
+                                        for (int i = 0; i < 8; i++)
+                                        {
+                                            for (int j = 0; j < 12; j++)
+                                            {
+                                                dgv_Protocolo.Rows[i].Cells[j].Value = listArray[cont];
+                                                cont++;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No es un pozo libre para esta operación");
+                            }
+                        }
+                        else if (rb_opt2.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "C-");
+                            }
+                        }
+                        else if (rb_Opt1.Checked)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                MainUtils.contar(protocolo, "SINM");
+                        }
+
+                        break;
+                    }
+
+                    case MainUtils.Test.Rotavirus:
+                    {
+                        if (rb_Opt4.Checked)
+                        {
+                            if (dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == DataGridView.DefaultBackColor)
+                            {
+                                if (MessageBox.Show("¿Desea convertir a Control Muestra esta celda?", 
+                                        "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == 
+                                    DialogResult.Yes)
+                                {
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Gray;
+                                }
+                            }
+                            else{
+                                if (MessageBox.Show("¿Desea quitar Control Muestra de esta celda?",
+                                        "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                    DialogResult.Yes)
+                                {
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = DataGridView.DefaultBackColor;
+                                }
+                            }
+                        }else if (rb_Opt3.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Positivo (C+) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "C+");
+                            }
+                        }else if (rb_opt2.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "C-");
+                            }
+                        }else if (rb_Opt1.Checked)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
+                        }
+                    }
+                        break;
+                    case MainUtils.Test.ChinkungunyaCNDR:
+                    {
+                        if (rb_Opt3.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Positivo (C+) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "C+");
+                            }
+                        }else if (rb_opt2.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Negativo (C-) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "C-");
+                            }
+                        }else if (rb_Opt1.Checked)
+                        {
+                            protocolo[e.RowIndex, e.ColumnIndex] = "";
+                            dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MainUtils.contar(protocolo, "SINM");
+                        }
+                    }
+                        break;
+                    case MainUtils.Test.ZikaBOB:
+                    case MainUtils.Test.ZikaBOBCohAnual:
+                    case MainUtils.Test.ZikaBOBCohAnualDup:
+                    case MainUtils.Test.ZikaBOBCohAnualSero:
+                    {
+                        if (rb_Opt4.Checked)
+                        {
+                            
+                        }
+                        else if (rb_Opt3.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Maximo (MAX) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "MAX");
+                            }
+                        }
+                        else if (rb_opt2.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a Control Minimo (MIN) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "MIN");
+                            }
+                        }
+                        else if (rb_Opt1.Checked)
+                        {
+                            if (MessageBox.Show("¿Desea convertir a (SINM) esta celda?",
+                                    "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
+                                DialogResult.Yes)
+                            {
+                                protocolo[e.RowIndex, e.ColumnIndex] = "";
+                                dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                    dgv_Protocolo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =
+                                        MainUtils.contar(protocolo, "SINM");
+                            }
+                        }
+                    }
+                        break;
                 }
             }
             
@@ -1692,6 +3051,18 @@ namespace ELISA.UI
             MainUtils.InitializeExcelWorkSheet(this, groupProtocol.Text);
             closeLoadingScreen();
             this.Enabled = true;
+        }
+
+        private void protocoloRotavirusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatosRV protoRV = new DatosRV();
+            DialogResult result = protoRV.ShowDialog(this);
+        }
+
+        private void kitRotaviruToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KitRotavirus kit = new KitRotavirus();
+            kit.ShowDialog(this);
         }
 
         LoadingScreen load = new LoadingScreen("Creando archivo de Excel");

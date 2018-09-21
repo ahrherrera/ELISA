@@ -23,5 +23,6 @@ namespace ELISA
         public float ControlNegLS { get; set; }
         public float ControlPosLI { get; set; }
         public float ControlPosLS { get; set; }
+        public int idDatosProtocoloRV { get; set; }
     }
 }

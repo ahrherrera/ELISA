@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Transaccion;
 using ELISA.Transaccion.DatosProtocoloTrans;
+using ELISA.UI.UIParametros.Controles;
 using ELISA.Utils;
 
 namespace ELISA.UI.UIParametros

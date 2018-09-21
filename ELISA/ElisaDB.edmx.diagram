@@ -20,10 +20,10 @@
         <EntityTypeShape EntityType="elisaModel.controles_ei" Width="1.5" PointX="16.75" PointY="12.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.controles_igg" Width="1.5" PointX="14.75" PointY="17.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.controles_igm" Width="1.5" PointX="16.75" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocoloei" Width="1.5" PointX="11.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocoloei" Width="2.125" PointX="11.5" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocoloigm" Width="1.875" PointX="18.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocolons1" Width="2.125" PointX="5.75" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocolorotaviru" Width="1.5" PointX="18.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocolorotaviru" Width="2" PointX="18.5" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocolovih" Width="1.5" PointX="18.75" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.elisaigg" Width="1.5" PointX="18.75" PointY="17.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.elisaiggrepeticione" Width="1.5" PointX="13" PointY="1.875" IsExpanded="true" />
@@ -77,14 +77,14 @@
         <EntityTypeShape EntityType="elisaModel.zikaigmbei" Width="1.5" PointX="14.75" PointY="30.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.zikarmanual" Width="1.5" PointX="21.75" PointY="30.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.zikarmanualdup" Width="1.5" PointX="30.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocolochik" Width="1.5" PointX="30.75" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocolochikhiper" Width="1.5" PointX="30.75" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocolochikmono" Width="1.5" PointX="30.75" PointY="24.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocoloeiensayo" Width="1.5" PointX="23.75" PointY="31.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocoloeizika" Width="1.5" PointX="25.75" PointY="31.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocoloigg" Width="1.5" PointX="30.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocolochik" Width="2.25" PointX="30.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocolochikhiper" Width="2.25" PointX="30.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocolochikmono" Width="2.5" PointX="30.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocoloeiensayo" Width="1.875" PointX="23.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocoloeizika" Width="2.375" PointX="25.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocoloigg" Width="2" PointX="30.75" PointY="30.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocoloigmzika" Width="2" PointX="32.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocolozikabob" Width="1.75" PointX="2.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocolozikabob" Width="2.25" PointX="2.375" PointY="32.375" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocolozikaigmbei" Width="2.125" PointX="4.75" PointY="33.5" IsExpanded="true" />
         <AssociationConnector Association="elisaModel.fk_Lab1IGGRep" ManuallyRouted="false" />
         <AssociationConnector Association="elisaModel.fk_UserIGGRep" ManuallyRouted="false" />
@@ -94,6 +94,7 @@
         <AssociationConnector Association="elisaModel.fk_Rotaviruskit" ManuallyRouted="false" />
         <AssociationConnector Association="elisaModel.fk_reactivosVIHkit" ManuallyRouted="false" />
         <AssociationConnector Association="elisaModel.fk_VIHkit" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="elisaModel.chikungunya" Width="1.5" PointX="7.375" PointY="33.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

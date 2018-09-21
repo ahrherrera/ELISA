@@ -80,7 +80,7 @@ namespace ELISA.Transaccion.DatosProtocoloTrans
             catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un problema conectando a la base de datos.\n Por favor contacte al administrador del Sistema", "Error detectado");
-                Log.logError("Error capturado: Trace: " + ex.StackTrace);
+                Log.logError("Error capturado: update IgMZika: " + ex.StackTrace);
             }
         }
     }

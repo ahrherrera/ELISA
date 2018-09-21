@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ELISA.Transaccion;
 using ELISA.Transaccion.DatosProtocoloTrans;
+using ELISA.UI.UIParametros.Controles;
 using ELISA.Utils;
 
 namespace ELISA.UI.UIParametros
@@ -185,17 +186,37 @@ namespace ELISA.UI.UIParametros
 
         private void txt_ControlPosAlto_Click(object sender, EventArgs e)
         {
-            DialogResult res = new ControlesEI(MainUtils.Controles.ControlesEI_CPlus, this).ShowDialog(this);
+            DialogResult res = new Controles.ControlesEI(MainUtils.Controles.ControlesEI_CPlus, this).ShowDialog(this);
         }
 
         private void txt_ControlNeg_Click(object sender, EventArgs e)
         {
-            DialogResult res = new ControlesEI(MainUtils.Controles.ControlesEI_CMin, this).ShowDialog(this);
+            DialogResult res = new Controles.ControlesEI(MainUtils.Controles.ControlesEI_CMin, this).ShowDialog(this);
         }
 
         private void txt_Coatting_Click(object sender, EventArgs e)
         {
             DialogResult res = new DatosCoatting(this.txt_Coatting).ShowDialog(this);
+        }
+
+        private void txt_LoteAsignado_Click(object sender, EventArgs e)
+        {
+            new Gamma(this.txt_LoteAsignado).ShowDialog(this);
+        }
+
+        private void txt_PB_Click(object sender, EventArgs e)
+        {
+            new PB(this.txt_PB).ShowDialog(this);
+        }
+
+        private void txt_SHN_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_SUBST_Click(object sender, EventArgs e)
+        {
+            new Substrato(this.txt_SUBST).ShowDialog(this); 
         }
     }
 }

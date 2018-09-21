@@ -40,17 +40,18 @@ namespace ELISA.Transaccion
 
             int cont;
             Single ac, cc;
+            datosprotocoloigm datos = DatosProtocoloIgM.TraerDatosProtocoloIgM();
 
             try
             {
                 //Calculo de los Controles Positivos Altos
                 ac = 0;
                 cont = 0;
-                cc = -120;
                 for (int i = 0; i < 8; i++)
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i, j].StartsWith("CA+"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -84,11 +85,12 @@ namespace ELISA.Transaccion
 
                 ac = 0;
                 cont = 0;
-                cc = -120;
+                
                 for (int i = 0; i < 8; i++)
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i, j].StartsWith("CB+"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -121,11 +123,11 @@ namespace ELISA.Transaccion
 
                 ac = 0;
                 cont = 0;
-                cc = -120;
                 for (int i = 0; i < 8; i++)
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i, j].StartsWith("C-"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -133,6 +135,17 @@ namespace ELISA.Transaccion
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
+                            }
+
+                            if (cc != -120)
+                            {
+                                if (!(cc >= datos.ControlNegLI && cc<= datos.ControlNegLS))
+                                {
+                                    MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    parent.btn_Save.Enabled = false;
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                }
                             }
                         }
                     }
@@ -164,12 +177,11 @@ namespace ELISA.Transaccion
 
                 ac = 0;
                 cont = 0;
-                cc = -120;
-                datosprotocoloigm datos = DatosProtocoloIgM.TraerDatosProtocoloIgM();
                 for (int i = 0; i < 8; i++)
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i, j].StartsWith("CR+"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -177,21 +189,19 @@ namespace ELISA.Transaccion
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
-
-                                if (cc != -120)
+                            }
+                            if (cc != -120)
+                            {
+                                if (!(cc >= datos.ControlPosRadLI && cc <= datos.ControlPosRadLS))
                                 {
-
-                                    if (!(cc >= datos.ControlPosRadLI && cc <= datos.ControlPosRadLS))
-                                    {
-                                        MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        //Deshabilitar btnSave
-                                        parent.btn_Save.Enabled = false;
-                                        //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
-                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                        return;
-                                    }
+                                    MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    //Deshabilitar btnSave
+                                    parent.btn_Save.Enabled = false;
+                                    //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                                 }
+
                             }
                         }
                     }
@@ -308,17 +318,17 @@ namespace ELISA.Transaccion
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
                     parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                 }
+
+                //Habilitar btnSave
+                parent.btn_Save.Enabled = true;
+                //Deshabilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = false;
             }
             catch (IOException ex)
             {
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
+                Log.logError("Calculo IgM: "+ ex.StackTrace);
             }
-
-            //Habilitar btnSave
-            parent.btn_Save.Enabled = true;
-            //Deshabilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
-            parent.guardarPlacaInválidaToolStripMenuItem.Enabled = false;
-
         }
 
         public void CalcularIgmZika(Principal parent)
@@ -351,12 +361,12 @@ namespace ELISA.Transaccion
 
                 ac = 0;
                 cont = 0;
-                cc = -120;
 
                 for (int i = 0; i < 8; i++)
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i, j].StartsWith("C+"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -391,11 +401,12 @@ namespace ELISA.Transaccion
                 ///// CALCULO DE LOS CONTROLES NEGATIVOS
                 ac = 0;
                 cont = 0;
-                cc = -120;
                 for (int i = 0; i < 8; i++)
                 {
                     for (int j = 0; j < 12; j++)
                     {
+
+                        cc = -120;
                         if (protocolo[i, j].StartsWith("C-"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -403,20 +414,22 @@ namespace ELISA.Transaccion
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
+                            }
 
-                                //Validacion del rango de los controles
-                                if (cc != -120)
+                            //Validacion del rango de los controles
+                            if (cc != -120)
+                            {
+                                if (cc >= datos.ControlNegLI && cc <= datos.ControlNegLS)
                                 {
-                                    if (cc >= datos.ControlNegLI && cc <= datos.ControlNegLS)
-                                    {
-                                        MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        //Deshabilitar btnSave
-                                        parent.btn_Save.Enabled = false;
-                                        //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
-                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                        break;
-                                    }
+                                    //MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
+                                    //    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show(datos.ControlNegLI + ">=" + lectura[i, j] + "<=" + datos.ControlNegLS,
+                                        "Protocolo: " + protocolo[i, j] + " Ubicacion: [" + (i + 1) + "," + (j + 1) + "]",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    //Deshabilitar btnSave
+                                    parent.btn_Save.Enabled = false;
+                                    //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                                 }
                             }
                         }
@@ -450,6 +463,7 @@ namespace ELISA.Transaccion
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i, j].StartsWith("CR+"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -457,18 +471,21 @@ namespace ELISA.Transaccion
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
-                                if (cc != -120)
+                            }
+
+                            if (cc != -120)
+                            {
+                                if (cc >= datos.ControlPosRadLI && cc <= datos.ControlPosRadLS)
                                 {
-                                    if (cc >= datos.ControlPosRadLI && cc <= datos.ControlPosRadLS)
-                                    {
-                                        MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        //Deshabilitar btnSave
-                                        parent.btn_Save.Enabled = false;
-                                        //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
-                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                        break;
-                                    }
+                                    MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    //MessageBox.Show(datos.ControlPosRadLI + ">="+lectura[i,j]+"<="+ datos.ControlPosRadLS,
+                                    //    "Protocolo: "+ protocolo[i,j]+ " Ubicacion: ["+(i+1)+","+(j+1)+"]",
+                                    //    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    //Deshabilitar btnSave
+                                    parent.btn_Save.Enabled = false;
+                                    //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
                                 }
                             }
                         }
@@ -484,6 +501,7 @@ namespace ELISA.Transaccion
                     parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
                     parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                    return;
                 }
                 else
                 {
@@ -500,26 +518,30 @@ namespace ELISA.Transaccion
                 {
                     for (int j = 0; j < 12; j++)
                     {
-                        if (protocolo[i, j].StartsWith("CR+"))
+                        cc = -120;
+                        if (protocolo[i, j].StartsWith("CR-"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
                             {
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
+                            }
 
-                                if (cc != -120)
+                            if (cc != -120)
+                            {
+                                if (cc >= datos.ControlNegRadLI && cc <= datos.ControlNegRadLS)
                                 {
-                                    if (cc >= datos.ControlNegRadLI && cc <= datos.ControlNegRadLS)
-                                    {
-                                        MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        //Deshabilitar btnSave
-                                        parent.btn_Save.Enabled = false;
-                                        //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
-                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                        break;
-                                    }
+                                    //MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
+                                    //    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show(datos.ControlNegRadLI + ">=" + lectura[i, j] + "<=" + datos.ControlNegRadLS,
+                                        "Protocolo: " + protocolo[i, j] + " Ubicacion: [" + (i + 1) + "," + (j + 1) + "]",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    //Deshabilitar btnSave
+                                    parent.btn_Save.Enabled = false;
+                                    //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                    return;
                                 }
                             }
                         }
@@ -535,6 +557,7 @@ namespace ELISA.Transaccion
                     parent.btn_Save.Enabled = false;
                     //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
                     parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                    return;
                 }
                 else
                 {
@@ -579,6 +602,7 @@ namespace ELISA.Transaccion
             catch (IOException ex)
             {
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
+                Log.logError("Calculo IgM Zika: " + ex.StackTrace);
             }
 
         }
@@ -606,7 +630,7 @@ namespace ELISA.Transaccion
             //Calculo Controles Positivos
             int cont;
             Single ac, cc, columpio;
-            Single[] m3men = new Single[] { 3, 3, 3 };
+            Single[] m3men = new Single[]{ 3, 3, 3 };
             datosprotocoloigg datos = DatosProtocoloIgG.TraerDatosprotocoloIgG();
             try
             {
@@ -660,17 +684,17 @@ namespace ELISA.Transaccion
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
+                            }
 
-                                if (!(cc >= datos.ControlNegLI && cc <= datos.ControlNegLS))
-                                {
-                                    MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    //Deshabilitar btnSave
-                                    parent.btn_Save.Enabled = false;
-                                    //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
-                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                    return;
-                                }
+                            if (!(cc >= datos.ControlNegLI && cc <= datos.ControlNegLS))
+                            {
+                                MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                //Deshabilitar btnSave
+                                parent.btn_Save.Enabled = false;
+                                //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                return;
                             }
                         }
 
@@ -705,17 +729,17 @@ namespace ELISA.Transaccion
                                 cc = Single.Parse(lectura[i, j]);
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
+                            }
 
-                                if (!(cc >= datos.ControlNegSalLI && cc <= datos.ControlNegSalLS))
-                                {
-                                    MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    //Deshabilitar btnSave
-                                    parent.btn_Save.Enabled = false;
-                                    //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
-                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                    return;
-                                }
+                            if (!(cc >= datos.ControlNegSalLI && cc <= datos.ControlNegSalLS))
+                            {
+                                MessageBox.Show(protocolo[i, j] + " No cumple Criterios", "Verifique sus datos",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                //Deshabilitar btnSave
+                                parent.btn_Save.Enabled = false;
+                                //Habilitar Guardar placa Invalida guardarPlacaInválidaToolStripMenuItem
+                                parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                return;
                             }
                         }
 
@@ -779,6 +803,7 @@ namespace ELISA.Transaccion
             catch (IOException ex)
             {
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
+                Log.logError("Calculo IgG: " + ex.StackTrace);
             }
         }
 
@@ -792,6 +817,7 @@ namespace ELISA.Transaccion
             parent.btn_Save.Enabled = true;
 
             //Recolectar los datos de las tablas a una matriz
+            List<string> list = new List<string>();
 
             for (int i = 0; i < 8; i++)
             {
@@ -799,62 +825,59 @@ namespace ELISA.Transaccion
                 {
                     lectura[i, j] = tablaLectura.Rows[i].Cells[j].Value.ToString();
                     protocolo[i, j] = tablaProtocolo.Rows[i].Cells[j].Value.ToString();
+                    list.Add(lectura[i,j]);
                 }
             }
 
             //Calcular Controles Positivos / Densidad optica de los controles positivos
             int cont;
-            Single ac, odcontrolv, odcontroln;
+            Single ac, odcontrolv =0, odcontroln=0;
             try
             {
                 ac = 0;
                 cont = 0;
 
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < list.Count; i++)
                 {
-                    for (int j = 0; j < 12; j++)
+                    if (list[i].StartsWith("C+v"))
                     {
-                        if (protocolo[i, j].StartsWith("C+v"))
+                        if (!list[i].EndsWith(Convert.ToString((char)8203)))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                            if (i != 95)
                             {
-                                if (i != 7 && j != 11)
-                                {
-                                    odcontrolv = Single.Parse(lectura[i, j]);
-                                    odcontroln = Single.Parse(lectura[i, j + 1]);
-                                }
-                                else
-                                {
-                                    odcontrolv = Single.Parse(lectura[i, j]);
-                                    odcontroln = 0;
-                                }
-                                cont++;
-                                if (parent.txt_val2.Text.Equals(""))
-                                {
-                                    parent.txt_val2.Text = (odcontrolv - odcontroln).ToString("0.000");
-                                }
-                                else
-                                {
-                                    parent.txt_val2.Text += " , " + (odcontrolv - odcontroln).ToString("0.000");
-                                }
-
-                                if ((odcontrolv - odcontroln) <= 0.8)
-                                {
-                                    MessageBox.Show("Control positivo no cumple criterios de validacion",
-                                        "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
-                                        MessageBoxIcon.Error);
-                                    parent.btn_Save.Enabled = false;
-                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                    return;
-                                }
+                                odcontrolv = Single.Parse(list[i]);
+                                odcontroln = Single.Parse(list[i + 1]);
                             }
-
-
+                            else
+                            {
+                                odcontrolv = Single.Parse(list[i]);
+                                odcontroln = 0;
+                            }
+                            cont++;
                         }
+
+                        if (parent.txt_val2.Text.Equals(""))
+                        {
+                            parent.txt_val2.Text = (odcontrolv - odcontroln).ToString("0.000");
+                        }
+                        else
+                        {
+                            parent.txt_val2.Text += " , " + (odcontrolv - odcontroln).ToString("0.000");
+                        }
+
+                        if ((odcontrolv - odcontroln) <= 0.8)
+                        {
+                            MessageBox.Show("Control positivo no cumple criterios de validacion",
+                                "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                            parent.btn_Save.Enabled = false;
+                            parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                            return;
+                        }
+
 
                     }
                 }
-
                 if (cont < 1)
                 {
                     MessageBox.Show("No existe control positivo",
@@ -865,52 +888,48 @@ namespace ELISA.Transaccion
                     return;
                 }
 
-                //Calculo controles negativos / Densidad optica de los controles negativos
+                //// Calculo controles negativos / Densidad optica de los controles negativos
 
                 cont = 0;
 
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < list.Count; i++)
                 {
-                    for (int j = 0; j < 12; j++)
+                    if (list[i].StartsWith("C-v"))
                     {
-                        if (protocolo[i, j].StartsWith("C-v"))
+                        if (!list[i].EndsWith(Convert.ToString((char)8203)))
                         {
-                            if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                            if (i != 95)
                             {
-                                if (i != 7 && j != 11)
-                                {
-                                    odcontrolv = Single.Parse(lectura[i, j]);
-                                    odcontroln = Single.Parse(lectura[i, j + 1]);
-                                }
-                                else
-                                {
-                                    odcontrolv = Single.Parse(lectura[i, j]);
-                                    odcontroln = 0;
-                                }
-
-                                cont++;
-
-                                if (parent.txt_val1.Text.Equals(""))
-                                {
-                                    parent.txt_val1.Text = (odcontrolv - odcontroln).ToString("0.000");
-                                }
-                                else
-                                {
-                                    parent.txt_val1.Text += " , " + (odcontrolv - odcontroln).ToString("0.000");
-                                }
-
-                                if ((odcontrolv - odcontroln) >= 0.2)
-                                {
-                                    MessageBox.Show("Control negativo no cumple criterios de validacion",
-                                        "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
-                                        MessageBoxIcon.Error);
-                                    parent.btn_Save.Enabled = false;
-                                    parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                    return;
-                                }
+                                odcontrolv = Single.Parse(list[i]);
+                                odcontroln = Single.Parse(list[i+1]);
                             }
+                            else
+                            {
+                                odcontrolv = Single.Parse(list[i]);
+                                odcontroln = 0;
+                            }
+
+                            cont++;
                         }
 
+                        if (parent.txt_val1.Text.Equals(""))
+                        {
+                            parent.txt_val1.Text = (odcontrolv - odcontroln).ToString("0.000");
+                        }
+                        else
+                        {
+                            parent.txt_val1.Text += " , " + (odcontrolv - odcontroln).ToString("0.000");
+                        }
+
+                        if ((odcontrolv - odcontroln) >= 0.2)
+                        {
+                            MessageBox.Show("Control negativo no cumple criterios de validacion",
+                                "Verifique su protocolo de trabajo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                            parent.btn_Save.Enabled = false;
+                            parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                            return;
+                        }
                     }
                 }
 
@@ -931,6 +950,7 @@ namespace ELISA.Transaccion
             catch (IOException ex)
             {
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
+                Log.logError("Calculo IgM Zika Bei: " + ex.StackTrace);
             }
         }
 
@@ -993,31 +1013,29 @@ namespace ELISA.Transaccion
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
                             }
+                            
                             if (cc != -120)
                             {
-                                if (cc != -120)
+                                if (parent.selectedTest == 30 || parent.selectedTest == 31)
                                 {
-                                    if (parent.selectedTest == 30 || parent.selectedTest == 31)
+                                    if (!(cc >= datosEIZika.ControlNegLI && cc <= datosEIZika.ControlNegLS))
                                     {
-                                        if (!(cc >= datosEIZika.ControlNegLI && cc <= datosEIZika.ControlNegLS))
-                                        {
-                                            MessageBox.Show(protocolo[i, j] + " No cumple Criterios",
-                                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                            parent.btn_Save.Enabled = false;
-                                            parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                            return;
-                                        }
+                                        MessageBox.Show(protocolo[i, j] + " No cumple Criterios",
+                                            "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        parent.btn_Save.Enabled = false;
+                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                        return;
                                     }
-                                    else
+                                }
+                                else
+                                {
+                                    if (!(cc >= datosEI.ControlNegLI && cc <= datosEI.ControlNegLS))
                                     {
-                                        if (!(cc >= datosEI.ControlNegLI && cc <= datosEI.ControlNegLS))
-                                        {
-                                            MessageBox.Show(protocolo[i, j] + " No cumple Criterios",
-                                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                            parent.btn_Save.Enabled = false;
-                                            parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
-                                            return;
-                                        }
+                                        MessageBox.Show(protocolo[i, j] + " No cumple Criterios",
+                                            "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        parent.btn_Save.Enabled = false;
+                                        parent.guardarPlacaInválidaToolStripMenuItem.Enabled = true;
+                                        return;
                                     }
                                 }
                             }
@@ -1477,6 +1495,7 @@ namespace ELISA.Transaccion
             catch (IOException ex)
             {
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
+                Log.logError("Calculo EINH: " + ex.StackTrace);
             }
 
         }
@@ -1573,6 +1592,7 @@ namespace ELISA.Transaccion
                                 ac += Single.Parse(lectura[i, j]);
                                 cont++;
                             }
+
                             if (cc != -120)
                             {
                                 if (parent.selectedTest == 22 || parent.selectedTest == 23)
@@ -1618,7 +1638,7 @@ namespace ELISA.Transaccion
 
                 parent.txt_val1.Text = (parent.MxCNEI / 2).ToString("0.000");
 
-                for (int i = 0; i < cps -1; i++)
+                for (int i = 0; i <= cps -1; i++)
                 {
                     if (cpE[i] > (parent.MxCNEI /2))
                     {
@@ -1636,6 +1656,7 @@ namespace ELISA.Transaccion
             catch (Exception ex)
             {
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
+                Log.logError("Calculo EI1D: " + ex.StackTrace);
             }
         }
 
@@ -1673,6 +1694,7 @@ namespace ELISA.Transaccion
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i,j].StartsWith("C+"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -1720,6 +1742,7 @@ namespace ELISA.Transaccion
                 {
                     for (int j = 0; j < 12; j++)
                     {
+                        cc = -120;
                         if (protocolo[i,j].StartsWith("C-"))
                         {
                             if (!lectura[i, j].EndsWith(Convert.ToString((char)8203)))
@@ -1773,6 +1796,7 @@ namespace ELISA.Transaccion
             catch (Exception ex)
             {
                 MessageBox.Show("Error detectado: " + ex.StackTrace);
+                Log.logError("Calculo RV: " + ex.StackTrace);
             }
 
 
@@ -1892,7 +1916,7 @@ namespace ELISA.Transaccion
                     return;
                 }
 
-                //Calculo de los controles posirivos AN
+                //Calculo de los controles positivos AN
 
                 ac = 0;
                 cont = 0;
@@ -1975,8 +1999,8 @@ namespace ELISA.Transaccion
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                MessageBox.Show("Ha ocurrido un error" + e.StackTrace);
+                Log.logError("Calculo Chik: " + e.StackTrace);
             }
 
         }

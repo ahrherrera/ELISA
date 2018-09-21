@@ -326,7 +326,7 @@
   </EntityType>
   <EntityType Name="datosprotocolorotaviru">
     <Key>
-      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="idDatosProtocoloRV" />
     </Key>
     <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -337,6 +337,7 @@
     <Property Name="ControlNegLS" Type="Single" Nullable="false" />
     <Property Name="ControlPosLI" Type="Single" Nullable="false" />
     <Property Name="ControlPosLS" Type="Single" Nullable="false" />
+    <Property Name="idDatosProtocoloRV" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocolovih">
     <Key>
@@ -1896,15 +1897,7 @@
   </EntityType>
   <EntityType Name="datosprotocolochik">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="LoteIgM" />
-      <PropertyRef Name="LoteAntigenoViral" />
-      <PropertyRef Name="LoteAntigenoNormal" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
+      <PropertyRef Name="idDatosProtocoloChik" />
     </Key>
     <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1932,6 +1925,7 @@
     <Property Name="LimCNI" Type="Single" />
     <Property Name="LimCNS" Type="Single" />
     <Property Name="FVC" Type="Single" />
+    <Property Name="idDatosProtocoloChik" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocolochikhiper">
     <Key>
@@ -1972,17 +1966,7 @@
   </EntityType>
   <EntityType Name="datosprotocolochikmono">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="LoteEI" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="GGLOB" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="idDatosProtocoloChikMono" />
     </Key>
     <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -2006,6 +1990,7 @@
     <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ControlNegLI" Type="Single" Nullable="false" />
     <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="idDatosProtocoloChikMono" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocoloeiensayo">
     <Key>
@@ -2081,20 +2066,7 @@
   </EntityType>
   <EntityType Name="datosprotocoloigg">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="ControlNegSal" />
-      <PropertyRef Name="LoteIgG" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="GGLOB" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
-      <PropertyRef Name="ControlNegSalLI" />
-      <PropertyRef Name="ControlNegSalLS" />
+      <PropertyRef Name="idDatosProtocoloIgG" />
     </Key>
     <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -2121,6 +2093,7 @@
     <Property Name="ControlNegLS" Type="Single" Nullable="false" />
     <Property Name="ControlNegSalLI" Type="Single" Nullable="false" />
     <Property Name="ControlNegSalLS" Type="Single" Nullable="false" />
+    <Property Name="idDatosProtocoloIgG" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocoloigmzika">
     <Key>
@@ -2414,5 +2387,61 @@
       <End Role="kit_elisa_vih" EntitySet="kit_elisa_vihs" />
       <End Role="vih" EntitySet="vihs" />
     </AssociationSet>
+    <EntitySet Name="chikungunyas" EntityType="elisaModel.chikungunya" />
   </EntityContainer>
+  <EntityType Name="chikungunya">
+    <Key>
+      <PropertyRef Name="Cod_pozo" />
+      <PropertyRef Name="posicion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Placa" />
+      <PropertyRef Name="Lectura" />
+      <PropertyRef Name="VC" />
+      <PropertyRef Name="Resultado" />
+      <PropertyRef Name="ControlPos" />
+      <PropertyRef Name="ControlNeg" />
+      <PropertyRef Name="LoteIgM" />
+      <PropertyRef Name="Tecnica" />
+      <PropertyRef Name="LoteAntigenoViral" />
+      <PropertyRef Name="GGLOB" />
+      <PropertyRef Name="Substrato" />
+      <PropertyRef Name="Conjugado" />
+      <PropertyRef Name="SHN" />
+      <PropertyRef Name="STOP" />
+      <PropertyRef Name="Lab1" />
+      <PropertyRef Name="FVC" />
+    </Key>
+    <Property Name="Cod_pozo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="posicion" Type="Byte" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="Placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Lectura" Type="Single" Nullable="false" />
+    <Property Name="VC" Type="Single" Nullable="false" />
+    <Property Name="Valido" Type="Boolean" />
+    <Property Name="Resultado" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ControlPos" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ControlNeg" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteIgM" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tecnica" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoteAntigenoViral" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GGLOB" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fechafijGG" Type="DateTime" />
+    <Property Name="VolUsado" Type="Single" />
+    <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FB" Type="DateTime" />
+    <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TMPB" Type="Byte" />
+    <Property Name="Substrato" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TSubstrato" Type="Single" />
+    <Property Name="Conjugado" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SHN" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STOP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Lab1" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="FVC" Type="Single" Nullable="false" />
+  </EntityType>
 </Schema>

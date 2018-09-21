@@ -56,6 +56,63 @@
           <Property Name="IgA" Type="varchar" MaxLength="5" />
           <Property Name="Observaciones" Type="varchar" MaxLength="30" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'def.elisa.chikungunya' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="chikungunya">
+          <Key>
+            <PropertyRef Name="Cod_pozo" />
+            <PropertyRef Name="posicion" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="Placa" />
+            <PropertyRef Name="Lectura" />
+            <PropertyRef Name="VC" />
+            <PropertyRef Name="Resultado" />
+            <PropertyRef Name="ControlPos" />
+            <PropertyRef Name="ControlNeg" />
+            <PropertyRef Name="LoteIgM" />
+            <PropertyRef Name="Tecnica" />
+            <PropertyRef Name="LoteAntigenoViral" />
+            <PropertyRef Name="GGLOB" />
+            <PropertyRef Name="Substrato" />
+            <PropertyRef Name="Conjugado" />
+            <PropertyRef Name="SHN" />
+            <PropertyRef Name="STOP" />
+            <PropertyRef Name="Lab1" />
+            <PropertyRef Name="FVC" />
+          </Key>
+          <Property Name="Cod_pozo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="posicion" Type="utinyint" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="Placa" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lectura" Type="float" Nullable="false" />
+          <Property Name="VC" Type="float" Nullable="false" />
+          <Property Name="Valido" Type="bool" />
+          <Property Name="Resultado" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LoteIgM" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tecnica" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LoteAntigenoViral" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="GGLOB" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="fechafijGG" Type="datetime" Precision="0" />
+          <Property Name="VolUsado" Type="float" />
+          <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
+          <Property Name="Coatting" Type="varchar" MaxLength="50" />
+          <Property Name="PB" Type="varchar" MaxLength="50" />
+          <Property Name="TB" Type="varchar" MaxLength="50" />
+          <Property Name="FB" Type="datetime" Precision="0" />
+          <Property Name="TIMEB" Type="varchar" MaxLength="50" />
+          <Property Name="TMPB" Type="utinyint" />
+          <Property Name="Substrato" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TSubstrato" Type="float" />
+          <Property Name="Conjugado" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SHN" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Lab1" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Lab2" Type="varchar" MaxLength="3" />
+          <Property Name="user" Type="varchar" MaxLength="3" />
+          <Property Name="FVC" Type="float" Nullable="false" />
+        </EntityType>
         <EntityType Name="chikungunyainhhiper">
           <Key>
             <PropertyRef Name="Cod_Pozo" />
@@ -251,19 +308,9 @@
           <Property Name="Fecha_Finalizacion" Type="datetime" Precision="0" />
           <Property Name="Oservaciones" Type="varchar" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocolochik' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="datosprotocolochik">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="LoteIgM" />
-            <PropertyRef Name="LoteAntigenoViral" />
-            <PropertyRef Name="LoteAntigenoNormal" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
+            <PropertyRef Name="idDatosProtocoloChik" />
           </Key>
           <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
@@ -291,6 +338,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolochik' does not have a prim
           <Property Name="LimCNI" Type="float" />
           <Property Name="LimCNS" Type="float" />
           <Property Name="FVC" Type="float" />
+          <Property Name="idDatosProtocoloChik" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'def.elisa.datosprotocolochikhiper' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -331,21 +379,9 @@ warning 6002: The table/view 'def.elisa.datosprotocolochikhiper' does not have a
           <Property Name="ControlNegLI" Type="float" Nullable="false" />
           <Property Name="ControlNegLS" Type="float" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocolochikmono' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="datosprotocolochikmono">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="LoteEI" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="GGLOB" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
+            <PropertyRef Name="idDatosProtocoloChikMono" />
           </Key>
           <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
@@ -369,6 +405,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolochikmono' does not have a 
           <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ControlNegLI" Type="float" Nullable="false" />
           <Property Name="ControlNegLS" Type="float" Nullable="false" />
+          <Property Name="idDatosProtocoloChikMono" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocoloei">
           <Key>
@@ -474,24 +511,9 @@ warning 6002: The table/view 'def.elisa.datosprotocoloeizika' does not have a pr
           <Property Name="ControlNegLI" Type="float" Nullable="false" />
           <Property Name="ControlNegLS" Type="float" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="datosprotocoloigg">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="ControlNegSal" />
-            <PropertyRef Name="LoteIgG" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="GGLOB" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
-            <PropertyRef Name="ControlNegSalLI" />
-            <PropertyRef Name="ControlNegSalLS" />
+            <PropertyRef Name="idDatosProtocoloIgG" />
           </Key>
           <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
@@ -518,6 +540,7 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a prima
           <Property Name="ControlNegLS" Type="float" Nullable="false" />
           <Property Name="ControlNegSalLI" Type="float" Nullable="false" />
           <Property Name="ControlNegSalLS" Type="float" Nullable="false" />
+          <Property Name="idDatosProtocoloIgG" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocoloigm">
           <Key>
@@ -608,7 +631,7 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a prima
         </EntityType>
         <EntityType Name="datosprotocolorotavirus">
           <Key>
-            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="idDatosProtocoloRV" />
           </Key>
           <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ProcH2O" Type="varchar" MaxLength="50" />
@@ -619,6 +642,7 @@ warning 6002: The table/view 'def.elisa.datosprotocoloigg' does not have a prima
           <Property Name="ControlNegLS" Type="float" Nullable="false" />
           <Property Name="ControlPosLI" Type="float" Nullable="false" />
           <Property Name="ControlPosLS" Type="float" Nullable="false" />
+          <Property Name="idDatosProtocoloRV" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocolovih">
           <Key>
@@ -2269,18 +2293,6 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_Rotaviruskit">
-          <End Role="kit elisa rotavirus" Type="Self.kit elisa rotavirus" Multiplicity="0..1" />
-          <End Role="rotavirus" Type="Self.rotavirus" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="kit elisa rotavirus">
-              <PropertyRef Name="Codigo" />
-            </Principal>
-            <Dependent Role="rotavirus">
-              <PropertyRef Name="CodigoKit" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="fk_UserIGGRep">
           <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
           <End Role="elisaiggrepeticiones" Type="Self.elisaiggrepeticiones" Multiplicity="*" />
@@ -2321,7 +2333,10 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <EntitySet Name="controles_ei" EntityType="Self.controles_ei" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="controles_igg" EntityType="Self.controles_igg" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="controles_igm" EntityType="Self.controles_igm" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="datosprotocolochik" EntityType="Self.datosprotocolochik" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="datosprotocolochikmono" EntityType="Self.datosprotocolochikmono" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocoloei" EntityType="Self.datosprotocoloei" Schema="elisa" store:Type="Tables" />
+          <EntitySet Name="datosprotocoloigg" EntityType="Self.datosprotocoloigg" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocoloigm" EntityType="Self.datosprotocoloigm" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocoloigmzika" EntityType="Self.datosprotocoloigmzika" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="datosprotocolons1" EntityType="Self.datosprotocolons1" Schema="elisa" store:Type="Tables" />
@@ -2379,35 +2394,41 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
           <EntitySet Name="zikaigmbei" EntityType="Self.zikaigmbei" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="zikarmanual" EntityType="Self.zikarmanual" Schema="elisa" store:Type="Tables" />
           <EntitySet Name="zikarmanualdup" EntityType="Self.zikarmanualdup" Schema="elisa" store:Type="Tables" />
-          <EntitySet Name="datosprotocolochik" EntityType="Self.datosprotocolochik" store:Type="Tables" store:Schema="elisa">
+          <EntitySet Name="chikungunya" EntityType="Self.chikungunya" store:Type="Tables" store:Schema="elisa">
             <DefiningQuery>SELECT
-`datosprotocolochik`.`ControlPos`, 
-`datosprotocolochik`.`ControlNeg`, 
-`datosprotocolochik`.`LoteIgM`, 
-`datosprotocolochik`.`LoteAntigenoViral`, 
-`datosprotocolochik`.`LoteAntigenoNormal`, 
-`datosprotocolochik`.`GGLOB`, 
-`datosprotocolochik`.`fechafijGG`, 
-`datosprotocolochik`.`VolUsado`, 
-`datosprotocolochik`.`ProcH2O`, 
-`datosprotocolochik`.`Coatting`, 
-`datosprotocolochik`.`PB`, 
-`datosprotocolochik`.`TB`, 
-`datosprotocolochik`.`FB`, 
-`datosprotocolochik`.`TMPB`, 
-`datosprotocolochik`.`TIMEB`, 
-`datosprotocolochik`.`Conjugado`, 
-`datosprotocolochik`.`Substrato`, 
-`datosprotocolochik`.`TSubstrato`, 
-`datosprotocolochik`.`SHN`, 
-`datosprotocolochik`.`STOP`, 
-`datosprotocolochik`.`Tecnica`, 
-`datosprotocolochik`.`LimCPI`, 
-`datosprotocolochik`.`LimCPS`, 
-`datosprotocolochik`.`LimCNI`, 
-`datosprotocolochik`.`LimCNS`, 
-`datosprotocolochik`.`FVC`
-FROM `datosprotocolochik` AS `datosprotocolochik`</DefiningQuery>
+`chikungunya`.`Cod_pozo`, 
+`chikungunya`.`posicion`, 
+`chikungunya`.`Fecha`, 
+`chikungunya`.`Placa`, 
+`chikungunya`.`Lectura`, 
+`chikungunya`.`VC`, 
+`chikungunya`.`Valido`, 
+`chikungunya`.`Resultado`, 
+`chikungunya`.`ControlPos`, 
+`chikungunya`.`ControlNeg`, 
+`chikungunya`.`LoteIgM`, 
+`chikungunya`.`Tecnica`, 
+`chikungunya`.`LoteAntigenoViral`, 
+`chikungunya`.`GGLOB`, 
+`chikungunya`.`fechafijGG`, 
+`chikungunya`.`VolUsado`, 
+`chikungunya`.`ProcH2O`, 
+`chikungunya`.`Coatting`, 
+`chikungunya`.`PB`, 
+`chikungunya`.`TB`, 
+`chikungunya`.`FB`, 
+`chikungunya`.`TIMEB`, 
+`chikungunya`.`TMPB`, 
+`chikungunya`.`Substrato`, 
+`chikungunya`.`TSubstrato`, 
+`chikungunya`.`Conjugado`, 
+`chikungunya`.`SHN`, 
+`chikungunya`.`STOP`, 
+`chikungunya`.`Lab1`, 
+`chikungunya`.`Lab2`, 
+`chikungunya`.`user`, 
+`chikungunya`.`FVC`
+FROM `chikungunya` AS `chikungunya`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="datosprotocolochikhiper" EntityType="Self.datosprotocolochikhiper" store:Type="Tables" store:Schema="elisa">
             <DefiningQuery>SELECT
@@ -2434,32 +2455,6 @@ FROM `datosprotocolochik` AS `datosprotocolochik`</DefiningQuery>
 `datosprotocolochikhiper`.`ControlNegLI`, 
 `datosprotocolochikhiper`.`ControlNegLS`
 FROM `datosprotocolochikhiper` AS `datosprotocolochikhiper`</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="datosprotocolochikmono" EntityType="Self.datosprotocolochikmono" store:Type="Tables" store:Schema="elisa">
-            <DefiningQuery>SELECT
-`datosprotocolochikmono`.`ControlPos`, 
-`datosprotocolochikmono`.`ControlNeg`, 
-`datosprotocolochikmono`.`LoteEI`, 
-`datosprotocolochikmono`.`LoteAntigeno`, 
-`datosprotocolochikmono`.`GGLOB`, 
-`datosprotocolochikmono`.`fechafijGG`, 
-`datosprotocolochikmono`.`VolUsado`, 
-`datosprotocolochikmono`.`ProcH2O`, 
-`datosprotocolochikmono`.`TipoEstudio`, 
-`datosprotocolochikmono`.`Coatting`, 
-`datosprotocolochikmono`.`PB`, 
-`datosprotocolochikmono`.`TB`, 
-`datosprotocolochikmono`.`FB`, 
-`datosprotocolochikmono`.`TMPB`, 
-`datosprotocolochikmono`.`TIMEB`, 
-`datosprotocolochikmono`.`Conjugado`, 
-`datosprotocolochikmono`.`Substrato`, 
-`datosprotocolochikmono`.`TSubstrato`, 
-`datosprotocolochikmono`.`SHN`, 
-`datosprotocolochikmono`.`STOP`, 
-`datosprotocolochikmono`.`ControlNegLI`, 
-`datosprotocolochikmono`.`ControlNegLS`
-FROM `datosprotocolochikmono` AS `datosprotocolochikmono`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="datosprotocoloeiensayos" EntityType="Self.datosprotocoloeiensayos" store:Type="Tables" store:Schema="elisa">
             <DefiningQuery>SELECT
@@ -2511,35 +2506,6 @@ FROM `datosprotocoloeiensayos` AS `datosprotocoloeiensayos`</DefiningQuery>
 `datosprotocoloeizika`.`ControlNegLI`, 
 `datosprotocoloeizika`.`ControlNegLS`
 FROM `datosprotocoloeizika` AS `datosprotocoloeizika`</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="datosprotocoloigg" EntityType="Self.datosprotocoloigg" store:Type="Tables" store:Schema="elisa">
-            <DefiningQuery>SELECT
-`datosprotocoloigg`.`ControlPos`, 
-`datosprotocoloigg`.`ControlNeg`, 
-`datosprotocoloigg`.`ControlNegSal`, 
-`datosprotocoloigg`.`LoteIgG`, 
-`datosprotocoloigg`.`LoteAntigeno`, 
-`datosprotocoloigg`.`GGLOB`, 
-`datosprotocoloigg`.`fechafijGG`, 
-`datosprotocoloigg`.`VolUsado`, 
-`datosprotocoloigg`.`ProcH2O`, 
-`datosprotocoloigg`.`TipoEstudio`, 
-`datosprotocoloigg`.`Coatting`, 
-`datosprotocoloigg`.`PB`, 
-`datosprotocoloigg`.`TB`, 
-`datosprotocoloigg`.`FB`, 
-`datosprotocoloigg`.`TMPB`, 
-`datosprotocoloigg`.`TIMEB`, 
-`datosprotocoloigg`.`Conjugado`, 
-`datosprotocoloigg`.`Substrato`, 
-`datosprotocoloigg`.`TSubstrato`, 
-`datosprotocoloigg`.`SHN`, 
-`datosprotocoloigg`.`STOP`, 
-`datosprotocoloigg`.`ControlNegLI`, 
-`datosprotocoloigg`.`ControlNegLS`, 
-`datosprotocoloigg`.`ControlNegSalLI`, 
-`datosprotocoloigg`.`ControlNegSalLS`
-FROM `datosprotocoloigg` AS `datosprotocoloigg`</DefiningQuery>
           </EntitySet>
           <EntitySet Name="datosprotocolozikabob" EntityType="Self.datosprotocolozikabob" store:Type="Tables" store:Schema="elisa">
             <DefiningQuery>SELECT
@@ -2596,10 +2562,6 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <AssociationSet Name="fk_reactivosVIHkit" Association="Self.fk_reactivosVIHkit">
             <End Role="kit elisa vih" EntitySet="kit elisa vih" />
             <End Role="reactivos vih" EntitySet="reactivos vih" />
-          </AssociationSet>
-          <AssociationSet Name="fk_Rotaviruskit" Association="Self.fk_Rotaviruskit">
-            <End Role="kit elisa rotavirus" EntitySet="kit elisa rotavirus" />
-            <End Role="rotavirus" EntitySet="rotavirus" />
           </AssociationSet>
           <AssociationSet Name="fk_UserIGGRep" Association="Self.fk_UserIGGRep">
             <End Role="usuario" EntitySet="usuario" />
@@ -2940,7 +2902,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
         </EntityType>
         <EntityType Name="datosprotocolorotaviru">
           <Key>
-            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="idDatosProtocoloRV" />
           </Key>
           <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -2951,6 +2913,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="ControlNegLS" Type="Single" Nullable="false" />
           <Property Name="ControlPosLI" Type="Single" Nullable="false" />
           <Property Name="ControlPosLS" Type="Single" Nullable="false" />
+          <Property Name="idDatosProtocoloRV" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocolovih">
           <Key>
@@ -4510,15 +4473,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
         </EntityType>
         <EntityType Name="datosprotocolochik">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="LoteIgM" />
-            <PropertyRef Name="LoteAntigenoViral" />
-            <PropertyRef Name="LoteAntigenoNormal" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
+            <PropertyRef Name="idDatosProtocoloChik" />
           </Key>
           <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -4546,6 +4501,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="LimCNI" Type="Single" />
           <Property Name="LimCNS" Type="Single" />
           <Property Name="FVC" Type="Single" />
+          <Property Name="idDatosProtocoloChik" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocolochikhiper">
           <Key>
@@ -4586,17 +4542,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
         </EntityType>
         <EntityType Name="datosprotocolochikmono">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="LoteEI" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="GGLOB" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
+            <PropertyRef Name="idDatosProtocoloChikMono" />
           </Key>
           <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -4620,6 +4566,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ControlNegLI" Type="Single" Nullable="false" />
           <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+          <Property Name="idDatosProtocoloChikMono" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocoloeiensayo">
           <Key>
@@ -4695,20 +4642,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
         </EntityType>
         <EntityType Name="datosprotocoloigg">
           <Key>
-            <PropertyRef Name="ControlPos" />
-            <PropertyRef Name="ControlNeg" />
-            <PropertyRef Name="ControlNegSal" />
-            <PropertyRef Name="LoteIgG" />
-            <PropertyRef Name="LoteAntigeno" />
-            <PropertyRef Name="GGLOB" />
-            <PropertyRef Name="Conjugado" />
-            <PropertyRef Name="Substrato" />
-            <PropertyRef Name="SHN" />
-            <PropertyRef Name="STOP" />
-            <PropertyRef Name="ControlNegLI" />
-            <PropertyRef Name="ControlNegLS" />
-            <PropertyRef Name="ControlNegSalLI" />
-            <PropertyRef Name="ControlNegSalLS" />
+            <PropertyRef Name="idDatosProtocoloIgG" />
           </Key>
           <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -4735,6 +4669,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <Property Name="ControlNegLS" Type="Single" Nullable="false" />
           <Property Name="ControlNegSalLI" Type="Single" Nullable="false" />
           <Property Name="ControlNegSalLS" Type="Single" Nullable="false" />
+          <Property Name="idDatosProtocoloIgG" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="datosprotocoloigmzika">
           <Key>
@@ -5028,7 +4963,63 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
             <End Role="kit_elisa_vih" EntitySet="kit_elisa_vihs" />
             <End Role="vih" EntitySet="vihs" />
           </AssociationSet>
+          <EntitySet Name="chikungunyas" EntityType="elisaModel.chikungunya" />
         </EntityContainer>
+        <EntityType Name="chikungunya">
+          <Key>
+            <PropertyRef Name="Cod_pozo" />
+            <PropertyRef Name="posicion" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="Placa" />
+            <PropertyRef Name="Lectura" />
+            <PropertyRef Name="VC" />
+            <PropertyRef Name="Resultado" />
+            <PropertyRef Name="ControlPos" />
+            <PropertyRef Name="ControlNeg" />
+            <PropertyRef Name="LoteIgM" />
+            <PropertyRef Name="Tecnica" />
+            <PropertyRef Name="LoteAntigenoViral" />
+            <PropertyRef Name="GGLOB" />
+            <PropertyRef Name="Substrato" />
+            <PropertyRef Name="Conjugado" />
+            <PropertyRef Name="SHN" />
+            <PropertyRef Name="STOP" />
+            <PropertyRef Name="Lab1" />
+            <PropertyRef Name="FVC" />
+          </Key>
+          <Property Name="Cod_pozo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="posicion" Type="Byte" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" />
+          <Property Name="Placa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Lectura" Type="Single" Nullable="false" />
+          <Property Name="VC" Type="Single" Nullable="false" />
+          <Property Name="Valido" Type="Boolean" />
+          <Property Name="Resultado" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ControlPos" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ControlNeg" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LoteIgM" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Tecnica" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LoteAntigenoViral" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="GGLOB" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="fechafijGG" Type="DateTime" />
+          <Property Name="VolUsado" Type="Single" />
+          <Property Name="ProcH2O" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coatting" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FB" Type="DateTime" />
+          <Property Name="TIMEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TMPB" Type="Byte" />
+          <Property Name="Substrato" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TSubstrato" Type="Single" />
+          <Property Name="Conjugado" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SHN" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STOP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Lab1" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Lab2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="user" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FVC" Type="Single" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5374,6 +5365,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySetMapping Name="datosprotocolorotavirus">
             <EntityTypeMapping TypeName="elisaModel.datosprotocolorotaviru">
               <MappingFragment StoreEntitySet="datosprotocolorotavirus">
+                <ScalarProperty Name="idDatosProtocoloRV" ColumnName="idDatosProtocoloRV" />
                 <ScalarProperty Name="Codigo" ColumnName="Codigo" />
                 <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
                 <ScalarProperty Name="TIMES" ColumnName="TIMES" />
@@ -6883,6 +6875,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySetMapping Name="datosprotocolochiks">
             <EntityTypeMapping TypeName="elisaModel.datosprotocolochik">
               <MappingFragment StoreEntitySet="datosprotocolochik">
+                <ScalarProperty Name="idDatosProtocoloChik" ColumnName="idDatosProtocoloChik" />
                 <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
                 <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
                 <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
@@ -6943,6 +6936,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySetMapping Name="datosprotocolochikmonoes">
             <EntityTypeMapping TypeName="elisaModel.datosprotocolochikmono">
               <MappingFragment StoreEntitySet="datosprotocolochikmono">
+                <ScalarProperty Name="idDatosProtocoloChikMono" ColumnName="idDatosProtocoloChikMono" />
                 <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
                 <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
                 <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />
@@ -7026,6 +7020,7 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
           <EntitySetMapping Name="datosprotocoloiggs">
             <EntityTypeMapping TypeName="elisaModel.datosprotocoloigg">
               <MappingFragment StoreEntitySet="datosprotocoloigg">
+                <ScalarProperty Name="idDatosProtocoloIgG" ColumnName="idDatosProtocoloIgG" />
                 <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
                 <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
                 <ScalarProperty Name="ControlNegSal" ColumnName="ControlNegSal" />
@@ -7129,6 +7124,44 @@ FROM `datosprotocolozikaigmbei` AS `datosprotocolozikaigmbei`</DefiningQuery>
                 <ScalarProperty Name="CodDiluyente" ColumnName="CodDiluyente" />
                 <ScalarProperty Name="Substrato" ColumnName="Substrato" />
                 <ScalarProperty Name="STOP" ColumnName="STOP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chikungunyas">
+            <EntityTypeMapping TypeName="elisaModel.chikungunya">
+              <MappingFragment StoreEntitySet="chikungunya">
+                <ScalarProperty Name="FVC" ColumnName="FVC" />
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="Lab2" ColumnName="Lab2" />
+                <ScalarProperty Name="Lab1" ColumnName="Lab1" />
+                <ScalarProperty Name="STOP" ColumnName="STOP" />
+                <ScalarProperty Name="SHN" ColumnName="SHN" />
+                <ScalarProperty Name="Conjugado" ColumnName="Conjugado" />
+                <ScalarProperty Name="TSubstrato" ColumnName="TSubstrato" />
+                <ScalarProperty Name="Substrato" ColumnName="Substrato" />
+                <ScalarProperty Name="TMPB" ColumnName="TMPB" />
+                <ScalarProperty Name="TIMEB" ColumnName="TIMEB" />
+                <ScalarProperty Name="FB" ColumnName="FB" />
+                <ScalarProperty Name="TB" ColumnName="TB" />
+                <ScalarProperty Name="PB" ColumnName="PB" />
+                <ScalarProperty Name="Coatting" ColumnName="Coatting" />
+                <ScalarProperty Name="ProcH2O" ColumnName="ProcH2O" />
+                <ScalarProperty Name="VolUsado" ColumnName="VolUsado" />
+                <ScalarProperty Name="fechafijGG" ColumnName="fechafijGG" />
+                <ScalarProperty Name="GGLOB" ColumnName="GGLOB" />
+                <ScalarProperty Name="LoteAntigenoViral" ColumnName="LoteAntigenoViral" />
+                <ScalarProperty Name="Tecnica" ColumnName="Tecnica" />
+                <ScalarProperty Name="LoteIgM" ColumnName="LoteIgM" />
+                <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
+                <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="Valido" ColumnName="Valido" />
+                <ScalarProperty Name="VC" ColumnName="VC" />
+                <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+                <ScalarProperty Name="Placa" ColumnName="Placa" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="posicion" ColumnName="posicion" />
+                <ScalarProperty Name="Cod_pozo" ColumnName="Cod_pozo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
