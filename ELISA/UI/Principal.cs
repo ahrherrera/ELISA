@@ -1621,7 +1621,12 @@ namespace ELISA.UI
                     {
                         ControlP = false;
                         //GuardarRV
+                        bool invalidTemp = invalid;
 
+                        if (new DatosRV().ShowDialog(this) == DialogResult.OK)
+                        {
+                            
+                        }
                         break;
                     }
                 case 3:
