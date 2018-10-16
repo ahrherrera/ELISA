@@ -325,8 +325,10 @@
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgMZika.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloRotavirus.cs" />
     <Compile Include="Transaccion\EITrans.cs" />
+    <Compile Include="Transaccion\ElisaChikTrans.cs" />
     <Compile Include="Transaccion\ElisaIGGTrans.cs" />
     <Compile Include="Transaccion\ElisaIGMTrans.cs" />
+    <Compile Include="Transaccion\ElisaRVTrans.cs" />
     <Compile Include="Transaccion\EstudioTrans.cs" />
     <Compile Include="Transaccion\GammaTrans.cs" />
     <Compile Include="Transaccion\KitELISATrans.cs" />

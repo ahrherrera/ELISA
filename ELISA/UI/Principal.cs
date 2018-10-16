@@ -1625,13 +1625,195 @@ namespace ELISA.UI
 
                         if (new DatosRV().ShowDialog(this) == DialogResult.OK)
                         {
-                            
+                            Single lectData;
+                            String und;
+                            String res;
+                            datosprotocolorotaviru datos = DatosProtocoloRotavirus.TraerDatosprotocoloRotavirus();
+                            int cont = 1;
+
+                            for (int i = 0; i < 8; i++)
+                            {
+                                for (int j = 0; j < 12; j++)
+                                {
+                                    rotaviru rv = new rotaviru();
+                                    rv.Cod_Pozo = protocolo[i, j];
+                                    rv.posicion = Convert.ToByte(cont);
+                                    cont++;
+                                    if (dgv_Protocolo.Rows[i].Cells[j].Style.BackColor == Color.Red)
+                                    {
+                                        rv.ControlMuestra = true;
+                                    }
+
+                                    if (lectura[i,j].EndsWith(Convert.ToString((char)8203)))
+                                    {
+                                        lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                                    }
+                                    else
+                                    {
+                                        lectData = Single.Parse(lectura[i, j]);
+                                    }
+
+                                    rv.Lectura = lectData;
+                                    Absorbancia[i, j] = Convert.ToString(lectData);
+
+                                    if (lectData > (float.Parse(txt_val1.Text) - 0.01) && lectData < (float.Parse(txt_val1.Text) + 0.01) && !invalidTemp)
+                                    {
+                                        res = "IND";
+                                    }else if (lectData >= float.Parse(txt_val1.Text) && !invalid)
+                                    {
+                                        res = "P";
+                                    }
+                                    else
+                                    {
+                                        res = "N";
+                                    }
+
+                                    if (invalidTemp)
+                                    {
+                                        res = "INV";
+                                    }
+
+                                    rv.VC = Single.Parse(Single.Parse(txt_val1.Text).ToString("0.000"));
+                                    rv.Resultado = res;
+                                    Resultados[i, j] = res;
+                                    rv.Placa = txt_Placa.Text;
+
+                                    if (invalidTemp)
+                                    {
+                                        rv.Valido = false;
+                                    }
+                                    else
+                                    {
+                                        if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                        {
+                                            rv.Valido = false;
+                                        }
+                                        else
+                                            rv.Valido = true;
+                                    }
+
+                                    rv.CodigoKit = datos.Codigo;
+                                    rv.ControlPos = datos.ControlPos;
+                                    rv.ControlNeg = datos.ControlNeg;
+                                    rv.ProcH2O = datos.ProcH2O;
+                                    rv.TIMES = Convert.ToByte(datos.TIMES);
+                                    rv.Lab2 = cmb_Lab2.ComboBox.Text;
+                                    rv.Lab1 = cmb_Lab1.ComboBox.Text;
+                                    rv.User = Convert.ToString(user.idUsuario);
+                                    ElisaRVTrans.saveElisaRV(rv);
+                                    btn_Print.Enabled = true;
+
+                                }
+                            }
+                            MessageBox.Show("Datos Guardados Correctamente",
+                                "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Verifique los datos del protocolo en el menu principal",
+                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         break;
                     }
                 case 3:
                     {
                         //GuardarChik
+                        bool invalidTemp = invalid;
+                        if (new DatosChikCNDR().ShowDialog(this)== DialogResult.OK)
+                        {
+                            Single lectData;
+                            String und, res, res1;
+                            datosprotocolochik datos = DatosProtocoloChik.TraerDatosprotocoloChik();
+                            int cont = 1;
+                            for (int i = 0; i < 8; i++)
+                            {
+                                for (int j = 0; j < 12; j++)
+                                {
+                                    chikungunya newChik = new chikungunya();
+                                    newChik.Cod_pozo = protocolo[i, j];
+                                    newChik.posicion = Convert.ToByte(cont);
+                                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                    {
+                                        lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                                    }
+                                    else
+                                    {
+                                        lectData = Single.Parse(lectura[i, j]);
+                                    }
+
+                                    newChik.Lectura = lectData;
+                                    Absorbancia[i, j] = Convert.ToString(lectData);
+
+                                    if (lectData >= (Single.Parse(txt_val2.Text) * datos.FVC) && !invalidTemp )
+                                    {
+                                        res = "P";
+                                    }
+                                    else
+                                    {
+                                        res = "N";
+                                    }
+
+                                    if (invalidTemp)
+                                    {
+                                        res = "INV";
+                                    }
+
+                                    newChik.VC = (float)(Single.Parse(txt_val1.Text) * datos.FVC);
+                                    newChik.Resultado = res;
+                                    Resultados[i, j] = res;
+
+                                    newChik.Placa = txt_Placa.TextBox.Text;
+                                    if (invalidTemp)
+                                    {
+                                        newChik.Valido = false;
+                                    }
+                                    else
+                                    {
+                                        if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                                        {
+                                            newChik.Valido = false;
+                                        }
+                                        else
+                                            newChik.Valido = true;
+                                    }
+
+                                    newChik.Fecha = DateTime.Now;
+                                    newChik.ControlPos = datos.ControlPos;
+                                    newChik.ControlNeg = datos.ControlNeg;
+                                    newChik.LoteIgM = datos.LoteIgM;
+                                    newChik.Tecnica = "CNDR";
+                                    newChik.LoteAntigenoViral = datos.LoteAntigenoViral;
+                                    newChik.GGLOB = datos.GGLOB;
+                                    newChik.fechafijGG = datos.fechafijGG;
+                                    newChik.VolUsado = datos.VolUsado;
+                                    newChik.ProcH2O = datos.ProcH2O;
+                                    newChik.Coatting = datos.Coatting;
+                                    newChik.PB = datos.PB;
+                                    newChik.TB = datos.TB;
+                                    newChik.FB = datos.FB;
+                                    newChik.TMPB = datos.TMPB;
+                                    newChik.TIMEB = datos.TIMEB;
+                                    newChik.Substrato = datos.Substrato;
+                                    newChik.TSubstrato = datos.TSubstrato;
+                                    newChik.Conjugado = datos.Conjugado;
+                                    newChik.SHN = datos.SHN;
+                                    newChik.STOP = datos.STOP;
+                                    newChik.Lab1 = cmb_Lab1.ComboBox.Text;
+                                    newChik.Lab2 = cmb_Lab2.ComboBox.Text;
+                                    newChik.user = Convert.ToString(user.idUsuario);
+                                    ElisaChikTrans.saveElisaChikCNDR(newChik);
+                                    btn_Print.Enabled = true;
+                                    cont++;
+                                }
+                            }
+                            MessageBox.Show("Datos Guardados Correctamente",
+                                "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Verifique los datos del protocolo en el menu principal",
+                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     }
                 case 4:

@@ -1373,3 +1373,80 @@ ELISA.exe Information: 0 : 19-09-2018 10:31:01	Lista de cod Kit cargado correcta
 ELISA.exe Information: 0 : 19-09-2018 10:31:10	Aplicación Terminada
 ELISA.exe Information: 0 : 19-09-2018 10:31:10	=================SALTO DE LINEA=================
 ELISA.exe Information: 0 : 19-09-2018 10:31:10	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-10-2018 08:19:12	Aplicación Iniciada
+ELISA.exe Error: 0 : Authentication to host 'localhost' for user 'elisa' using method 'caching_sha2_password' failed with message: Access denied for user 'elisa'@'localhost' (using password: YES)
+ELISA.exe Error: 0 : 12-10-2018 08:19:17	Error capturado: Trace:    at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ELISA.Transaccion.DatosProtocoloTrans.DatosProtocoloIgM.TraerDatosProtocoloIgM() in C:\Users\ahrhe\Documents\Visual Studio 2017\Projects\ELISA\ELISA\Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs:line 22
+ELISA.exe Information: 0 : 12-10-2018 08:19:17	Splash Iniciado
+ELISA.exe Information: 0 : 12-10-2018 08:19:18	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-10-2018 08:19:18	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-10-2018 08:19:18	Arrancar la ventana de autenticación
+ELISA.exe Error: 0 : Authentication to host 'localhost' for user 'elisa' using method 'caching_sha2_password' failed with message: Access denied for user 'elisa'@'localhost' (using password: YES)
+ELISA.exe Information: 0 : 12-10-2018 08:20:09	Aplicación Iniciada
+ELISA.exe Error: 0 : Authentication to host 'localhost' for user 'elisa' using method 'caching_sha2_password' failed with message: Access denied for user 'elisa'@'localhost' (using password: YES)
+ELISA.exe Error: 0 : 12-10-2018 08:20:13	Error capturado: Trace:    at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ELISA.Transaccion.DatosProtocoloTrans.DatosProtocoloIgM.TraerDatosProtocoloIgM() in C:\Users\ahrhe\Documents\Visual Studio 2017\Projects\ELISA\ELISA\Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs:line 22
+ELISA.exe Information: 0 : 12-10-2018 08:20:13	Splash Iniciado
+ELISA.exe Information: 0 : 12-10-2018 08:20:14	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-10-2018 08:20:14	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-10-2018 08:20:14	Arrancar la ventana de autenticación
+ELISA.exe Error: 0 : Authentication to host 'localhost' for user 'elisa' using method 'caching_sha2_password' failed with message: Access denied for user 'elisa'@'localhost' (using password: YES)
+ELISA.exe Information: 0 : 12-10-2018 08:21:02	Aplicación Iniciada
+ELISA.exe Error: 0 : 12-10-2018 08:21:06	Error capturado: Trace:    at MySql.Data.MySqlClient.MySqlClientFactory.get_MySqlDbProviderServicesInstance()
+   at MySql.Data.MySqlClient.MySqlClientFactory.System.IServiceProvider.GetService(Type serviceType)
+   at System.Data.Common.DbProviderServices.GetProviderServices(DbProviderFactory factory)
+   at System.Data.Metadata.Edm.StoreItemCollection.Loader.InitializeProviderManifest(Action`3 addError)
+   at System.Data.EntityModel.SchemaObjectModel.Schema.HandleAttribute(XmlReader reader)
+   at System.Data.EntityModel.SchemaObjectModel.SchemaElement.ParseAttribute(XmlReader reader)
+   at System.Data.EntityModel.SchemaObjectModel.SchemaElement.Parse(XmlReader reader)
+   at System.Data.EntityModel.SchemaObjectModel.Schema.HandleTopLevelSchemaElement(XmlReader reader)
+   at System.Data.EntityModel.SchemaObjectModel.Schema.InternalParse(XmlReader sourceReader, String sourceLocation)
+   at System.Data.EntityModel.SchemaObjectModel.Schema.Parse(XmlReader sourceReader, String sourceLocation)
+   at System.Data.EntityModel.SchemaObjectModel.SchemaManager.ParseAndValidate(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths, SchemaDataModelOption dataModel, AttributeValueNotification providerNotification, AttributeValueNotification providerManifestTokenNotification, ProviderManifestNeeded providerManifestNeeded, IList`1& schemaCollection)
+   at System.Data.Metadata.Edm.StoreItemCollection.Loader.LoadItems(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths)
+   at System.Data.Metadata.Edm.StoreItemCollection.Init(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths, Boolean throwOnError, DbProviderManifest& providerManifest, DbProviderFactory& providerFactory, String& providerManifestToken, Memoizer`2& cachedCTypeFunction)
+   at System.Data.Metadata.Edm.StoreItemCollection..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths)
+   at System.Data.Metadata.Edm.MetadataCache.StoreMetadataEntry.LoadStoreCollection(EdmItemCollection edmItemCollection, MetadataArtifactLoader loader)
+   at System.Data.Metadata.Edm.MetadataCache.LoadItemCollection[T](IItemCollectionLoader`1 itemCollectionLoader, T entry)
+   at System.Data.Metadata.Edm.MetadataCache.GetOrCreateStoreAndMappingItemCollections(String cacheKey, MetadataArtifactLoader loader, EdmItemCollection edmItemCollection, Object& entryToken)
+   at System.Data.EntityClient.EntityConnection.LoadStoreItemCollections(MetadataWorkspace workspace, DbConnection storeConnection, DbProviderFactory factory, DbConnectionOptions connectionOptions, EdmItemCollection edmItemCollection, MetadataArtifactLoader artifactLoader)
+   at System.Data.EntityClient.EntityConnection.GetMetadataWorkspace(Boolean initializeAllCollections)
+   at System.Data.EntityClient.EntityConnection.InitializeMetadata(DbConnection newConnection, DbConnection originalConnection, Boolean closeOriginalConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ELISA.Transaccion.DatosProtocoloTrans.DatosProtocoloIgM.TraerDatosProtocoloIgM() in C:\Users\ahrhe\Documents\Visual Studio 2017\Projects\ELISA\ELISA\Transaccion\DatosProtocoloTrans\DatosProtocoloIgM.cs:line 22
+ELISA.exe Information: 0 : 12-10-2018 08:21:06	Splash Iniciado
+ELISA.exe Information: 0 : 12-10-2018 08:21:07	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-10-2018 08:21:07	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-10-2018 08:21:07	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-10-2018 08:28:40	Aplicación Iniciada
+ELISA.exe Information: 0 : 12-10-2018 08:28:45	Splash Iniciado
+ELISA.exe Information: 0 : 12-10-2018 08:28:46	Splash Finalizado, Splash cerrado
+ELISA.exe Information: 0 : 12-10-2018 08:28:46	Ventana de autenticación Mostrada
+ELISA.exe Information: 0 : 12-10-2018 08:28:46	Arrancar la ventana de autenticación
+ELISA.exe Information: 0 : 12-10-2018 08:28:46	Los usuarios han sido cargado correctamente. Numero de Usuarios: 1
+ELISA.exe Information: 0 : 12-10-2018 08:28:49	Usuario seleccionado, consultar los datos
+ELISA.exe Information: 0 : 12-10-2018 08:28:49	Inicio de la consulta a la Base de Datos
+ELISA.exe Information: 0 : 12-10-2018 08:28:49	Usuario y contraseña son correctos
+ELISA.exe Information: 0 : 12-10-2018 08:28:49	Ventana principal Cargada correctamente
+ELISA.exe Information: 0 : 12-10-2018 08:28:49	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-10-2018 08:28:49	Lista de laboratorista cargado correctamente
+ELISA.exe Information: 0 : 12-10-2018 08:28:53	Aplicación Terminada
+ELISA.exe Information: 0 : 12-10-2018 08:28:53	=================SALTO DE LINEA=================
+ELISA.exe Information: 0 : 12-10-2018 08:28:53	=================SALTO DE LINEA=================
