@@ -318,6 +318,7 @@
     <Compile Include="Transaccion\Calculos.cs" />
     <Compile Include="Transaccion\ControlesTrans.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloChik.cs" />
+    <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloChikHiper.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloEI.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloEIChikMono.cs" />
     <Compile Include="Transaccion\DatosProtocoloTrans\DatosProtocoloIgG.cs" />
@@ -410,6 +411,12 @@
     </Compile>
     <Compile Include="UI\UIParametros\DatosCoatting.Designer.cs">
       <DependentUpon>DatosCoatting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosEIChikHiper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIParametros\DatosEIChikHiper.Designer.cs">
+      <DependentUpon>DatosEIChikHiper.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UIParametros\DatosEIChikMono.cs">
       <SubType>Form</SubType>
@@ -622,6 +629,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosCoatting.resx">
       <DependentUpon>DatosCoatting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIParametros\DatosEIChikHiper.resx">
+      <DependentUpon>DatosEIChikHiper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UIParametros\DatosEIChikMono.resx">
       <DependentUpon>DatosEIChikMono.cs</DependentUpon>

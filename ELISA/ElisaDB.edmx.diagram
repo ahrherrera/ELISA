@@ -78,7 +78,7 @@
         <EntityTypeShape EntityType="elisaModel.zikarmanual" Width="1.5" PointX="21.75" PointY="30.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.zikarmanualdup" Width="1.5" PointX="30.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocolochik" Width="2.25" PointX="30.75" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elisaModel.datosprotocolochikhiper" Width="2.25" PointX="30.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elisaModel.datosprotocolochikhiper" Width="2.25" PointX="31" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocolochikmono" Width="2.5" PointX="30.75" PointY="24.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocoloeiensayo" Width="1.875" PointX="23.75" PointY="31.5" IsExpanded="true" />
         <EntityTypeShape EntityType="elisaModel.datosprotocoloeizika" Width="2.375" PointX="25.75" PointY="31.5" IsExpanded="true" />

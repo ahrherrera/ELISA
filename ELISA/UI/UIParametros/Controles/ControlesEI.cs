@@ -9,6 +9,7 @@ namespace ELISA.UI.UIParametros.Controles
     {
         private DatosEI parent;
         private DatosEIChikMono parentChik;
+        private DatosEIChikHiper parentChikHiper;
         private Boolean cambiosPendientes = false;
         private MainUtils.Controles param;
         private int indexEditRow = -1;
@@ -26,6 +27,14 @@ namespace ELISA.UI.UIParametros.Controles
             InitializeComponent();
             switchParam(param);
             this.parentChik = parent;
+            this.param = param;
+        }
+
+        public ControlesEI(MainUtils.Controles param, DatosEIChikHiper parent)
+        {
+            InitializeComponent();
+            switchParam(param);
+            this.parentChikHiper = parent;
             this.param = param;
         }
 
@@ -68,9 +77,12 @@ namespace ELISA.UI.UIParametros.Controles
                     {
                         parentChik.txt_ControlNeg.Text = selected;
                     }
-                    else
+                    else if(parent!=null)
                     {
                         parent.txt_ControlNeg.Text = selected;
+                    }else if (parentChikHiper != null)
+                    {
+                        parentChikHiper.txt_ControlNeg.Text = selected;
                     }
                     
                         break;
@@ -81,9 +93,12 @@ namespace ELISA.UI.UIParametros.Controles
                     {
                         parentChik.txt_ControlPos.Text = selected;
                     }
-                    else
+                    else if(parent!=null)
                     {
                         parent.txt_ControlPos.Text = selected;
+                    }else if(parentChikHiper!=null)
+                    {
+                        parentChikHiper.txt_ControlPos.Text = selected;
                     }
                         break;
                 }

@@ -335,21 +335,9 @@ warning 6002: The table/view 'def.elisa.chikungunya' does not have a primary key
     <Property Name="FVC" Type="float" />
     <Property Name="idDatosProtocoloChik" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'def.elisa.datosprotocolochikhiper' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="datosprotocolochikhiper">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="LoteEI" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="GGLOB" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="idDatosProtocoloChikHiper" />
     </Key>
     <Property Name="ControlPos" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="ControlNeg" Type="varchar" MaxLength="10" Nullable="false" />
@@ -373,6 +361,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolochikhiper' does not have a
     <Property Name="STOP" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="ControlNegLI" Type="float" Nullable="false" />
     <Property Name="ControlNegLS" Type="float" Nullable="false" />
+    <Property Name="idDatosProtocoloChikHiper" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocolochikmono">
     <Key>
@@ -2329,6 +2318,7 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
     <EntitySet Name="controles_igg" EntityType="Self.controles_igg" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="controles_igm" EntityType="Self.controles_igm" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocolochik" EntityType="Self.datosprotocolochik" Schema="elisa" store:Type="Tables" />
+    <EntitySet Name="datosprotocolochikhiper" EntityType="Self.datosprotocolochikhiper" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocolochikmono" EntityType="Self.datosprotocolochikmono" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocoloei" EntityType="Self.datosprotocoloei" Schema="elisa" store:Type="Tables" />
     <EntitySet Name="datosprotocoloigg" EntityType="Self.datosprotocoloigg" Schema="elisa" store:Type="Tables" />
@@ -2424,32 +2414,6 @@ warning 6002: The table/view 'def.elisa.datosprotocolozikaigmbei' does not have 
 `chikungunya`.`user`, 
 `chikungunya`.`FVC`
 FROM `chikungunya` AS `chikungunya`</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="datosprotocolochikhiper" EntityType="Self.datosprotocolochikhiper" store:Type="Tables" store:Schema="elisa">
-      <DefiningQuery>SELECT
-`datosprotocolochikhiper`.`ControlPos`, 
-`datosprotocolochikhiper`.`ControlNeg`, 
-`datosprotocolochikhiper`.`LoteEI`, 
-`datosprotocolochikhiper`.`LoteAntigeno`, 
-`datosprotocolochikhiper`.`GGLOB`, 
-`datosprotocolochikhiper`.`fechafijGG`, 
-`datosprotocolochikhiper`.`VolUsado`, 
-`datosprotocolochikhiper`.`ProcH2O`, 
-`datosprotocolochikhiper`.`TipoEstudio`, 
-`datosprotocolochikhiper`.`Coatting`, 
-`datosprotocolochikhiper`.`PB`, 
-`datosprotocolochikhiper`.`TB`, 
-`datosprotocolochikhiper`.`FB`, 
-`datosprotocolochikhiper`.`TMPB`, 
-`datosprotocolochikhiper`.`TIMEB`, 
-`datosprotocolochikhiper`.`Conjugado`, 
-`datosprotocolochikhiper`.`Substrato`, 
-`datosprotocolochikhiper`.`TSubstrato`, 
-`datosprotocolochikhiper`.`SHN`, 
-`datosprotocolochikhiper`.`STOP`, 
-`datosprotocolochikhiper`.`ControlNegLI`, 
-`datosprotocolochikhiper`.`ControlNegLS`
-FROM `datosprotocolochikhiper` AS `datosprotocolochikhiper`</DefiningQuery>
     </EntitySet>
     <EntitySet Name="datosprotocoloeiensayos" EntityType="Self.datosprotocoloeiensayos" store:Type="Tables" store:Schema="elisa">
       <DefiningQuery>SELECT

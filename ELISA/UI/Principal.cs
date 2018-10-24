@@ -1718,102 +1718,102 @@ namespace ELISA.UI
                 case 3:
                     {
                         //GuardarChik
-                        bool invalidTemp = invalid;
-                        if (new DatosChikCNDR().ShowDialog(this)== DialogResult.OK)
-                        {
-                            Single lectData;
-                            String und, res, res1;
-                            datosprotocolochik datos = DatosProtocoloChik.TraerDatosprotocoloChik();
-                            int cont = 1;
-                            for (int i = 0; i < 8; i++)
-                            {
-                                for (int j = 0; j < 12; j++)
-                                {
-                                    chikungunya newChik = new chikungunya();
-                                    newChik.Cod_pozo = protocolo[i, j];
-                                    newChik.posicion = Convert.ToByte(cont);
-                                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
-                                    {
-                                        lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
-                                    }
-                                    else
-                                    {
-                                        lectData = Single.Parse(lectura[i, j]);
-                                    }
+                    //    bool invalidTemp = invalid;
+                    //    if (new DatosChikCNDR().ShowDialog(this)== DialogResult.OK)
+                    //    {
+                    //        Single lectData;
+                    //        String und, res, res1;
+                    //        datosprotocolochik datos = DatosProtocoloChik.TraerDatosprotocoloChik();
+                    //        int cont = 1;
+                    //        for (int i = 0; i < 8; i++)
+                    //        {
+                    //            for (int j = 0; j < 12; j++)
+                    //            {
+                    //                chikungunya newChik = new chikungunya();
+                    //                newChik.Cod_pozo = protocolo[i, j];
+                    //                newChik.posicion = Convert.ToByte(cont);
+                    //                if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                    //                {
+                    //                    lectData = Single.Parse(lectura[i, j].Remove(lectura[i, j].Length - 1));
+                    //                }
+                    //                else
+                    //                {
+                    //                    lectData = Single.Parse(lectura[i, j]);
+                    //                }
 
-                                    newChik.Lectura = lectData;
-                                    Absorbancia[i, j] = Convert.ToString(lectData);
+                    //                newChik.Lectura = lectData;
+                    //                Absorbancia[i, j] = Convert.ToString(lectData);
 
-                                    if (lectData >= (Single.Parse(txt_val2.Text) * datos.FVC) && !invalidTemp )
-                                    {
-                                        res = "P";
-                                    }
-                                    else
-                                    {
-                                        res = "N";
-                                    }
+                    //                if (lectData >= (Single.Parse(txt_val2.Text) * datos.FVC) && !invalidTemp )
+                    //                {
+                    //                    res = "P";
+                    //                }
+                    //                else
+                    //                {
+                    //                    res = "N";
+                    //                }
 
-                                    if (invalidTemp)
-                                    {
-                                        res = "INV";
-                                    }
+                    //                if (invalidTemp)
+                    //                {
+                    //                    res = "INV";
+                    //                }
 
-                                    newChik.VC = (float)(Single.Parse(txt_val1.Text) * datos.FVC);
-                                    newChik.Resultado = res;
-                                    Resultados[i, j] = res;
+                    //                newChik.VC = (float)(Single.Parse(txt_val1.Text) * datos.FVC);
+                    //                newChik.Resultado = res;
+                    //                Resultados[i, j] = res;
 
-                                    newChik.Placa = txt_Placa.TextBox.Text;
-                                    if (invalidTemp)
-                                    {
-                                        newChik.Valido = false;
-                                    }
-                                    else
-                                    {
-                                        if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
-                                        {
-                                            newChik.Valido = false;
-                                        }
-                                        else
-                                            newChik.Valido = true;
-                                    }
+                    //                newChik.Placa = txt_Placa.TextBox.Text;
+                    //                if (invalidTemp)
+                    //                {
+                    //                    newChik.Valido = false;
+                    //                }
+                    //                else
+                    //                {
+                    //                    if (lectura[i, j].EndsWith(Convert.ToString((char)8203)))
+                    //                    {
+                    //                        newChik.Valido = false;
+                    //                    }
+                    //                    else
+                    //                        newChik.Valido = true;
+                    //                }
 
-                                    newChik.Fecha = DateTime.Now;
-                                    newChik.ControlPos = datos.ControlPos;
-                                    newChik.ControlNeg = datos.ControlNeg;
-                                    newChik.LoteIgM = datos.LoteIgM;
-                                    newChik.Tecnica = "CNDR";
-                                    newChik.LoteAntigenoViral = datos.LoteAntigenoViral;
-                                    newChik.GGLOB = datos.GGLOB;
-                                    newChik.fechafijGG = datos.fechafijGG;
-                                    newChik.VolUsado = datos.VolUsado;
-                                    newChik.ProcH2O = datos.ProcH2O;
-                                    newChik.Coatting = datos.Coatting;
-                                    newChik.PB = datos.PB;
-                                    newChik.TB = datos.TB;
-                                    newChik.FB = datos.FB;
-                                    newChik.TMPB = datos.TMPB;
-                                    newChik.TIMEB = datos.TIMEB;
-                                    newChik.Substrato = datos.Substrato;
-                                    newChik.TSubstrato = datos.TSubstrato;
-                                    newChik.Conjugado = datos.Conjugado;
-                                    newChik.SHN = datos.SHN;
-                                    newChik.STOP = datos.STOP;
-                                    newChik.Lab1 = cmb_Lab1.ComboBox.Text;
-                                    newChik.Lab2 = cmb_Lab2.ComboBox.Text;
-                                    newChik.user = Convert.ToString(user.idUsuario);
-                                    ElisaChikTrans.saveElisaChikCNDR(newChik);
-                                    btn_Print.Enabled = true;
-                                    cont++;
-                                }
-                            }
-                            MessageBox.Show("Datos Guardados Correctamente",
-                                "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Verifique los datos del protocolo en el menu principal",
-                                "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                    //                newChik.Fecha = DateTime.Now;
+                    //                newChik.ControlPos = datos.ControlPos;
+                    //                newChik.ControlNeg = datos.ControlNeg;
+                    //                newChik.LoteIgM = datos.LoteIgM;
+                    //                newChik.Tecnica = "CNDR";
+                    //                newChik.LoteAntigenoViral = datos.LoteAntigenoViral;
+                    //                newChik.GGLOB = datos.GGLOB;
+                    //                newChik.fechafijGG = datos.fechafijGG;
+                    //                newChik.VolUsado = datos.VolUsado;
+                    //                newChik.ProcH2O = datos.ProcH2O;
+                    //                newChik.Coatting = datos.Coatting;
+                    //                newChik.PB = datos.PB;
+                    //                newChik.TB = datos.TB;
+                    //                newChik.FB = datos.FB;
+                    //                newChik.TMPB = datos.TMPB;
+                    //                newChik.TIMEB = datos.TIMEB;
+                    //                newChik.Substrato = datos.Substrato;
+                    //                newChik.TSubstrato = datos.TSubstrato;
+                    //                newChik.Conjugado = datos.Conjugado;
+                    //                newChik.SHN = datos.SHN;
+                    //                newChik.STOP = datos.STOP;
+                    //                newChik.Lab1 = cmb_Lab1.ComboBox.Text;
+                    //                newChik.Lab2 = cmb_Lab2.ComboBox.Text;
+                    //                newChik.user = Convert.ToString(user.idUsuario);
+                    //                ElisaChikTrans.saveElisaChikCNDR(newChik);
+                    //                btn_Print.Enabled = true;
+                    //                cont++;
+                    //            }
+                    //        }
+                    //        MessageBox.Show("Datos Guardados Correctamente",
+                    //            "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    }
+                    //    else
+                    //    {
+                    //        MessageBox.Show("Verifique los datos del protocolo en el menu principal",
+                    //            "Verifique sus datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    }
                         break;
                     }
                 case 4:

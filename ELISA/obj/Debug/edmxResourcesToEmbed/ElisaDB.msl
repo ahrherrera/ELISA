@@ -1883,6 +1883,7 @@
     <EntitySetMapping Name="datosprotocolochikhipers">
       <EntityTypeMapping TypeName="elisaModel.datosprotocolochikhiper">
         <MappingFragment StoreEntitySet="datosprotocolochikhiper">
+          <ScalarProperty Name="idDatosProtocoloChikHiper" ColumnName="idDatosProtocoloChikHiper" />
           <ScalarProperty Name="ControlPos" ColumnName="ControlPos" />
           <ScalarProperty Name="ControlNeg" ColumnName="ControlNeg" />
           <ScalarProperty Name="LoteEI" ColumnName="LoteEI" />

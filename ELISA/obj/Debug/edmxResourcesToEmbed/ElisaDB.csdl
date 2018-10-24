@@ -1929,17 +1929,7 @@
   </EntityType>
   <EntityType Name="datosprotocolochikhiper">
     <Key>
-      <PropertyRef Name="ControlPos" />
-      <PropertyRef Name="ControlNeg" />
-      <PropertyRef Name="LoteEI" />
-      <PropertyRef Name="LoteAntigeno" />
-      <PropertyRef Name="GGLOB" />
-      <PropertyRef Name="Conjugado" />
-      <PropertyRef Name="Substrato" />
-      <PropertyRef Name="SHN" />
-      <PropertyRef Name="STOP" />
-      <PropertyRef Name="ControlNegLI" />
-      <PropertyRef Name="ControlNegLS" />
+      <PropertyRef Name="idDatosProtocoloChikHiper" />
     </Key>
     <Property Name="ControlPos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ControlNeg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1963,6 +1953,7 @@
     <Property Name="STOP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ControlNegLI" Type="Single" Nullable="false" />
     <Property Name="ControlNegLS" Type="Single" Nullable="false" />
+    <Property Name="idDatosProtocoloChikHiper" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="datosprotocolochikmono">
     <Key>
